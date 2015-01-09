@@ -141,9 +141,14 @@
 </code></pre>
 <h2>Use with Connect/Express</h2>
 <pre><code class="lang-js">var wechat = require(&#39;wechat&#39;);
+var config = {
+  token: &#39;token&#39;,
+  appid: &#39;appid&#39;,
+  encodingAESKey: &#39;encodinAESKey&#39;
+};
 
 app.use(connect.query()); // Or app.use(express.query());
-app.use(&#39;/wechat&#39;, wechat(&#39;some token&#39;, function (req, res, next) {
+app.use(&#39;/wechat&#39;, wechat(config, function (req, res, next) {
   // 微信输入信息都在req.weixin上
   var message = req.weixin;
   if (message.FromUserName === &#39;diaosi&#39;) {
