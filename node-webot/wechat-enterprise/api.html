@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>wechat-enterprise Documentation</title>
+    <meta name="keywords" content="weixin,wechat,enterprise" />
+    <meta name="description" content="微信公共平台企业号版本Node库" />
+    <script src="assets/prettify.js"></script>
+    <script src="assets/jquery-1.8.2.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/base.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./index.html">wechat-enterprise</a>
+        </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+          
+            <li>
+              <a href="./api.html">API Docs</a>
+            </li>
+          
+            <li>
+              <a href="./Getting start.html">Getting start</a>
+            </li>
+          
+          
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <header class="jumbotron subhead">
+      <div class="container">
+        <h1>wechat-enterprise <small>Version: 0.0.9 By @Jackson Tian</small></h1>
+        <p class="lead">
+          微信公共平台企业号版本Node库
+        </p>
+      </div>
+    </header>
+
+<div class="container content">
+  <div class="row">
+    <div class="col-md-3 bs-docs-sidebar">
+      <ul class="nav nav-list bs-docs-sidenav affix">
+
+  <li>
+		<div class="accordion" id="list">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_list" class="api_side_link">list</a>
+					<div class="accordion-marker" id="collapse_marker_list">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#list" href="#collapse_list">
+							 <span id="toggle_list" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_list">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#list__List">List</a>
+						</li>
+					
+						<li>
+							<a href="#list__get">get</a>
+						</li>
+					
+						<li>
+							<a href="#list_List_add">add</a>
+						</li>
+					
+						<li>
+							<a href="#list_List_get">get</a>
+						</li>
+					
+						<li>
+							<a href="#list_List_clear">clear</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_list').on('click', function() {
+    	$('#toggle_list').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
+
+  <li>
+		<div class="accordion" id="session">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_session" class="api_side_link">session</a>
+					<div class="accordion-marker" id="collapse_marker_session">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#session" href="#collapse_session">
+							 <span id="toggle_session" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_session">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#session__Session">Session</a>
+						</li>
+					
+						<li>
+							<a href="#session__save">save</a>
+						</li>
+					
+						<li>
+							<a href="#session__destroy">destroy</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_session').on('click', function() {
+    	$('#toggle_session').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
+
+  <li>
+		<div class="accordion" id="util">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_util" class="api_side_link">util</a>
+					<div class="accordion-marker" id="collapse_marker_util">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#util" href="#collapse_util">
+							 <span id="toggle_util" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_util">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_util').on('click', function() {
+    	$('#toggle_util').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
+
+  <li>
+		<div class="accordion" id="wechat-enterprise">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_wechat-enterprise" class="api_side_link">wechat-enterprise</a>
+					<div class="accordion-marker" id="collapse_marker_wechat-enterprise">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#wechat-enterprise" href="#collapse_wechat-enterprise">
+							 <span id="toggle_wechat-enterprise" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_wechat-enterprise">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#wechat-enterprise__Handler">Handler</a>
+						</li>
+					
+						<li>
+							<a href="#wechat-enterprise__setHandler">setHandler</a>
+						</li>
+					
+						<li>
+							<a href="#wechat-enterprise__getHandler">getHandler</a>
+						</li>
+					
+						<li>
+							<a href="#wechat-enterprise__middlewarify">middlewarify</a>
+						</li>
+					
+						<li>
+							<a href="#wechat-enterprise__middleware">middleware</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_wechat-enterprise').on('click', function() {
+    	$('#toggle_wechat-enterprise').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
+
+</ul>
+
+    </div>
+    <div class="col-md-9">
+      
+        <section id="api_list" class="api">
+  <h2>list: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#list__List">List</a>
+    </li>
+
+    <li>
+      <a href="#list__get">get</a>
+    </li>
+
+    <li>
+      <a href="#list_List_add">add</a>
+    </li>
+
+    <li>
+      <a href="#list_List_get">get</a>
+    </li>
+
+    <li>
+      <a href="#list_List_clear">clear</a>
+    </li>
+
+  </ul>
+  <hr />
+
+  
+  <h3 data-id="list__List">
+    List
+  </h3>
+  
+
+  <p>回复列表类型</p>
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>函数</td>
+      <td>List()</td> 
+      <td></td>
+      <td>List</td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="list__get">
+    get
+  </h3>
+  
+
+  <p>从List对象中根据key取出对应的handler</p>
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td>List.prototype.get()</td> 
+      <td></td>
+      <td>get</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>key(String)</td>
+      <td colspan="2">列表中的关键词</td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="list_List_add">
+    add
+  </h3>
+  
+
+  <p>静态方法，根据items生成List对象，并放置到缓存中</p>
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td>List.add()</td> 
+      <td>List</td>
+      <td>add</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>name(String)</td>
+      <td colspan="2">列表名字</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>items(Array)</td>
+      <td colspan="2">元素列表</td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="list_List_get">
+    get
+  </h3>
+  
+
+  <p>静态方法，从缓存中根据名字取出List对象</p>
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td>List.get()</td> 
+      <td>List</td>
+      <td>get</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>name(String)</td>
+      <td colspan="2">列表名字</td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="list_List_clear">
+    clear
+  </h3>
+  
+
+  <p>静态方法，清空缓存的所有的List对象</p>
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td>List.clear()</td> 
+      <td>List</td>
+      <td>clear</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>name(String)</td>
+      <td colspan="2">列表名字</td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
+        <section id="api_session" class="api">
+  <h2>session: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#session__Session">Session</a>
+    </li>
+
+    <li>
+      <a href="#session__save">save</a>
+    </li>
+
+    <li>
+      <a href="#session__destroy">destroy</a>
+    </li>
+
+  </ul>
+  <hr />
+
+  
+  <h3 data-id="session__Session">
+    Session
+  </h3>
+  
+
+  <p>Session构造函数，用于与Connect的Session中间件集成的会话脚本</p>
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>函数</td>
+      <td>Session()</td> 
+      <td></td>
+      <td>Session</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>id(String)</td>
+      <td colspan="2">Session ID</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>req(Object)</td>
+      <td colspan="2">Connect中的请求对象</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>data(Object)</td>
+      <td colspan="2">可选的其余数据，将被合并进Session对象中</td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="session__save">
+    save
+  </h3>
+  
+
+  <p>保存Session对象到实际的存储中</p><p>Callback:</p><ul>
+<li><code>err</code>, 错误对象，保存发生错误时传入</li>
+</ul>
+
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td>Session.prototype.save()</td> 
+      <td></td>
+      <td>save</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2">保存Session的回调函数</td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="session__destroy">
+    destroy
+  </h3>
+  
+
+  <p>销毁Session对象</p><p>Callback:</p><ul>
+<li><code>err</code>, 错误对象，删除发生错误时传入</li>
+</ul>
+
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td>Session.prototype.destroy()</td> 
+      <td></td>
+      <td>destroy</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2">从存储中删除Session数据后的回调函数</td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
+        <section id="api_util" class="api">
+  <h2>util: API索引</h2>
+  <ul class="indexs">
+  
+  </ul>
+  <hr />
+
+</section>
+
+      
+        <section id="api_wechat-enterprise" class="api">
+  <h2>wechat-enterprise: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#wechat-enterprise__Handler">Handler</a>
+    </li>
+
+    <li>
+      <a href="#wechat-enterprise__setHandler">setHandler</a>
+    </li>
+
+    <li>
+      <a href="#wechat-enterprise__getHandler">getHandler</a>
+    </li>
+
+    <li>
+      <a href="#wechat-enterprise__middlewarify">middlewarify</a>
+    </li>
+
+    <li>
+      <a href="#wechat-enterprise__middleware">middleware</a>
+    </li>
+
+  </ul>
+  <hr />
+
+  
+  <h3 data-id="wechat-enterprise__Handler">
+    Handler
+  </h3>
+  
+
+  <p>微信自动回复平台的内部的Handler对象</p>
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>函数</td>
+      <td>Handler()</td> 
+      <td></td>
+      <td>Handler</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>config(Object)</td>
+      <td colspan="2">企业号的开发者配置对象</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>handle(Function)</td>
+      <td colspan="2">handle对象 
+config:
+```
+{
+  token: &#39;&#39;,          // 公众平台上，开发者设置的Token
+  encodingAESKey: &#39;&#39;, // 公众平台上，开发者设置的EncodingAESKey
+  corpId: &#39;&#39;,         // 企业号的CorpId
+}
+```</td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="wechat-enterprise__setHandler">
+    setHandler
+  </h3>
+  
+
+  <p>设置handler对象<br />按消息设置handler对象的快捷方式</p><ul>
+<li><code>text(fn)</code></li>
+<li><code>image(fn)</code></li>
+<li><code>voice(fn)</code></li>
+<li><code>video(fn)</code></li>
+<li><code>location(fn)</code></li>
+<li><code>link(fn)</code></li>
+<li><code>event(fn)</code></li>
+</ul>
+
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td>Handler.prototype.setHandler()</td> 
+      <td></td>
+      <td>setHandler</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>type(String)</td>
+      <td colspan="2">handler处理的消息类型</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>handle(Function)</td>
+      <td colspan="2">handle对象</td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="wechat-enterprise__getHandler">
+    getHandler
+  </h3>
+  
+
+  <p>根据消息类型取出handler对象</p>
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td>Handler.prototype.getHandler()</td> 
+      <td></td>
+      <td>getHandler</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>type(String)</td>
+      <td colspan="2">消息类型</td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="wechat-enterprise__middlewarify">
+    middlewarify
+  </h3>
+  
+
+  <p>根据Handler对象生成响应方法，并最终生成中间件函数</p>
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td>Handler.prototype.middlewarify()</td> 
+      <td></td>
+      <td>middlewarify</td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="wechat-enterprise__middleware">
+    middleware
+  </h3>
+  
+
+  <p>根据口令</p><p>Examples:<br />使用wechat作为自动回复中间件的三种方式</p><pre><code>wechat(config, function (req, res, next) {});
+
+wechat(config, wechat.text(function (message, req, res, next) {
+  // TODO
+}).location(function (message, req, res, next) {
+  // TODO
+}));
+
+wechat(config)
+  .text(function (message, req, res, next) {
+    // TODO
+  }).location(function (message, req, res, next) {
+   // TODO
+  }).middleware();
+</code></pre><p>静态方法</p><ul>
+<li><code>text</code>，处理文字推送的回调函数，接受参数为(text, req, res, next)。</li>
+<li><code>image</code>，处理图片推送的回调函数，接受参数为(image, req, res, next)。</li>
+<li><code>voice</code>，处理声音推送的回调函数，接受参数为(voice, req, res, next)。</li>
+<li><code>video</code>，处理视频推送的回调函数，接受参数为(video, req, res, next)。</li>
+<li><code>location</code>，处理位置推送的回调函数，接受参数为(location, req, res, next)。</li>
+<li><code>link</code>，处理链接推送的回调函数，接受参数为(link, req, res, next)。</li>
+<li><code>event</code>，处理事件推送的回调函数，接受参数为(event, req, res, next)。</li>
+</ul>
+
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>函数</td>
+      <td>middleware()</td> 
+      <td></td>
+      <td>middleware</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>config(Object)</td>
+      <td colspan="2">企业号的开发者配置对象</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>handle(Function)</td>
+      <td colspan="2">生成的回调函数，参见示例</td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
+    </div>
+  </div>
+</div>
+      <footer class="footer">
+        <div class="container">
+          <p class="pull-right">
+            <a href="#">Back to top</a>
+          </p>
+          <p>此文档通过doxmate生成。主题借鉴Bootstrap API文档风格，注解基于<a href="https://github.com/visionmedia/dox">Dox</a>。欢迎关注doxmate作者<a href="http://weibo.com/shyvo" target="_blank">@朴灵</a></p>
+          <ul class="footer-links">
+            <li><a href="https://github.com/visionmedia/dox">Dox主页</a></li>
+            <li><a href="http://html5ify.com/doxmate">Doxmate主页</a></li>
+            <li><a href="https://github.com/JacksonTian/doxmate">Doxmate源码</a></li>
+            <li><a href="https://github.com/JacksonTian/doxmate/issues?state=open">提交bug</a></li>
+          </ul>
+      </div>
+    </footer>
+    <script>
+      $(function() {
+        $('pre').addClass('prettyprint');
+        $('td pre').removeClass('prettyprint');
+        prettyPrint();
+        var $window = $(window);
+        $('.bs-docs-sidenav').affix({
+          offset: {
+            top: function () {
+              return $window.width() <= 980 ? 290 : 210
+            },
+            bottom: 270
+          }
+        });
+        $(".content").find('h1, h2, h3, h4, h5, h6').each(function () {
+          var node = $(this);
+          // 总是设置id
+          node.attr("id", node.data('id') || "index_" + node.text());
+          node.css("paddingTop", 50);
+        });
+      });
+    </script>
+  
+  </body>
+</html>
+
