@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>co-wechat Documentation</title>
+    <meta name="keywords" content="wechat,wexin" />
+    <meta name="description" content="wechat api for co" />
+    <script src="assets/prettify.js"></script>
+    <script src="assets/jquery-1.8.2.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/base.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./index.html">co-wechat</a>
+        </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+          
+            <li>
+              <a href="./api.html">API Docs</a>
+            </li>
+          
+          
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <header class="jumbotron subhead">
+      <div class="container">
+        <h1>co-wechat <small>Version: 0.0.2 By @Jackson Tian</small></h1>
+        <p class="lead">
+          wechat api for co
+        </p>
+      </div>
+    </header>
+
+<div class="container content">
+  <div class="row">
+    <div class="col-md-3 bs-docs-sidebar">
+      <ul class="nav nav-list bs-docs-sidenav affix">
+
+  <li>
+		<div class="accordion" id="wechat">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_wechat" class="api_side_link">wechat</a>
+					<div class="accordion-marker" id="collapse_marker_wechat">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#wechat" href="#collapse_wechat">
+							 <span id="toggle_wechat" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_wechat">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_wechat').on('click', function() {
+    	$('#toggle_wechat').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
+
+</ul>
+
+    </div>
+    <div class="col-md-9">
+      
+        <section id="api_wechat" class="api">
+  <h2>wechat: API索引</h2>
+  <ul class="indexs">
+  
+  </ul>
+  <hr />
+
+</section>
+
+      
+    </div>
+  </div>
+</div>
+      <footer class="footer">
+        <div class="container">
+          <p class="pull-right">
+            <a href="#">Back to top</a>
+          </p>
+          <p>此文档通过doxmate生成。主题借鉴Bootstrap API文档风格，注解基于<a href="https://github.com/visionmedia/dox">Dox</a>。欢迎关注doxmate作者<a href="http://weibo.com/shyvo" target="_blank">@朴灵</a></p>
+          <ul class="footer-links">
+            <li><a href="https://github.com/visionmedia/dox">Dox主页</a></li>
+            <li><a href="http://html5ify.com/doxmate">Doxmate主页</a></li>
+            <li><a href="https://github.com/JacksonTian/doxmate">Doxmate源码</a></li>
+            <li><a href="https://github.com/JacksonTian/doxmate/issues?state=open">提交bug</a></li>
+          </ul>
+      </div>
+    </footer>
+    <script>
+      $(function() {
+        $('pre').addClass('prettyprint');
+        $('td pre').removeClass('prettyprint');
+        prettyPrint();
+        var $window = $(window);
+        $('.bs-docs-sidenav').affix({
+          offset: {
+            top: function () {
+              return $window.width() <= 980 ? 290 : 210
+            },
+            bottom: 270
+          }
+        });
+        $(".content").find('h1, h2, h3, h4, h5, h6').each(function () {
+          var node = $(this);
+          // 总是设置id
+          node.attr("id", node.data('id') || "index_" + node.text());
+          node.css("paddingTop", 50);
+        });
+      });
+    </script>
+  
+  </body>
+</html>
+
