@@ -38,7 +38,7 @@
     </nav>
     <header class="jumbotron subhead">
       <div class="container">
-        <h1>wechat-api <small>Version: 1.4.1 By @Jackson Tian</small></h1>
+        <h1>wechat-api <small>Version: 1.5.0 By @Jackson Tian</small></h1>
         <p class="lead">
           微信公共平台Node库 API
         </p>
@@ -283,6 +283,38 @@
   <script type="text/javascript">
     $('#collapse_marker_api_ip').on('click', function() {
     	$('#toggle_api_ip').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
+
+  <li>
+		<div class="accordion" id="api_js">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_js" class="api_side_link">api_js</a>
+					<div class="accordion-marker" id="collapse_marker_api_js">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_js" href="#collapse_api_js">
+							 <span id="toggle_api_js" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_js">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_js_exports_registerTicketHandle">registerTicketHandle</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_api_js').on('click', function() {
+    	$('#toggle_api_js').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
     });
   </script>
 
@@ -2004,6 +2036,70 @@ api.getInterfaceSummaryHour(startDate, endDate, callback); // 获取接口分析
       <td>参数</td>
       <td>callback(Function)</td>
       <td colspan="2">回调函数</td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
+        <section id="api_api_js" class="api">
+  <h2>api_js: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#api_js_exports_registerTicketHandle">registerTicketHandle</a>
+    </li>
+
+  </ul>
+  <hr />
+
+  
+  <h3 data-id="api_js_exports_registerTicketHandle">
+    registerTicketHandle
+  </h3>
+  
+
+  <p>多台服务器负载均衡时，ticketToken需要外部存储共享。<br />需要调用此registerTicketHandle来设置get和set的自定义方法。</p><p>Examples:</p><pre><code>api.registerTicketHandle(getTicketToken, saveTicketToken);
+// getTicketToken
+function getTicketToken(callback) {
+ settingModel.getItem({key: &#39;weixin_ticketToken&#39;}, function (err, setting) {
+   if (err) return callback(err);
+   callback(null, setting.value);
+ });
+}
+// saveTicketToken
+function saveTicketToken(_ticketToken, callback) {
+ settingModel.setItem({key:&#39;weixin_ticketToken&#39;, value: ticketToken}, function(err) {
+   if (err) return callback(err);
+   callback(null);
+ });
+}
+</code></pre>
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td>exports.registerTicketHandle()</td> 
+      <td>exports</td>
+      <td>registerTicketHandle</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>getTicketToken(Function)</td>
+      <td colspan="2">获取外部ticketToken的函数</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>saveTicketToken(Function)</td>
+      <td colspan="2">存储外部ticketToken的函数</td>
     </tr>
   
 
