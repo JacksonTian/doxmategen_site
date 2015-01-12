@@ -305,6 +305,14 @@
 							<a href="#api_js_exports_registerTicketHandle">registerTicketHandle</a>
 						</li>
 					
+						<li>
+							<a href="#api_js_exports_getTicket">getTicket</a>
+						</li>
+					
+						<li>
+							<a href="#api_js_exports_getJsConfig">getJsConfig</a>
+						</li>
+					
 					</ul>
 					</div>
 				</div>
@@ -2053,6 +2061,14 @@ api.getInterfaceSummaryHour(startDate, endDate, callback); // 获取接口分析
       <a href="#api_js_exports_registerTicketHandle">registerTicketHandle</a>
     </li>
 
+    <li>
+      <a href="#api_js_exports_getTicket">getTicket</a>
+    </li>
+
+    <li>
+      <a href="#api_js_exports_getJsConfig">getJsConfig</a>
+    </li>
+
   </ul>
   <hr />
 
@@ -2062,7 +2078,7 @@ api.getInterfaceSummaryHour(startDate, endDate, callback); // 获取接口分析
   </h3>
   
 
-  <p>多台服务器负载均衡时，ticketToken需要外部存储共享。<br />需要调用此registerTicketHandle来设置get和set的自定义方法。</p><p>Examples:</p><pre><code>api.registerTicketHandle(getTicketToken, saveTicketToken);
+  <p>多台服务器负载均衡时，ticketToken需要外部存储共享。<br />需要调用此registerTicketHandle来设置获取和保存的自定义方法。</p><p>Examples:</p><pre><code>api.registerTicketHandle(getTicketToken, saveTicketToken);
 // getTicketToken
 function getTicketToken(callback) {
  settingModel.getItem({key: &#39;weixin_ticketToken&#39;}, function (err, setting) {
@@ -2072,7 +2088,7 @@ function getTicketToken(callback) {
 }
 // saveTicketToken
 function saveTicketToken(_ticketToken, callback) {
- settingModel.setItem({key:&#39;weixin_ticketToken&#39;, value: ticketToken}, function(err) {
+ settingModel.setItem({key:&#39;weixin_ticketToken&#39;, value: ticketToken}, function (err) {
    if (err) return callback(err);
    callback(null);
  });
@@ -2100,6 +2116,89 @@ function saveTicketToken(_ticketToken, callback) {
       <td>参数</td>
       <td>saveTicketToken(Function)</td>
       <td colspan="2">存储外部ticketToken的函数</td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="api_js_exports_getTicket">
+    getTicket
+  </h3>
+  
+
+  <p>获取js sdk所需的有效js ticket</p><p>Callback:</p><ul>
+<li><code>err</code>, 异常对象</li>
+<li><code>result</code>, 正常获取时的数据</li>
+</ul>
+<p>Result:</p><ul>
+<li><code>errcode</code>, 0为成功</li>
+<li><code>errmsg</code>, 成功为&#39;ok&#39;，错误则为详细错误信息</li>
+<li><code>ticket</code>, js sdk有效票据，如：bxLdikRXVbTPdHSM05e5u5sUoXNKd8-41ZO3MhKoyN5OfkWITDGgnr2fwJ0m9E8NYzWKVZvdVtaUgWvsdshFKA</li>
+<li><code>expires_in</code>, 有效期7200秒，开发者必须在自己的服务全局缓存jsapi_ticket</li>
+</ul>
+
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td>exports.getTicket()</td> 
+      <td>exports</td>
+      <td>getTicket</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2">回调函数</td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="api_js_exports_getJsConfig">
+    getJsConfig
+  </h3>
+  
+
+  <p>获取微信JS SDK Config的所需参数</p><p>Examples:</p><pre><code>var param = {
+ debug:false,
+ jsApiList: [&#39;onMenuShareTimeline&#39;, &#39;onMenuShareAppMessage&#39;],
+ url: &#39;http://www.xxx.com&#39;
+};
+api.getJsConfig(, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的js sdk config所需参数</li>
+</ul>
+
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td>exports.getJsConfig()</td> 
+      <td>exports</td>
+      <td>getJsConfig</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>param(Object)</td>
+      <td colspan="2">参数</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2">回调函数</td>
     </tr>
   
 
