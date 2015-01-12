@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>dox Documentation</title>
+    <meta name="keywords" content="documentation,docs,markdown,jsdoc" />
+    <meta name="description" content="Markdown / JSdoc documentation generator" />
+    <script src="assets/prettify.js"></script>
+    <script src="assets/jquery-1.8.2.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/base.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./index.html">dox</a>
+        </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+          
+            <li>
+              <a href="./api.html">API Docs</a>
+            </li>
+          
+          
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <header class="jumbotron subhead">
+      <div class="container">
+        <h1>dox <small>Version: 0.6.1 By @TJ Holowaychuk &lt;tj@vision-media.ca&gt;</small></h1>
+        <p class="lead">
+          Markdown / JSdoc documentation generator
+        </p>
+      </div>
+    </header>
+
+<div class="container content">
+  <div class="row">
+  	<div class="col-md-3">
+      <ul class="nav nav-list bs-docs-sidenav affix">
+
+  <li class="level_2">
+    <a href="#index_Installation" title="Installation">
+      <i class="icon-chevron-right"></i>Installation
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_Usage Examples" title="Usage Examples">
+      <i class="icon-chevron-right"></i>Usage Examples
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_Usage" title="Usage">
+      <i class="icon-chevron-right"></i>Usage
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_Properties" title="Properties">
+      <i class="icon-chevron-right"></i>Properties
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_License" title="License">
+      <i class="icon-chevron-right"></i>License
+    </a>
+  </li>
+
+</ul>
+
+    </div>
+    <div class="col-md-9">
+      <section>
+        <h1>Dox</h1>
+<p><a href="https://travis-ci.org/tj/dox"><img src="https://travis-ci.org/tj/dox.svg?branch=master" alt="Build Status"></a></p><p> Dox is a JavaScript documentation generator written with <a href="http://nodejs.org">node</a>. Dox no longer generates an opinionated structure or style for your docs, it simply gives you a JSON representation, allowing you to use <em>markdown</em> and <em>JSDoc</em>-style tags.</p><h2>Installation</h2>
+<p>Install from npm:</p><pre><code>$ npm install -g dox
+</code></pre><h2>Usage Examples</h2>
+<p><code>dox(1)</code> operates over stdio:</p><pre><code>$ dox &lt; utils.js
+...JSON...
+</code></pre><p> to inspect the generated data you can use the <code>--debug</code> flag, which is easier to read than the JSON output:</p><pre><code> $ dox --debug &lt; utils.js
+</code></pre><p>utils.js:</p><pre><code class="lang-js">/**
+ * Escape the given `html`.
+ *
+ * @example
+ *     utils.escape(&#39;&lt;script&gt;&lt;/script&gt;&#39;)
+ *     // =&gt; &#39;&amp;lt;script&amp;gt;&amp;lt;/script&amp;gt;&#39;
+ *
+ * @param {String} html string to be escaped
+ * @return {String} escaped html
+ * @api public
+ */
+
+exports.escape = function(html){
+  return String(html)
+    .replace(/&amp;(?!\w+;)/g, &#39;&amp;amp;&#39;)
+    .replace(/&lt;/g, &#39;&amp;lt;&#39;)
+    .replace(/&gt;/g, &#39;&amp;gt;&#39;);
+};
+</code></pre>
+<p>output:</p><pre><code class="lang-json">[
+  {
+    &quot;tags&quot;: [
+      {
+        &quot;type&quot;: &quot;example&quot;,
+        &quot;string&quot;: &quot;&lt;pre&gt;&lt;code&gt;utils.escape(&amp;#39;&amp;lt;script&amp;gt;&amp;lt;/script&amp;gt;&amp;#39;)\n// =&amp;gt; &amp;#39;&amp;amp;lt;script&amp;amp;gt;&amp;amp;lt;/script&amp;amp;gt;&amp;#39;\n&lt;/code&gt;&lt;/pre&gt;&quot;
+      },
+      {
+        &quot;type&quot;: &quot;param&quot;,
+        &quot;types&quot;: [
+          &quot;String&quot;
+        ],
+        &quot;name&quot;: &quot;html&quot;,
+        &quot;description&quot;: &quot;string to be escaped&quot;
+      },
+      {
+        &quot;type&quot;: &quot;return&quot;,
+        &quot;types&quot;: [
+          &quot;String&quot;
+        ],
+        &quot;description&quot;: &quot;escaped html&quot;
+      },
+      {
+        &quot;type&quot;: &quot;api&quot;,
+        &quot;visibility&quot;: &quot;public&quot;
+      }
+    ],
+    &quot;description&quot;: {
+      &quot;full&quot;: &quot;&lt;p&gt;Escape the given &lt;code&gt;html&lt;/code&gt;.&lt;/p&gt;&quot;,
+      &quot;summary&quot;: &quot;&lt;p&gt;Escape the given &lt;code&gt;html&lt;/code&gt;.&lt;/p&gt;&quot;,
+      &quot;body&quot;: &quot;&quot;
+    },
+    &quot;isPrivate&quot;: false,
+    &quot;ignore&quot;: false,
+    &quot;code&quot;: &quot;exports.escape = function(html){\n  return String(html)\n    .replace(/&amp;(?!\\w+;)/g, &#39;&amp;amp;&#39;)\n    .replace(/&lt;/g, &#39;&amp;lt;&#39;)\n    .replace(/&gt;/g, &#39;&amp;gt;&#39;);\n};&quot;,
+    &quot;ctx&quot;: {
+      &quot;type&quot;: &quot;method&quot;,
+      &quot;receiver&quot;: &quot;exports&quot;,
+      &quot;name&quot;: &quot;escape&quot;,
+      &quot;string&quot;: &quot;exports.escape()&quot;
+    }
+  }
+]
+</code></pre>
+<p>This output can then be passed to a template for rendering. Look below at the &quot;Properties&quot; section for details.</p><h2>Usage</h2>
+<pre><code>
+Usage: dox [options]
+
+  Options:
+
+    -h, --help                     output usage information
+    -V, --version                  output the version number
+    -r, --raw                      output &quot;raw&quot; comments, leaving the markdown intact
+    -a, --api                      output markdown readme documentation
+    -s, --skipPrefixes [prefixes]  skip comments prefixed with these prefixes, separated by commas
+    -d, --debug                    output parsed comments for debugging
+    -S, --skipSingleStar           set to false to ignore `/* ... */` comments
+
+  Examples:
+
+    # stdin
+    $ dox &gt; myfile.json
+
+    # operates over stdio
+    $ dox &lt; myfile.js &gt; myfile.json
+</code></pre><h3>Programmatic Usage</h3>
+<pre><code class="lang-javascript">
+var dox = require(&#39;dox&#39;),
+    code = &quot;...&quot;;
+
+var obj = dox.parseComments(code);
+
+// [{ tags:[ ... ], description, ... }, { ... }, ...]
+</code></pre>
+<h2>Properties</h2>
+<p>  A &quot;comment&quot; is comprised of the following detailed properties:</p><pre><code>- tags
+- description
+- isPrivate
+- isEvent
+- isConstructor
+- line
+- ignore
+- code
+- ctx
+</code></pre><h3>Description</h3>
+<p>  A dox description is comprised of three parts, the &quot;full&quot; description,<br />  the &quot;summary&quot;, and the &quot;body&quot;. The following example has only a &quot;summary&quot;,<br />  as it consists of a single paragraph only, therefore the &quot;full&quot; property has<br />  only this value as well.</p><pre><code class="lang-js">/**
+ * Output the given `str` to _stdout_.
+ */
+
+exports.write = function(str) {
+  process.stdout.write(str);
+};
+`
+</code></pre>
+<p>yields:</p><pre><code class="lang-js">description:
+     { full: &#39;&lt;p&gt;Output the given &lt;code&gt;str&lt;/code&gt; to &lt;em&gt;stdout&lt;/em&gt;.&lt;/p&gt;&#39;,
+       summary: &#39;&lt;p&gt;Output the given &lt;code&gt;str&lt;/code&gt; to &lt;em&gt;stdout&lt;/em&gt;.&lt;/p&gt;&#39;,
+       body: &#39;&#39; },
+</code></pre>
+<p>  Large descriptions might look something like the following, where the &quot;summary&quot; is still the first paragraph, the remaining description becomes the &quot;body&quot;. Keep in mind this <em>is</em> markdown, so you can indent code, use lists, links, etc. Dox also augments markdown, allowing &quot;Some Title:\n&quot; to form a header.</p><pre><code class="lang-js">/**
+ * Output the given `str` to _stdout_
+ * or the stream specified by `options`.
+ *
+ * Options:
+ *
+ *   - `stream` defaulting to _stdout_
+ *
+ * Examples:
+ *
+ *     mymodule.write(&#39;foo&#39;)
+ *     mymodule.write(&#39;foo&#39;, { stream: process.stderr })
+ *
+ */
+
+exports.write = function(str, options) {
+  options = options || {};
+  (options.stream || process.stdout).write(str);
+};
+</code></pre>
+<p>yields:</p><pre><code class="lang-js">description:
+     { full: &#39;&lt;p&gt;Output the given &lt;code&gt;str&lt;/code&gt; to &lt;em&gt;stdout&lt;/em&gt;&lt;br /&gt;or the stream specified by &lt;code&gt;options&lt;/code&gt;.&lt;/p&gt;\n\n&lt;h2&gt;Options&lt;/h2&gt;\n\n&lt;ul&gt;\n&lt;li&gt;&lt;code&gt;stream&lt;/code&gt; defaulting to &lt;em&gt;stdout&lt;/em&gt;&lt;/li&gt;\n&lt;/ul&gt;\n\n&lt;h2&gt;Examples&lt;/h2&gt;\n\n&lt;pre&gt;&lt;code&gt;mymodule.write(\&#39;foo\&#39;)\nmymodule.write(\&#39;foo\&#39;, { stream: process.stderr })\n&lt;/code&gt;&lt;/pre&gt;&#39;,
+       summary: &#39;&lt;p&gt;Output the given &lt;code&gt;str&lt;/code&gt; to &lt;em&gt;stdout&lt;/em&gt;&lt;br /&gt;or the stream specified by &lt;code&gt;options&lt;/code&gt;.&lt;/p&gt;&#39;,
+       body: &#39;&lt;h2&gt;Options&lt;/h2&gt;\n\n&lt;ul&gt;\n&lt;li&gt;&lt;code&gt;stream&lt;/code&gt; defaulting to &lt;em&gt;stdout&lt;/em&gt;&lt;/li&gt;\n&lt;/ul&gt;\n\n&lt;h2&gt;Examples&lt;/h2&gt;\n\n&lt;pre&gt;&lt;code&gt;mymodule.write(\&#39;foo\&#39;)\nmymodule.write(\&#39;foo\&#39;, { stream: process.stderr })\n&lt;/code&gt;&lt;/pre&gt;&#39; }
+</code></pre>
+<h3>Tags</h3>
+<p>  Dox also supports JSdoc-style tags. Currently only <strong>@api</strong> is special-cased, providing the <code>comment.isPrivate</code> boolean so you may omit &quot;private&quot; utilities etc.</p><pre><code class="lang-js">
+/**
+ * Output the given `str` to _stdout_
+ * or the stream specified by `options`.
+ *
+ * @param {String} str
+ * @param {{stream: Writable}} options
+ * @return {Object} exports for chaining
+ */
+
+exports.write = function(str, options) {
+  options = options || {};
+  (options.stream || process.stdout).write(str);
+  return this;
+};
+</code></pre>
+<p>yields:</p><pre><code class="lang-js">tags:
+   [ { type: &#39;param&#39;,
+       types: [ &#39;String&#39; ],
+       name: &#39;str&#39;,
+       description: &#39;&#39; },
+     { type: &#39;param&#39;,
+       types: [ { stream: [&#39;Writable&#39;] } ],
+       name: &#39;options&#39;,
+       description: &#39;&#39; },
+     { type: &#39;return&#39;,
+       types: [ &#39;Object&#39; ],
+       description: &#39;exports for chaining&#39; },
+     { type: &#39;api&#39;,
+       visibility: &#39;public&#39; } ]
+</code></pre>
+<h4>Complex jsdoc tags</h4>
+<p>dox supports all jsdoc type strings specified in the <a href="http://usejsdoc.org/tags-type.html">jsdoc documentation</a>. You can<br />specify complex object types including optional flag <code>=</code>, nullable <code>?</code>, non-nullable <code>!</code> and variable arguments <code>...</code>.</p><p>Additionally you can use <code>typesDescription</code> which contains formatted HTML for displaying complex types.</p><pre><code class="lang-js">
+/**
+ * Generates a person information string based on input.
+ *
+ * @param {string | {name: string, age: number | date}} name Name or person object
+ * @param {{separator: string} =} options An options object
+ * @return {string} The constructed information string
+ */
+
+exports.generatePersonInfo = function(name, options) {
+  var str = &#39;&#39;;
+  var separator = options &amp;&amp; options.separator ? options.separator : &#39; &#39;;
+
+  if(typeof name === &#39;object&#39;) {
+    str = [name.name, &#39;(&#39;, name.age, &#39;)&#39;].join(separator);
+  } else {
+    str = name;
+  }
+};
+</code></pre>
+<p>yields:</p><pre><code class="lang-js">tags:
+[
+  {
+    &quot;tags&quot;: [
+      {
+        &quot;type&quot;: &quot;param&quot;,
+        &quot;name&quot;: &quot;name&quot;,
+        &quot;description&quot;: &quot;Name or person object&quot;,
+        &quot;types&quot;: [
+          &quot;string&quot;,
+          {
+            &quot;name&quot;: [
+              &quot;string&quot;
+            ],
+            &quot;age&quot;: [
+              &quot;number&quot;,
+              &quot;date&quot;
+            ]
+          }
+        ],
+        &quot;typesDescription&quot;: &quot;&lt;code&gt;string&lt;/code&gt;|{ name: &lt;code&gt;string&lt;/code&gt;, age: &lt;code&gt;number&lt;/code&gt;|&lt;code&gt;date&lt;/code&gt; }&quot;,
+        &quot;optional&quot;: false,
+        &quot;nullable&quot;: false,
+        &quot;nonNullable&quot;: false,
+        &quot;variable&quot;: false
+      },
+      {
+        &quot;type&quot;: &quot;param&quot;,
+        &quot;name&quot;: &quot;options&quot;,
+        &quot;description&quot;: &quot;An options object&quot;,
+        &quot;types&quot;: [
+          {
+            &quot;separator&quot;: [
+              &quot;string&quot;
+            ]
+          }
+        ],
+        &quot;typesDescription&quot;: &quot;{ separator: &lt;code&gt;string&lt;/code&gt; }|&lt;code&gt;undefined&lt;/code&gt;&quot;,
+        &quot;optional&quot;: true,
+        &quot;nullable&quot;: false,
+        &quot;nonNullable&quot;: false,
+        &quot;variable&quot;: false
+      },
+      {
+        &quot;type&quot;: &quot;return&quot;,
+        &quot;types&quot;: [
+          &quot;string&quot;
+        ],
+        &quot;typesDescription&quot;: &quot;&lt;code&gt;string&lt;/code&gt;&quot;,
+        &quot;optional&quot;: false,
+        &quot;nullable&quot;: false,
+        &quot;nonNullable&quot;: false,
+        &quot;variable&quot;: false,
+        &quot;description&quot;: &quot;The constructed information string&quot;
+      }
+    ]
+</code></pre>
+<h3>Code</h3>
+<p> The <code>.code</code> property is the code following the comment block, in our previous examples:</p><pre><code class="lang-js">exports.write = function(str, options) {
+  options = options || {};
+  (options.stream || process.stdout).write(str);
+  return this;
+};
+</code></pre>
+<h3>Ctx</h3>
+<p>  The <code>.ctx</code> object indicates the context of the code block, is it a method, a function, a variable etc. Below are some examples:</p><pre><code class="lang-js">exports.write = function(str, options) {
+};
+</code></pre>
+<p>yields:</p><pre><code class="lang-js">ctx:
+ { type: &#39;method&#39;,
+   receiver: &#39;exports&#39;,
+   name: &#39;write&#39;,
+   string: &#39;exports.write()&#39; } }
+</code></pre>
+<pre><code class="lang-js">var foo = &#39;bar&#39;;
+</code></pre>
+<p>yields:</p><pre><code class="lang-js">ctx:
+ { type: &#39;declaration&#39;,
+   name: &#39;foo&#39;,
+   value: &#39;\&#39;bar\&#39;&#39;,
+   string: &#39;foo&#39; }
+</code></pre>
+<pre><code class="lang-js">function User() {
+
+}
+</code></pre>
+<p>yields:</p><pre><code class="lang-js">ctx:
+ { type: &#39;function&#39;,
+   name: &#39;User&#39;,
+   string: &#39;User()&#39; } }
+</code></pre>
+<h3>Ignore</h3>
+<p>Comments and their associated bodies of code may be flagged with &quot;!&quot; to be considered worth ignoring, these are typically things like file comments containing copyright etc, however you of course can output them in your templates if you want.</p><pre><code>/**
+ * Not ignored.
+ */
+</code></pre><p>vs</p><pre><code>/*!
+ * Ignored.
+ */
+</code></pre><p>You may use <code>-S</code>, <code>--skipSingleStar</code> or <code>{skipSingleStar: true}</code> to ignore <code>/* ... */</code> comments.</p><h3>Running tests</h3>
+<p> Install dev dependencies and execute <code>make test</code>:</p><pre><code> $ npm install -d
+ $ make test
+</code></pre><h2>License</h2>
+<p>(The MIT License)</p><p>Copyright (c) 2011 TJ Holowaychuk &lt;tj@vision-media.ca&gt;</p><p>Permission is hereby granted, free of charge, to any person obtaining<br />a copy of this software and associated documentation files (the<br />&#39;Software&#39;), to deal in the Software without restriction, including<br />without limitation the rights to use, copy, modify, merge, publish,<br />distribute, sublicense, and/or sell copies of the Software, and to<br />permit persons to whom the Software is furnished to do so, subject to<br />the following conditions:</p><p>The above copyright notice and this permission notice shall be<br />included in all copies or substantial portions of the Software.</p><p>THE SOFTWARE IS PROVIDED &#39;AS IS&#39;, WITHOUT WARRANTY OF ANY KIND,<br />EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF<br />MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.<br />IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY<br />CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,<br />TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE<br />SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+      </section>
+  
+    </div>
+  </div>
+</div>
+      <footer class="footer">
+        <div class="container">
+          <p class="pull-right">
+            <a href="#">Back to top</a>
+          </p>
+          <p>此文档通过doxmate生成。主题借鉴Bootstrap API文档风格，注解基于<a href="https://github.com/visionmedia/dox">Dox</a>。欢迎关注doxmate作者<a href="http://weibo.com/shyvo" target="_blank">@朴灵</a></p>
+          <ul class="footer-links">
+            <li><a href="https://github.com/visionmedia/dox">Dox主页</a></li>
+            <li><a href="http://html5ify.com/doxmate">Doxmate主页</a></li>
+            <li><a href="https://github.com/JacksonTian/doxmate">Doxmate源码</a></li>
+            <li><a href="https://github.com/JacksonTian/doxmate/issues?state=open">提交bug</a></li>
+          </ul>
+      </div>
+    </footer>
+    <script>
+      $(function() {
+        $('pre').addClass('prettyprint');
+        $('td pre').removeClass('prettyprint');
+        prettyPrint();
+        var $window = $(window);
+        $('.bs-docs-sidenav').affix({
+          offset: {
+            top: function () {
+              return $window.width() <= 980 ? 290 : 210
+            },
+            bottom: 270
+          }
+        });
+        $(".content").find('h1, h2, h3, h4, h5, h6').each(function () {
+          var node = $(this);
+          // 总是设置id
+          node.attr("id", node.data('id') || "index_" + node.text());
+          node.css("paddingTop", 50);
+        });
+      });
+    </script>
+  
+  </body>
+</html>
+

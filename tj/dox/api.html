@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>dox Documentation</title>
+    <meta name="keywords" content="documentation,docs,markdown,jsdoc" />
+    <meta name="description" content="Markdown / JSdoc documentation generator" />
+    <script src="assets/prettify.js"></script>
+    <script src="assets/jquery-1.8.2.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/base.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./index.html">dox</a>
+        </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+          
+            <li>
+              <a href="./api.html">API Docs</a>
+            </li>
+          
+          
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <header class="jumbotron subhead">
+      <div class="container">
+        <h1>dox <small>Version: 0.6.1 By @TJ Holowaychuk &lt;tj@vision-media.ca&gt;</small></h1>
+        <p class="lead">
+          Markdown / JSdoc documentation generator
+        </p>
+      </div>
+    </header>
+
+<div class="container content">
+  <div class="row">
+    <div class="col-md-3 bs-docs-sidebar">
+      <ul class="nav nav-list bs-docs-sidenav affix">
+
+  <li>
+		<div class="accordion" id="api">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api" class="api_side_link">api</a>
+					<div class="accordion-marker" id="collapse_marker_api">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api" href="#collapse_api">
+							 <span id="toggle_api" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_module_exports">exports</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_api').on('click', function() {
+    	$('#toggle_api').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
+
+  <li>
+		<div class="accordion" id="dox">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_dox" class="api_side_link">dox</a>
+					<div class="accordion-marker" id="collapse_marker_dox">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#dox" href="#collapse_dox">
+							 <span id="toggle_dox" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_dox">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#dox_exports_api">api</a>
+						</li>
+					
+						<li>
+							<a href="#dox_exports_parseComments">parseComments</a>
+						</li>
+					
+						<li>
+							<a href="#dox_exports_trimIndentation">trimIndentation</a>
+						</li>
+					
+						<li>
+							<a href="#dox_exports_parseComment">parseComment</a>
+						</li>
+					
+						<li>
+							<a href="#dox_exports_extractTagParts">extractTagParts</a>
+						</li>
+					
+						<li>
+							<a href="#dox_exports_parseTag">parseTag</a>
+						</li>
+					
+						<li>
+							<a href="#dox_exports_parseTagTypes">parseTagTypes</a>
+						</li>
+					
+						<li>
+							<a href="#dox_exports_parseParamOptional">parseParamOptional</a>
+						</li>
+					
+						<li>
+							<a href="#dox_exports_parseCodeContext">parseCodeContext</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_dox').on('click', function() {
+    	$('#toggle_dox').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
+
+  <li>
+		<div class="accordion" id="utils">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_utils" class="api_side_link">utils</a>
+					<div class="accordion-marker" id="collapse_marker_utils">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#utils" href="#collapse_utils">
+							 <span id="toggle_utils" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_utils">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#utils_exports_escape">escape</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_utils').on('click', function() {
+    	$('#toggle_utils').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
+
+</ul>
+
+    </div>
+    <div class="col-md-9">
+      
+        <section id="api_api" class="api">
+  <h2>api: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#api_module_exports">exports</a>
+    </li>
+
+  </ul>
+  <hr />
+
+  
+  <h3 data-id="api_module_exports">
+    exports
+  </h3>
+  
+
+  
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td>module.exports()</td> 
+      <td>module</td>
+      <td>exports</td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
+        <section id="api_dox" class="api">
+  <h2>dox: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#dox_exports_api">api</a>
+    </li>
+
+    <li>
+      <a href="#dox_exports_parseComments">parseComments</a>
+    </li>
+
+    <li>
+      <a href="#dox_exports_trimIndentation">trimIndentation</a>
+    </li>
+
+    <li>
+      <a href="#dox_exports_parseComment">parseComment</a>
+    </li>
+
+    <li>
+      <a href="#dox_exports_extractTagParts">extractTagParts</a>
+    </li>
+
+    <li>
+      <a href="#dox_exports_parseTag">parseTag</a>
+    </li>
+
+    <li>
+      <a href="#dox_exports_parseTagTypes">parseTagTypes</a>
+    </li>
+
+    <li>
+      <a href="#dox_exports_parseParamOptional">parseParamOptional</a>
+    </li>
+
+    <li>
+      <a href="#dox_exports_parseCodeContext">parseCodeContext</a>
+    </li>
+
+  </ul>
+  <hr />
+
+  
+  <h3 data-id="dox_exports_api">
+    api
+  </h3>
+  
+
+  <p>Expose api.</p>
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>属性</td>
+      <td>exports.api</td> 
+      <td>exports</td>
+      <td>api</td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="dox_exports_parseComments">
+    parseComments
+  </h3>
+  
+
+  <p>Parse comments in the given string of <code>js</code>.</p>
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td>exports.parseComments()</td> 
+      <td>exports</td>
+      <td>parseComments</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>js(String)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>options(Object)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Array</td>
+      <td colspan="2"><pre></pre></td> </tr>
+  
+
+    <tr>
+      <td>undefined</td>
+      <td>undefined</td>
+      <td>undefined</td>
+      <td>undefined</td>
+    </tr>
+  
+
+    <tr>
+      <td>可见度</td>
+      <td colspan="3">public</td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="dox_exports_trimIndentation">
+    trimIndentation
+  </h3>
+  
+
+  <p>Removes excess indentation from string of code.</p>
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td>exports.trimIndentation()</td> 
+      <td>exports</td>
+      <td>trimIndentation</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>str(String)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>String</td>
+      <td colspan="2"><pre></pre></td> </tr>
+  
+
+    <tr>
+      <td>可见度</td>
+      <td colspan="3">public</td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="dox_exports_parseComment">
+    parseComment
+  </h3>
+  
+
+  <p>Parse the given comment <code>str</code>.</p><p>The comment object returned contains the following</p><ul>
+<li><code>tags</code>  array of tag objects</li>
+<li><code>description</code> the first line of the comment</li>
+<li><code>body</code> lines following the description</li>
+<li><code>content</code> both the description and the body</li>
+<li><code>isPrivate</code> true when &quot;@api private&quot; is used</li>
+</ul>
+
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td>exports.parseComment()</td> 
+      <td>exports</td>
+      <td>parseComment</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>str(String)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>options(Object)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Object</td>
+      <td colspan="2"><pre></pre></td> </tr>
+  
+
+    <tr>
+      <td>undefined</td>
+      <td>undefined</td>
+      <td>undefined</td>
+      <td>undefined</td>
+    </tr>
+  
+
+    <tr>
+      <td>可见度</td>
+      <td colspan="3">public</td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="dox_exports_extractTagParts">
+    extractTagParts
+  </h3>
+  
+
+  <p>Extracts different parts of a tag by splitting string into pieces separated by whitespace. If the white spaces are<br />somewhere between curly braces (which is used to indicate param/return type in JSDoc) they will not be used to split<br />the string. This allows to specify jsdoc tags without the need to eliminate all white spaces i.e. {number | string}</p>
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td>exports.extractTagParts()</td> 
+      <td>exports</td>
+      <td>extractTagParts</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>The(str)</td>
+      <td colspan="2">tag line as a string that needs to be split into parts</td>
+    </tr>
+  
+
+    <tr>
+      <td>undefined</td>
+      <td>Array.&lt;string&gt;</td>
+      <td>undefined</td>
+      <td>An array of strings containing the parts</td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="dox_exports_parseTag">
+    parseTag
+  </h3>
+  
+
+  <p>Parse tag string &quot;@param {Array} name description&quot; etc.</p>
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td>exports.parseTag()</td> 
+      <td>exports</td>
+      <td>parseTag</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>(String)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Object</td>
+      <td colspan="2"><pre></pre></td> </tr>
+  
+
+    <tr>
+      <td>可见度</td>
+      <td colspan="3">public</td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="dox_exports_parseTagTypes">
+    parseTagTypes
+  </h3>
+  
+
+  <p>Parse tag type string &quot;{Array|Object}&quot; etc.<br />This function also supports complex type descriptors like in jsDoc or even the enhanced syntax used by the<br /><a href="https://developers.google.com/closure/compiler/docs/js-for-compiler#types">google closure compiler</a></p><p>The resulting array from the type descriptor <code>{number|string|{name:string,age:number|date}}</code> would look like this:</p><pre><code>[
+  &#39;number&#39;,
+  &#39;string&#39;,
+  {
+    age: [&#39;number&#39;, &#39;date&#39;],
+    name: [&#39;string&#39;]
+  }
+]
+</code></pre>
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td>exports.parseTagTypes()</td> 
+      <td>exports</td>
+      <td>parseTagTypes</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>str(String)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Array</td>
+      <td colspan="2"><pre></pre></td> </tr>
+  
+
+    <tr>
+      <td>可见度</td>
+      <td colspan="3">public</td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="dox_exports_parseParamOptional">
+    parseParamOptional
+  </h3>
+  
+
+  <p>Determine if a parameter is optional.</p><p>Examples:<br />JSDoc: {Type} [name]<br />Google: {Type=} name<br />TypeScript: {Type?} name</p>
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td>exports.parseParamOptional()</td> 
+      <td>exports</td>
+      <td>parseParamOptional</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>tag(Object)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Boolean</td>
+      <td colspan="2"><pre></pre></td> </tr>
+  
+
+    <tr>
+      <td>可见度</td>
+      <td colspan="3">public</td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="dox_exports_parseCodeContext">
+    parseCodeContext
+  </h3>
+  
+
+  <p>Parse the context from the given <code>str</code> of js.</p><p>This method attempts to discover the context<br />for the comment based on it&#39;s code. Currently<br />supports:</p><ul>
+<li>function statements</li>
+<li>function expressions</li>
+<li>prototype methods</li>
+<li>prototype properties</li>
+<li>methods</li>
+<li>properties</li>
+<li>declarations</li>
+</ul>
+
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td>exports.parseCodeContext()</td> 
+      <td>exports</td>
+      <td>parseCodeContext</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>str(String)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>parentContext(Object=)</td>
+      <td colspan="2">An indication if we are already in something. Like a namespace or an inline declaration.</td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Object</td>
+      <td colspan="2"><pre></pre></td> </tr>
+  
+
+    <tr>
+      <td>可见度</td>
+      <td colspan="3">public</td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
+        <section id="api_utils" class="api">
+  <h2>utils: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#utils_exports_escape">escape</a>
+    </li>
+
+  </ul>
+  <hr />
+
+  
+  <h3 data-id="utils_exports_escape">
+    escape
+  </h3>
+  
+
+  <p>Escape the given <code>html</code>.</p>
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td>exports.escape()</td> 
+      <td>exports</td>
+      <td>escape</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>html(String)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>String</td>
+      <td colspan="2"><pre></pre></td> </tr>
+  
+
+    <tr>
+      <td>可见度</td>
+      <td colspan="3">private</td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
+    </div>
+  </div>
+</div>
+      <footer class="footer">
+        <div class="container">
+          <p class="pull-right">
+            <a href="#">Back to top</a>
+          </p>
+          <p>此文档通过doxmate生成。主题借鉴Bootstrap API文档风格，注解基于<a href="https://github.com/visionmedia/dox">Dox</a>。欢迎关注doxmate作者<a href="http://weibo.com/shyvo" target="_blank">@朴灵</a></p>
+          <ul class="footer-links">
+            <li><a href="https://github.com/visionmedia/dox">Dox主页</a></li>
+            <li><a href="http://html5ify.com/doxmate">Doxmate主页</a></li>
+            <li><a href="https://github.com/JacksonTian/doxmate">Doxmate源码</a></li>
+            <li><a href="https://github.com/JacksonTian/doxmate/issues?state=open">提交bug</a></li>
+          </ul>
+      </div>
+    </footer>
+    <script>
+      $(function() {
+        $('pre').addClass('prettyprint');
+        $('td pre').removeClass('prettyprint');
+        prettyPrint();
+        var $window = $(window);
+        $('.bs-docs-sidenav').affix({
+          offset: {
+            top: function () {
+              return $window.width() <= 980 ? 290 : 210
+            },
+            bottom: 270
+          }
+        });
+        $(".content").find('h1, h2, h3, h4, h5, h6').each(function () {
+          var node = $(this);
+          // 总是设置id
+          node.attr("id", node.data('id') || "index_" + node.text());
+          node.css("paddingTop", 50);
+        });
+      });
+    </script>
+  
+  </body>
+</html>
+
