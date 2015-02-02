@@ -38,7 +38,7 @@
     </nav>
     <header class="jumbotron subhead">
       <div class="container">
-        <h1>wechat-api <small>Version: 1.5.0 By @Jackson Tian</small></h1>
+        <h1>wechat-api <small>Version: 1.6.0 By @Jackson Tian</small></h1>
         <p class="lead">
           微信公共平台Node库 API
         </p>
@@ -49,6 +49,34 @@
   <div class="row">
     <div class="col-md-3 bs-docs-sidebar">
       <ul class="nav nav-list bs-docs-sidenav affix">
+
+  <li>
+		<div class="accordion" id="api_card">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_card" class="api_side_link">api_card</a>
+					<div class="accordion-marker" id="collapse_marker_api_card">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_card" href="#collapse_api_card">
+							 <span id="toggle_api_card" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_card">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_api_card').on('click', function() {
+    	$('#toggle_api_card').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
 
   <li>
 		<div class="accordion" id="api_common">
@@ -171,6 +199,38 @@
   <script type="text/javascript">
     $('#collapse_marker_api_datacube').on('click', function() {
     	$('#toggle_api_datacube').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
+
+  <li>
+		<div class="accordion" id="api_device">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_device" class="api_side_link">api_device</a>
+					<div class="accordion-marker" id="collapse_marker_api_device">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_device" href="#collapse_api_device">
+							 <span id="toggle_api_device" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_device">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_device__util">util</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_api_device').on('click', function() {
+    	$('#toggle_api_device').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
     });
   </script>
 
@@ -311,6 +371,10 @@
 					
 						<li>
 							<a href="#api_js_exports_getJsConfig">getJsConfig</a>
+						</li>
+					
+						<li>
+							<a href="#api_js_exports_getLatestTicket">getLatestTicket</a>
 						</li>
 					
 					</ul>
@@ -1091,6 +1155,50 @@
     </div>
     <div class="col-md-9">
       
+        <section id="api_api_card" class="api">
+  <h2>api_card: API索引</h2>
+  <ul class="indexs">
+  
+  </ul>
+  <hr />
+
+  
+
+  <p>上传Logo<br />Examples:</p><pre><code>api.uploadLogo(&#39;filepath&#39;, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+ &quot;errcode&quot;:0,
+ &quot;errmsg&quot;:&quot;ok&quot;,
+ &quot;url&quot;:&quot;http://mmbiz.qpic.cn/mmbiz/iaL1LJM1mF9aRKPZJkmG8xXhiaHqkKSVMMWeN3hLut7X7hicFNjakmxibMLGWpXrEXB33367o7zHN0CwngnQY7zb7g/0&quot;
+}
+</code></pre>
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+
+    <tr>
+      <td>参数</td>
+      <td>filepath(String)</td>
+      <td colspan="2">文件路径</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2">回调函数</td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
         <section id="api_api_common" class="api">
   <h2>api_common: API索引</h2>
   <ul class="indexs">
@@ -1131,7 +1239,7 @@
 <p>Tips:</p><ul>
 <li>如果跨机器运行wechat模块，需要注意同步机器之间的系统时间。</li>
 </ul>
-<p>Examples:</p><pre><code>var API = require(&#39;wechat&#39;).API;
+<p>Examples:</p><pre><code>var API = require(&#39;wechat-api&#39;);
 var api = new API(&#39;appid&#39;, &#39;secret&#39;);
 </code></pre><p>以上即可满足单进程使用。<br />当多进程时，token需要全局维护，以下为保存token的接口。</p><pre><code>var api = new API(&#39;appid&#39;, &#39;secret&#39;, function (callback) {
   // 传入一个获取全局token的方法
@@ -1689,6 +1797,41 @@ api.getInterfaceSummaryHour(startDate, endDate, callback); // 获取接口分析
 </section>
 
       
+        <section id="api_api_device" class="api">
+  <h2>api_device: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#api_device__util">util</a>
+    </li>
+
+  </ul>
+  <hr />
+
+  
+  <h3 data-id="api_device__util">
+    util
+  </h3>
+  
+
+  
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>声明</td>
+      <td>util</td> 
+      <td></td>
+      <td>util</td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
         <section id="api_api_feedback" class="api">
   <h2>api_feedback: API索引</h2>
   <ul class="indexs">
@@ -2069,6 +2212,10 @@ api.getInterfaceSummaryHour(startDate, endDate, callback); // 获取接口分析
       <a href="#api_js_exports_getJsConfig">getJsConfig</a>
     </li>
 
+    <li>
+      <a href="#api_js_exports_getLatestTicket">getLatestTicket</a>
+    </li>
+
   </ul>
   <hr />
 
@@ -2080,15 +2227,15 @@ api.getInterfaceSummaryHour(startDate, endDate, callback); // 获取接口分析
 
   <p>多台服务器负载均衡时，ticketToken需要外部存储共享。<br />需要调用此registerTicketHandle来设置获取和保存的自定义方法。</p><p>Examples:</p><pre><code>api.registerTicketHandle(getTicketToken, saveTicketToken);
 // getTicketToken
-function getTicketToken(callback) {
- settingModel.getItem({key: &#39;weixin_ticketToken&#39;}, function (err, setting) {
+function getTicketToken(type, callback) {
+ settingModel.getItem(type, {key: &#39;weixin_ticketToken&#39;}, function (err, setting) {
    if (err) return callback(err);
    callback(null, setting.value);
  });
 }
 // saveTicketToken
-function saveTicketToken(_ticketToken, callback) {
- settingModel.setItem({key:&#39;weixin_ticketToken&#39;, value: ticketToken}, function (err) {
+function saveTicketToken(type, _ticketToken, callback) {
+ settingModel.setItem(type, {key:&#39;weixin_ticketToken&#39;, value: ticketToken}, function (err) {
    if (err) return callback(err);
    callback(null);
  });
@@ -2167,11 +2314,11 @@ function saveTicketToken(_ticketToken, callback) {
   
 
   <p>获取微信JS SDK Config的所需参数</p><p>Examples:</p><pre><code>var param = {
- debug:false,
+ debug: false,
  jsApiList: [&#39;onMenuShareTimeline&#39;, &#39;onMenuShareAppMessage&#39;],
  url: &#39;http://www.xxx.com&#39;
 };
-api.getJsConfig(, callback);
+api.getJsConfig(param, callback);
 </code></pre><p>Callback:</p><ul>
 <li><code>err</code>, 调用失败时得到的异常</li>
 <li><code>result</code>, 调用正常时得到的js sdk config所需参数</li>
@@ -2192,6 +2339,39 @@ api.getJsConfig(, callback);
       <td>参数</td>
       <td>param(Object)</td>
       <td colspan="2">参数</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2">回调函数</td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="api_js_exports_getLatestTicket">
+    getLatestTicket
+  </h3>
+  
+
+  <p>获取最新的js api ticket</p><p>Examples:</p><pre><code>api.getLatestTicket(callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 获取js api ticket出现异常时的异常对象</li>
+<li><code>ticket</code>, 获取的ticket</li>
+</ul>
+
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td>exports.getLatestTicket()</td> 
+      <td>exports</td>
+      <td>getLatestTicket</td>
     </tr>
   
 
