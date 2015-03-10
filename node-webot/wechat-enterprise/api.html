@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="assets/base.css" />
   </head>
   <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-inverse navbar-static-top top-navbar" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -59,9 +59,9 @@
 			<div class="accordion-group">
 				<div class="accordion-heading">
 					<a href="#api_list" class="api_side_link">list</a>
-					<div class="accordion-marker" id="collapse_marker_list">
+					<div class="accordion-marker">
 						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#list" href="#collapse_list">
-							 <span id="toggle_list" class="glyphicon glyphicon-chevron-right"></span>
+							 <span class="glyphicon glyphicon-chevron-right"></span>
 						</a>
 					</div>
 				</div>
@@ -95,21 +95,15 @@
 			</div>
 		</div>
   </li>
-  
-  <script type="text/javascript">
-    $('#collapse_marker_list').on('click', function() {
-    	$('#toggle_list').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
-    });
-  </script>
 
   <li>
 		<div class="accordion" id="session">
 			<div class="accordion-group">
 				<div class="accordion-heading">
 					<a href="#api_session" class="api_side_link">session</a>
-					<div class="accordion-marker" id="collapse_marker_session">
+					<div class="accordion-marker">
 						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#session" href="#collapse_session">
-							 <span id="toggle_session" class="glyphicon glyphicon-chevron-right"></span>
+							 <span class="glyphicon glyphicon-chevron-right"></span>
 						</a>
 					</div>
 				</div>
@@ -135,21 +129,15 @@
 			</div>
 		</div>
   </li>
-  
-  <script type="text/javascript">
-    $('#collapse_marker_session').on('click', function() {
-    	$('#toggle_session').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
-    });
-  </script>
 
   <li>
 		<div class="accordion" id="util">
 			<div class="accordion-group">
 				<div class="accordion-heading">
 					<a href="#api_util" class="api_side_link">util</a>
-					<div class="accordion-marker" id="collapse_marker_util">
+					<div class="accordion-marker">
 						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#util" href="#collapse_util">
-							 <span id="toggle_util" class="glyphicon glyphicon-chevron-right"></span>
+							 <span class="glyphicon glyphicon-chevron-right"></span>
 						</a>
 					</div>
 				</div>
@@ -163,21 +151,15 @@
 			</div>
 		</div>
   </li>
-  
-  <script type="text/javascript">
-    $('#collapse_marker_util').on('click', function() {
-    	$('#toggle_util').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
-    });
-  </script>
 
   <li>
 		<div class="accordion" id="wechat-enterprise">
 			<div class="accordion-group">
 				<div class="accordion-heading">
 					<a href="#api_wechat-enterprise" class="api_side_link">wechat-enterprise</a>
-					<div class="accordion-marker" id="collapse_marker_wechat-enterprise">
+					<div class="accordion-marker">
 						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#wechat-enterprise" href="#collapse_wechat-enterprise">
-							 <span id="toggle_wechat-enterprise" class="glyphicon glyphicon-chevron-right"></span>
+							 <span class="glyphicon glyphicon-chevron-right"></span>
 						</a>
 					</div>
 				</div>
@@ -211,12 +193,6 @@
 			</div>
 		</div>
   </li>
-  
-  <script type="text/javascript">
-    $('#collapse_marker_wechat-enterprise').on('click', function() {
-    	$('#toggle_wechat-enterprise').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
-    });
-  </script>
 
 </ul>
 
@@ -258,13 +234,12 @@
 
   <p>回复列表类型</p>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>函数</td>
-      <td>List()</td> 
-      <td></td>
-      <td>List</td>
+      <td colspan="3">List()</td> 
     </tr>
   
 
@@ -279,20 +254,19 @@
 
   <p>从List对象中根据key取出对应的handler</p>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>List.prototype.get()</td> 
-      <td></td>
-      <td>get</td>
+      <td colspan="3">List.prototype.get()</td> 
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>key(String)</td>
-      <td colspan="2">列表中的关键词</td>
+      <td colspan="2"><p>列表中的关键词</p></td>
     </tr>
   
 
@@ -307,27 +281,26 @@
 
   <p>静态方法，根据items生成List对象，并放置到缓存中</p>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>List.add()</td> 
-      <td>List</td>
-      <td>add</td>
+      <td colspan="3">List.add()</td> 
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>name(String)</td>
-      <td colspan="2">列表名字</td>
+      <td colspan="2"><p>列表名字</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>items(Array)</td>
-      <td colspan="2">元素列表</td>
+      <td colspan="2"><p>元素列表</p></td>
     </tr>
   
 
@@ -342,20 +315,19 @@
 
   <p>静态方法，从缓存中根据名字取出List对象</p>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>List.get()</td> 
-      <td>List</td>
-      <td>get</td>
+      <td colspan="3">List.get()</td> 
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>name(String)</td>
-      <td colspan="2">列表名字</td>
+      <td colspan="2"><p>列表名字</p></td>
     </tr>
   
 
@@ -370,20 +342,19 @@
 
   <p>静态方法，清空缓存的所有的List对象</p>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>List.clear()</td> 
-      <td>List</td>
-      <td>clear</td>
+      <td colspan="3">List.clear()</td> 
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>name(String)</td>
-      <td colspan="2">列表名字</td>
+      <td colspan="2"><p>列表名字</p></td>
     </tr>
   
 
@@ -420,34 +391,33 @@
 
   <p>Session构造函数，用于与Connect的Session中间件集成的会话脚本</p>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>函数</td>
-      <td>Session()</td> 
-      <td></td>
-      <td>Session</td>
+      <td colspan="3">Session()</td> 
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>id(String)</td>
-      <td colspan="2">Session ID</td>
+      <td colspan="2"><p>Session ID</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>req(Object)</td>
-      <td colspan="2">Connect中的请求对象</td>
+      <td colspan="2"><p>Connect中的请求对象</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>data(Object)</td>
-      <td colspan="2">可选的其余数据，将被合并进Session对象中</td>
+      <td colspan="2"><p>可选的其余数据，将被合并进Session对象中</p></td>
     </tr>
   
 
@@ -465,20 +435,19 @@
 </ul>
 
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>Session.prototype.save()</td> 
-      <td></td>
-      <td>save</td>
+      <td colspan="3">Session.prototype.save()</td> 
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>callback(Function)</td>
-      <td colspan="2">保存Session的回调函数</td>
+      <td colspan="2"><p>保存Session的回调函数</p></td>
     </tr>
   
 
@@ -496,20 +465,19 @@
 </ul>
 
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>Session.prototype.destroy()</td> 
-      <td></td>
-      <td>destroy</td>
+      <td colspan="3">Session.prototype.destroy()</td> 
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>callback(Function)</td>
-      <td colspan="2">从存储中删除Session数据后的回调函数</td>
+      <td colspan="2"><p>从存储中删除Session数据后的回调函数</p></td>
     </tr>
   
 
@@ -564,35 +532,31 @@
 
   <p>微信自动回复平台的内部的Handler对象</p>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>函数</td>
-      <td>Handler()</td> 
-      <td></td>
-      <td>Handler</td>
+      <td colspan="3">Handler()</td> 
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>config(Object)</td>
-      <td colspan="2">企业号的开发者配置对象</td>
+      <td colspan="2"><p>企业号的开发者配置对象</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>handle(Function)</td>
-      <td colspan="2">handle对象 
-config:
-```
-{
+      <td colspan="2"><p>handle对象<br />config:</p><pre><code>{
   token: &#39;&#39;,          // 公众平台上，开发者设置的Token
   encodingAESKey: &#39;&#39;, // 公众平台上，开发者设置的EncodingAESKey
   corpId: &#39;&#39;,         // 企业号的CorpId
 }
-```</td>
+</code></pre></td>
     </tr>
   
 
@@ -616,27 +580,26 @@ config:
 </ul>
 
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>Handler.prototype.setHandler()</td> 
-      <td></td>
-      <td>setHandler</td>
+      <td colspan="3">Handler.prototype.setHandler()</td> 
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>type(String)</td>
-      <td colspan="2">handler处理的消息类型</td>
+      <td colspan="2"><p>handler处理的消息类型</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>handle(Function)</td>
-      <td colspan="2">handle对象</td>
+      <td colspan="2"><p>handle对象</p></td>
     </tr>
   
 
@@ -651,20 +614,19 @@ config:
 
   <p>根据消息类型取出handler对象</p>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>Handler.prototype.getHandler()</td> 
-      <td></td>
-      <td>getHandler</td>
+      <td colspan="3">Handler.prototype.getHandler()</td> 
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>type(String)</td>
-      <td colspan="2">消息类型</td>
+      <td colspan="2"><p>消息类型</p></td>
     </tr>
   
 
@@ -679,13 +641,12 @@ config:
 
   <p>根据Handler对象生成响应方法，并最终生成中间件函数</p>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>Handler.prototype.middlewarify()</td> 
-      <td></td>
-      <td>middlewarify</td>
+      <td colspan="3">Handler.prototype.middlewarify()</td> 
     </tr>
   
 
@@ -723,27 +684,26 @@ wechat(config)
 </ul>
 
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>函数</td>
-      <td>middleware()</td> 
-      <td></td>
-      <td>middleware</td>
+      <td colspan="3">middleware()</td> 
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>config(Object)</td>
-      <td colspan="2">企业号的开发者配置对象</td>
+      <td colspan="2"><p>企业号的开发者配置对象</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>handle(Function)</td>
-      <td colspan="2">生成的回调函数，参见示例</td>
+      <td colspan="2"><p>生成的回调函数，参见示例</p></td>
     </tr>
   
 
@@ -776,19 +736,28 @@ wechat(config)
         $('td pre').removeClass('prettyprint');
         prettyPrint();
         var $window = $(window);
-        $('.bs-docs-sidenav').affix({
-          offset: {
-            top: function () {
-              return $window.width() <= 980 ? 290 : 210
-            },
-            bottom: 270
-          }
-        });
+        var sidenav = $('.bs-docs-sidenav');
+        if (sidenav.height() < window.innerHeight) {
+          sidenav.affix({
+            offset: {
+              top: function () {
+                return $window.width() <= 980 ? 290 : 210
+              },
+              bottom: 200
+            }
+          });
+        } else {
+          sidenav.removeClass('affix');
+        }
         $(".content").find('h1, h2, h3, h4, h5, h6').each(function () {
           var node = $(this);
           // 总是设置id
           node.attr("id", node.data('id') || "index_" + node.text());
-          node.css("paddingTop", 50);
+        });
+
+        $('.bs-docs-sidenav .accordion-marker').on('click', function(event) {
+          var current = $(event.currentTarget);
+          current.find('.glyphicon').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
         });
       });
     </script>
