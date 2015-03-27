@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>loader Documentation</title>
+    <meta name="keywords" content="Loader" />
+    <meta name="description" content="Assets loader." />
+    <script src="assets/prettify.js"></script>
+    <script src="assets/jquery-1.8.2.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/base.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-static-top top-navbar" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./index.html">loader</a>
+        </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+          
+            <li>
+              <a href="./api.html">API Docs</a>
+            </li>
+          
+          
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <header class="jumbotron subhead">
+      <div class="container">
+        <h1>loader <small>Version: 0.1.6 By @Jackson Tian</small></h1>
+        <p class="lead">
+          Assets loader.
+        </p>
+      </div>
+    </header>
+
+<div class="container content">
+  <div class="row">
+  	<div class="col-md-3">
+      <ul class="nav nav-list bs-docs-sidenav affix">
+
+  <li class="level_2">
+    <a href="#index_Installation" title="Installation">
+      <i class="icon-chevron-right"></i>Installation
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_Example" title="Example">
+      <i class="icon-chevron-right"></i>Example
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_构建" title="构建">
+      <i class="icon-chevron-right"></i>构建
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_流程" title="流程">
+      <i class="icon-chevron-right"></i>流程
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_API" title="API">
+      <i class="icon-chevron-right"></i>API
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_LESS支持" title="LESS支持">
+      <i class="icon-chevron-right"></i>LESS支持
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_Stylus支持" title="Stylus支持">
+      <i class="icon-chevron-right"></i>Stylus支持
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_CoffeeScript支持" title="CoffeeScript支持">
+      <i class="icon-chevron-right"></i>CoffeeScript支持
+    </a>
+  </li>
+
+</ul>
+
+    </div>
+    <div class="col-md-9">
+      <section>
+        <h1>loader <a href="http://travis-ci.org/JacksonTian/loader"><img src="https://secure.travis-ci.org/JacksonTian/loader.png?branch=master" alt="Build Status"></a> <a href="https://coveralls.io/r/JacksonTian/loader"><img src="https://coveralls.io/repos/JacksonTian/loader/badge.png" alt="Coverage Status"></a></h1>
+<p>Node静态资源加载器。该模块通过两个步骤配合完成，代码部分根据环境生成标签。上线时，需要调用minify方法进行静态资源的合并和压缩。</p><h1>Usage</h1>
+<h2>Installation</h2>
+<pre><code class="lang-bash">$ npm install loader
+</code></pre>
+<h2>Example</h2>
+<p>Controller:</p><pre><code class="lang-js">res.render(tpl, {
+  Loader: require(&#39;loader&#39;)
+});
+</code></pre>
+<p>View:</p><pre><code class="lang-html">&lt;%- Loader(&quot;/assets/scripts/jqueryplugin.js&quot;, &quot;/assets/styles/jqueryplugin.css&quot;)
+  .js(&quot;/assets/scripts/lib/jquery.jmodal.js&quot;)
+  .js(&quot;/assets/scripts/lib/jquery.mousewheel.js&quot;)
+  .js(&quot;/assets/scripts/lib/jquery.tagsphere.js&quot;)
+  .css(&quot;/assets/styles/jquery.autocomplate.css&quot;)
+  .done(assetsMap, prefix, combo) %&gt;
+</code></pre>
+<h3>环境判别</h3>
+<p>环境判别由<code>done</code>方法的第三个参数决定，如果传入combo值，将决定选用线下版本还是线上版本。如果不传入第三个参数，将由环境变量。如下代码实现：</p><pre><code>process.env.NODE_ENV === &#39;production&#39;
+</code></pre><p>如果不传入combo，需要设置环境，通过以下代码实现：</p><pre><code># 生产环境
+export NODE_ENV=&quot;production&quot;
+# 开发环境
+export NODE_ENV=&quot;dev&quot;
+</code></pre><p>可切换进<code>example</code>目录运行示例代码：</p><pre><code>$ npm start
+</code></pre><h3>线上输出</h3>
+<p>线上模式将会输出合并和压缩后的地址，该地址从Loader构造参数中得到。</p><pre><code class="lang-html">&lt;script src=&quot;/assets/scripts/jqueryplugin.md5_hash.js&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/assets/styles/jqueryplugin.md5_hash.css&quot; media=&quot;all&quot; /&gt;
+</code></pre>
+<p>如果你有CDN地址，可以传入prefix参数，使得可以一键切换到CDN地址上，实现网络加速。以下为结果示例：</p><pre><code class="lang-html">&lt;script src=&quot;http://cnodejs.qiniudn.com/assets/scripts/jqueryplugin.md5_hash.js&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;http://cnodejs.qiniudn.com/assets/styles/jqueryplugin.css&quot; media=&quot;all&quot; /&gt;
+</code></pre>
+<h3>线下输出</h3>
+<p>线下模式输出为原始的文件地址。</p><pre><code class="lang-html">&lt;script src=&quot;/assets/scripts/lib/jquery.jmodal.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/assets/scripts/lib/jquery.mousewheel.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/assets/scripts/lib/jquery.tagsphere.js&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/assets/styles/jquery.autocomplate.css&quot; media=&quot;all&quot; /&gt;
+</code></pre>
+<h2>构建</h2>
+<p>上文没有提及的重要值是<code>assetsMap</code>，这个值需要通过构建产生，类似如下格式：</p><pre><code class="lang-json">{
+  &quot;/assets/index.min.js&quot;:&quot;/assets/index.min.ecf8427e.js&quot;,
+  &quot;/assets/index.min.css&quot;:&quot;/assets/index.min.f2fdeab1.css&quot;
+}
+</code></pre>
+<p>如果需要线上执行，需要该对象的传入。而该对象需要通过以下构建脚本来生成</p><pre><code>./node_modules/loader/bin/build &lt;views_dir&gt; &lt;output_dir&gt;
+</code></pre><p>以上脚本将会遍历视图目录中寻找<code>Loader().js().css().done()</code>这样的标记，然后得到合并文件与实际文件的关系。如以上的<code>assets/index.min.js</code>文件并不一定需要真正存在，进行扫描构建后，会将相关的<code>js</code>文件进行编译和合并为一个文件。<br />并且根据文件内容进行md5取hash值，最终生成<code>/assets/index.min.ecf8427e.js</code>这样的文件。</p><p>遍历完目录后，将这些映射关系生成为<code>assets.json</code>文件，这个文件位于<code>&lt;output_dir&gt;</code>指定的目录下。使用时请正确引入该文件。具体请参见<code>example</code>目录下的代码示例。</p><h2>流程</h2>
+<p><img src="./figures/flow.png" alt="流程"></p><h2>API</h2>
+<p>请参见<a href="http://doxmate.cool/JacksonTian/loader/api.html">API文档</a>。</p><h2>LESS支持</h2>
+<p>Loader中支持<code>.less</code>文件与普通的<code>.css</code>文件没有差别，通过<code>.css()</code>加载即可。</p><pre><code>&lt;%- Loader(&quot;/assets/styles/jqueryplugin.min.css&quot;)
+  .css(&quot;/assets/styles/jquery.autocomplate.css&quot;)
+  .css(&quot;/assets/styles/bootstrap.less&quot;)
+  .done(assetsMap, prefix, combo) %&gt;
+</code></pre><p>默认情况下会输出<code>.less</code>的原始内容，需要借助<code>Loader.less(root)</code>中间来拦截<code>.less</code>文件的请求，它将自动将其转换为CSS内容。示例如下：</p><pre><code>app.use(Loader.less(__dirname)); // Loader.less一定要在静态文件中间件之前，否则.less文件会被静态文件中间件所处理
+app.use(&#39;/assets&#39;, connect.static(__dirname + &#39;/assets&#39;, { maxAge: 3600000 * 24 * 365 }));
+</code></pre><p>在扫描静态文件、合并压缩方面，没有任何改动。</p><h2>Stylus支持</h2>
+<p>基本同LESS。Loader中支持<code>.styl</code>文件与普通的<code>.css</code>文件没有差别，通过<code>.css()</code>加载即可。</p><pre><code>&lt;%- Loader(&quot;/assets/styles/jqueryplugin.min.css&quot;)
+  .css(&quot;/assets/styles/jquery.autocomplate.css&quot;)
+  .css(&quot;/assets/styles/bootstrap.styl&quot;)
+  .done(assetsMap, prefix, combo) %&gt;
+</code></pre><p>默认情况下会输出styl的原始内容，需要借助<code>Loader.stylus(root)</code>中间来拦截<code>.styl</code>文件的请求，它将自动将其转换为CSS内容。示例如下：</p><pre><code>app.use(Loader.stylus(__dirname)); // Loader.stylus一定要在静态文件中间件之前，否则.styl文件会被静态文件中间件所处理
+app.use(&#39;/assets&#39;, connect.static(__dirname + &#39;/assets&#39;, { maxAge: 3600000 * 24 * 365 }));
+</code></pre><p>在扫描静态文件、合并压缩方面，没有任何改动。</p><h2>CoffeeScript支持</h2>
+<p>基本同LESS。Loader中支持<code>.coffee</code>文件与普通的<code>.js</code>文件没有差别，通过<code>.js()</code>加载即可。</p><pre><code>&lt;%- Loader(&quot;/assets/home.js&quot;)
+  .js(&quot;/assets/home.coffee&quot;)
+  .done(assetsMap, prefix, combo) %&gt;
+</code></pre><p>默认情况下会输出<code>.coffee</code>的原始内容，需要借助<code>Loader.coffee(root)</code>中间来拦截<code>.coffee</code>文件的请求，它将自动将其转换为JS内容。示例如下：</p><pre><code>app.use(Loader.coffee(__dirname)); // Loader.coffee一定要在静态文件中间件之前，否则.coffee文件会被静态文件中间件所处理
+app.use(&#39;/assets&#39;, connect.static(__dirname + &#39;/assets&#39;, { maxAge: 3600000 * 24 * 365 }));
+</code></pre><p>在扫描静态文件、合并压缩方面，没有任何改动。</p><h1>License</h1>
+<p><a href="https://github.com/JacksonTian/loader/blob/master/MIT-License">MIT license</a></p>
+      </section>
+  
+    </div>
+  </div>
+</div>
+      <footer class="footer">
+        <div class="container">
+          <p class="pull-right">
+            <a href="#">Back to top</a>
+          </p>
+          <p>此文档通过doxmate生成。主题借鉴Bootstrap API文档风格，注解基于<a href="https://github.com/visionmedia/dox">Dox</a>。欢迎关注doxmate作者<a href="http://weibo.com/shyvo" target="_blank">@朴灵</a></p>
+          <ul class="footer-links">
+            <li><a href="https://github.com/visionmedia/dox">Dox主页</a></li>
+            <li><a href="http://html5ify.com/doxmate">Doxmate主页</a></li>
+            <li><a href="https://github.com/JacksonTian/doxmate">Doxmate源码</a></li>
+            <li><a href="https://github.com/JacksonTian/doxmate/issues?state=open">提交bug</a></li>
+          </ul>
+      </div>
+    </footer>
+    <script>
+      $(function() {
+        $('pre').addClass('prettyprint');
+        $('td pre').removeClass('prettyprint');
+        prettyPrint();
+        var $window = $(window);
+        var sidenav = $('.bs-docs-sidenav');
+        if (sidenav.height() < window.innerHeight) {
+          sidenav.affix({
+            offset: {
+              top: function () {
+                return $window.width() <= 980 ? 290 : 210
+              },
+              bottom: 200
+            }
+          });
+        } else {
+          sidenav.removeClass('affix');
+        }
+        $(".content").find('h1, h2, h3, h4, h5, h6').each(function () {
+          var node = $(this);
+          // 总是设置id
+          node.attr("id", node.data('id') || "index_" + node.text());
+        });
+
+        $('.bs-docs-sidenav .accordion-marker').on('click', function(event) {
+          var current = $(event.currentTarget);
+          current.find('.glyphicon').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+        });
+      });
+    </script>
+  
+  </body>
+</html>
+

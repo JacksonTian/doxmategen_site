@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>loader Documentation</title>
+    <meta name="keywords" content="Loader" />
+    <meta name="description" content="Assets loader." />
+    <script src="assets/prettify.js"></script>
+    <script src="assets/jquery-1.8.2.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/base.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-static-top top-navbar" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./index.html">loader</a>
+        </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+          
+            <li>
+              <a href="./api.html">API Docs</a>
+            </li>
+          
+          
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <header class="jumbotron subhead">
+      <div class="container">
+        <h1>loader <small>Version: 0.1.6 By @Jackson Tian</small></h1>
+        <p class="lead">
+          Assets loader.
+        </p>
+      </div>
+    </header>
+
+<div class="container content">
+  <div class="row">
+    <div class="col-md-3 bs-docs-sidebar">
+      <ul class="nav nav-list bs-docs-sidenav affix">
+
+  <li>
+		<div class="accordion" id="loader">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_loader" class="api_side_link">loader</a>
+					<div class="accordion-marker">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#loader" href="#collapse_loader">
+							 <span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_loader">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#loader__Loader">Loader</a>
+						</li>
+					
+						<li>
+							<a href="#loader__js">js</a>
+						</li>
+					
+						<li>
+							<a href="#loader__css">css</a>
+						</li>
+					
+						<li>
+							<a href="#loader_Loader_less">less</a>
+						</li>
+					
+						<li>
+							<a href="#loader_Loader_stylus">stylus</a>
+						</li>
+					
+						<li>
+							<a href="#loader_Loader_coffee">coffee</a>
+						</li>
+					
+						<li>
+							<a href="#loader__dev">dev</a>
+						</li>
+					
+						<li>
+							<a href="#loader__pro">pro</a>
+						</li>
+					
+						<li>
+							<a href="#loader__done">done</a>
+						</li>
+					
+						<li>
+							<a href="#loader_Loader_scan">scan</a>
+						</li>
+					
+						<li>
+							<a href="#loader_Loader_scanDir">scanDir</a>
+						</li>
+					
+						<li>
+							<a href="#loader_Loader_transformScript">transformScript</a>
+						</li>
+					
+						<li>
+							<a href="#loader_Loader_transformLess">transformLess</a>
+						</li>
+					
+						<li>
+							<a href="#loader_Loader_transformStylus">transformStylus</a>
+						</li>
+					
+						<li>
+							<a href="#loader_Loader_transformCoffee">transformCoffee</a>
+						</li>
+					
+						<li>
+							<a href="#loader_Loader_transformStyle">transformStyle</a>
+						</li>
+					
+						<li>
+							<a href="#loader_Loader_minify">minify</a>
+						</li>
+					
+						<li>
+							<a href="#loader_Loader_map">map</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+
+</ul>
+
+    </div>
+    <div class="col-md-9">
+      
+        <section id="api_loader" class="api">
+  <h2>loader: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#loader__Loader">Loader</a>
+    </li>
+
+    <li>
+      <a href="#loader__js">js</a>
+    </li>
+
+    <li>
+      <a href="#loader__css">css</a>
+    </li>
+
+    <li>
+      <a href="#loader_Loader_less">less</a>
+    </li>
+
+    <li>
+      <a href="#loader_Loader_stylus">stylus</a>
+    </li>
+
+    <li>
+      <a href="#loader_Loader_coffee">coffee</a>
+    </li>
+
+    <li>
+      <a href="#loader__dev">dev</a>
+    </li>
+
+    <li>
+      <a href="#loader__pro">pro</a>
+    </li>
+
+    <li>
+      <a href="#loader__done">done</a>
+    </li>
+
+    <li>
+      <a href="#loader_Loader_scan">scan</a>
+    </li>
+
+    <li>
+      <a href="#loader_Loader_scanDir">scanDir</a>
+    </li>
+
+    <li>
+      <a href="#loader_Loader_transformScript">transformScript</a>
+    </li>
+
+    <li>
+      <a href="#loader_Loader_transformLess">transformLess</a>
+    </li>
+
+    <li>
+      <a href="#loader_Loader_transformStylus">transformStylus</a>
+    </li>
+
+    <li>
+      <a href="#loader_Loader_transformCoffee">transformCoffee</a>
+    </li>
+
+    <li>
+      <a href="#loader_Loader_transformStyle">transformStyle</a>
+    </li>
+
+    <li>
+      <a href="#loader_Loader_minify">minify</a>
+    </li>
+
+    <li>
+      <a href="#loader_Loader_map">map</a>
+    </li>
+
+  </ul>
+  <hr />
+
+  
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="loader__Loader">
+    Loader
+  </h3>
+  
+
+  <p>静态资源加载器</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>函数</td>
+      <td colspan="3">Loader()</td> 
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>压缩js路径()</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>压缩css路径(s)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="loader__js">
+    js
+  </h3>
+  
+
+  <p>加载js文件</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">Loader.prototype.js()</td> 
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>src(String)</td>
+      <td colspan="2"><p>js文件相对项目根目录的路径</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="loader__css">
+    css
+  </h3>
+  
+
+  <p>加载css文件</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">Loader.prototype.css()</td> 
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>href(String)</td>
+      <td colspan="2"><p>css文件相对项目根目录的路径</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="loader_Loader_less">
+    less
+  </h3>
+  
+
+  <p>记得在static中间件之前使用，否则会被静态文件中间件处理</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">Loader.less()</td> 
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="loader_Loader_stylus">
+    stylus
+  </h3>
+  
+
+  <p>记得在static中间件之前使用，否则会被静态文件中间件处理</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">Loader.stylus()</td> 
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="loader_Loader_coffee">
+    coffee
+  </h3>
+  
+
+  <p>记得在static中间件之前使用，否则会被静态文件中间件处理</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">Loader.coffee()</td> 
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="loader__dev">
+    dev
+  </h3>
+  
+
+  <p>生成开发环境下的标签</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">Loader.prototype.dev()</td> 
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="loader__pro">
+    pro
+  </h3>
+  
+
+  <p>生成线上环境下的标签</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">Loader.prototype.pro()</td> 
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>CDNMap(Object)</td>
+      <td colspan="2"><p>通过Loader.scanDir() =&gt; Loader.minify() =&gt; Loader.map()得到的map文件</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>prefix(String)</td>
+      <td colspan="2"><p>CDN前缀。如有CDN，可以一键切换文件到CDN中</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="loader__done">
+    done
+  </h3>
+  
+
+  <p>根据环境和版本号去生成对应标签<br />如果env没有传入，将取<code>process.env.NODE_ENV</code>作为判断，<code>production</code>为产品环境，其余将采用原始版本</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">Loader.prototype.done()</td> 
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>CDNMap(Object)</td>
+      <td colspan="2"><p>通过Loader.scanDir() =&gt; Loader.minify() =&gt; Loader.map()得到的map文件</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>prefix(String)</td>
+      <td colspan="2"><p>CDN前缀。如有CDN，可以一键切换文件到CDN中</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>env(Boolean)</td>
+      <td colspan="2"><p>是否启用压缩版</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="loader_Loader_scan">
+    scan
+  </h3>
+  
+
+  <p>扫描文本中的静态资源部分，提取出目标路径和文件列表。<br />结果如下：</p><pre><code>[
+  {target: &quot;x.js&quot;, assets:[&quot;path1&quot;, &quot;path2&quot;]},
+  {target: &quot;x.css&quot;, assets:[&quot;path1&quot;, &quot;path2&quot;]}
+]
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">Loader.scan()</td> 
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>view(String)</td>
+      <td colspan="2"><p>view html code</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="loader_Loader_scanDir">
+    scanDir
+  </h3>
+  
+
+  <p>扫描指定目录，生成合并压缩映射关系数组<br />生成结构如下：</p><pre><code>[
+  {target: &quot;x.js&quot;, assets:[&quot;path1&quot;, &quot;path2&quot;]},
+  {target: &quot;x.css&quot;, assets:[&quot;path1&quot;, &quot;path2&quot;]}
+]
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">Loader.scanDir()</td> 
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>dirpath(String)</td>
+      <td colspan="2"><p>The dir path</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="loader_Loader_transformScript">
+    transformScript
+  </h3>
+  
+
+  <p>调用uglifyjs模块压缩脚本文件</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">Loader.transformScript()</td> 
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>input(String)</td>
+      <td colspan="2"><p>JavaScript source code</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="loader_Loader_transformLess">
+    transformLess
+  </h3>
+  
+
+  <p>调用less模块编译less文件到CSS内容</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">Loader.transformLess()</td> 
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>input(String)</td>
+      <td colspan="2"><p>JavaScript source code</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="loader_Loader_transformStylus">
+    transformStylus
+  </h3>
+  
+
+  <p>调用stylus模块编译stylus文件到CSS内容</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">Loader.transformStylus()</td> 
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>input(String)</td>
+      <td colspan="2"><p>JavaScript source code</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="loader_Loader_transformCoffee">
+    transformCoffee
+  </h3>
+  
+
+  <p>调用coffee-script模块编译coffee文件到JS内容</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">Loader.transformCoffee()</td> 
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>input(String)</td>
+      <td colspan="2"><p>JavaScript source code</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="loader_Loader_transformStyle">
+    transformStyle
+  </h3>
+  
+
+  <p>调用clean css模块压缩样式表文件</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">Loader.transformStyle()</td> 
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>input(String)</td>
+      <td colspan="2"><p>CSS source code</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="loader_Loader_minify">
+    minify
+  </h3>
+  
+
+  <p>根据传入映射关系数组和指定的基本目录地址，调用uglifyjs和cleancss压缩文本<br />并生成带MD5签名的压缩文件，以及一个debug文件</p><pre><code>[
+  {target: &quot;x.js&quot;, assets:[&quot;path1&quot;, &quot;path2&quot;]},
+  {target: &quot;x.css&quot;, assets:[&quot;path1&quot;, &quot;path2&quot;]}
+]
+=&gt;
+[
+  {target: &quot;x.js&quot;, min: &quot;x.hash.js&quot;, debug: &quot;x.hash.debug.js&quot;,
+     assets:[&quot;path1&quot;, &quot;path2&quot;]},
+  {target: &quot;x.css&quot;, min: &quot;x.hash.css&quot;, debug: &quot;x.hash.debug.css&quot;,
+     assets:[&quot;path1&quot;, &quot;path2&quot;]}
+]
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">Loader.minify()</td> 
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>basedir(String)</td>
+      <td colspan="2"><p>基本目录路径</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>arr(Array)</td>
+      <td colspan="2"><p>静态资源数组</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="loader_Loader_map">
+    map
+  </h3>
+  
+
+  <p>将压缩生成的文件映射关系转换为map</p><pre><code>[
+  {target: &quot;x.js&quot;, min: &quot;x.hash.js&quot;, debug: &quot;x.hash.debug.js&quot;,
+     assets:[&quot;path1&quot;, &quot;path2&quot;]},
+  {target: &quot;x.css&quot;, min: &quot;x.hash.css&quot;, debug: &quot;x.hash.debug.css&quot;,
+     assets:[&quot;path1&quot;, &quot;path2&quot;]}
+]
+=&gt;
+{
+  &quot;x.js&quot;: &quot;x.hash.js&quot;,
+  &quot;x.css&quot;: &quot;x.hash.css&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">Loader.map()</td> 
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>arr(Array)</td>
+      <td colspan="2"><p>压缩生成的映射关系数组</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
+    </div>
+  </div>
+</div>
+      <footer class="footer">
+        <div class="container">
+          <p class="pull-right">
+            <a href="#">Back to top</a>
+          </p>
+          <p>此文档通过doxmate生成。主题借鉴Bootstrap API文档风格，注解基于<a href="https://github.com/visionmedia/dox">Dox</a>。欢迎关注doxmate作者<a href="http://weibo.com/shyvo" target="_blank">@朴灵</a></p>
+          <ul class="footer-links">
+            <li><a href="https://github.com/visionmedia/dox">Dox主页</a></li>
+            <li><a href="http://html5ify.com/doxmate">Doxmate主页</a></li>
+            <li><a href="https://github.com/JacksonTian/doxmate">Doxmate源码</a></li>
+            <li><a href="https://github.com/JacksonTian/doxmate/issues?state=open">提交bug</a></li>
+          </ul>
+      </div>
+    </footer>
+    <script>
+      $(function() {
+        $('pre').addClass('prettyprint');
+        $('td pre').removeClass('prettyprint');
+        prettyPrint();
+        var $window = $(window);
+        var sidenav = $('.bs-docs-sidenav');
+        if (sidenav.height() < window.innerHeight) {
+          sidenav.affix({
+            offset: {
+              top: function () {
+                return $window.width() <= 980 ? 290 : 210
+              },
+              bottom: 200
+            }
+          });
+        } else {
+          sidenav.removeClass('affix');
+        }
+        $(".content").find('h1, h2, h3, h4, h5, h6').each(function () {
+          var node = $(this);
+          // 总是设置id
+          node.attr("id", node.data('id') || "index_" + node.text());
+        });
+
+        $('.bs-docs-sidenav .accordion-marker').on('click', function(event) {
+          var current = $(event.currentTarget);
+          current.find('.glyphicon').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+        });
+      });
+    </script>
+  
+  </body>
+</html>
+
