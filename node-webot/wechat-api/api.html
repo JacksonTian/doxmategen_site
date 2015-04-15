@@ -669,6 +669,28 @@
   </li>
 
   <li>
+		<div class="accordion" id="api_shakearound">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_shakearound" class="api_side_link">api_shakearound</a>
+					<div class="accordion-marker">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_shakearound" href="#collapse_api_shakearound">
+							 <span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_shakearound">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+
+  <li>
 		<div class="accordion" id="api_shop_common">
 			<div class="accordion-group">
 				<div class="accordion-heading">
@@ -4455,6 +4477,317 @@ api.sendNews(&#39;openid&#39;, articles, callback);
       <td>参数</td>
       <td>opts(Object)</td>
       <td colspan="2"><p>查询条件</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
+        <section id="api_api_shakearound" class="api">
+  <h2>api_shakearound: API索引</h2>
+  <ul class="indexs">
+  
+  </ul>
+  <hr />
+
+  
+
+  <p>设备管理: 申请设备ID。<br />接口说明:<br />申请配置设备所需的UUID、Major、Minor。若激活率小于50%，不能新增设备。单次新增设备超过500个，<br />需走人工审核流程。审核通过后，可用返回的批次ID用“查询设备列表”接口拉取本次申请的设备ID。<br />详情请参见：<a href="http://mp.weixin.qq.com/wiki/15/b9e012f917e3484b7ed02771156411f3.html">http://mp.weixin.qq.com/wiki/15/b9e012f917e3484b7ed02771156411f3.html</a></p><p>Options:</p><pre><code>{
+  &quot;quantity&quot;:3,
+  &quot;apply_reason&quot;:&quot;测试&quot;,
+  &quot;comment&quot;:&quot;测试专用&quot;,
+  &quot;poi_id&quot;:1234
+}
+</code></pre><p>Examples:</p><pre><code>api.applyBeacons(options, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+  &quot;data&quot; : { ... },
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;success.&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+
+    <tr>
+      <td>参数</td>
+      <td>options(Object)</td>
+      <td colspan="2"><p>请求参数</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+
+  <p>设备管理: 配置设备与门店的关联关系。<br />接口说明:<br />修改设备关联的门店ID、设备的备注信息。可用设备ID或完整的UUID、Major、Minor指定设备，二者选其一。<br />详情请参见：<a href="http://mp.weixin.qq.com/wiki/15/b9e012f917e3484b7ed02771156411f3.html">http://mp.weixin.qq.com/wiki/15/b9e012f917e3484b7ed02771156411f3.html</a><br />Options:</p><pre><code>{
+  &quot;device_identifier&quot;: {
+    &quot;device_id&quot;: 10011,
+    &quot;uuid&quot;: &quot;FDA50693-A4E2-4FB1-AFCF-C6EB07647825&quot;,
+    &quot;major&quot;: 1002,
+    &quot;minor&quot;: 1223
+  },
+  &quot;poi_id&quot;: 1231
+}
+</code></pre><p>Examples:</p><pre><code>api.bindBeaconLocation(options, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+  &quot;data&quot; : {
+  },
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;success.&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+
+    <tr>
+      <td>参数</td>
+      <td>options(Object)</td>
+      <td colspan="2"><p>请求参数</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+
+  <p>页面管理: 新增页面<br />接口说明:<br />新增摇一摇出来的页面信息，包括在摇一摇页面出现的主标题、副标题、图片和点击进去的超链接。<br />其中，图片必须为用素材管理接口（uploadPageIcon函数）上传至微信侧服务器后返回的链接。<br />详情请参见：<a href="http://mp.weixin.qq.com/wiki/5/6626199ea8757c752046d8e46cf13251.html">http://mp.weixin.qq.com/wiki/5/6626199ea8757c752046d8e46cf13251.html</a><br />Page:</p><pre><code>{
+  &quot;title&quot;:&quot;主标题&quot;,
+  &quot;description&quot;:&quot;副标题&quot;,
+  &quot;page_url&quot;:&quot; https://zb.weixin.qq.com&quot;,
+  &quot;comment&quot;:&quot;数据示例&quot;,
+  &quot;icon_url&quot;:&quot;http://shp.qpic.cn/wx_shake_bus/0/14288351768a23d76e7636b56440172120529e8252/120&quot;
+  //调用uploadPageIcon函数获取到该URL
+}
+</code></pre><p>Examples:</p><pre><code>api.createPage(page, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+  &quot;data&quot; : {
+    &quot;page_id&quot;: 28840
+  },
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;success.&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+
+    <tr>
+      <td>参数</td>
+      <td>page(Object)</td>
+      <td colspan="2"><p>请求参数</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+
+  <p>页面管理: 删除页面<br />接口说明:<br />删除已有的页面，包括在摇一摇页面出现的主标题、副标题、图片和点击进去的超链接。<br />只有页面与设备没有关联关系时，才可被删除。<br />详情请参见：<a href="http://mp.weixin.qq.com/wiki/5/6626199ea8757c752046d8e46cf13251.html">http://mp.weixin.qq.com/wiki/5/6626199ea8757c752046d8e46cf13251.html</a><br />Page_ids:</p><pre><code>{
+  &quot;page_ids&quot;:[12345,23456,34567]
+}
+</code></pre><p>Examples:</p><pre><code>api.deletePages(options, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+  &quot;data&quot; : {
+  },
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;success.&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+
+    <tr>
+      <td>参数</td>
+      <td>page_ids(Object)</td>
+      <td colspan="2"><p>请求参数</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+
+  <p>上传图片素材<br />接口说明：<br />上传在摇一摇页面展示的图片素材，素材保存在微信侧服务器上。<br />格式限定为：jpg,jpeg,png,gif，图片大小建议120px<em>120 px，限制不超过200 px </em>200 px，图片需为正方形。<br />详情请参见：<a href="http://mp.weixin.qq.com/wiki/5/e997428269ff189d8f9a4b9e177be2d9.html">http://mp.weixin.qq.com/wiki/5/e997428269ff189d8f9a4b9e177be2d9.html</a><br />Examples:</p><pre><code>api.uploadPageIcon(&#39;filepath&#39;, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+  &quot;data&quot; : {
+    &quot;pic_url&quot;: &quot;http://shp.qpic.cn/wechat_shakearound_pic/0/1428377032e9dd2797018cad79186e03e8c5aec8dc/120&quot;
+  },
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;success.&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+
+    <tr>
+      <td>参数</td>
+      <td>filepath(String)</td>
+      <td colspan="2"><p>文件路径</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+
+  <p>获取摇周边的设备及用户信息<br />接口说明:<br />获取设备信息，包括UUID、major、minor，以及距离、openID等信息。<br />详情请参见：<a href="http://mp.weixin.qq.com/wiki/3/34904a5db3d0ec7bb5306335b8da1faf.html">http://mp.weixin.qq.com/wiki/3/34904a5db3d0ec7bb5306335b8da1faf.html</a><br />Ticket:</p><pre><code>{
+  &quot;ticket&quot;:”6ab3d8465166598a5f4e8c1b44f44645”
+}
+</code></pre><p>Examples:</p><pre><code>api.getShakeInfo(ticket, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+  &quot;data&quot; : {
+  },
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;success.&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+
+    <tr>
+      <td>参数</td>
+      <td>ticket(Object)</td>
+      <td colspan="2"><p>摇周边业务的ticket，可在摇到的URL中得到，ticket生效时间为30分钟</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+
+  <p>数据统计: 以页面为维度的数据统计接口<br />接口说明:<br />查询单个页面通过摇周边摇出来的人数、次数，点击摇周边页面的人数、次数；查询的最长时间跨度为30天。<br />详情请参见：<a href="http://mp.weixin.qq.com/wiki/0/8a24bcacad40fe7ee98d1573cb8a6764.html">http://mp.weixin.qq.com/wiki/0/8a24bcacad40fe7ee98d1573cb8a6764.html</a><br />Options:</p><pre><code>{
+  &quot;page_id&quot;: 12345,
+  &quot;begin_date&quot;: 12313123311,
+  &quot;end_date&quot;: 123123131231
+}
+</code></pre><p>Examples:</p><pre><code>api.getPageStatistics(options, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+  &quot;data&quot; : {
+    {
+      &quot;click_pv&quot;: 0,
+      &quot;click_uv&quot;: 0,
+      &quot;ftime&quot;: 1425052800,
+      &quot;shake_pv&quot;: 0,
+      &quot;shake_uv&quot;: 0
+    },
+    {
+      &quot;click_pv&quot;: 0,
+      &quot;click_uv&quot;: 0,
+      &quot;ftime&quot;: 1425139200,
+      &quot;shake_pv&quot;: 0,
+      &quot;shake_uv&quot;: 0
+    }
+  },
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;success.&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+
+    <tr>
+      <td>参数</td>
+      <td>options(Object)</td>
+      <td colspan="2"><p>请求参数</p></td>
     </tr>
   
 
