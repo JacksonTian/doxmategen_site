@@ -38,7 +38,7 @@
     </nav>
     <header class="jumbotron subhead">
       <div class="container">
-        <h1>wechat-api <small>Version: 1.7.1 By @Jackson Tian</small></h1>
+        <h1>wechat-api <small>Version: 1.8.0 By @Jackson Tian</small></h1>
         <p class="lead">
           微信公共平台Node库 API
         </p>
@@ -64,6 +64,10 @@
 				<div class="accordion-body collapse" id="collapse_api_card">
 					<div class="accordion-inner">
 					<ul class="indexs">
+					
+						<li>
+							<a href="#api_card__make">make</a>
+						</li>
 					
 					</ul>
 					</div>
@@ -146,7 +150,15 @@
 						</li>
 					
 						<li>
+							<a href="#api_custom_service_exports_updateKfAccount">updateKfAccount</a>
+						</li>
+					
+						<li>
 							<a href="#api_custom_service_exports_deleteKfAccount">deleteKfAccount</a>
+						</li>
+					
+						<li>
+							<a href="#api_custom_service_exports_setKfAccountAvatar">setKfAccountAvatar</a>
 						</li>
 					
 					</ul>
@@ -458,7 +470,15 @@
 						</li>
 					
 						<li>
+							<a href="#api_material_exports_removeMaterial">removeMaterial</a>
+						</li>
+					
+						<li>
 							<a href="#api_material_exports_getMaterialCount">getMaterialCount</a>
+						</li>
+					
+						<li>
+							<a href="#api_material_exports_getMaterials">getMaterials</a>
 						</li>
 					
 					</ul>
@@ -683,6 +703,58 @@
 					<div class="accordion-inner">
 					<ul class="indexs">
 					
+						<li>
+							<a href="#api_shakearound__make">make</a>
+						</li>
+					
+						<li>
+							<a href="#api_shakearound__make">make</a>
+						</li>
+					
+						<li>
+							<a href="#api_shakearound__make">make</a>
+						</li>
+					
+						<li>
+							<a href="#api_shakearound__make">make</a>
+						</li>
+					
+						<li>
+							<a href="#api_shakearound__make">make</a>
+						</li>
+					
+						<li>
+							<a href="#api_shakearound__make">make</a>
+						</li>
+					
+						<li>
+							<a href="#api_shakearound__make">make</a>
+						</li>
+					
+						<li>
+							<a href="#api_shakearound__make">make</a>
+						</li>
+					
+						<li>
+							<a href="#api_shakearound__make">make</a>
+						</li>
+					
+						<li>
+							<a href="#api_shakearound__make">make</a>
+						</li>
+					
+						<li>
+							<a href="#api_shakearound__make">make</a>
+						</li>
+					
+						<li>
+							<a href="#api_shakearound__make">make</a>
+						</li>
+					
+						<li>
+							<a href="#api_shakearound__make">make</a>
+						</li>
+					
 					</ul>
 					</div>
 				</div>
@@ -778,7 +850,35 @@
 						</li>
 					
 						<li>
+							<a href="#api_shop_goods_exports_deleteGoods">deleteGoods</a>
+						</li>
+					
+						<li>
+							<a href="#api_shop_goods_exports_updateGoods">updateGoods</a>
+						</li>
+					
+						<li>
 							<a href="#api_shop_goods_exports_getGoods">getGoods</a>
+						</li>
+					
+						<li>
+							<a href="#api_shop_goods_exports_getGoodsByStatus">getGoodsByStatus</a>
+						</li>
+					
+						<li>
+							<a href="#api_shop_goods_exports_updateGoodsStatus">updateGoodsStatus</a>
+						</li>
+					
+						<li>
+							<a href="#api_shop_goods_exports_getSubCats">getSubCats</a>
+						</li>
+					
+						<li>
+							<a href="#api_shop_goods_exports_getSKUs">getSKUs</a>
+						</li>
+					
+						<li>
+							<a href="#api_shop_goods_exports_getProperties">getProperties</a>
 						</li>
 					
 					</ul>
@@ -1065,10 +1165,20 @@
   <h2>api_card: API索引</h2>
   <ul class="indexs">
   
+    <li>
+      <a href="#api_card__make">
+        make
+      </a>
+    </li>
+
   </ul>
   <hr />
 
-  
+
+  <h3 data-id="api_card__make">
+    make
+  </h3>
+
 
   <p>上传Logo<br />Examples:</p><pre><code>api.uploadLogo(&#39;filepath&#39;, callback);
 </code></pre><p>Callback:</p><ul>
@@ -1084,6 +1194,11 @@
 
   <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">make()</td>
+    </tr>
   
 
     <tr>
@@ -1111,33 +1226,43 @@
   <ul class="indexs">
   
     <li>
-      <a href="#api_common__API">API</a>
+      <a href="#api_common__API">
+        API
+      </a>
     </li>
 
     <li>
-      <a href="#api_common__setOpts">setOpts</a>
+      <a href="#api_common__setOpts">
+        setOpts
+      </a>
     </li>
 
     <li>
-      <a href="#api_common__request">request</a>
+      <a href="#api_common__request">
+        request
+      </a>
     </li>
 
     <li>
-      <a href="#api_common__getLatestToken">getLatestToken</a>
+      <a href="#api_common__getLatestToken">
+        getLatestToken
+      </a>
     </li>
 
     <li>
-      <a href="#api_common_API_mixin">mixin</a>
+      <a href="#api_common_API_mixin">
+        mixin
+      </a>
     </li>
 
   </ul>
   <hr />
 
-  
+
   <h3 data-id="api_common__API">
     API
   </h3>
-  
+
 
   <p>根据appid和appsecret创建API的构造函数<br />如需跨进程跨机器进行操作Wechat API（依赖access token），access token需要进行全局维护<br />使用策略如下：</p><ol>
 <li>调用用户传入的获取token的异步方法，获得token之后使用</li>
@@ -1166,7 +1291,7 @@ var api = new API(&#39;appid&#39;, &#39;secret&#39;);
   
     <tr>
       <td>函数</td>
-      <td colspan="3">API()</td> 
+      <td colspan="3">API()</td>
     </tr>
   
 
@@ -1201,11 +1326,11 @@ var api = new API(&#39;appid&#39;, &#39;secret&#39;);
   
   </table>
   
-  
+
   <h3 data-id="api_common__setOpts">
     setOpts
   </h3>
-  
+
 
   <p>用于设置urllib的默认options</p><p>Examples:</p><pre><code>api.setOpts({timeout: 15000});
 </code></pre>
@@ -1215,7 +1340,7 @@ var api = new API(&#39;appid&#39;, &#39;secret&#39;);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">API.prototype.setOpts()</td> 
+      <td colspan="3">API.prototype.setOpts()</td>
     </tr>
   
 
@@ -1229,11 +1354,11 @@ var api = new API(&#39;appid&#39;, &#39;secret&#39;);
   
   </table>
   
-  
+
   <h3 data-id="api_common__request">
     request
   </h3>
-  
+
 
   <p>设置urllib的hook</p><p>Examples:</p><pre><code>api.setHook(function (options) {
   // options
@@ -1245,7 +1370,7 @@ var api = new API(&#39;appid&#39;, &#39;secret&#39;);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">API.prototype.request()</td> 
+      <td colspan="3">API.prototype.request()</td>
     </tr>
   
 
@@ -1259,11 +1384,11 @@ var api = new API(&#39;appid&#39;, &#39;secret&#39;);
   
   </table>
   
-  
+
   <h3 data-id="api_common__getLatestToken">
     getLatestToken
   </h3>
-  
+
 
   <p>获取最新的token</p><p>Examples:</p><pre><code>api.getLatestToken(callback);
 </code></pre><p>Callback:</p><ul>
@@ -1277,7 +1402,7 @@ var api = new API(&#39;appid&#39;, &#39;secret&#39;);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">API.prototype.getLatestToken()</td> 
+      <td colspan="3">API.prototype.getLatestToken()</td>
     </tr>
   
 
@@ -1298,11 +1423,11 @@ var api = new API(&#39;appid&#39;, &#39;secret&#39;);
   
   </table>
   
-  
+
   <h3 data-id="api_common_API_mixin">
     mixin
   </h3>
-  
+
 
   <p>用于支持对象合并。将对象合并到API.prototype上，使得能够支持扩展<br />Examples:</p><pre><code>// 媒体管理（上传、下载）
 API.mixin(require(&#39;./lib/api_media&#39;));
@@ -1313,7 +1438,7 @@ API.mixin(require(&#39;./lib/api_media&#39;));
   
     <tr>
       <td>方法</td>
-      <td colspan="3">API.mixin()</td> 
+      <td colspan="3">API.mixin()</td>
     </tr>
   
 
@@ -1335,33 +1460,55 @@ API.mixin(require(&#39;./lib/api_media&#39;));
   <ul class="indexs">
   
     <li>
-      <a href="#api_custom_service_exports_getRecords">getRecords</a>
+      <a href="#api_custom_service_exports_getRecords">
+        getRecords
+      </a>
     </li>
 
     <li>
-      <a href="#api_custom_service_exports_getCustomServiceList">getCustomServiceList</a>
+      <a href="#api_custom_service_exports_getCustomServiceList">
+        getCustomServiceList
+      </a>
     </li>
 
     <li>
-      <a href="#api_custom_service_exports_getOnlineCustomServiceList">getOnlineCustomServiceList</a>
+      <a href="#api_custom_service_exports_getOnlineCustomServiceList">
+        getOnlineCustomServiceList
+      </a>
     </li>
 
     <li>
-      <a href="#api_custom_service_exports_addKfAccount">addKfAccount</a>
+      <a href="#api_custom_service_exports_addKfAccount">
+        addKfAccount
+      </a>
     </li>
 
     <li>
-      <a href="#api_custom_service_exports_deleteKfAccount">deleteKfAccount</a>
+      <a href="#api_custom_service_exports_updateKfAccount">
+        updateKfAccount
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_custom_service_exports_deleteKfAccount">
+        deleteKfAccount
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_custom_service_exports_setKfAccountAvatar">
+        setKfAccountAvatar
+      </a>
     </li>
 
   </ul>
   <hr />
 
-  
+
   <h3 data-id="api_custom_service_exports_getRecords">
     getRecords
   </h3>
-  
+
 
   <p>获取客服聊天记录<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=获取客服聊天记录">http://mp.weixin.qq.com/wiki/index.php?title=获取客服聊天记录</a></p><p>Opts:</p><pre><code>{
  &quot;starttime&quot; : 123456789,
@@ -1400,7 +1547,7 @@ API.mixin(require(&#39;./lib/api_media&#39;));
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.getRecords()</td> 
+      <td colspan="3">exports.getRecords()</td>
     </tr>
   
 
@@ -1421,11 +1568,11 @@ API.mixin(require(&#39;./lib/api_media&#39;));
   
   </table>
   
-  
+
   <h3 data-id="api_custom_service_exports_getCustomServiceList">
     getCustomServiceList
   </h3>
-  
+
 
   <p>获取客服基本信息<br />详细请看：<a href="http://dkf.qq.com/document-3_1.html">http://dkf.qq.com/document-3_1.html</a></p><p>Examples:</p><pre><code>api.getCustomServiceList(callback);
 </code></pre><p>Callback:</p><ul>
@@ -1458,7 +1605,7 @@ API.mixin(require(&#39;./lib/api_media&#39;));
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.getCustomServiceList()</td> 
+      <td colspan="3">exports.getCustomServiceList()</td>
     </tr>
   
 
@@ -1472,11 +1619,11 @@ API.mixin(require(&#39;./lib/api_media&#39;));
   
   </table>
   
-  
+
   <h3 data-id="api_custom_service_exports_getOnlineCustomServiceList">
     getOnlineCustomServiceList
   </h3>
-  
+
 
   <p>获取在线客服接待信息<br />详细请看：<a href="http://dkf.qq.com/document-3_2.html">http://dkf.qq.com/document-3_2.html</a></p><p>Examples:</p><pre><code>api.getOnlineCustomServiceList(callback);
 </code></pre><p>Callback:</p><ul>
@@ -1508,7 +1655,7 @@ API.mixin(require(&#39;./lib/api_media&#39;));
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.getOnlineCustomServiceList()</td> 
+      <td colspan="3">exports.getOnlineCustomServiceList()</td>
     </tr>
   
 
@@ -1522,11 +1669,11 @@ API.mixin(require(&#39;./lib/api_media&#39;));
   
   </table>
   
-  
+
   <h3 data-id="api_custom_service_exports_addKfAccount">
     addKfAccount
   </h3>
-  
+
 
   <p>添加客服账号<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/9/6fff6f191ef92c126b043ada035cc935.html">http://mp.weixin.qq.com/wiki/9/6fff6f191ef92c126b043ada035cc935.html</a></p><p>Examples:</p><pre><code>api.addKfAccount(&#39;test@test&#39;, &#39;nickname&#39;, &#39;password&#39;, callback);
 </code></pre><p>Callback:</p><ul>
@@ -1544,7 +1691,7 @@ API.mixin(require(&#39;./lib/api_media&#39;));
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.addKfAccount()</td> 
+      <td colspan="3">exports.addKfAccount()</td>
     </tr>
   
 
@@ -1579,11 +1726,68 @@ API.mixin(require(&#39;./lib/api_media&#39;));
   
   </table>
   
+
+  <h3 data-id="api_custom_service_exports_updateKfAccount">
+    updateKfAccount
+  </h3>
+
+
+  <p>设置客服账号<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/9/6fff6f191ef92c126b043ada035cc935.html">http://mp.weixin.qq.com/wiki/9/6fff6f191ef92c126b043ada035cc935.html</a></p><p>Examples:</p><pre><code>api.updateKfAccount(&#39;test@test&#39;, &#39;nickname&#39;, &#39;password&#39;, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+ &quot;errcode&quot; : 0,
+ &quot;errmsg&quot; : &quot;ok&quot;,
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
   
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.updateKfAccount()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>account(String)</td>
+      <td colspan="2"><p>账号名字，格式为：前缀@公共号名字</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>nick(String)</td>
+      <td colspan="2"><p>昵称</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>password(String)</td>
+      <td colspan="2"><p>密码，可以直接传递明文，wechat模块自动进行md5加密</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+
   <h3 data-id="api_custom_service_exports_deleteKfAccount">
     deleteKfAccount
   </h3>
-  
+
 
   <p>删除客服账号<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/9/6fff6f191ef92c126b043ada035cc935.html">http://mp.weixin.qq.com/wiki/9/6fff6f191ef92c126b043ada035cc935.html</a></p><p>Examples:</p><pre><code>api.deleteKfAccount(&#39;test@test&#39;, callback);
 </code></pre><p>Callback:</p><ul>
@@ -1601,7 +1805,7 @@ API.mixin(require(&#39;./lib/api_media&#39;));
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.deleteKfAccount()</td> 
+      <td colspan="3">exports.deleteKfAccount()</td>
     </tr>
   
 
@@ -1609,6 +1813,56 @@ API.mixin(require(&#39;./lib/api_media&#39;));
       <td>参数</td>
       <td>account(String)</td>
       <td colspan="2"><p>账号名字，格式为：前缀@公共号名字</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="api_custom_service_exports_setKfAccountAvatar">
+    setKfAccountAvatar
+  </h3>
+
+
+  <p>设置客服头像<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/9/6fff6f191ef92c126b043ada035cc935.html">http://mp.weixin.qq.com/wiki/9/6fff6f191ef92c126b043ada035cc935.html</a></p><p>Examples:</p><pre><code>api.setKfAccountAvatar(&#39;test@test&#39;, &#39;/path/to/avatar.png&#39;, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+ &quot;errcode&quot; : 0,
+ &quot;errmsg&quot; : &quot;ok&quot;,
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.setKfAccountAvatar()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>account(String)</td>
+      <td colspan="2"><p>账号名字，格式为：前缀@公共号名字</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>filepath(String)</td>
+      <td colspan="2"><p>头像路径</p></td>
     </tr>
   
 
@@ -1632,7 +1886,7 @@ API.mixin(require(&#39;./lib/api_media&#39;));
   </ul>
   <hr />
 
-  
+
 
   <p>公众平台官网数据统计模块<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/8/c0453610fb5131d1fcb17b4e87c82050.html">http://mp.weixin.qq.com/wiki/8/c0453610fb5131d1fcb17b4e87c82050.html</a><br />Examples:</p><pre><code>// 用户分析数据接口
 api.getUserSummary(startDate, endDate, callback); // 获取用户增减数据
@@ -1700,17 +1954,19 @@ api.getInterfaceSummaryHour(startDate, endDate, callback); // 获取接口分析
   <ul class="indexs">
   
     <li>
-      <a href="#api_device__util">util</a>
+      <a href="#api_device__util">
+        util
+      </a>
     </li>
 
   </ul>
   <hr />
 
-  
+
   <h3 data-id="api_device__util">
     util
   </h3>
-  
+
 
   
 
@@ -1719,7 +1975,7 @@ api.getInterfaceSummaryHour(startDate, endDate, callback); // 获取接口分析
   
     <tr>
       <td>声明</td>
-      <td colspan="3">util</td> 
+      <td colspan="3">util</td>
     </tr>
   
 
@@ -1734,17 +1990,19 @@ api.getInterfaceSummaryHour(startDate, endDate, callback); // 获取接口分析
   <ul class="indexs">
   
     <li>
-      <a href="#api_feedback_exports_updateFeedback">updateFeedback</a>
+      <a href="#api_feedback_exports_updateFeedback">
+        updateFeedback
+      </a>
     </li>
 
   </ul>
   <hr />
 
-  
+
   <h3 data-id="api_feedback_exports_updateFeedback">
     updateFeedback
   </h3>
-  
+
 
   <p>标记客户的投诉处理状态<br />Examples:</p><pre><code>api.updateFeedback(openid, feedbackId, callback);
 </code></pre><p>Callback:</p><ul>
@@ -1762,7 +2020,7 @@ api.getInterfaceSummaryHour(startDate, endDate, callback); // 获取接口分析
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.updateFeedback()</td> 
+      <td colspan="3">exports.updateFeedback()</td>
     </tr>
   
 
@@ -1798,33 +2056,43 @@ api.getInterfaceSummaryHour(startDate, endDate, callback); // 获取接口分析
   <ul class="indexs">
   
     <li>
-      <a href="#api_group_exports_getGroups">getGroups</a>
+      <a href="#api_group_exports_getGroups">
+        getGroups
+      </a>
     </li>
 
     <li>
-      <a href="#api_group_exports_getWhichGroup">getWhichGroup</a>
+      <a href="#api_group_exports_getWhichGroup">
+        getWhichGroup
+      </a>
     </li>
 
     <li>
-      <a href="#api_group_exports_createGroup">createGroup</a>
+      <a href="#api_group_exports_createGroup">
+        createGroup
+      </a>
     </li>
 
     <li>
-      <a href="#api_group_exports_updateGroup">updateGroup</a>
+      <a href="#api_group_exports_updateGroup">
+        updateGroup
+      </a>
     </li>
 
     <li>
-      <a href="#api_group_exports_moveUserToGroup">moveUserToGroup</a>
+      <a href="#api_group_exports_moveUserToGroup">
+        moveUserToGroup
+      </a>
     </li>
 
   </ul>
   <hr />
 
-  
+
   <h3 data-id="api_group_exports_getGroups">
     getGroups
   </h3>
-  
+
 
   <p>获取分组列表<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/index.php?title=分组管理接口">http://mp.weixin.qq.com/wiki/index.php?title=分组管理接口</a><br />Examples:</p><pre><code>api.getGroups(callback);
 </code></pre><p>Callback:</p><ul>
@@ -1844,7 +2112,7 @@ api.getInterfaceSummaryHour(startDate, endDate, callback); // 获取接口分析
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.getGroups()</td> 
+      <td colspan="3">exports.getGroups()</td>
     </tr>
   
 
@@ -1858,11 +2126,11 @@ api.getInterfaceSummaryHour(startDate, endDate, callback); // 获取接口分析
   
   </table>
   
-  
+
   <h3 data-id="api_group_exports_getWhichGroup">
     getWhichGroup
   </h3>
-  
+
 
   <p>查询用户在哪个分组<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/index.php?title=分组管理接口">http://mp.weixin.qq.com/wiki/index.php?title=分组管理接口</a><br />Examples:</p><pre><code>api.getWhichGroup(openid, callback);
 </code></pre><p>Callback:</p><ul>
@@ -1879,7 +2147,7 @@ api.getInterfaceSummaryHour(startDate, endDate, callback); // 获取接口分析
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.getWhichGroup()</td> 
+      <td colspan="3">exports.getWhichGroup()</td>
     </tr>
   
 
@@ -1900,11 +2168,11 @@ api.getInterfaceSummaryHour(startDate, endDate, callback); // 获取接口分析
   
   </table>
   
-  
+
   <h3 data-id="api_group_exports_createGroup">
     createGroup
   </h3>
-  
+
 
   <p>创建分组<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/index.php?title=分组管理接口">http://mp.weixin.qq.com/wiki/index.php?title=分组管理接口</a><br />Examples:</p><pre><code>api.createGroup(&#39;groupname&#39;, callback);
 </code></pre><p>Callback:</p><ul>
@@ -1919,7 +2187,7 @@ api.getInterfaceSummaryHour(startDate, endDate, callback); // 获取接口分析
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.createGroup()</td> 
+      <td colspan="3">exports.createGroup()</td>
     </tr>
   
 
@@ -1940,11 +2208,11 @@ api.getInterfaceSummaryHour(startDate, endDate, callback); // 获取接口分析
   
   </table>
   
-  
+
   <h3 data-id="api_group_exports_updateGroup">
     updateGroup
   </h3>
-  
+
 
   <p>更新分组名字<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/index.php?title=分组管理接口">http://mp.weixin.qq.com/wiki/index.php?title=分组管理接口</a><br />Examples:</p><pre><code>api.updateGroup(107, &#39;new groupname&#39;, callback);
 </code></pre><p>Callback:</p><ul>
@@ -1959,7 +2227,7 @@ api.getInterfaceSummaryHour(startDate, endDate, callback); // 获取接口分析
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.updateGroup()</td> 
+      <td colspan="3">exports.updateGroup()</td>
     </tr>
   
 
@@ -1987,11 +2255,11 @@ api.getInterfaceSummaryHour(startDate, endDate, callback); // 获取接口分析
   
   </table>
   
-  
+
   <h3 data-id="api_group_exports_moveUserToGroup">
     moveUserToGroup
   </h3>
-  
+
 
   <p>移动用户进分组<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/index.php?title=分组管理接口">http://mp.weixin.qq.com/wiki/index.php?title=分组管理接口</a><br />Examples:</p><pre><code>api.moveUserToGroup(openid, groupId, callback);
 </code></pre><p>Callback:</p><ul>
@@ -2006,7 +2274,7 @@ api.getInterfaceSummaryHour(startDate, endDate, callback); // 获取接口分析
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.moveUserToGroup()</td> 
+      <td colspan="3">exports.moveUserToGroup()</td>
     </tr>
   
 
@@ -2042,17 +2310,19 @@ api.getInterfaceSummaryHour(startDate, endDate, callback); // 获取接口分析
   <ul class="indexs">
   
     <li>
-      <a href="#api_ip_exports_getIp">getIp</a>
+      <a href="#api_ip_exports_getIp">
+        getIp
+      </a>
     </li>
 
   </ul>
   <hr />
 
-  
+
   <h3 data-id="api_ip_exports_getIp">
     getIp
   </h3>
-  
+
 
   <p>获取微信服务器IP地址<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/index.php?title=%E8%8E%B7%E5%8F%96%E5%BE%AE%E4%BF%A1%E6%9C%8D%E5%8A%A1%E5%99%A8IP%E5%9C%B0%E5%9D%80">http://mp.weixin.qq.com/wiki/index.php?title=%E8%8E%B7%E5%8F%96%E5%BE%AE%E4%BF%A1%E6%9C%8D%E5%8A%A1%E5%99%A8IP%E5%9C%B0%E5%9D%80</a><br />Examples:</p><pre><code>api.getIp(callback);
 </code></pre><p>Callback:</p><ul>
@@ -2069,7 +2339,7 @@ api.getInterfaceSummaryHour(startDate, endDate, callback); // 获取接口分析
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.getIp()</td> 
+      <td colspan="3">exports.getIp()</td>
     </tr>
   
 
@@ -2091,29 +2361,37 @@ api.getInterfaceSummaryHour(startDate, endDate, callback); // 获取接口分析
   <ul class="indexs">
   
     <li>
-      <a href="#api_js_exports_registerTicketHandle">registerTicketHandle</a>
+      <a href="#api_js_exports_registerTicketHandle">
+        registerTicketHandle
+      </a>
     </li>
 
     <li>
-      <a href="#api_js_exports_getTicket">getTicket</a>
+      <a href="#api_js_exports_getTicket">
+        getTicket
+      </a>
     </li>
 
     <li>
-      <a href="#api_js_exports_getJsConfig">getJsConfig</a>
+      <a href="#api_js_exports_getJsConfig">
+        getJsConfig
+      </a>
     </li>
 
     <li>
-      <a href="#api_js_exports_getLatestTicket">getLatestTicket</a>
+      <a href="#api_js_exports_getLatestTicket">
+        getLatestTicket
+      </a>
     </li>
 
   </ul>
   <hr />
 
-  
+
   <h3 data-id="api_js_exports_registerTicketHandle">
     registerTicketHandle
   </h3>
-  
+
 
   <p>多台服务器负载均衡时，ticketToken需要外部存储共享。<br />需要调用此registerTicketHandle来设置获取和保存的自定义方法。</p><p>Examples:</p><pre><code>api.registerTicketHandle(getTicketToken, saveTicketToken);
 // getTicketToken
@@ -2137,7 +2415,7 @@ function saveTicketToken(type, _ticketToken, callback) {
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.registerTicketHandle()</td> 
+      <td colspan="3">exports.registerTicketHandle()</td>
     </tr>
   
 
@@ -2158,11 +2436,11 @@ function saveTicketToken(type, _ticketToken, callback) {
   
   </table>
   
-  
+
   <h3 data-id="api_js_exports_getTicket">
     getTicket
   </h3>
-  
+
 
   <p>获取js sdk所需的有效js ticket</p><p>Callback:</p><ul>
 <li><code>err</code>, 异常对象</li>
@@ -2181,7 +2459,7 @@ function saveTicketToken(type, _ticketToken, callback) {
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.getTicket()</td> 
+      <td colspan="3">exports.getTicket()</td>
     </tr>
   
 
@@ -2195,11 +2473,11 @@ function saveTicketToken(type, _ticketToken, callback) {
   
   </table>
   
-  
+
   <h3 data-id="api_js_exports_getJsConfig">
     getJsConfig
   </h3>
-  
+
 
   <p>获取微信JS SDK Config的所需参数</p><p>Examples:</p><pre><code>var param = {
  debug: false,
@@ -2218,7 +2496,7 @@ api.getJsConfig(param, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.getJsConfig()</td> 
+      <td colspan="3">exports.getJsConfig()</td>
     </tr>
   
 
@@ -2239,11 +2517,11 @@ api.getJsConfig(param, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_js_exports_getLatestTicket">
     getLatestTicket
   </h3>
-  
+
 
   <p>获取最新的js api ticket</p><p>Examples:</p><pre><code>api.getLatestTicket(callback);
 </code></pre><p>Callback:</p><ul>
@@ -2257,7 +2535,7 @@ api.getJsConfig(param, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.getLatestTicket()</td> 
+      <td colspan="3">exports.getLatestTicket()</td>
     </tr>
   
 
@@ -2279,77 +2557,109 @@ api.getJsConfig(param, callback);
   <ul class="indexs">
   
     <li>
-      <a href="#api_mass_send_exports_uploadNews">uploadNews</a>
+      <a href="#api_mass_send_exports_uploadNews">
+        uploadNews
+      </a>
     </li>
 
     <li>
-      <a href="#api_mass_send_exports_uploadMPVideo">uploadMPVideo</a>
+      <a href="#api_mass_send_exports_uploadMPVideo">
+        uploadMPVideo
+      </a>
     </li>
 
     <li>
-      <a href="#api_mass_send_exports_massSend">massSend</a>
+      <a href="#api_mass_send_exports_massSend">
+        massSend
+      </a>
     </li>
 
     <li>
-      <a href="#api_mass_send_exports_massSendNews">massSendNews</a>
+      <a href="#api_mass_send_exports_massSendNews">
+        massSendNews
+      </a>
     </li>
 
     <li>
-      <a href="#api_mass_send_exports_massSendText">massSendText</a>
+      <a href="#api_mass_send_exports_massSendText">
+        massSendText
+      </a>
     </li>
 
     <li>
-      <a href="#api_mass_send_exports_massSendVoice">massSendVoice</a>
+      <a href="#api_mass_send_exports_massSendVoice">
+        massSendVoice
+      </a>
     </li>
 
     <li>
-      <a href="#api_mass_send_exports_massSendImage">massSendImage</a>
+      <a href="#api_mass_send_exports_massSendImage">
+        massSendImage
+      </a>
     </li>
 
     <li>
-      <a href="#api_mass_send_exports_massSendVideo">massSendVideo</a>
+      <a href="#api_mass_send_exports_massSendVideo">
+        massSendVideo
+      </a>
     </li>
 
     <li>
-      <a href="#api_mass_send_exports_massSendMPVideo">massSendMPVideo</a>
+      <a href="#api_mass_send_exports_massSendMPVideo">
+        massSendMPVideo
+      </a>
     </li>
 
     <li>
-      <a href="#api_mass_send_exports_deleteMass">deleteMass</a>
+      <a href="#api_mass_send_exports_deleteMass">
+        deleteMass
+      </a>
     </li>
 
     <li>
-      <a href="#api_mass_send_exports_previewNews">previewNews</a>
+      <a href="#api_mass_send_exports_previewNews">
+        previewNews
+      </a>
     </li>
 
     <li>
-      <a href="#api_mass_send_exports_previewText">previewText</a>
+      <a href="#api_mass_send_exports_previewText">
+        previewText
+      </a>
     </li>
 
     <li>
-      <a href="#api_mass_send_exports_previewVoice">previewVoice</a>
+      <a href="#api_mass_send_exports_previewVoice">
+        previewVoice
+      </a>
     </li>
 
     <li>
-      <a href="#api_mass_send_exports_previewImage">previewImage</a>
+      <a href="#api_mass_send_exports_previewImage">
+        previewImage
+      </a>
     </li>
 
     <li>
-      <a href="#api_mass_send_exports_previewVideo">previewVideo</a>
+      <a href="#api_mass_send_exports_previewVideo">
+        previewVideo
+      </a>
     </li>
 
     <li>
-      <a href="#api_mass_send_exports_getMassMessageStatus">getMassMessageStatus</a>
+      <a href="#api_mass_send_exports_getMassMessageStatus">
+        getMassMessageStatus
+      </a>
     </li>
 
   </ul>
   <hr />
 
-  
+
   <h3 data-id="api_mass_send_exports_uploadNews">
     uploadNews
   </h3>
-  
+
 
   <p>上传多媒体文件，分别有图片（image）、语音（voice）、视频（video）和缩略图（thumb）<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a><br />Examples:</p><pre><code>api.uploadNews(news, callback);
 </code></pre><p>News:</p><pre><code>{
@@ -2390,7 +2700,7 @@ api.getJsConfig(param, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.uploadNews()</td> 
+      <td colspan="3">exports.uploadNews()</td>
     </tr>
   
 
@@ -2411,11 +2721,11 @@ api.getJsConfig(param, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_mass_send_exports_uploadMPVideo">
     uploadMPVideo
   </h3>
-  
+
 
   <p>将通过上传下载多媒体文件得到的视频media_id变成视频素材<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a><br />Examples:</p><pre><code>api.uploadMPVideo(opts, callback);
 </code></pre><p>Opts:</p><pre><code>{
@@ -2439,7 +2749,7 @@ api.getJsConfig(param, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.uploadMPVideo()</td> 
+      <td colspan="3">exports.uploadMPVideo()</td>
     </tr>
   
 
@@ -2460,11 +2770,11 @@ api.getJsConfig(param, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_mass_send_exports_massSend">
     massSend
   </h3>
-  
+
 
   <p>群发消息，分别有图文（news）、文本(text)、语音（voice）、图片（image）和视频（video）<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a><br />Examples:</p><pre><code>api.massSend(opts, receivers, callback);
 </code></pre><p>opts:</p><pre><code>{
@@ -2489,7 +2799,7 @@ api.getJsConfig(param, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.massSend()</td> 
+      <td colspan="3">exports.massSend()</td>
     </tr>
   
 
@@ -2517,11 +2827,11 @@ api.getJsConfig(param, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_mass_send_exports_massSendNews">
     massSendNews
   </h3>
-  
+
 
   <p>群发图文（news）消息<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a><br />Examples:</p><pre><code>api.massSendNews(mediaId, receivers, callback);
 </code></pre><p>Callback:</p><ul>
@@ -2540,7 +2850,7 @@ api.getJsConfig(param, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.massSendNews()</td> 
+      <td colspan="3">exports.massSendNews()</td>
     </tr>
   
 
@@ -2568,11 +2878,11 @@ api.getJsConfig(param, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_mass_send_exports_massSendText">
     massSendText
   </h3>
-  
+
 
   <p>群发文字（text）消息<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a><br />Examples:</p><pre><code>api.massSendText(content, receivers, callback);
 </code></pre><p>Callback:</p><ul>
@@ -2591,7 +2901,7 @@ api.getJsConfig(param, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.massSendText()</td> 
+      <td colspan="3">exports.massSendText()</td>
     </tr>
   
 
@@ -2619,11 +2929,11 @@ api.getJsConfig(param, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_mass_send_exports_massSendVoice">
     massSendVoice
   </h3>
-  
+
 
   <p>群发声音（voice）消息<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a><br />Examples:</p><pre><code>api.massSendVoice(media_id, receivers, callback);
 </code></pre><p>Callback:</p><ul>
@@ -2642,7 +2952,7 @@ api.getJsConfig(param, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.massSendVoice()</td> 
+      <td colspan="3">exports.massSendVoice()</td>
     </tr>
   
 
@@ -2670,11 +2980,11 @@ api.getJsConfig(param, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_mass_send_exports_massSendImage">
     massSendImage
   </h3>
-  
+
 
   <p>群发图片（image）消息<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a><br />Examples:</p><pre><code>api.massSendImage(media_id, receivers, callback);
 </code></pre><p>Callback:</p><ul>
@@ -2693,7 +3003,7 @@ api.getJsConfig(param, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.massSendImage()</td> 
+      <td colspan="3">exports.massSendImage()</td>
     </tr>
   
 
@@ -2721,11 +3031,11 @@ api.getJsConfig(param, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_mass_send_exports_massSendVideo">
     massSendVideo
   </h3>
-  
+
 
   <p>群发视频（video）消息<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a><br />Examples:</p><pre><code>api.massSendVideo(mediaId, receivers, callback);
 </code></pre><p>Callback:</p><ul>
@@ -2744,7 +3054,7 @@ api.getJsConfig(param, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.massSendVideo()</td> 
+      <td colspan="3">exports.massSendVideo()</td>
     </tr>
   
 
@@ -2772,11 +3082,11 @@ api.getJsConfig(param, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_mass_send_exports_massSendMPVideo">
     massSendMPVideo
   </h3>
-  
+
 
   <p>群发视频（video）消息，直接通过上传文件得到的media id进行群发（自动生成素材）<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a><br />Examples:</p><pre><code>api.massSendMPVideo(data, receivers, callback);
 </code></pre><p>Data:</p><pre><code>{
@@ -2800,7 +3110,7 @@ api.getJsConfig(param, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.massSendMPVideo()</td> 
+      <td colspan="3">exports.massSendMPVideo()</td>
     </tr>
   
 
@@ -2828,11 +3138,11 @@ api.getJsConfig(param, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_mass_send_exports_deleteMass">
     deleteMass
   </h3>
-  
+
 
   <p>删除群发消息<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a><br />Examples:</p><pre><code>api.deleteMass(message_id, callback);
 </code></pre><p>Callback:</p><ul>
@@ -2850,7 +3160,7 @@ api.getJsConfig(param, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.deleteMass()</td> 
+      <td colspan="3">exports.deleteMass()</td>
     </tr>
   
 
@@ -2871,11 +3181,11 @@ api.getJsConfig(param, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_mass_send_exports_previewNews">
     previewNews
   </h3>
-  
+
 
   <p>预览接口，预览图文消息<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a><br />Examples:</p><pre><code>api.previewNews(openid, mediaId, callback);
 </code></pre><p>Callback:</p><ul>
@@ -2894,7 +3204,7 @@ api.getJsConfig(param, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.previewNews()</td> 
+      <td colspan="3">exports.previewNews()</td>
     </tr>
   
 
@@ -2922,11 +3232,11 @@ api.getJsConfig(param, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_mass_send_exports_previewText">
     previewText
   </h3>
-  
+
 
   <p>预览接口，预览文本消息<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a><br />Examples:</p><pre><code>api.previewText(openid, content, callback);
 </code></pre><p>Callback:</p><ul>
@@ -2945,7 +3255,7 @@ api.getJsConfig(param, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.previewText()</td> 
+      <td colspan="3">exports.previewText()</td>
     </tr>
   
 
@@ -2973,11 +3283,11 @@ api.getJsConfig(param, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_mass_send_exports_previewVoice">
     previewVoice
   </h3>
-  
+
 
   <p>预览接口，预览语音消息<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a><br />Examples:</p><pre><code>api.previewVoice(openid, mediaId, callback);
 </code></pre><p>Callback:</p><ul>
@@ -2996,7 +3306,7 @@ api.getJsConfig(param, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.previewVoice()</td> 
+      <td colspan="3">exports.previewVoice()</td>
     </tr>
   
 
@@ -3024,11 +3334,11 @@ api.getJsConfig(param, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_mass_send_exports_previewImage">
     previewImage
   </h3>
-  
+
 
   <p>预览接口，预览图片消息<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a><br />Examples:</p><pre><code>api.previewImage(openid, mediaId, callback);
 </code></pre><p>Callback:</p><ul>
@@ -3047,7 +3357,7 @@ api.getJsConfig(param, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.previewImage()</td> 
+      <td colspan="3">exports.previewImage()</td>
     </tr>
   
 
@@ -3075,11 +3385,11 @@ api.getJsConfig(param, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_mass_send_exports_previewVideo">
     previewVideo
   </h3>
-  
+
 
   <p>预览接口，预览视频消息<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a><br />Examples:</p><pre><code>api.previewVideo(openid, mediaId, callback);
 </code></pre><p>Callback:</p><ul>
@@ -3098,7 +3408,7 @@ api.getJsConfig(param, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.previewVideo()</td> 
+      <td colspan="3">exports.previewVideo()</td>
     </tr>
   
 
@@ -3126,11 +3436,11 @@ api.getJsConfig(param, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_mass_send_exports_getMassMessageStatus">
     getMassMessageStatus
   </h3>
-  
+
 
   <p>查询群发消息状态<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a><br />Examples:</p><pre><code>api.getMassMessageStatus(messageId, callback);
 </code></pre><p>Callback:</p><ul>
@@ -3148,7 +3458,7 @@ api.getJsConfig(param, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.getMassMessageStatus()</td> 
+      <td colspan="3">exports.getMassMessageStatus()</td>
     </tr>
   
 
@@ -3177,37 +3487,61 @@ api.getJsConfig(param, callback);
   <ul class="indexs">
   
     <li>
-      <a href="#api_material_exports_uploadMaterial">uploadMaterial</a>
+      <a href="#api_material_exports_uploadMaterial">
+        uploadMaterial
+      </a>
     </li>
 
     <li>
-      <a href="#api_material_exports_uploadVideoMaterial">uploadVideoMaterial</a>
+      <a href="#api_material_exports_uploadVideoMaterial">
+        uploadVideoMaterial
+      </a>
     </li>
 
     <li>
-      <a href="#api_material_exports_uploadNewsMaterial">uploadNewsMaterial</a>
+      <a href="#api_material_exports_uploadNewsMaterial">
+        uploadNewsMaterial
+      </a>
     </li>
 
     <li>
-      <a href="#api_material_exports_updateNewsMaterial">updateNewsMaterial</a>
+      <a href="#api_material_exports_updateNewsMaterial">
+        updateNewsMaterial
+      </a>
     </li>
 
     <li>
-      <a href="#api_material_exports_getMaterial">getMaterial</a>
+      <a href="#api_material_exports_getMaterial">
+        getMaterial
+      </a>
     </li>
 
     <li>
-      <a href="#api_material_exports_getMaterialCount">getMaterialCount</a>
+      <a href="#api_material_exports_removeMaterial">
+        removeMaterial
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_material_exports_getMaterialCount">
+        getMaterialCount
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_material_exports_getMaterials">
+        getMaterials
+      </a>
     </li>
 
   </ul>
   <hr />
 
-  
+
   <h3 data-id="api_material_exports_uploadMaterial">
     uploadMaterial
   </h3>
-  
+
 
   <p>上传永久素材，分别有图片（image）、语音（voice）、和缩略图（thumb）<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/14/7e6c03263063f4813141c3e17dd4350a.html">http://mp.weixin.qq.com/wiki/14/7e6c03263063f4813141c3e17dd4350a.html</a><br />Examples:</p><pre><code>api.uploadMaterial(&#39;filepath&#39;, type, callback);
 </code></pre><p>Callback:</p><ul>
@@ -3227,7 +3561,7 @@ api.getJsConfig(param, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.uploadMaterial()</td> 
+      <td colspan="3">exports.uploadMaterial()</td>
     </tr>
   
 
@@ -3255,11 +3589,11 @@ api.getJsConfig(param, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_material_exports_uploadVideoMaterial">
     uploadVideoMaterial
   </h3>
-  
+
 
   <p>上传永久素材，视频（video）<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/14/7e6c03263063f4813141c3e17dd4350a.html">http://mp.weixin.qq.com/wiki/14/7e6c03263063f4813141c3e17dd4350a.html</a><br />Examples:</p><pre><code>var description = {
   &quot;title&quot;:VIDEO_TITLE,
@@ -3278,7 +3612,7 @@ api.uploadVideoMaterial(&#39;filepath&#39;, description, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.uploadVideoMaterial()</td> 
+      <td colspan="3">exports.uploadVideoMaterial()</td>
     </tr>
   
 
@@ -3306,11 +3640,11 @@ api.uploadVideoMaterial(&#39;filepath&#39;, description, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_material_exports_uploadNewsMaterial">
     uploadNewsMaterial
   </h3>
-  
+
 
   <p>新增永久图文素材</p><p>News:</p><pre><code>{
  &quot;articles&quot;: [
@@ -3339,7 +3673,7 @@ api.uploadVideoMaterial(&#39;filepath&#39;, description, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.uploadNewsMaterial()</td> 
+      <td colspan="3">exports.uploadNewsMaterial()</td>
     </tr>
   
 
@@ -3360,11 +3694,11 @@ api.uploadVideoMaterial(&#39;filepath&#39;, description, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_material_exports_updateNewsMaterial">
     updateNewsMaterial
   </h3>
-  
+
 
   <p>更新永久图文素材</p><p>News:</p><pre><code>{
  &quot;media_id&quot;:MEDIA_ID,
@@ -3395,7 +3729,7 @@ api.uploadVideoMaterial(&#39;filepath&#39;, description, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.updateNewsMaterial()</td> 
+      <td colspan="3">exports.updateNewsMaterial()</td>
     </tr>
   
 
@@ -3416,11 +3750,11 @@ api.uploadVideoMaterial(&#39;filepath&#39;, description, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_material_exports_getMaterial">
     getMaterial
   </h3>
-  
+
 
   <p>根据媒体ID获取永久素材<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/4/b3546879f07623cb30df9ca0e420a5d0.html">http://mp.weixin.qq.com/wiki/4/b3546879f07623cb30df9ca0e420a5d0.html</a><br />Examples:</p><pre><code>api.getMaterial(&#39;media_id&#39;, callback);
 </code></pre><p>Callback:</p><ul>
@@ -3435,7 +3769,7 @@ api.uploadVideoMaterial(&#39;filepath&#39;, description, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.getMaterial()</td> 
+      <td colspan="3">exports.getMaterial()</td>
     </tr>
   
 
@@ -3456,11 +3790,51 @@ api.uploadVideoMaterial(&#39;filepath&#39;, description, callback);
   
   </table>
   
+
+  <h3 data-id="api_material_exports_removeMaterial">
+    removeMaterial
+  </h3>
+
+
+  <p>删除永久素材<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/5/e66f61c303db51a6c0f90f46b15af5f5.html">http://mp.weixin.qq.com/wiki/5/e66f61c303db51a6c0f90f46b15af5f5.html</a><br />Examples:</p><pre><code>api.removeMaterial(&#39;media_id&#39;, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的文件Buffer对象</li>
+<li><code>res</code>, HTTP响应对象</li>
+</ul>
+
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
   
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.removeMaterial()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>mediaId(String)</td>
+      <td colspan="2"><p>媒体文件的ID</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+
   <h3 data-id="api_material_exports_getMaterialCount">
     getMaterialCount
   </h3>
-  
+
 
   <p>获取素材总数<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/16/8cc64f8c189674b421bee3ed403993b8.html">http://mp.weixin.qq.com/wiki/16/8cc64f8c189674b421bee3ed403993b8.html</a><br />Examples:</p><pre><code>api.getMaterialCount(callback);
 </code></pre><p>Callback:</p><ul>
@@ -3481,7 +3855,72 @@ api.uploadVideoMaterial(&#39;filepath&#39;, description, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.getMaterialCount()</td> 
+      <td colspan="3">exports.getMaterialCount()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="api_material_exports_getMaterials">
+    getMaterials
+  </h3>
+
+
+  <p>获取永久素材列表<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/12/2108cd7aafff7f388f41f37efa710204.html">http://mp.weixin.qq.com/wiki/12/2108cd7aafff7f388f41f37efa710204.html</a><br />Examples:</p><pre><code>api.getMaterials(type, offset, count, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的文件Buffer对象</li>
+<li><code>res</code>, HTTP响应对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+ &quot;total_count&quot;: TOTAL_COUNT,
+ &quot;item_count&quot;: ITEM_COUNT,
+ &quot;item&quot;: [{
+   &quot;media_id&quot;: MEDIA_ID,
+   &quot;name&quot;: NAME,
+   &quot;update_time&quot;: UPDATE_TIME
+ },
+ //可能会有多个素材
+ ]
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getMaterials()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>type(String)</td>
+      <td colspan="2"><p>素材的类型，图片（image）、视频（video）、语音 （voice）、图文（news）</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>offset(Number)</td>
+      <td colspan="2"><p>从全部素材的该偏移位置开始返回，0表示从第一个素材 返回</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>count(Number)</td>
+      <td colspan="2"><p>返回素材的数量，取值在1到20之间</p></td>
     </tr>
   
 
@@ -3503,21 +3942,25 @@ api.uploadVideoMaterial(&#39;filepath&#39;, description, callback);
   <ul class="indexs">
   
     <li>
-      <a href="#api_media_exports_uploadMedia">uploadMedia</a>
+      <a href="#api_media_exports_uploadMedia">
+        uploadMedia
+      </a>
     </li>
 
     <li>
-      <a href="#api_media_exports_getMedia">getMedia</a>
+      <a href="#api_media_exports_getMedia">
+        getMedia
+      </a>
     </li>
 
   </ul>
   <hr />
 
-  
+
   <h3 data-id="api_media_exports_uploadMedia">
     uploadMedia
   </h3>
-  
+
 
   <p>新增临时素材，分别有图片（image）、语音（voice）、视频（video）和缩略图（thumb）<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/5/963fc70b80dc75483a271298a76a8d59.html">http://mp.weixin.qq.com/wiki/5/963fc70b80dc75483a271298a76a8d59.html</a><br />Examples:</p><pre><code>api.uploadMedia(&#39;filepath&#39;, type, callback);
 </code></pre><p>Callback:</p><ul>
@@ -3538,7 +3981,7 @@ api.uploadVideoMaterial(&#39;filepath&#39;, description, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.uploadMedia()</td> 
+      <td colspan="3">exports.uploadMedia()</td>
     </tr>
   
 
@@ -3566,11 +4009,11 @@ api.uploadVideoMaterial(&#39;filepath&#39;, description, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_media_exports_getMedia">
     getMedia
   </h3>
-  
+
 
   <p>获取临时素材<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/11/07b6b76a6b6e8848e855a435d5e34a5f.html">http://mp.weixin.qq.com/wiki/11/07b6b76a6b6e8848e855a435d5e34a5f.html</a><br />Examples:</p><pre><code>api.getMedia(&#39;media_id&#39;, callback);
 </code></pre><p>Callback:</p><ul>
@@ -3585,7 +4028,7 @@ api.uploadVideoMaterial(&#39;filepath&#39;, description, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.getMedia()</td> 
+      <td colspan="3">exports.getMedia()</td>
     </tr>
   
 
@@ -3614,25 +4057,31 @@ api.uploadVideoMaterial(&#39;filepath&#39;, description, callback);
   <ul class="indexs">
   
     <li>
-      <a href="#api_menu_exports_createMenu">createMenu</a>
+      <a href="#api_menu_exports_createMenu">
+        createMenu
+      </a>
     </li>
 
     <li>
-      <a href="#api_menu_exports_getMenu">getMenu</a>
+      <a href="#api_menu_exports_getMenu">
+        getMenu
+      </a>
     </li>
 
     <li>
-      <a href="#api_menu_exports_removeMenu">removeMenu</a>
+      <a href="#api_menu_exports_removeMenu">
+        removeMenu
+      </a>
     </li>
 
   </ul>
   <hr />
 
-  
+
   <h3 data-id="api_menu_exports_createMenu">
     createMenu
   </h3>
-  
+
 
   <p>创建自定义菜单<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=自定义菜单创建接口">http://mp.weixin.qq.com/wiki/index.php?title=自定义菜单创建接口</a></p><p>Menu:</p><pre><code>{
  &quot;button&quot;:[
@@ -3671,7 +4120,7 @@ api.uploadVideoMaterial(&#39;filepath&#39;, description, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.createMenu()</td> 
+      <td colspan="3">exports.createMenu()</td>
     </tr>
   
 
@@ -3692,11 +4141,11 @@ api.uploadVideoMaterial(&#39;filepath&#39;, description, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_menu_exports_getMenu">
     getMenu
   </h3>
-  
+
 
   <p>获取菜单<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=自定义菜单查询接口">http://mp.weixin.qq.com/wiki/index.php?title=自定义菜单查询接口</a></p><p>Examples:</p><pre><code>api.getMenu(callback);
 </code></pre><p>Callback:</p><ul>
@@ -3724,7 +4173,7 @@ api.uploadVideoMaterial(&#39;filepath&#39;, description, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.getMenu()</td> 
+      <td colspan="3">exports.getMenu()</td>
     </tr>
   
 
@@ -3738,11 +4187,11 @@ api.uploadVideoMaterial(&#39;filepath&#39;, description, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_menu_exports_removeMenu">
     removeMenu
   </h3>
-  
+
 
   <p>删除自定义菜单<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=自定义菜单删除接口">http://mp.weixin.qq.com/wiki/index.php?title=自定义菜单删除接口</a><br />Examples:</p><pre><code>api.removeMenu(callback);
 </code></pre><p>Callback:</p><ul>
@@ -3757,7 +4206,7 @@ api.uploadVideoMaterial(&#39;filepath&#39;, description, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.removeMenu()</td> 
+      <td colspan="3">exports.removeMenu()</td>
     </tr>
   
 
@@ -3779,37 +4228,49 @@ api.uploadVideoMaterial(&#39;filepath&#39;, description, callback);
   <ul class="indexs">
   
     <li>
-      <a href="#api_message_exports_sendText">sendText</a>
+      <a href="#api_message_exports_sendText">
+        sendText
+      </a>
     </li>
 
     <li>
-      <a href="#api_message_exports_sendImage">sendImage</a>
+      <a href="#api_message_exports_sendImage">
+        sendImage
+      </a>
     </li>
 
     <li>
-      <a href="#api_message_exports_sendVoice">sendVoice</a>
+      <a href="#api_message_exports_sendVoice">
+        sendVoice
+      </a>
     </li>
 
     <li>
-      <a href="#api_message_exports_sendVideo">sendVideo</a>
+      <a href="#api_message_exports_sendVideo">
+        sendVideo
+      </a>
     </li>
 
     <li>
-      <a href="#api_message_exports_sendMusic">sendMusic</a>
+      <a href="#api_message_exports_sendMusic">
+        sendMusic
+      </a>
     </li>
 
     <li>
-      <a href="#api_message_exports_sendNews">sendNews</a>
+      <a href="#api_message_exports_sendNews">
+        sendNews
+      </a>
     </li>
 
   </ul>
   <hr />
 
-  
+
   <h3 data-id="api_message_exports_sendText">
     sendText
   </h3>
-  
+
 
   <p>客服消息，发送文字消息<br />详细细节 <a href="http://mp.weixin.qq.com/wiki/index.php?title=发送客服消息">http://mp.weixin.qq.com/wiki/index.php?title=发送客服消息</a><br />Examples:</p><pre><code>api.sendText(&#39;openid&#39;, &#39;Hello world&#39;, callback);
 </code></pre><p>Callback:</p><ul>
@@ -3823,7 +4284,7 @@ api.uploadVideoMaterial(&#39;filepath&#39;, description, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.sendText()</td> 
+      <td colspan="3">exports.sendText()</td>
     </tr>
   
 
@@ -3851,11 +4312,11 @@ api.uploadVideoMaterial(&#39;filepath&#39;, description, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_message_exports_sendImage">
     sendImage
   </h3>
-  
+
 
   <p>客服消息，发送图片消息<br />详细细节 <a href="http://mp.weixin.qq.com/wiki/index.php?title=发送客服消息">http://mp.weixin.qq.com/wiki/index.php?title=发送客服消息</a><br />Examples:</p><pre><code>api.sendImage(&#39;openid&#39;, &#39;media_id&#39;, callback);
 </code></pre><p>Callback:</p><ul>
@@ -3869,7 +4330,7 @@ api.uploadVideoMaterial(&#39;filepath&#39;, description, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.sendImage()</td> 
+      <td colspan="3">exports.sendImage()</td>
     </tr>
   
 
@@ -3897,11 +4358,11 @@ api.uploadVideoMaterial(&#39;filepath&#39;, description, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_message_exports_sendVoice">
     sendVoice
   </h3>
-  
+
 
   <p>客服消息，发送语音消息<br />详细细节 <a href="http://mp.weixin.qq.com/wiki/index.php?title=发送客服消息">http://mp.weixin.qq.com/wiki/index.php?title=发送客服消息</a><br />Examples:</p><pre><code>api.sendVoice(&#39;openid&#39;, &#39;media_id&#39;, callback);
 </code></pre><p>Callback:</p><ul>
@@ -3915,7 +4376,7 @@ api.uploadVideoMaterial(&#39;filepath&#39;, description, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.sendVoice()</td> 
+      <td colspan="3">exports.sendVoice()</td>
     </tr>
   
 
@@ -3943,11 +4404,11 @@ api.uploadVideoMaterial(&#39;filepath&#39;, description, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_message_exports_sendVideo">
     sendVideo
   </h3>
-  
+
 
   <p>客服消息，发送视频消息<br />详细细节 <a href="http://mp.weixin.qq.com/wiki/index.php?title=发送客服消息">http://mp.weixin.qq.com/wiki/index.php?title=发送客服消息</a><br />Examples:</p><pre><code>api.sendVideo(&#39;openid&#39;, &#39;media_id&#39;, &#39;thumb_media_id&#39;, callback);
 </code></pre><p>Callback:</p><ul>
@@ -3961,7 +4422,7 @@ api.uploadVideoMaterial(&#39;filepath&#39;, description, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.sendVideo()</td> 
+      <td colspan="3">exports.sendVideo()</td>
     </tr>
   
 
@@ -3996,11 +4457,11 @@ api.uploadVideoMaterial(&#39;filepath&#39;, description, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_message_exports_sendMusic">
     sendMusic
   </h3>
-  
+
 
   <p>客服消息，发送音乐消息<br />详细细节 <a href="http://mp.weixin.qq.com/wiki/index.php?title=发送客服消息">http://mp.weixin.qq.com/wiki/index.php?title=发送客服消息</a><br />Examples:</p><pre><code>var music = {
  title: &#39;音乐标题&#39;, // 可选
@@ -4021,7 +4482,7 @@ api.sendMusic(&#39;openid&#39;, music, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.sendMusic()</td> 
+      <td colspan="3">exports.sendMusic()</td>
     </tr>
   
 
@@ -4049,11 +4510,11 @@ api.sendMusic(&#39;openid&#39;, music, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_message_exports_sendNews">
     sendNews
   </h3>
-  
+
 
   <p>客服消息，发送图文消息<br />详细细节 <a href="http://mp.weixin.qq.com/wiki/index.php?title=发送客服消息">http://mp.weixin.qq.com/wiki/index.php?title=发送客服消息</a><br />Examples:</p><pre><code>var articles = [
  {
@@ -4080,7 +4541,7 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.sendNews()</td> 
+      <td colspan="3">exports.sendNews()</td>
     </tr>
   
 
@@ -4116,21 +4577,25 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   <ul class="indexs">
   
     <li>
-      <a href="#api_payment_exports_deliverNotify">deliverNotify</a>
+      <a href="#api_payment_exports_deliverNotify">
+        deliverNotify
+      </a>
     </li>
 
     <li>
-      <a href="#api_payment_exports_orderQuery">orderQuery</a>
+      <a href="#api_payment_exports_orderQuery">
+        orderQuery
+      </a>
     </li>
 
   </ul>
   <hr />
 
-  
+
   <h3 data-id="api_payment_exports_deliverNotify">
     deliverNotify
   </h3>
-  
+
 
   <p>微信公众号支付: 发货通知<br />详情请见：<a href="http://mp.weixin.qq.com/htmledition/res/bussiness-faq/wx_mp_pay.zip">http://mp.weixin.qq.com/htmledition/res/bussiness-faq/wx_mp_pay.zip</a> 接口文档订单发货通知</p><p>Data:</p><pre><code>{
   &quot;appid&quot; : &quot;wwwwb4f85f3a797777&quot;,
@@ -4156,7 +4621,7 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.deliverNotify()</td> 
+      <td colspan="3">exports.deliverNotify()</td>
     </tr>
   
 
@@ -4177,11 +4642,11 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_payment_exports_orderQuery">
     orderQuery
   </h3>
-  
+
 
   <p>微信公众号支付: 订单查询<br />详情请见：<a href="http://mp.weixin.qq.com/htmledition/res/bussiness-faq/wx_mp_pay.zip">http://mp.weixin.qq.com/htmledition/res/bussiness-faq/wx_mp_pay.zip</a> 接口文档订单查询部分</p><p>Package:</p><pre><code>{
   &quot;appid&quot; : &quot;wwwwb4f85f3a797777&quot;,
@@ -4228,7 +4693,7 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.orderQuery()</td> 
+      <td colspan="3">exports.orderQuery()</td>
     </tr>
   
 
@@ -4257,25 +4722,31 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   <ul class="indexs">
   
     <li>
-      <a href="#api_qrcode_exports_createTmpQRCode">createTmpQRCode</a>
+      <a href="#api_qrcode_exports_createTmpQRCode">
+        createTmpQRCode
+      </a>
     </li>
 
     <li>
-      <a href="#api_qrcode_exports_createLimitQRCode">createLimitQRCode</a>
+      <a href="#api_qrcode_exports_createLimitQRCode">
+        createLimitQRCode
+      </a>
     </li>
 
     <li>
-      <a href="#api_qrcode_exports_showQRCodeURL">showQRCodeURL</a>
+      <a href="#api_qrcode_exports_showQRCodeURL">
+        showQRCodeURL
+      </a>
     </li>
 
   </ul>
   <hr />
 
-  
+
   <h3 data-id="api_qrcode_exports_createTmpQRCode">
     createTmpQRCode
   </h3>
-  
+
 
   <p>创建临时二维码<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=生成带参数的二维码">http://mp.weixin.qq.com/wiki/index.php?title=生成带参数的二维码</a><br />Examples:</p><pre><code>api.createTmpQRCode(10000, 1800, callback);
 </code></pre><p>Callback:</p><ul>
@@ -4293,7 +4764,7 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.createTmpQRCode()</td> 
+      <td colspan="3">exports.createTmpQRCode()</td>
     </tr>
   
 
@@ -4321,11 +4792,11 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_qrcode_exports_createLimitQRCode">
     createLimitQRCode
   </h3>
-  
+
 
   <p>创建永久二维码<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=生成带参数的二维码">http://mp.weixin.qq.com/wiki/index.php?title=生成带参数的二维码</a><br />Examples:</p><pre><code>api.createLimitQRCode(100, callback);
 </code></pre><p>Callback:</p><ul>
@@ -4342,7 +4813,7 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.createLimitQRCode()</td> 
+      <td colspan="3">exports.createLimitQRCode()</td>
     </tr>
   
 
@@ -4363,11 +4834,11 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_qrcode_exports_showQRCodeURL">
     showQRCodeURL
   </h3>
-  
+
 
   <p>生成显示二维码的链接。微信扫描后，可立即进入场景<br />Examples:</p><pre><code>api.showQRCodeURL(titck);
 // =&gt; https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=TICKET
@@ -4378,7 +4849,7 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.showQRCodeURL()</td> 
+      <td colspan="3">exports.showQRCodeURL()</td>
     </tr>
   
 
@@ -4406,17 +4877,19 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   <ul class="indexs">
   
     <li>
-      <a href="#api_semantic_exports_semantic">semantic</a>
+      <a href="#api_semantic_exports_semantic">
+        semantic
+      </a>
     </li>
 
   </ul>
   <hr />
 
-  
+
   <h3 data-id="api_semantic_exports_semantic">
     semantic
   </h3>
-  
+
 
   <p>发送语义理解请求<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=%E8%AF%AD%E4%B9%89%E7%90%86%E8%A7%A3">http://mp.weixin.qq.com/wiki/index.php?title=%E8%AF%AD%E4%B9%89%E7%90%86%E8%A7%A3</a></p><p>Opts:</p><pre><code>{
   &quot;query&quot;:&quot;查一下明天从北京到上海的南航机票&quot;,
@@ -4462,7 +4935,7 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.semantic()</td> 
+      <td colspan="3">exports.semantic()</td>
     </tr>
   
 
@@ -4497,10 +4970,92 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   <h2>api_shakearound: API索引</h2>
   <ul class="indexs">
   
+    <li>
+      <a href="#api_shakearound__applyBeacons">
+        applyBeacons
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_shakearound__updateBeacon">
+        updateBeacon
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_shakearound__bindBeaconLocation">
+        bindBeaconLocation
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_shakearound__getBeacons">
+        getBeacons
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_shakearound__createPage">
+        createPage
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_shakearound__updatePage">
+        updatePage
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_shakearound__deletePages">
+        deletePages
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_shakearound__getPages">
+        getPages
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_shakearound__uploadPageIcon">
+        uploadPageIcon
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_shakearound__bindBeaconWithPages">
+        bindBeaconWithPages
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_shakearound__getShakeInfo">
+        getShakeInfo
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_shakearound__getDeviceStatistics">
+        getDeviceStatistics
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_shakearound__getPageStatistics">
+        getPageStatistics
+      </a>
+    </li>
+
   </ul>
   <hr />
 
-  
+
+  <h3 data-id="api_shakearound__applyBeacons">
+    applyBeacons
+  </h3>
+
 
   <p>设备管理: 申请设备ID。<br />接口说明:<br />申请配置设备所需的UUID、Major、Minor。若激活率小于50%，不能新增设备。单次新增设备超过500个，<br />需走人工审核流程。审核通过后，可用返回的批次ID用“查询设备列表”接口拉取本次申请的设备ID。<br />详情请参见：<a href="http://mp.weixin.qq.com/wiki/15/b9e012f917e3484b7ed02771156411f3.html">http://mp.weixin.qq.com/wiki/15/b9e012f917e3484b7ed02771156411f3.html</a></p><p>Options:</p><pre><code>{
   &quot;quantity&quot;:3,
@@ -4523,6 +5078,19 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
+    <tr>
+      <td>方法</td>
+      <td colspan="3">make()</td>
+    </tr>
+  
+
+    <tr>
+      <td>name</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  
 
     <tr>
       <td>参数</td>
@@ -4541,7 +5109,74 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
   </table>
   
+
+  <h3 data-id="api_shakearound__updateBeacon">
+    updateBeacon
+  </h3>
+
+
+  <p>设备管理: 编辑设备的备注信息。<br />接口说明:<br />可用设备ID或完整的UUID、Major、Minor指定设备，二者选其一。<br />详情请参见：<a href="http://mp.weixin.qq.com/wiki/15/b9e012f917e3484b7ed02771156411f3.html">http://mp.weixin.qq.com/wiki/15/b9e012f917e3484b7ed02771156411f3.html</a><br />Options:</p><pre><code>{
+ &quot;device_identifier&quot;: {
+   // 设备编号，若填了UUID、major、minor，则可不填设备编号，若二者都填，则以设备编号为优先
+   &quot;device_id&quot;: 10011,
+   &quot;uuid&quot;: &quot;FDA50693-A4E2-4FB1-AFCF-C6EB07647825&quot;,
+   &quot;major&quot;: 1002,
+   &quot;minor&quot;: 1223
+ },
+ &quot;comment&quot;: &quot;test&quot;
+}
+</code></pre><p>Examples:</p><pre><code>api.updateBeacon(options, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+  &quot;data&quot; : {
+  },
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;success.&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
   
+    <tr>
+      <td>方法</td>
+      <td colspan="3">make()</td>
+    </tr>
+  
+
+    <tr>
+      <td>name</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>options(Object)</td>
+      <td colspan="2"><p>请求参数</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="api_shakearound__bindBeaconLocation">
+    bindBeaconLocation
+  </h3>
+
 
   <p>设备管理: 配置设备与门店的关联关系。<br />接口说明:<br />修改设备关联的门店ID、设备的备注信息。可用设备ID或完整的UUID、Major、Minor指定设备，二者选其一。<br />详情请参见：<a href="http://mp.weixin.qq.com/wiki/15/b9e012f917e3484b7ed02771156411f3.html">http://mp.weixin.qq.com/wiki/15/b9e012f917e3484b7ed02771156411f3.html</a><br />Options:</p><pre><code>{
   &quot;device_identifier&quot;: {
@@ -4568,6 +5203,19 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
+    <tr>
+      <td>方法</td>
+      <td colspan="3">make()</td>
+    </tr>
+  
+
+    <tr>
+      <td>name</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  
 
     <tr>
       <td>参数</td>
@@ -4586,7 +5234,106 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
   </table>
   
+
+  <h3 data-id="api_shakearound__getBeacons">
+    getBeacons
+  </h3>
+
+
+  <p>设备管理: 查询设备列表<br />接口说明:<br />查询已有的设备ID、UUID、Major、Minor、激活状态、备注信息、关联门店、关联页面等信息。<br />可指定设备ID或完整的UUID、Major、Minor查询，也可批量拉取设备信息列表。<br />详情请参见：<a href="http://mp.weixin.qq.com/wiki/15/b9e012f917e3484b7ed02771156411f3.html">http://mp.weixin.qq.com/wiki/15/b9e012f917e3484b7ed02771156411f3.html</a><br />Options:<br />1) 查询指定设备时：</p><pre><code>{
+ &quot;device_identifier&quot;: [
+   {
+     &quot;device_id&quot;:10011,
+     &quot;uuid&quot;:&quot;FDA50693-A4E2-4FB1-AFCF-C6EB07647825&quot;,
+     &quot;major&quot;:1002,
+     &quot;minor&quot;:1223
+   }
+ ]
+}
+</code></pre><p>2) 需要分页查询或者指定范围内的设备时：</p><pre><code>{
+  &quot;begin&quot;: 0,
+  &quot;count&quot;: 3
+}
+</code></pre><p>3) 当需要根据批次ID查询时：</p><pre><code>{
+  &quot;apply_id&quot;: 1231,
+  &quot;begin&quot;: 0,
+  &quot;count&quot;: 3
+}
+</code></pre><p>Examples:</p><pre><code>api.getBeacons(options, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+  &quot;data&quot;: {
+    &quot;devices&quot;: [
+      {
+        &quot;comment&quot;: &quot;&quot;,
+        &quot;device_id&quot;: 10097,
+        &quot;major&quot;: 10001,
+        &quot;minor&quot;: 12102,
+        &quot;page_ids&quot;: &quot;15369&quot;,
+        &quot;status&quot;: 1, //激活状态，0：未激活，1：已激活（但不活跃），2：活跃
+        &quot;poi_id&quot;: 0,
+        &quot;uuid&quot;: &quot;FDA50693-A4E2-4FB1-AFCF-C6EB07647825&quot;
+      },
+      {
+        &quot;comment&quot;: &quot;&quot;,
+        &quot;device_id&quot;: 10098,
+        &quot;major&quot;: 10001,
+        &quot;minor&quot;: 12103,
+        &quot;page_ids&quot;: &quot;15368&quot;,
+        &quot;status&quot;: 1,
+        &quot;poi_id&quot;: 0,
+        &quot;uuid&quot;: &quot;FDA50693-A4E2-4FB1-AFCF-C6EB07647825&quot;
+      }
+     ],
+     &quot;total_count&quot;: 151
+   },
+   &quot;errcode&quot;: 0,
+   &quot;errmsg&quot;: &quot;success.&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
   
+    <tr>
+      <td>方法</td>
+      <td colspan="3">make()</td>
+    </tr>
+  
+
+    <tr>
+      <td>name</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>options(Object)</td>
+      <td colspan="2"><p>请求参数</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="api_shakearound__createPage">
+    createPage
+  </h3>
+
 
   <p>页面管理: 新增页面<br />接口说明:<br />新增摇一摇出来的页面信息，包括在摇一摇页面出现的主标题、副标题、图片和点击进去的超链接。<br />其中，图片必须为用素材管理接口（uploadPageIcon函数）上传至微信侧服务器后返回的链接。<br />详情请参见：<a href="http://mp.weixin.qq.com/wiki/5/6626199ea8757c752046d8e46cf13251.html">http://mp.weixin.qq.com/wiki/5/6626199ea8757c752046d8e46cf13251.html</a><br />Page:</p><pre><code>{
   &quot;title&quot;:&quot;主标题&quot;,
@@ -4613,6 +5360,19 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
+    <tr>
+      <td>方法</td>
+      <td colspan="3">make()</td>
+    </tr>
+  
+
+    <tr>
+      <td>name</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  
 
     <tr>
       <td>参数</td>
@@ -4631,7 +5391,74 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
   </table>
   
+
+  <h3 data-id="api_shakearound__updatePage">
+    updatePage
+  </h3>
+
+
+  <p>页面管理: 编辑页面信息<br />接口说明:<br />编辑摇一摇出来的页面信息，包括在摇一摇页面出现的主标题、副标题、图片和点击进去的超链接。<br />详情请参见：<a href="http://mp.weixin.qq.com/wiki/5/6626199ea8757c752046d8e46cf13251.html">http://mp.weixin.qq.com/wiki/5/6626199ea8757c752046d8e46cf13251.html</a><br />Page:</p><pre><code>{
+  &quot;page_id&quot;:12306,
+  &quot;title&quot;:&quot;主标题&quot;,
+  &quot;description&quot;:&quot;副标题&quot;,
+  &quot;page_url&quot;:&quot; https://zb.weixin.qq.com&quot;,
+  &quot;comment&quot;:&quot;数据示例&quot;,
+  &quot;icon_url&quot;:&quot;http://shp.qpic.cn/wx_shake_bus/0/14288351768a23d76e7636b56440172120529e8252/120&quot;
+  //调用uploadPageIcon函数获取到该URL
+}
+</code></pre><p>Examples:</p><pre><code>api.updatePage(page, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+  &quot;data&quot; : {
+    &quot;page_id&quot;: 28840
+  },
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;success.&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
   
+    <tr>
+      <td>方法</td>
+      <td colspan="3">make()</td>
+    </tr>
+  
+
+    <tr>
+      <td>name</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>page(Object)</td>
+      <td colspan="2"><p>请求参数</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="api_shakearound__deletePages">
+    deletePages
+  </h3>
+
 
   <p>页面管理: 删除页面<br />接口说明:<br />删除已有的页面，包括在摇一摇页面出现的主标题、副标题、图片和点击进去的超链接。<br />只有页面与设备没有关联关系时，才可被删除。<br />详情请参见：<a href="http://mp.weixin.qq.com/wiki/5/6626199ea8757c752046d8e46cf13251.html">http://mp.weixin.qq.com/wiki/5/6626199ea8757c752046d8e46cf13251.html</a><br />Page_ids:</p><pre><code>{
   &quot;page_ids&quot;:[12345,23456,34567]
@@ -4652,6 +5479,19 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
+    <tr>
+      <td>方法</td>
+      <td colspan="3">make()</td>
+    </tr>
+  
+
+    <tr>
+      <td>name</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  
 
     <tr>
       <td>参数</td>
@@ -4670,7 +5510,90 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
   </table>
   
+
+  <h3 data-id="api_shakearound__getPages">
+    getPages
+  </h3>
+
+
+  <p>页面管理: 查询页面列表<br />接口说明:<br />查询已有的页面，包括在摇一摇页面出现的主标题、副标题、图片和点击进去的超链接。提供两种查询方式，可指定页面ID查询，也可批量拉取页面列表。<br />详情请参见：<a href="http://mp.weixin.qq.com/wiki/5/6626199ea8757c752046d8e46cf13251.html">http://mp.weixin.qq.com/wiki/5/6626199ea8757c752046d8e46cf13251.html</a><br />Options:<br />1) 需要查询指定页面时：</p><pre><code>{
+  &quot;page_ids&quot;:[12345, 23456, 34567]
+}
+</code></pre><p>2) 需要分页查询或者指定范围内的页面时：</p><pre><code>{
+  &quot;begin&quot;: 0,
+  &quot;count&quot;: 3
+}
+</code></pre><p>Examples:</p><pre><code>api.getBeacons(options, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+  &quot;data&quot;: {
+    &quot;pages&quot;: [
+       {
+         &quot;comment&quot;: &quot;just for test&quot;,
+         &quot;description&quot;: &quot;test&quot;,
+         &quot;icon_url&quot;: &quot;https://www.baidu.com/img/bd_logo1&quot;,
+         &quot;page_id&quot;: 28840,
+         &quot;page_url&quot;: &quot;http://xw.qq.com/testapi1&quot;,
+         &quot;title&quot;: &quot;测试1&quot;
+       },
+       {
+         &quot;comment&quot;: &quot;just for test&quot;,
+         &quot;description&quot;: &quot;test&quot;,
+         &quot;icon_url&quot;: &quot;https://www.baidu.com/img/bd_logo1&quot;,
+         &quot;page_id&quot;: 28842,
+         &quot;page_url&quot;: &quot;http://xw.qq.com/testapi2&quot;,
+         &quot;title&quot;: &quot;测试2&quot;
+       }
+     ],
+     &quot;total_count&quot;: 2
+   },
+   &quot;errcode&quot;: 0,
+   &quot;errmsg&quot;: &quot;success.&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
   
+    <tr>
+      <td>方法</td>
+      <td colspan="3">make()</td>
+    </tr>
+  
+
+    <tr>
+      <td>name</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>options(Object)</td>
+      <td colspan="2"><p>请求参数</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="api_shakearound__uploadPageIcon">
+    uploadPageIcon
+  </h3>
+
 
   <p>上传图片素材<br />接口说明：<br />上传在摇一摇页面展示的图片素材，素材保存在微信侧服务器上。<br />格式限定为：jpg,jpeg,png,gif，图片大小建议120px<em>120 px，限制不超过200 px </em>200 px，图片需为正方形。<br />详情请参见：<a href="http://mp.weixin.qq.com/wiki/5/e997428269ff189d8f9a4b9e177be2d9.html">http://mp.weixin.qq.com/wiki/5/e997428269ff189d8f9a4b9e177be2d9.html</a><br />Examples:</p><pre><code>api.uploadPageIcon(&#39;filepath&#39;, callback);
 </code></pre><p>Callback:</p><ul>
@@ -4688,6 +5611,19 @@ api.sendNews(&#39;openid&#39;, articles, callback);
 
   <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">make()</td>
+    </tr>
+  
+
+    <tr>
+      <td>name</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
   
 
     <tr>
@@ -4707,7 +5643,76 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
   </table>
   
+
+  <h3 data-id="api_shakearound__bindBeaconWithPages">
+    bindBeaconWithPages
+  </h3>
+
+
+  <p>配置设备与页面的关联关系<br />接口说明:<br />配置设备与页面的关联关系。支持建立或解除关联关系，也支持新增页面或覆盖页面等操作。<br />配置完成后，在此设备的信号范围内，即可摇出关联的页面信息。若设备配置多个页面，则随机出现页面信息。<br />详情请参见：<a href="http://mp.weixin.qq.com/wiki/12/c8120214ec0ba08af5dfcc0da1a11400.html">http://mp.weixin.qq.com/wiki/12/c8120214ec0ba08af5dfcc0da1a11400.html</a><br />Options:</p><pre><code>{
+ &quot;device_identifier&quot;: {
+   // 设备编号，若填了UUID、major、minor，则可不填设备编号，若二者都填，则以设备编号为优先
+   &quot;device_id&quot;:10011
+   &quot;uuid&quot;:&quot;FDA50693-A4E2-4FB1-AFCF-C6EB07647825&quot;,
+   &quot;major&quot;:1002,
+   &quot;minor&quot;:1223
+ },
+ &quot;page_ids&quot;:[12345, 23456, 334567],
+ &quot;bind&quot; :0,  //关联操作标志位， 0为解除关联关系，1为建立关联关系
+ &quot;append&quot;:0, //新增操作标志位， 0为覆盖，1为新增
+}
+</code></pre><p>Examples:</p><pre><code>api.bindBeaconWithPages(options, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+  &quot;data&quot; : {
+  },
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;success.&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
   
+    <tr>
+      <td>方法</td>
+      <td colspan="3">make()</td>
+    </tr>
+  
+
+    <tr>
+      <td>name</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>options(Object)</td>
+      <td colspan="2"><p>请求参数</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="api_shakearound__getShakeInfo">
+    getShakeInfo
+  </h3>
+
 
   <p>获取摇周边的设备及用户信息<br />接口说明:<br />获取设备信息，包括UUID、major、minor，以及距离、openID等信息。<br />详情请参见：<a href="http://mp.weixin.qq.com/wiki/3/34904a5db3d0ec7bb5306335b8da1faf.html">http://mp.weixin.qq.com/wiki/3/34904a5db3d0ec7bb5306335b8da1faf.html</a><br />Ticket:</p><pre><code>{
   &quot;ticket&quot;:”6ab3d8465166598a5f4e8c1b44f44645”
@@ -4728,6 +5733,19 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
+    <tr>
+      <td>方法</td>
+      <td colspan="3">make()</td>
+    </tr>
+  
+
+    <tr>
+      <td>name</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  
 
     <tr>
       <td>参数</td>
@@ -4746,7 +5764,88 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
   </table>
   
+
+  <h3 data-id="api_shakearound__getDeviceStatistics">
+    getDeviceStatistics
+  </h3>
+
+
+  <p>数据统计: 以设备为维度的数据统计接口<br />接口说明:<br />查询单个设备进行摇周边操作的人数、次数，点击摇周边消息的人数、次数；查询的最长时间跨度为30天。<br />详情请参见：<a href="http://mp.weixin.qq.com/wiki/0/8a24bcacad40fe7ee98d1573cb8a6764.html">http://mp.weixin.qq.com/wiki/0/8a24bcacad40fe7ee98d1573cb8a6764.html</a><br />Options:</p><pre><code>{
+  &quot;device_identifier&quot;: {
+    &quot;device_id&quot;:10011,  //设备编号，若填了UUID、major、minor，则可不填设备编号，若二者都填，则以设备编号为优先
+    &quot;uuid&quot;:&quot;FDA50693-A4E2-4FB1-AFCF-C6EB07647825&quot;, //UUID、major、minor，三个信息需填写完整，若填了设备编号，则可不填此信息。
+    &quot;major&quot;:1002,
+    &quot;minor&quot;:1223
+  },
+  &quot;begin_date&quot;: 12313123311,
+  &quot;end_date&quot;: 123123131231
+}
+</code></pre><p>Examples:</p><pre><code>api.getDeviceStatistics(options, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+  &quot;data&quot; : {
+    {
+      &quot;click_pv&quot;: 0,
+      &quot;click_uv&quot;: 0,
+      &quot;ftime&quot;: 1425052800,
+      &quot;shake_pv&quot;: 0,
+      &quot;shake_uv&quot;: 0
+    },
+    {
+      &quot;click_pv&quot;: 0,
+      &quot;click_uv&quot;: 0,
+      &quot;ftime&quot;: 1425139200,
+      &quot;shake_pv&quot;: 0,
+      &quot;shake_uv&quot;: 0
+    }
+  },
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;success.&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
   
+    <tr>
+      <td>方法</td>
+      <td colspan="3">make()</td>
+    </tr>
+  
+
+    <tr>
+      <td>name</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>options(Object)</td>
+      <td colspan="2"><p>请求参数</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="api_shakearound__getPageStatistics">
+    getPageStatistics
+  </h3>
+
 
   <p>数据统计: 以页面为维度的数据统计接口<br />接口说明:<br />查询单个页面通过摇周边摇出来的人数、次数，点击摇周边页面的人数、次数；查询的最长时间跨度为30天。<br />详情请参见：<a href="http://mp.weixin.qq.com/wiki/0/8a24bcacad40fe7ee98d1573cb8a6764.html">http://mp.weixin.qq.com/wiki/0/8a24bcacad40fe7ee98d1573cb8a6764.html</a><br />Options:</p><pre><code>{
   &quot;page_id&quot;: 12345,
@@ -4783,6 +5882,19 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
+    <tr>
+      <td>方法</td>
+      <td colspan="3">make()</td>
+    </tr>
+  
+
+    <tr>
+      <td>name</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  
 
     <tr>
       <td>参数</td>
@@ -4809,17 +5921,19 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   <ul class="indexs">
   
     <li>
-      <a href="#api_shop_common_exports_uploadPicture">uploadPicture</a>
+      <a href="#api_shop_common_exports_uploadPicture">
+        uploadPicture
+      </a>
     </li>
 
   </ul>
   <hr />
 
-  
+
   <h3 data-id="api_shop_common_exports_uploadPicture">
     uploadPicture
   </h3>
-  
+
 
   <p>上传图片<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.uploadPicture(&#39;/path/to/your/img.jpg&#39;, callback);
 </code></pre><p>Callback:</p><ul>
@@ -4838,7 +5952,7 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.uploadPicture()</td> 
+      <td colspan="3">exports.uploadPicture()</td>
     </tr>
   
 
@@ -4867,33 +5981,43 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   <ul class="indexs">
   
     <li>
-      <a href="#api_shop_express_exports_addExpressTemplate">addExpressTemplate</a>
+      <a href="#api_shop_express_exports_addExpressTemplate">
+        addExpressTemplate
+      </a>
     </li>
 
     <li>
-      <a href="#api_shop_express_exports_deleteExpressTemplate">deleteExpressTemplate</a>
+      <a href="#api_shop_express_exports_deleteExpressTemplate">
+        deleteExpressTemplate
+      </a>
     </li>
 
     <li>
-      <a href="#api_shop_express_exports_updateExpressTemplate">updateExpressTemplate</a>
+      <a href="#api_shop_express_exports_updateExpressTemplate">
+        updateExpressTemplate
+      </a>
     </li>
 
     <li>
-      <a href="#api_shop_express_exports_getExpressTemplateById">getExpressTemplateById</a>
+      <a href="#api_shop_express_exports_getExpressTemplateById">
+        getExpressTemplateById
+      </a>
     </li>
 
     <li>
-      <a href="#api_shop_express_exports_getAllExpressTemplates">getAllExpressTemplates</a>
+      <a href="#api_shop_express_exports_getAllExpressTemplates">
+        getAllExpressTemplates
+      </a>
     </li>
 
   </ul>
   <hr />
 
-  
+
   <h3 data-id="api_shop_express_exports_addExpressTemplate">
     addExpressTemplate
   </h3>
-  
+
 
   <p>增加邮费模板<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.addExpress(express, callback);
 </code></pre><p>Express:</p><pre><code>{
@@ -4981,7 +6105,7 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.addExpressTemplate()</td> 
+      <td colspan="3">exports.addExpressTemplate()</td>
     </tr>
   
 
@@ -5002,11 +6126,11 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_shop_express_exports_deleteExpressTemplate">
     deleteExpressTemplate
   </h3>
-  
+
 
   <p>修改邮费模板<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.deleteExpressTemplate(templateId, callback);
 </code></pre><p>Callback:</p><ul>
@@ -5024,7 +6148,7 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.deleteExpressTemplate()</td> 
+      <td colspan="3">exports.deleteExpressTemplate()</td>
     </tr>
   
 
@@ -5045,11 +6169,11 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_shop_express_exports_updateExpressTemplate">
     updateExpressTemplate
   </h3>
-  
+
 
   <p>修改邮费模板<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.updateExpressTemplate(template, callback);
 </code></pre><p>Callback:</p><ul>
@@ -5071,7 +6195,7 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.updateExpressTemplate()</td> 
+      <td colspan="3">exports.updateExpressTemplate()</td>
     </tr>
   
 
@@ -5092,11 +6216,11 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_shop_express_exports_getExpressTemplateById">
     getExpressTemplateById
   </h3>
-  
+
 
   <p>获取指定ID的邮费模板<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.getExpressTemplateById(templateId, callback);
 </code></pre><p>Callback:</p><ul>
@@ -5143,7 +6267,7 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.getExpressTemplateById()</td> 
+      <td colspan="3">exports.getExpressTemplateById()</td>
     </tr>
   
 
@@ -5164,11 +6288,11 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_shop_express_exports_getAllExpressTemplates">
     getAllExpressTemplates
   </h3>
-  
+
 
   <p>获取所有邮费模板的未封装版本<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.getAllExpressTemplates(callback);
 </code></pre><p>Callback:</p><ul>
@@ -5209,7 +6333,7 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.getAllExpressTemplates()</td> 
+      <td colspan="3">exports.getAllExpressTemplates()</td>
     </tr>
   
 
@@ -5231,21 +6355,67 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   <ul class="indexs">
   
     <li>
-      <a href="#api_shop_goods_exports_createGoods">createGoods</a>
+      <a href="#api_shop_goods_exports_createGoods">
+        createGoods
+      </a>
     </li>
 
     <li>
-      <a href="#api_shop_goods_exports_getGoods">getGoods</a>
+      <a href="#api_shop_goods_exports_deleteGoods">
+        deleteGoods
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_shop_goods_exports_updateGoods">
+        updateGoods
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_shop_goods_exports_getGoods">
+        getGoods
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_shop_goods_exports_getGoodsByStatus">
+        getGoodsByStatus
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_shop_goods_exports_updateGoodsStatus">
+        updateGoodsStatus
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_shop_goods_exports_getSubCats">
+        getSubCats
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_shop_goods_exports_getSKUs">
+        getSKUs
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_shop_goods_exports_getProperties">
+        getProperties
+      </a>
     </li>
 
   </ul>
   <hr />
 
-  
+
   <h3 data-id="api_shop_goods_exports_createGoods">
     createGoods
   </h3>
-  
+
 
   <p>增加商品<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.createGoods(goods, callback);
 </code></pre><p>Goods:</p><pre><code>{
@@ -5332,7 +6502,7 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.createGoods()</td> 
+      <td colspan="3">exports.createGoods()</td>
     </tr>
   
 
@@ -5353,11 +6523,166 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
   </table>
   
+
+  <h3 data-id="api_shop_goods_exports_deleteGoods">
+    deleteGoods
+  </h3>
+
+
+  <p>删除商品<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.deleteGoods(productId, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+ &quot;errcode&quot;: 0,
+ &quot;errmsg&quot;: &quot;success&quot;,
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
   
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.deleteGoods()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>productId(String)</td>
+      <td colspan="2"><p>商品Id</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="api_shop_goods_exports_updateGoods">
+    updateGoods
+  </h3>
+
+
+  <p>修改商品<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.updateGoods(goods, callback);
+</code></pre><p>Goods:</p><pre><code>{
+ &quot;product_id&quot;:&quot;pDF3iY6Kr_BV_CXaiYysoGqJhppQ&quot;,
+ &quot;product_base&quot;:{
+   &quot;category_id&quot;:[
+     &quot;537074298&quot;
+   ],
+   &quot;property&quot;:[
+     {&quot;id&quot;:&quot;1075741879&quot;,&quot;vid&quot;:&quot;1079749967&quot;},
+     {&quot;id&quot;:&quot;1075754127&quot;,&quot;vid&quot;:&quot;1079795198&quot;},
+     {&quot;id&quot;:&quot;1075777334&quot;,&quot;vid&quot;:&quot;1079837440&quot;}
+   ],
+   &quot;name&quot;:&quot;testaddproduct&quot;,
+   &quot;sku_info&quot;:[
+     {
+       &quot;id&quot;:&quot;1075741873&quot;,
+       &quot;vid&quot;:[&quot;1079742386&quot;,&quot;1079742363&quot;]
+     }
+   ],
+   &quot;main_img&quot;: &quot;http://mmbiz.qpic.cn/mmbiz/4whpV1VZl2iccsvYbHvnphkyGtnvjD3ulEKogfsiaua49pvLfUS8Ym0GSYjViaLic0FD3vN0V8PILcibEGb2fPfEOmw/0&quot;,
+   &quot;img&quot;:[
+     &quot;http://mmbiz.qpic.cn/mmbiz/4whpV1VZl2iccsvYbHvnphkyGtnvjD3ulEKogfsiaua49pvLfUS8Ym0GSYjViaLic0FD3vN0V8PILcibEGb2fPfEOmw/0&quot;
+   ],
+   &quot;detail&quot;:[
+     {&quot;text&quot;:&quot;testfirst&quot;},
+     {&quot;img&quot;: 4whpV1VZl2iccsvYbHvnphkyGtnvjD3ul1UcLcwxrFdwTKYhH9Q5YZoCfX4Ncx655ZK6ibnlibCCErbKQtReySaVA/0&quot;},
+     {&quot;text&quot;:&quot;testagain&quot;}
+   ],
+   &quot;buy_limit&quot;:10
+ },
+ &quot;sku_list&quot;:[
+   {
+     &quot;sku_id&quot;:&quot;1075741873:1079742386&quot;,
+     &quot;price&quot;:30,
+     &quot;icon_url&quot;: &quot;http://mmbiz.qpic.cn/mmbiz/4whpV1VZl28bJj62XgfHPibY3ORKicN1oJ4CcoIr4BMbfA8LqyyjzOZzqrOGz3f5K Wq1QGP3fo6TOTSYD3TBQjuw/0&quot;,
+     &quot;product_code&quot;:&quot;testing&quot;,
+     &quot;ori_price&quot;:9000000,
+     &quot;quantity&quot;:800
+   },
+   {
+     &quot;sku_id&quot;:&quot;1075741873:1079742363&quot;,
+     &quot;price&quot;:30,
+     &quot;icon_url&quot;: &quot;http://mmbiz.qpic.cn/mmbiz/4whpV1VZl28bJj62XgfHPibY3ORKicN1oJ4CcoIr4BMbfA8LqyyjzOZzqrOGz3f5K Wq1QGP3fo6TOTSYD3TBQjuw/0&quot;,
+     &quot;product_code&quot;:&quot;testingtesting&quot;,
+     &quot;ori_price&quot;:9000000,
+     &quot;quantity&quot;:800
+   }
+ ],
+ &quot;attrext&quot;:{
+   &quot;location&quot;:{
+     &quot;country&quot;:&quot;中国&quot;,
+     &quot;province&quot;:&quot;广东省&quot;,
+     &quot;city&quot;:&quot;广州市&quot;,
+     &quot;address&quot;:&quot;T.I.T创意园&quot;
+   },
+   &quot;isPostFree&quot;:0,
+   &quot;isHasReceipt&quot;:1,
+   &quot;isUnderGuaranty&quot;:0,
+   &quot;isSupportReplace&quot;:0
+ },
+ &quot;delivery_info&quot;:{
+   &quot;delivery_type&quot;:0,
+   &quot;template_id&quot;:0,
+   &quot;express&quot;:[
+     {&quot;id&quot;:10000027,&quot;price&quot;:100},
+     {&quot;id&quot;:10000028,&quot;price&quot;:100},
+     {&quot;id&quot;:10000029,&quot;price&quot;:100}
+   ]
+ }
+}
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+ &quot;errcode&quot;: 0,
+ &quot;errmsg&quot;: &quot;success&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.updateGoods()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>goods(Object)</td>
+      <td colspan="2"><p>商品信息</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+
   <h3 data-id="api_shop_goods_exports_getGoods">
     getGoods
   </h3>
-  
+
 
   <p>查询商品<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.getGoods(productId, callback);
 </code></pre><p>Callback:</p><ul>
@@ -5436,7 +6761,7 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.getGoods()</td> 
+      <td colspan="3">exports.getGoods()</td>
     </tr>
   
 
@@ -5444,6 +6769,270 @@ api.sendNews(&#39;openid&#39;, articles, callback);
       <td>参数</td>
       <td>productId(String)</td>
       <td colspan="2"><p>商品Id</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="api_shop_goods_exports_getGoodsByStatus">
+    getGoodsByStatus
+  </h3>
+
+
+  <p>获取指定状态的所有商品<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.deleteGoods(productId, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+ &quot;errcode&quot;: 0,
+ &quot;errmsg&quot;: &quot;success&quot;,
+ &quot;products_info&quot;: [
+   {
+     &quot;product_base&quot;: ...,
+     &quot;sku_list&quot;: ...,
+     &quot;attrext&quot;: ...,
+     &quot;delivery_info&quot;: ...,
+     &quot;product_id&quot;: &quot;pDF3iY-mql6CncpbVajaB_obC321&quot;,
+     &quot;status&quot;: 1
+   }
+ ]
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getGoodsByStatus()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>status(Number)</td>
+      <td colspan="2"><p>状态码。(0-全部, 1-上架, 2-下架)</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="api_shop_goods_exports_updateGoodsStatus">
+    updateGoodsStatus
+  </h3>
+
+
+  <p>商品上下架<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.updateGoodsStatus(productId, status, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+ &quot;errcode&quot;: 0,
+ &quot;errmsg&quot;: &quot;success&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.updateGoodsStatus()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>productId(String)</td>
+      <td colspan="2"><p>商品Id</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>status(Number)</td>
+      <td colspan="2"><p>状态码。(0-全部, 1-上架, 2-下架)</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="api_shop_goods_exports_getSubCats">
+    getSubCats
+  </h3>
+
+
+  <p>获取指定分类的所有子分类<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.getSubCats(catId, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+ &quot;errcode&quot;: 0,
+ &quot;errmsg&quot;: &quot;success&quot;
+ &quot;cate_list&quot;: [!
+   {&quot;id&quot;: &quot;537074292&quot;,&quot;name&quot;: &quot;数码相机&quot;},
+   {&quot;id&quot;: &quot;537074293&quot;,&quot;name&quot;: &quot;家⽤用摄像机&quot;},
+   {&quot;id&quot;: &quot;537074298&quot;,! &quot;name&quot;: &quot;单反相机&quot;}
+ ]
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getSubCats()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>catId(Number)</td>
+      <td colspan="2"><p>大分类ID</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="api_shop_goods_exports_getSKUs">
+    getSKUs
+  </h3>
+
+
+  <p>获取指定子分类的所有SKU<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.getSKUs(catId, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+ &quot;errcode&quot;: 0,
+ &quot;errmsg&quot;: &quot;success&quot;
+ &quot;sku_table&quot;: [
+   {
+     &quot;id&quot;: &quot;1075741873&quot;,
+     &quot;name&quot;: &quot;颜⾊色&quot;,
+     &quot;value_list&quot;: [
+       {&quot;id&quot;: &quot;1079742375&quot;, &quot;name&quot;: &quot;撞⾊色&quot;},
+       {&quot;id&quot;: &quot;1079742376&quot;,&quot;name&quot;: &quot;桔⾊色&quot;}
+     ]
+   }
+ ]
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getSKUs()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>catId(Number)</td>
+      <td colspan="2"><p>大分类ID</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="api_shop_goods_exports_getProperties">
+    getProperties
+  </h3>
+
+
+  <p>获取指定分类的所有属性<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.getProperties(catId, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+ &quot;errcode&quot;: 0,
+ &quot;errmsg&quot;: &quot;success&quot;
+ &quot;properties&quot;: [
+   {
+     &quot;id&quot;: &quot;1075741879&quot;,
+     &quot;name&quot;: &quot;品牌&quot;,
+     &quot;property_value&quot;: [
+       {&quot;id&quot;: &quot;200050867&quot;,&quot;name&quot;: &quot;VIC&amp;#38&quot;},
+       {&quot;id&quot;: &quot;200050868&quot;,&quot;name&quot;: &quot;Kate&amp;#38&quot;},
+       {&quot;id&quot;: &quot;200050971&quot;,&quot;name&quot;: &quot;M&amp;#38&quot;},
+       {&quot;id&quot;: &quot;200050972&quot;,&quot;name&quot;: &quot;Black&amp;#38&quot;}
+     ]
+   },
+   {
+     &quot;id&quot;: &quot;123456789&quot;,
+     &quot;name&quot;: &quot;颜⾊色&quot;,
+     &quot;property_value&quot;: ...
+   }
+ ]
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getProperties()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>catId(Number)</td>
+      <td colspan="2"><p>分类ID</p></td>
     </tr>
   
 
@@ -5465,37 +7054,49 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   <ul class="indexs">
   
     <li>
-      <a href="#api_shop_group_exports_createGoodsGroup">createGoodsGroup</a>
+      <a href="#api_shop_group_exports_createGoodsGroup">
+        createGoodsGroup
+      </a>
     </li>
 
     <li>
-      <a href="#api_shop_group_exports_deleteGoodsGroup">deleteGoodsGroup</a>
+      <a href="#api_shop_group_exports_deleteGoodsGroup">
+        deleteGoodsGroup
+      </a>
     </li>
 
     <li>
-      <a href="#api_shop_group_exports_updateGoodsGroup">updateGoodsGroup</a>
+      <a href="#api_shop_group_exports_updateGoodsGroup">
+        updateGoodsGroup
+      </a>
     </li>
 
     <li>
-      <a href="#api_shop_group_exports_updateGoodsForGroup">updateGoodsForGroup</a>
+      <a href="#api_shop_group_exports_updateGoodsForGroup">
+        updateGoodsForGroup
+      </a>
     </li>
 
     <li>
-      <a href="#api_shop_group_exports_getAllGroups">getAllGroups</a>
+      <a href="#api_shop_group_exports_getAllGroups">
+        getAllGroups
+      </a>
     </li>
 
     <li>
-      <a href="#api_shop_group_exports_getGroupById">getGroupById</a>
+      <a href="#api_shop_group_exports_getGroupById">
+        getGroupById
+      </a>
     </li>
 
   </ul>
   <hr />
 
-  
+
   <h3 data-id="api_shop_group_exports_createGoodsGroup">
     createGoodsGroup
   </h3>
-  
+
 
   <p>创建商品分组<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.createGoodsGroup(groupName, productList, callback);
 </code></pre><p>Callback:</p><ul>
@@ -5514,7 +7115,7 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.createGoodsGroup()</td> 
+      <td colspan="3">exports.createGoodsGroup()</td>
     </tr>
   
 
@@ -5542,11 +7143,11 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_shop_group_exports_deleteGoodsGroup">
     deleteGoodsGroup
   </h3>
-  
+
 
   <p>删除商品分组<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.deleteGoodsGroup(groupId, callback);
 </code></pre><p>Callback:</p><ul>
@@ -5564,7 +7165,7 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.deleteGoodsGroup()</td> 
+      <td colspan="3">exports.deleteGoodsGroup()</td>
     </tr>
   
 
@@ -5585,11 +7186,11 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_shop_group_exports_updateGoodsGroup">
     updateGoodsGroup
   </h3>
-  
+
 
   <p>修改商品分组属性<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.updateGoodsGroup(groupId, groupName, callback);
 </code></pre><p>Callback:</p><ul>
@@ -5607,7 +7208,7 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.updateGoodsGroup()</td> 
+      <td colspan="3">exports.updateGoodsGroup()</td>
     </tr>
   
 
@@ -5635,11 +7236,11 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_shop_group_exports_updateGoodsForGroup">
     updateGoodsForGroup
   </h3>
-  
+
 
   <p>修改商品分组内的商品<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.updateGoodsForGroup(groupId, addProductList, delProductList, callback);
 </code></pre><p>Callback:</p><ul>
@@ -5657,7 +7258,7 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.updateGoodsForGroup()</td> 
+      <td colspan="3">exports.updateGoodsForGroup()</td>
     </tr>
   
 
@@ -5692,11 +7293,11 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_shop_group_exports_getAllGroups">
     getAllGroups
   </h3>
-  
+
 
   <p>获取所有商品分组<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.getAllGroups(callback);
 </code></pre><p>Callback:</p><ul>
@@ -5723,7 +7324,7 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.getAllGroups()</td> 
+      <td colspan="3">exports.getAllGroups()</td>
     </tr>
   
 
@@ -5737,11 +7338,11 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_shop_group_exports_getGroupById">
     getGroupById
   </h3>
-  
+
 
   <p>根据ID获取商品分组<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.getGroupById(groupId, callback);
 </code></pre><p>Callback:</p><ul>
@@ -5768,7 +7369,7 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.getGroupById()</td> 
+      <td colspan="3">exports.getGroupById()</td>
     </tr>
   
 
@@ -5797,29 +7398,37 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   <ul class="indexs">
   
     <li>
-      <a href="#api_shop_order_exports_getOrderById">getOrderById</a>
+      <a href="#api_shop_order_exports_getOrderById">
+        getOrderById
+      </a>
     </li>
 
     <li>
-      <a href="#api_shop_order_exports_getOrdersByStatus">getOrdersByStatus</a>
+      <a href="#api_shop_order_exports_getOrdersByStatus">
+        getOrdersByStatus
+      </a>
     </li>
 
     <li>
-      <a href="#api_shop_order_exports_setExpressForOrder">setExpressForOrder</a>
+      <a href="#api_shop_order_exports_setExpressForOrder">
+        setExpressForOrder
+      </a>
     </li>
 
     <li>
-      <a href="#api_shop_order_exports_closeOrder">closeOrder</a>
+      <a href="#api_shop_order_exports_closeOrder">
+        closeOrder
+      </a>
     </li>
 
   </ul>
   <hr />
 
-  
+
   <h3 data-id="api_shop_order_exports_getOrderById">
     getOrderById
   </h3>
-  
+
 
   <p>根据订单Id获取订单详情<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.getOrderById(orderId, callback);
 </code></pre><p>Callback:</p><ul>
@@ -5861,7 +7470,7 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.getOrderById()</td> 
+      <td colspan="3">exports.getOrderById()</td>
     </tr>
   
 
@@ -5882,11 +7491,11 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_shop_order_exports_getOrdersByStatus">
     getOrdersByStatus
   </h3>
-  
+
 
   <p>根据订单状态/创建时间获取订单详情<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.getOrdersByStatus([status,] [beginTime,] [endTime,] callback);
 </code></pre><p>Usage:<br />当只传入callback参数时，查询所有状态，所有时间的订单<br />当传入两个参数，第一个参数为Number类型，第二个参数为callback时，查询指定状态，所有时间的订单<br />当传入两个参数，第一个参数为Date类型，第二个参数为callback时，查询所有状态，指定订单创建起始时间的订单(待测试)<br />当传入三个参数，第一参数为订单状态码，第二参数为订单创建起始时间，第三参数为callback<br />当传入四个参数，第一参数为订单状态码，第二参数为订单创建起始时间，第三参数为订单创建终止时间，第四参数为callback<br />Callback:</p><ul>
@@ -5954,7 +7563,7 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.getOrdersByStatus()</td> 
+      <td colspan="3">exports.getOrdersByStatus()</td>
     </tr>
   
 
@@ -5989,11 +7598,11 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_shop_order_exports_setExpressForOrder">
     setExpressForOrder
   </h3>
-  
+
 
   <p>设置订单发货信息<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.setExpressForOrder(orderId, deliveryCompany, deliveryTrackNo, callback);
 </code></pre><p>Callback:</p><ul>
@@ -6011,7 +7620,7 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.setExpressForOrder()</td> 
+      <td colspan="3">exports.setExpressForOrder()</td>
     </tr>
   
 
@@ -6046,11 +7655,11 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_shop_order_exports_closeOrder">
     closeOrder
   </h3>
-  
+
 
   <p>关闭订单<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.closeOrder(orderId, callback);
 </code></pre><p>Callback:</p><ul>
@@ -6068,7 +7677,7 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.closeOrder()</td> 
+      <td colspan="3">exports.closeOrder()</td>
     </tr>
   
 
@@ -6097,33 +7706,43 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   <ul class="indexs">
   
     <li>
-      <a href="#api_shop_shelf_exports_createShelf">createShelf</a>
+      <a href="#api_shop_shelf_exports_createShelf">
+        createShelf
+      </a>
     </li>
 
     <li>
-      <a href="#api_shop_shelf_exports_deleteShelf">deleteShelf</a>
+      <a href="#api_shop_shelf_exports_deleteShelf">
+        deleteShelf
+      </a>
     </li>
 
     <li>
-      <a href="#api_shop_shelf_exports_updateShelf">updateShelf</a>
+      <a href="#api_shop_shelf_exports_updateShelf">
+        updateShelf
+      </a>
     </li>
 
     <li>
-      <a href="#api_shop_shelf_exports_getAllShelves">getAllShelves</a>
+      <a href="#api_shop_shelf_exports_getAllShelves">
+        getAllShelves
+      </a>
     </li>
 
     <li>
-      <a href="#api_shop_shelf_exports_getShelfById">getShelfById</a>
+      <a href="#api_shop_shelf_exports_getShelfById">
+        getShelfById
+      </a>
     </li>
 
   </ul>
   <hr />
 
-  
+
   <h3 data-id="api_shop_shelf_exports_createShelf">
     createShelf
   </h3>
-  
+
 
   <p>增加货架<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.createShelf(shelf, callback);
 </code></pre><p>Shelf:</p><pre><code>{
@@ -6221,7 +7840,7 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.createShelf()</td> 
+      <td colspan="3">exports.createShelf()</td>
     </tr>
   
 
@@ -6242,11 +7861,11 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_shop_shelf_exports_deleteShelf">
     deleteShelf
   </h3>
-  
+
 
   <p>删除货架<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.deleteShelf(shelfId, callback);
 </code></pre><p>Callback:</p><ul>
@@ -6264,7 +7883,7 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.deleteShelf()</td> 
+      <td colspan="3">exports.deleteShelf()</td>
     </tr>
   
 
@@ -6285,11 +7904,11 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_shop_shelf_exports_updateShelf">
     updateShelf
   </h3>
-  
+
 
   <p>修改货架<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.updateShelf(shelf, callback);
 </code></pre><p>Shelf:</p><pre><code>{
@@ -6313,7 +7932,7 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.updateShelf()</td> 
+      <td colspan="3">exports.updateShelf()</td>
     </tr>
   
 
@@ -6334,11 +7953,11 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_shop_shelf_exports_getAllShelves">
     getAllShelves
   </h3>
-  
+
 
   <p>获取所有货架<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.getAllShelf(callback);
 </code></pre><p>Callback:</p><ul>
@@ -6405,7 +8024,7 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.getAllShelves()</td> 
+      <td colspan="3">exports.getAllShelves()</td>
     </tr>
   
 
@@ -6419,11 +8038,11 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_shop_shelf_exports_getShelfById">
     getShelfById
   </h3>
-  
+
 
   <p>根据货架ID获取货架信息<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.getShelfById(shelfId, callback);
 </code></pre><p>Callback:</p><ul>
@@ -6447,7 +8066,7 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.getShelfById()</td> 
+      <td colspan="3">exports.getShelfById()</td>
     </tr>
   
 
@@ -6476,17 +8095,19 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   <ul class="indexs">
   
     <li>
-      <a href="#api_shop_stock_exports_updateStock">updateStock</a>
+      <a href="#api_shop_stock_exports_updateStock">
+        updateStock
+      </a>
     </li>
 
   </ul>
   <hr />
 
-  
+
   <h3 data-id="api_shop_stock_exports_updateStock">
     updateStock
   </h3>
-  
+
 
   <p>增加库存<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.updateStock(10, productId, sku, callback); // 增加10件库存
 api.updateStock(-10, productId, sku, callback); // 减少10件库存
@@ -6505,7 +8126,7 @@ api.updateStock(-10, productId, sku, callback); // 减少10件库存
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.updateStock()</td> 
+      <td colspan="3">exports.updateStock()</td>
     </tr>
   
 
@@ -6548,25 +8169,31 @@ api.updateStock(-10, productId, sku, callback); // 减少10件库存
   <ul class="indexs">
   
     <li>
-      <a href="#api_template_exports_setIndustry">setIndustry</a>
+      <a href="#api_template_exports_setIndustry">
+        setIndustry
+      </a>
     </li>
 
     <li>
-      <a href="#api_template_exports_addTemplate">addTemplate</a>
+      <a href="#api_template_exports_addTemplate">
+        addTemplate
+      </a>
     </li>
 
     <li>
-      <a href="#api_template_exports_sendTemplate">sendTemplate</a>
+      <a href="#api_template_exports_sendTemplate">
+        sendTemplate
+      </a>
     </li>
 
   </ul>
   <hr />
 
-  
+
   <h3 data-id="api_template_exports_setIndustry">
     setIndustry
   </h3>
-  
+
 
   <p>设置所属行业<br />Examples:</p><pre><code>var industryIds = {
  &quot;industry_id1&quot;:&#39;1&#39;,
@@ -6584,7 +8211,7 @@ api.setIndustry(industryIds, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.setIndustry()</td> 
+      <td colspan="3">exports.setIndustry()</td>
     </tr>
   
 
@@ -6598,11 +8225,11 @@ api.setIndustry(industryIds, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_template_exports_addTemplate">
     addTemplate
   </h3>
-  
+
 
   <p>获得模板ID<br />Examples:</p><pre><code>var templateIdShort = &#39;TM00015&#39;;
 api.addTemplate(templateIdShort, callback);
@@ -6617,7 +8244,7 @@ api.addTemplate(templateIdShort, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.addTemplate()</td> 
+      <td colspan="3">exports.addTemplate()</td>
     </tr>
   
 
@@ -6631,11 +8258,11 @@ api.addTemplate(templateIdShort, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_template_exports_sendTemplate">
     sendTemplate
   </h3>
-  
+
 
   <p>发送模板消息<br />Examples:</p><pre><code>var templateId: &#39;模板id&#39;;
 // URL置空，则在发送后,点击模板消息会进入一个空白页面（ios）, 或无法点击（android）
@@ -6659,7 +8286,7 @@ api.sendTemplate(&#39;openid&#39;, templateId, url, topColor, data, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.sendTemplate()</td> 
+      <td colspan="3">exports.sendTemplate()</td>
     </tr>
   
 
@@ -6716,17 +8343,19 @@ api.sendTemplate(&#39;openid&#39;, templateId, url, topColor, data, callback);
   <ul class="indexs">
   
     <li>
-      <a href="#api_url_exports_shorturl">shorturl</a>
+      <a href="#api_url_exports_shorturl">
+        shorturl
+      </a>
     </li>
 
   </ul>
   <hr />
 
-  
+
   <h3 data-id="api_url_exports_shorturl">
     shorturl
   </h3>
-  
+
 
   <p>短网址服务<br />详细细节 <a href="http://mp.weixin.qq.com/wiki/index.php?title=长链接转短链接接口">http://mp.weixin.qq.com/wiki/index.php?title=长链接转短链接接口</a><br />Examples:</p><pre><code>api.shorturl(&#39;http://mp.weixin.com&#39;, callback);
 </code></pre><p>Callback:</p><ul>
@@ -6740,7 +8369,7 @@ api.sendTemplate(&#39;openid&#39;, templateId, url, topColor, data, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.shorturl()</td> 
+      <td colspan="3">exports.shorturl()</td>
     </tr>
   
 
@@ -6769,25 +8398,31 @@ api.sendTemplate(&#39;openid&#39;, templateId, url, topColor, data, callback);
   <ul class="indexs">
   
     <li>
-      <a href="#api_user_exports_getUser">getUser</a>
+      <a href="#api_user_exports_getUser">
+        getUser
+      </a>
     </li>
 
     <li>
-      <a href="#api_user_exports_getFollowers">getFollowers</a>
+      <a href="#api_user_exports_getFollowers">
+        getFollowers
+      </a>
     </li>
 
     <li>
-      <a href="#api_user_exports_updateRemark">updateRemark</a>
+      <a href="#api_user_exports_updateRemark">
+        updateRemark
+      </a>
     </li>
 
   </ul>
   <hr />
 
-  
+
   <h3 data-id="api_user_exports_getUser">
     getUser
   </h3>
-  
+
 
   <p>获取用户基本信息<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/index.php?title=获取用户基本信息">http://mp.weixin.qq.com/wiki/index.php?title=获取用户基本信息</a><br />Examples:</p><pre><code>api.getUser(openid, callback);
 </code></pre><p>Callback:</p><ul>
@@ -6813,7 +8448,7 @@ api.sendTemplate(&#39;openid&#39;, templateId, url, topColor, data, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.getUser()</td> 
+      <td colspan="3">exports.getUser()</td>
     </tr>
   
 
@@ -6834,11 +8469,11 @@ api.sendTemplate(&#39;openid&#39;, templateId, url, topColor, data, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_user_exports_getFollowers">
     getFollowers
   </h3>
-  
+
 
   <p>获取关注者列表<br />详细细节 <a href="http://mp.weixin.qq.com/wiki/index.php?title=获取关注者列表">http://mp.weixin.qq.com/wiki/index.php?title=获取关注者列表</a><br />Examples:</p><pre><code>api.getFollowers(callback);
 // or
@@ -6862,7 +8497,7 @@ api.getFollowers(nextOpenid, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.getFollowers()</td> 
+      <td colspan="3">exports.getFollowers()</td>
     </tr>
   
 
@@ -6883,11 +8518,11 @@ api.getFollowers(nextOpenid, callback);
   
   </table>
   
-  
+
   <h3 data-id="api_user_exports_updateRemark">
     updateRemark
   </h3>
-  
+
 
   <p>设置用户备注名<br />详细细节 <a href="http://mp.weixin.qq.com/wiki/index.php?title=设置用户备注名接口">http://mp.weixin.qq.com/wiki/index.php?title=设置用户备注名接口</a><br />Examples:</p><pre><code>api.updateRemark(openid, remark, callback);
 </code></pre><p>Callback:</p><ul>
@@ -6905,7 +8540,7 @@ api.getFollowers(nextOpenid, callback);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.updateRemark()</td> 
+      <td colspan="3">exports.updateRemark()</td>
     </tr>
   
 
