@@ -38,7 +38,7 @@
     </nav>
     <header class="jumbotron subhead">
       <div class="container">
-        <h1>wechat-api <small>Version: 1.8.0 By @Jackson Tian</small></h1>
+        <h1>wechat-api <small>Version: 1.8.1 By @Jackson Tian</small></h1>
         <p class="lead">
           微信公共平台Node库 API
         </p>
@@ -275,6 +275,10 @@
 					
 						<li>
 							<a href="#api_group_exports_moveUserToGroup">moveUserToGroup</a>
+						</li>
+					
+						<li>
+							<a href="#api_group_exports_removeGroup">removeGroup</a>
 						</li>
 					
 					</ul>
@@ -2085,6 +2089,12 @@ api.getInterfaceSummaryHour(startDate, endDate, callback); // 获取接口分析
       </a>
     </li>
 
+    <li>
+      <a href="#api_group_exports_removeGroup">
+        removeGroup
+      </a>
+    </li>
+
   </ul>
   <hr />
 
@@ -2094,7 +2104,7 @@ api.getInterfaceSummaryHour(startDate, endDate, callback); // 获取接口分析
   </h3>
 
 
-  <p>获取分组列表<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/index.php?title=分组管理接口">http://mp.weixin.qq.com/wiki/index.php?title=分组管理接口</a><br />Examples:</p><pre><code>api.getGroups(callback);
+  <p>获取分组列表<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/0/56d992c605a97245eb7e617854b169fc.html">http://mp.weixin.qq.com/wiki/0/56d992c605a97245eb7e617854b169fc.html</a><br />Examples:</p><pre><code>api.getGroups(callback);
 </code></pre><p>Callback:</p><ul>
 <li><code>err</code>, 调用失败时得到的异常</li>
 <li><code>result</code>, 调用正常时得到的对象</li>
@@ -2132,7 +2142,7 @@ api.getInterfaceSummaryHour(startDate, endDate, callback); // 获取接口分析
   </h3>
 
 
-  <p>查询用户在哪个分组<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/index.php?title=分组管理接口">http://mp.weixin.qq.com/wiki/index.php?title=分组管理接口</a><br />Examples:</p><pre><code>api.getWhichGroup(openid, callback);
+  <p>查询用户在哪个分组<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/0/56d992c605a97245eb7e617854b169fc.html">http://mp.weixin.qq.com/wiki/0/56d992c605a97245eb7e617854b169fc.html</a><br />Examples:</p><pre><code>api.getWhichGroup(openid, callback);
 </code></pre><p>Callback:</p><ul>
 <li><code>err</code>, 调用失败时得到的异常</li>
 <li><code>result</code>, 调用正常时得到的对象</li>
@@ -2174,7 +2184,7 @@ api.getInterfaceSummaryHour(startDate, endDate, callback); // 获取接口分析
   </h3>
 
 
-  <p>创建分组<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/index.php?title=分组管理接口">http://mp.weixin.qq.com/wiki/index.php?title=分组管理接口</a><br />Examples:</p><pre><code>api.createGroup(&#39;groupname&#39;, callback);
+  <p>创建分组<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/0/56d992c605a97245eb7e617854b169fc.html">http://mp.weixin.qq.com/wiki/0/56d992c605a97245eb7e617854b169fc.html</a><br />Examples:</p><pre><code>api.createGroup(&#39;groupname&#39;, callback);
 </code></pre><p>Callback:</p><ul>
 <li><code>err</code>, 调用失败时得到的异常</li>
 <li><code>result</code>, 调用正常时得到的对象</li>
@@ -2214,7 +2224,7 @@ api.getInterfaceSummaryHour(startDate, endDate, callback); // 获取接口分析
   </h3>
 
 
-  <p>更新分组名字<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/index.php?title=分组管理接口">http://mp.weixin.qq.com/wiki/index.php?title=分组管理接口</a><br />Examples:</p><pre><code>api.updateGroup(107, &#39;new groupname&#39;, callback);
+  <p>更新分组名字<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/0/56d992c605a97245eb7e617854b169fc.html">http://mp.weixin.qq.com/wiki/0/56d992c605a97245eb7e617854b169fc.html</a><br />Examples:</p><pre><code>api.updateGroup(107, &#39;new groupname&#39;, callback);
 </code></pre><p>Callback:</p><ul>
 <li><code>err</code>, 调用失败时得到的异常</li>
 <li><code>result</code>, 调用正常时得到的对象</li>
@@ -2261,7 +2271,7 @@ api.getInterfaceSummaryHour(startDate, endDate, callback); // 获取接口分析
   </h3>
 
 
-  <p>移动用户进分组<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/index.php?title=分组管理接口">http://mp.weixin.qq.com/wiki/index.php?title=分组管理接口</a><br />Examples:</p><pre><code>api.moveUserToGroup(openid, groupId, callback);
+  <p>移动用户进分组<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/0/56d992c605a97245eb7e617854b169fc.html">http://mp.weixin.qq.com/wiki/0/56d992c605a97245eb7e617854b169fc.html</a><br />Examples:</p><pre><code>api.moveUserToGroup(openid, groupId, callback);
 </code></pre><p>Callback:</p><ul>
 <li><code>err</code>, 调用失败时得到的异常</li>
 <li><code>result</code>, 调用正常时得到的对象</li>
@@ -2282,6 +2292,46 @@ api.getInterfaceSummaryHour(startDate, endDate, callback); // 获取接口分析
       <td>参数</td>
       <td>openid(String)</td>
       <td colspan="2"><p>用户的openid</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>groupId(Number)</td>
+      <td colspan="2"><p>分组ID</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="api_group_exports_removeGroup">
+    removeGroup
+  </h3>
+
+
+  <p>删除分组<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/0/56d992c605a97245eb7e617854b169fc.html">http://mp.weixin.qq.com/wiki/0/56d992c605a97245eb7e617854b169fc.html</a><br />Examples:</p><pre><code>api.removeGroup(groupId, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{&quot;errcode&quot;: 0, &quot;errmsg&quot;: &quot;ok&quot;}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.removeGroup()</td>
     </tr>
   
 
