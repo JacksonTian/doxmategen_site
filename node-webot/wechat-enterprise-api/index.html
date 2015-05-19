@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="assets/base.css" />
   </head>
   <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-inverse navbar-static-top top-navbar" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -38,7 +38,7 @@
     </nav>
     <header class="jumbotron subhead">
       <div class="container">
-        <h1>wechat-enterprise-api <small>Version: 0.0.4 By @Jackson Tian</small></h1>
+        <h1>wechat-enterprise-api <small>Version: 0.0.8 By @Jackson Tian</small></h1>
         <p class="lead">
           微信公共平台企业号版本Node API库
         </p>
@@ -120,14 +120,40 @@
 <li>标签管理</li>
 <li>媒体文件</li>
 <li>OAuth API（授权、获取基本信息）</li>
+<li>JS SDK 授权</li>
+<li>管理企业号应用</li>
+<li>通讯录批量操作接口</li>
 </ul>
 <h2>详细文档</h2>
 <ul>
-<li><a href="http://node-webot.github.io/wechat-enterprise-api/index.html">文档主页</a></li>
-<li><a href="http://node-webot.github.io/wechat-enterprise-api/api.html">API文档</a></li>
+<li><a href="http://doxmate.cool/node-webot/wechat-enterprise-api/index.html">文档主页</a></li>
+<li><a href="http://doxmate.cool/node-webot/wechat-enterprise-api/api.html">API文档</a></li>
 <li>代码<a href="http://node-webot.github.io/wechat-enterprise-api/coverage/index.html">测试覆盖率</a></li>
 <li><a href="http://node-webot.github.io/wechat-enterprise-api/Getting%20start.html">新手上路</a></li>
 </ul>
+<h3>通过代理服务器访问</h3>
+<h4>场景</h4>
+<p>对于大规模的集群部署模式，为了安全和速度，会有一些负载均衡的节点放在内网的服务器上（即负载均衡的节点与主结点通过内网连接，并且内网服务器上没有外网的IP）。这时，就需要配置代理服务器来使内网的机器可以有限度的访问外网的资源。例如：微信套件中的各种主动调用接口。</p><p>如何架设代理服务器在这里不做赘述，一般推荐使用squid 3，免费、快速、配置简单。</p><h4>技术原理</h4>
+<p>由于需要访问的微信API服务器是https协议，所以普通的http代理模式不能使用。<br />而一般都是http协议的代理服务器。<br />我们要实现的就是通过http代理通道来走https的请求。</p><p>基本的步骤是2步：</p><ul>
+<li>连接到代理服务器，发送CONNECT命令，打开一个TCP连接。</li>
+<li>使用上一步打开的TCP连接，发送https的请求。</li>
+</ul>
+<h4>实现步骤</h4>
+<p>一、下载<a href="https://github.com/koichik/node-tunnel">node-tunnel</a> 注意：npm上的版本较老，不支持node v0.10以上的版本。</p><p>二、使用 httpsOverHttp 这个agent。</p><p>三、将agent配置给urllib，通过urllib的beforeRequest这个方法。</p><pre><code class="lang-js">var tunnel = require(&#39;tunnel&#39;);
+
+var agent = tunnel.httpsOverHttp({
+  proxy: {
+    host: &#39;proxy_host_ip&#39;,
+    port: 3128
+  }
+});
+
+api.setOpts({
+    beforeRequest:function(options){
+        options.agent = agent;
+    }
+});
+</code></pre>
 <h2>Show cases</h2>
 <h3>Node.js API自动回复</h3>
 <p><img src="http://nodeapi.diveintonode.org/assets/qrcode.jpg" alt="Node.js API自动回复机器人"></p><p>欢迎关注。</p><p>代码：<a href="https://github.com/JacksonTian/api-doc-service">https://github.com/JacksonTian/api-doc-service</a></p><p>你可以在<a href="http://www.cloudfoundry.com/">CloudFoundry</a>、<a href="https://www.appfog.com/">appfog</a>、<a href="http://developer.baidu.com/wiki/index.php?title=docs/cplat/rt/node.js">BAE</a>等搭建自己的机器人。</p><h2>License</h2>
@@ -135,13 +161,13 @@
 <p>QQ群：157964097，使用疑问，开发，贡献代码请加群。</p><h2>感谢</h2>
 <p>感谢以下贡献者：</p><pre><code>
  project  : wechat-enterprise-api
- repo age : 4 weeks
- active   : 6 days
- commits  : 10
- files    : 29
+ repo age : 5 months
+ active   : 15 days
+ commits  : 21
+ files    : 33
  authors  :
-     7  Jackson Tian  70.0%
-     3  Nick Ma       30.0%
+    12    Jackson Tian            57.1%
+     9    Nick Ma                 42.9%
 </code></pre><h2>捐赠</h2>
 <p>如果您觉得Wechat企业号版本对您有帮助，欢迎请作者一杯咖啡</p><p><img src="https://cloud.githubusercontent.com/assets/327019/2941591/2b9e5e58-d9a7-11e3-9e80-c25aba0a48a1.png" alt="捐赠wechat"></p>
       </section>
@@ -169,19 +195,28 @@
         $('td pre').removeClass('prettyprint');
         prettyPrint();
         var $window = $(window);
-        $('.bs-docs-sidenav').affix({
-          offset: {
-            top: function () {
-              return $window.width() <= 980 ? 290 : 210
-            },
-            bottom: 270
-          }
-        });
+        var sidenav = $('.bs-docs-sidenav');
+        if (sidenav.height() < window.innerHeight) {
+          sidenav.affix({
+            offset: {
+              top: function () {
+                return $window.width() <= 980 ? 290 : 210
+              },
+              bottom: 200
+            }
+          });
+        } else {
+          sidenav.removeClass('affix');
+        }
         $(".content").find('h1, h2, h3, h4, h5, h6').each(function () {
           var node = $(this);
           // 总是设置id
           node.attr("id", node.data('id') || "index_" + node.text());
-          node.css("paddingTop", 50);
+        });
+
+        $('.bs-docs-sidenav .accordion-marker').on('click', function(event) {
+          var current = $(event.currentTarget);
+          current.find('.glyphicon').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
         });
       });
     </script>

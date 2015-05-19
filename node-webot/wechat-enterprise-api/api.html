@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="assets/base.css" />
   </head>
   <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-inverse navbar-static-top top-navbar" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -38,7 +38,7 @@
     </nav>
     <header class="jumbotron subhead">
       <div class="container">
-        <h1>wechat-enterprise-api <small>Version: 0.0.4 By @Jackson Tian</small></h1>
+        <h1>wechat-enterprise-api <small>Version: 0.0.8 By @Jackson Tian</small></h1>
         <p class="lead">
           微信公共平台企业号版本Node API库
         </p>
@@ -51,13 +51,89 @@
       <ul class="nav nav-list bs-docs-sidenav affix">
 
   <li>
+		<div class="accordion" id="api_agent">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_agent" class="api_side_link">api_agent</a>
+					<div class="accordion-marker">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_agent" href="#collapse_api_agent">
+							 <span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_agent">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_agent_exports_getAgent">getAgent</a>
+						</li>
+					
+						<li>
+							<a href="#api_agent_exports_setAgent">setAgent</a>
+						</li>
+					
+						<li>
+							<a href="#api_agent_exports_listAgent">listAgent</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+
+  <li>
+		<div class="accordion" id="api_batch">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_batch" class="api_side_link">api_batch</a>
+					<div class="accordion-marker">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_batch" href="#collapse_api_batch">
+							 <span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_batch">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_batch_exports_batchInviteUser">batchInviteUser</a>
+						</li>
+					
+						<li>
+							<a href="#api_batch_exports_batchSyncUser">batchSyncUser</a>
+						</li>
+					
+						<li>
+							<a href="#api_batch_exports_batchReplaceUser">batchReplaceUser</a>
+						</li>
+					
+						<li>
+							<a href="#api_batch_exports_batchReplaceParty">batchReplaceParty</a>
+						</li>
+					
+						<li>
+							<a href="#api_batch_exports_batchGetResult">batchGetResult</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+
+  <li>
 		<div class="accordion" id="api_common">
 			<div class="accordion-group">
 				<div class="accordion-heading">
 					<a href="#api_api_common" class="api_side_link">api_common</a>
-					<div class="accordion-marker" id="collapse_marker_api_common">
+					<div class="accordion-marker">
 						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_common" href="#collapse_api_common">
-							 <span id="toggle_api_common" class="glyphicon glyphicon-chevron-right"></span>
+							 <span class="glyphicon glyphicon-chevron-right"></span>
 						</a>
 					</div>
 				</div>
@@ -91,21 +167,15 @@
 			</div>
 		</div>
   </li>
-  
-  <script type="text/javascript">
-    $('#collapse_marker_api_common').on('click', function() {
-    	$('#toggle_api_common').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
-    });
-  </script>
 
   <li>
 		<div class="accordion" id="api_department">
 			<div class="accordion-group">
 				<div class="accordion-heading">
 					<a href="#api_api_department" class="api_side_link">api_department</a>
-					<div class="accordion-marker" id="collapse_marker_api_department">
+					<div class="accordion-marker">
 						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_department" href="#collapse_api_department">
-							 <span id="toggle_api_department" class="glyphicon glyphicon-chevron-right"></span>
+							 <span class="glyphicon glyphicon-chevron-right"></span>
 						</a>
 					</div>
 				</div>
@@ -135,21 +205,75 @@
 			</div>
 		</div>
   </li>
-  
-  <script type="text/javascript">
-    $('#collapse_marker_api_department').on('click', function() {
-    	$('#toggle_api_department').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
-    });
-  </script>
+
+  <li>
+		<div class="accordion" id="api_ip">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_ip" class="api_side_link">api_ip</a>
+					<div class="accordion-marker">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_ip" href="#collapse_api_ip">
+							 <span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_ip">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_ip__make">make</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+
+  <li>
+		<div class="accordion" id="api_js">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_js" class="api_side_link">api_js</a>
+					<div class="accordion-marker">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_js" href="#collapse_api_js">
+							 <span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_js">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_js_exports_registerTicketHandle">registerTicketHandle</a>
+						</li>
+					
+						<li>
+							<a href="#api_js_exports_getTicket">getTicket</a>
+						</li>
+					
+						<li>
+							<a href="#api_js_exports_getJsConfig">getJsConfig</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
 
   <li>
 		<div class="accordion" id="api_media">
 			<div class="accordion-group">
 				<div class="accordion-heading">
 					<a href="#api_api_media" class="api_side_link">api_media</a>
-					<div class="accordion-marker" id="collapse_marker_api_media">
+					<div class="accordion-marker">
 						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_media" href="#collapse_api_media">
-							 <span id="toggle_api_media" class="glyphicon glyphicon-chevron-right"></span>
+							 <span class="glyphicon glyphicon-chevron-right"></span>
 						</a>
 					</div>
 				</div>
@@ -171,21 +295,15 @@
 			</div>
 		</div>
   </li>
-  
-  <script type="text/javascript">
-    $('#collapse_marker_api_media').on('click', function() {
-    	$('#toggle_api_media').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
-    });
-  </script>
 
   <li>
 		<div class="accordion" id="api_menu">
 			<div class="accordion-group">
 				<div class="accordion-heading">
 					<a href="#api_api_menu" class="api_side_link">api_menu</a>
-					<div class="accordion-marker" id="collapse_marker_api_menu">
+					<div class="accordion-marker">
 						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_menu" href="#collapse_api_menu">
-							 <span id="toggle_api_menu" class="glyphicon glyphicon-chevron-right"></span>
+							 <span class="glyphicon glyphicon-chevron-right"></span>
 						</a>
 					</div>
 				</div>
@@ -211,21 +329,15 @@
 			</div>
 		</div>
   </li>
-  
-  <script type="text/javascript">
-    $('#collapse_marker_api_menu').on('click', function() {
-    	$('#toggle_api_menu').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
-    });
-  </script>
 
   <li>
 		<div class="accordion" id="api_message">
 			<div class="accordion-group">
 				<div class="accordion-heading">
 					<a href="#api_api_message" class="api_side_link">api_message</a>
-					<div class="accordion-marker" id="collapse_marker_api_message">
+					<div class="accordion-marker">
 						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_message" href="#collapse_api_message">
-							 <span id="toggle_api_message" class="glyphicon glyphicon-chevron-right"></span>
+							 <span class="glyphicon glyphicon-chevron-right"></span>
 						</a>
 					</div>
 				</div>
@@ -243,21 +355,15 @@
 			</div>
 		</div>
   </li>
-  
-  <script type="text/javascript">
-    $('#collapse_marker_api_message').on('click', function() {
-    	$('#toggle_api_message').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
-    });
-  </script>
 
   <li>
 		<div class="accordion" id="api_tag">
 			<div class="accordion-group">
 				<div class="accordion-heading">
 					<a href="#api_api_tag" class="api_side_link">api_tag</a>
-					<div class="accordion-marker" id="collapse_marker_api_tag">
+					<div class="accordion-marker">
 						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_tag" href="#collapse_api_tag">
-							 <span id="toggle_api_tag" class="glyphicon glyphicon-chevron-right"></span>
+							 <span class="glyphicon glyphicon-chevron-right"></span>
 						</a>
 					</div>
 				</div>
@@ -299,21 +405,15 @@
 			</div>
 		</div>
   </li>
-  
-  <script type="text/javascript">
-    $('#collapse_marker_api_tag').on('click', function() {
-    	$('#toggle_api_tag').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
-    });
-  </script>
 
   <li>
 		<div class="accordion" id="api_user">
 			<div class="accordion-group">
 				<div class="accordion-heading">
 					<a href="#api_api_user" class="api_side_link">api_user</a>
-					<div class="accordion-marker" id="collapse_marker_api_user">
+					<div class="accordion-marker">
 						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_user" href="#collapse_api_user">
-							 <span id="toggle_api_user" class="glyphicon glyphicon-chevron-right"></span>
+							 <span class="glyphicon glyphicon-chevron-right"></span>
 						</a>
 					</div>
 				</div>
@@ -334,6 +434,10 @@
 						</li>
 					
 						<li>
+							<a href="#api_user__make">make</a>
+						</li>
+					
+						<li>
 							<a href="#api_user_exports_getUser">getUser</a>
 						</li>
 					
@@ -343,6 +447,10 @@
 					
 						<li>
 							<a href="#api_user_exports_getDepartmentUsersDetail">getDepartmentUsersDetail</a>
+						</li>
+					
+						<li>
+							<a href="#api_user_exports_inviteUser">inviteUser</a>
 						</li>
 					
 						<li>
@@ -359,21 +467,15 @@
 			</div>
 		</div>
   </li>
-  
-  <script type="text/javascript">
-    $('#collapse_marker_api_user').on('click', function() {
-    	$('#toggle_api_user').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
-    });
-  </script>
 
   <li>
 		<div class="accordion" id="util">
 			<div class="accordion-group">
 				<div class="accordion-heading">
 					<a href="#api_util" class="api_side_link">util</a>
-					<div class="accordion-marker" id="collapse_marker_util">
+					<div class="accordion-marker">
 						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#util" href="#collapse_util">
-							 <span id="toggle_util" class="glyphicon glyphicon-chevron-right"></span>
+							 <span class="glyphicon glyphicon-chevron-right"></span>
 						</a>
 					</div>
 				</div>
@@ -387,56 +489,554 @@
 			</div>
 		</div>
   </li>
-  
-  <script type="text/javascript">
-    $('#collapse_marker_util').on('click', function() {
-    	$('#toggle_util').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
-    });
-  </script>
 
 </ul>
 
     </div>
     <div class="col-md-9">
       
-        <section id="api_api_common" class="api">
-  <h2>api_common: API索引</h2>
+        <section id="api_api_agent" class="api">
+  <h2>api_agent: API索引</h2>
   <ul class="indexs">
   
     <li>
-      <a href="#api_common__API">API</a>
+      <a href="#api_agent_exports_getAgent">
+        getAgent
+      </a>
     </li>
 
     <li>
-      <a href="#api_common__setOpts">setOpts</a>
+      <a href="#api_agent_exports_setAgent">
+        setAgent
+      </a>
     </li>
 
     <li>
-      <a href="#api_common__request">request</a>
-    </li>
-
-    <li>
-      <a href="#api_common__getLatestToken">getLatestToken</a>
-    </li>
-
-    <li>
-      <a href="#api_common_API_mixin">mixin</a>
+      <a href="#api_agent_exports_listAgent">
+        listAgent
+      </a>
     </li>
 
   </ul>
   <hr />
 
+
+  <h3 data-id="api_agent_exports_getAgent">
+    getAgent
+  </h3>
+
+
+  <p>获取企业号应用</p><p>Examples:</p><pre><code>api.getAgent(agentid, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+&quot;errcode&quot;:&quot;0&quot;,
+&quot;errmsg&quot;:&quot;ok&quot; ,
+&quot;agentid&quot;:&quot;1&quot; ,
+&quot;name&quot;:&quot;NAME&quot; ,
+&quot;square_logo_url&quot;:&quot;xxxxxxxx&quot; ,
+&quot;round_logo_url&quot;:&quot;yyyyyyyy&quot; ,
+&quot;description&quot;:&quot;desc&quot; ,
+&quot;allow_userinfos&quot;:{
+    &quot;user&quot;:[
+          {
+              &quot;userid&quot;:&quot;id1&quot;,
+              &quot;status&quot;:&quot;1&quot;
+          },
+          {
+              &quot;userid&quot;:&quot;id2&quot;,
+              &quot;status&quot;:&quot;1&quot;
+          },
+          {
+              &quot;userid&quot;:&quot;id3&quot;,
+              &quot;status&quot;:&quot;1&quot;
+          }
+           ]
+ },
+&quot;allow_partys&quot;:{
+    &quot;partyid&quot;: [1]
+ },
+&quot;allow_tags&quot;:{
+    &quot;tagid&quot;: [1,2,3]
+ }
+&quot;close&quot;:0 ,
+&quot;redirect_domain&quot;:&quot;www.qq.com&quot;,
+&quot;report_location_flag&quot;:0,
+&quot;isreportuser&quot;:0,
+&quot;isreportenter&quot;:0
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
   
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getAgent()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>agentid(String)</td>
+      <td colspan="2"><p>企业号应用的id</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="api_agent_exports_setAgent">
+    setAgent
+  </h3>
+
+
+  <p>设置企业号应用</p><p>Examples:</p><pre><code>api.setAgent(opts, callback);
+</code></pre><p>Opts:</p><pre><code>{
+  &quot;agentid&quot;: &quot;5&quot;,
+  &quot;report_location_flag&quot;: &quot;0&quot;,
+  &quot;logo_mediaid&quot;: &quot;xxxxx&quot;,
+  &quot;name&quot;: &quot;NAME&quot;,
+  &quot;description&quot;: &quot;DESC&quot;,
+  &quot;redirect_domain&quot;: &quot;xxxxxx&quot;,
+  &quot;isreportuser&quot;:0,
+  &quot;isreportenter&quot;:0
+}
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<pre><code>
+Result:
+{
+  &quot;errcode&quot;:&quot;0&quot;,
+  &quot;errmsg&quot;:&quot;ok&quot; ,
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.setAgent()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>opts(Object)</td>
+      <td colspan="2"><p>更新的数据</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="api_agent_exports_listAgent">
+    listAgent
+  </h3>
+
+
+  <p>企业号应用列表</p><p>Examples:</p><pre><code>api.listAgent(callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<pre><code>
+Result:
+{
+ &quot;errcode&quot;: 0,
+ &quot;errmsg&quot;: &quot;ok&quot;,
+ &quot;agentlist&quot;: [
+   {
+      &quot;agentid&quot;: &quot;5&quot;,
+      &quot;name&quot;: &quot;企业小助手&quot;,
+      &quot;square_logo_url&quot;: &quot;url&quot;,
+      &quot;round_logo_url&quot;: &quot;url&quot;
+   },
+   {
+      &quot;agentid&quot;: &quot;8&quot;,
+      &quot;name&quot;: &quot;HR小助手&quot;,
+      &quot;square_logo_url&quot;: &quot;url&quot;,
+      &quot;round_logo_url&quot;: &quot;url&quot;
+   }
+ ]  
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.listAgent()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
+        <section id="api_api_batch" class="api">
+  <h2>api_batch: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#api_batch_exports_batchInviteUser">
+        batchInviteUser
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_batch_exports_batchSyncUser">
+        batchSyncUser
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_batch_exports_batchReplaceUser">
+        batchReplaceUser
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_batch_exports_batchReplaceParty">
+        batchReplaceParty
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_batch_exports_batchGetResult">
+        batchGetResult
+      </a>
+    </li>
+
+  </ul>
+  <hr />
+
+
+  <h3 data-id="api_batch_exports_batchInviteUser">
+    batchInviteUser
+  </h3>
+
+
+  <p>批量邀请成员<br />详细请看：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E6%8E%A5%E5%8F%A3#.E9.82.80.E8.AF.B7.E6.88.90.E5.91.98.E5.85.B3.E6.B3.A8">http://qydev.weixin.qq.com/wiki/index.php?title=%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E6%8E%A5%E5%8F%A3#.E9.82.80.E8.AF.B7.E6.88.90.E5.91.98.E5.85.B3.E6.B3.A8</a></p><p>Examples:</p><pre><code>api.batchInviteUser(to, taskCb, callback);
+</code></pre><p>To:</p><pre><code>{
+  &quot;touser&quot;:&quot;xxx|xxx&quot;,
+  &quot;toparty&quot;:&quot;xxx|xxx&quot;,
+  &quot;totag&quot;:&quot;xxx|xxx&quot;,
+  &quot;invite_tips&quot;:&quot;xxx&quot;,
+}
+</code></pre><pre><code>TaskCb:
+</code></pre><p>  {<br />    &quot;url&quot;: &quot;xxx&quot;,<br />    &quot;token&quot;: &quot;xxx&quot;,<br />    &quot;encodingaeskey&quot;: &quot;xxx&quot;<br />  }</p><pre><code>
+Callback:
+
+- `err`, 调用失败时得到的异常
+- `result`, 调用正常时得到的对象
+
+Result:
+</code></pre><p>{<br />  &quot;errcode&quot;: 0,<br />  &quot;errmsg&quot;: &quot;ok&quot;,<br />  &quot;jobid&quot;: &quot;IoZW03y44Zcwuz-2K6T6rHTcf1uwyVbcYu2aRALKw-U&quot;<br />}<br />```</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.batchInviteUser()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>to(Object)</td>
+      <td colspan="2"><p>批量邀请的数据结构</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>taskCb(Object)</td>
+      <td colspan="2"><p>任务执行完毕后的回调结构</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="api_batch_exports_batchSyncUser">
+    batchSyncUser
+  </h3>
+
+
+  <p>批量更新成员<br />详细请看：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E6%8E%A5%E5%8F%A3#.E9.82.80.E8.AF.B7.E6.88.90.E5.91.98.E5.85.B3.E6.B3.A8">http://qydev.weixin.qq.com/wiki/index.php?title=%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E6%8E%A5%E5%8F%A3#.E9.82.80.E8.AF.B7.E6.88.90.E5.91.98.E5.85.B3.E6.B3.A8</a></p><p>Examples:</p><pre><code>api.batchSyncUser(mediaId, taskCb, callback);
+</code></pre><pre><code>TaskCb:
+</code></pre><p>  {<br />    &quot;url&quot;: &quot;xxx&quot;,<br />    &quot;token&quot;: &quot;xxx&quot;,<br />    &quot;encodingaeskey&quot;: &quot;xxx&quot;<br />  }</p><pre><code>
+Callback:
+
+- `err`, 调用失败时得到的异常
+- `result`, 调用正常时得到的对象
+
+Result:
+</code></pre><p>{<br />  &quot;errcode&quot;: 0,<br />  &quot;errmsg&quot;: &quot;ok&quot;,<br />  &quot;jobid&quot;: &quot;IoZW03y44Zcwuz-2K6T6rHTcf1uwyVbcYu2aRALKw-U&quot;<br />}<br />```</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.batchSyncUser()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>mediaId(String)</td>
+      <td colspan="2"><p>数据文件的mediaId</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>taskCb(Object)</td>
+      <td colspan="2"><p>任务执行完毕后的回调结构</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="api_batch_exports_batchReplaceUser">
+    batchReplaceUser
+  </h3>
+
+
+  <p>全量覆盖成员<br />详细请看：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E6%8E%A5%E5%8F%A3#.E9.82.80.E8.AF.B7.E6.88.90.E5.91.98.E5.85.B3.E6.B3.A8">http://qydev.weixin.qq.com/wiki/index.php?title=%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E6%8E%A5%E5%8F%A3#.E9.82.80.E8.AF.B7.E6.88.90.E5.91.98.E5.85.B3.E6.B3.A8</a></p><p>Examples:</p><pre><code>api.batchReplaceUser(mediaId, taskCb, callback);
+</code></pre><pre><code>TaskCb:
+</code></pre><p>  {<br />    &quot;url&quot;: &quot;xxx&quot;,<br />    &quot;token&quot;: &quot;xxx&quot;,<br />    &quot;encodingaeskey&quot;: &quot;xxx&quot;<br />  }</p><pre><code>
+Callback:
+
+- `err`, 调用失败时得到的异常
+- `result`, 调用正常时得到的对象
+
+Result:
+</code></pre><p>{<br />  &quot;errcode&quot;: 0,<br />  &quot;errmsg&quot;: &quot;ok&quot;,<br />  &quot;jobid&quot;: &quot;IoZW03y44Zcwuz-2K6T6rHTcf1uwyVbcYu2aRALKw-U&quot;<br />}<br />```</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.batchReplaceUser()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>mediaId(String)</td>
+      <td colspan="2"><p>数据文件的mediaId</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>taskCb(Object)</td>
+      <td colspan="2"><p>任务执行完毕后的回调结构</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="api_batch_exports_batchReplaceParty">
+    batchReplaceParty
+  </h3>
+
+
+  <p>全量覆盖部门<br />详细请看：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E6%8E%A5%E5%8F%A3#.E9.82.80.E8.AF.B7.E6.88.90.E5.91.98.E5.85.B3.E6.B3.A8">http://qydev.weixin.qq.com/wiki/index.php?title=%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E6%8E%A5%E5%8F%A3#.E9.82.80.E8.AF.B7.E6.88.90.E5.91.98.E5.85.B3.E6.B3.A8</a></p><p>Examples:</p><pre><code>api.batchReplaceParty(mediaId, taskCb, callback);
+</code></pre><pre><code>TaskCb:
+</code></pre><p>  {<br />    &quot;url&quot;: &quot;xxx&quot;,<br />    &quot;token&quot;: &quot;xxx&quot;,<br />    &quot;encodingaeskey&quot;: &quot;xxx&quot;<br />  }</p><pre><code>
+Callback:
+
+- `err`, 调用失败时得到的异常
+- `result`, 调用正常时得到的对象
+
+Result:
+</code></pre><p>{<br />  &quot;errcode&quot;: 0,<br />  &quot;errmsg&quot;: &quot;ok&quot;,<br />  &quot;jobid&quot;: &quot;IoZW03y44Zcwuz-2K6T6rHTcf1uwyVbcYu2aRALKw-U&quot;<br />}<br />```</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.batchReplaceParty()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>mediaId(Object)</td>
+      <td colspan="2"><p>数据文件的mediaId</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>taskCb(Object)</td>
+      <td colspan="2"><p>任务执行完毕后的回调结构</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="api_batch_exports_batchGetResult">
+    batchGetResult
+  </h3>
+
+
+  <p>获取批量任务的结果<br />详细请看：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E6%8E%A5%E5%8F%A3#.E9.82.80.E8.AF.B7.E6.88.90.E5.91.98.E5.85.B3.E6.B3.A8">http://qydev.weixin.qq.com/wiki/index.php?title=%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E6%8E%A5%E5%8F%A3#.E9.82.80.E8.AF.B7.E6.88.90.E5.91.98.E5.85.B3.E6.B3.A8</a></p><p>Examples:</p><pre><code>api.batchGetResult(jobid, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>返回结果参考微信的官方文档</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.batchGetResult()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>jobid(String)</td>
+      <td colspan="2"><p>启动批量任务时返回的任务id</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
+        <section id="api_api_common" class="api">
+  <h2>api_common: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#api_common__API">
+        API
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_common__setOpts">
+        setOpts
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_common__request">
+        request
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_common__getLatestToken">
+        getLatestToken
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_common_API_mixin">
+        mixin
+      </a>
+    </li>
+
+  </ul>
+  <hr />
+
+
   <h3 data-id="api_common__API">
     API
   </h3>
-  
+
 
   <p>根据appid和appsecret创建API的构造函数。</p><p>如需跨进程跨机器进行操作Wechat API（依赖access token），access token需要进行全局维护<br />使用策略如下：</p><ol>
 <li>调用用户传入的获取token的异步方法，获得token之后使用</li>
 <li>使用appid/appsecret获取token。并调用用户传入的保存token方法保存</li>
 </ol>
-<p>Examples:</p><pre><code>var API = require(&#39;wechat&#39;).API;
+<p>Examples:</p><pre><code>var API = require(&#39;wechat-enterprise-api&#39;);
 var api = new API(&#39;appid&#39;, &#39;secret&#39;, &#39;agentid&#39;);
 </code></pre><p>以上即可满足单进程使用。<br />当多进程时，token需要全局维护，以下为保存token的接口。</p><pre><code>var api = new API(&#39;corpid&#39;, &#39;secret&#39;, &#39;agentid&#39;, function (callback) {
   // 传入一个获取全局token的方法
@@ -451,109 +1051,106 @@ var api = new API(&#39;appid&#39;, &#39;secret&#39;, &#39;agentid&#39;);
 });
 </code></pre>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>函数</td>
-      <td>API()</td> 
-      <td></td>
-      <td>API</td>
+      <td colspan="3">API()</td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>corpid(String)</td>
-      <td colspan="2">在公众平台上申请得到的corpid</td>
+      <td colspan="2"><p>在公众平台上申请得到的corpid</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>corpsecret(String)</td>
-      <td colspan="2">在公众平台上申请得到的app secret</td>
+      <td colspan="2"><p>在公众平台上申请得到的app secret</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>agentid(String)</td>
-      <td colspan="2">企业应用的id</td>
+      <td colspan="2"><p>企业应用的id</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>getToken(Function)</td>
-      <td colspan="2">可选的。获取全局token对象的方法，多进程模式部署时需在意</td>
+      <td colspan="2"><p>可选的。获取全局token对象的方法，多进程模式部署时需在意</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>saveToken(Function)</td>
-      <td colspan="2">可选的。保存全局token对象的方法，多进程模式部署时需在意</td>
+      <td colspan="2"><p>可选的。保存全局token对象的方法，多进程模式部署时需在意</p></td>
     </tr>
   
 
   
   </table>
   
-  
+
   <h3 data-id="api_common__setOpts">
     setOpts
   </h3>
-  
+
 
   <p>用于设置urllib的默认options</p><p>Examples:</p><pre><code>api.setOpts({timeout: 15000});
 </code></pre>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>API.prototype.setOpts()</td> 
-      <td></td>
-      <td>setOpts</td>
+      <td colspan="3">API.prototype.setOpts()</td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>opts(Object)</td>
-      <td colspan="2">默认选项</td>
+      <td colspan="2"><p>默认选项</p></td>
     </tr>
   
 
   
   </table>
   
-  
+
   <h3 data-id="api_common__request">
     request
   </h3>
-  
+
 
   <p>设置urllib的options</p>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>API.prototype.request()</td> 
-      <td></td>
-      <td>request</td>
+      <td colspan="3">API.prototype.request()</td>
     </tr>
   
 
   
   </table>
   
-  
+
   <h3 data-id="api_common__getLatestToken">
     getLatestToken
   </h3>
-  
+
 
   <p>获取最新的token。</p><ul>
 <li>如果还没有请求过token，则发起获取Token请求。</li>
@@ -566,50 +1163,48 @@ var api = new API(&#39;appid&#39;, &#39;secret&#39;, &#39;agentid&#39;);
 </ul>
 
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>API.prototype.getLatestToken()</td> 
-      <td></td>
-      <td>getLatestToken</td>
+      <td colspan="3">API.prototype.getLatestToken()</td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>callback(Function)</td>
-      <td colspan="2">回调函数</td>
+      <td colspan="2"><p>回调函数</p></td>
     </tr>
   
 
   
   </table>
   
-  
+
   <h3 data-id="api_common_API_mixin">
     mixin
   </h3>
-  
+
 
   <p>用于支持对象合并。将对象合并到API.prototype上，使得能够支持扩展<br />Examples:</p><pre><code>// 媒体管理（上传、下载）
 API.mixin(require(&#39;./lib/api_media&#39;));
 </code></pre>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>API.mixin()</td> 
-      <td>API</td>
-      <td>mixin</td>
+      <td colspan="3">API.mixin()</td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>obj(Object)</td>
-      <td colspan="2">要合并的对象</td>
+      <td colspan="2"><p>要合并的对象</p></td>
     </tr>
   
 
@@ -624,34 +1219,43 @@ API.mixin(require(&#39;./lib/api_media&#39;));
   <ul class="indexs">
   
     <li>
-      <a href="#api_department_exports_createDepartment">createDepartment</a>
+      <a href="#api_department_exports_createDepartment">
+        createDepartment
+      </a>
     </li>
 
     <li>
-      <a href="#api_department_exports_updateDepartment">updateDepartment</a>
+      <a href="#api_department_exports_updateDepartment">
+        updateDepartment
+      </a>
     </li>
 
     <li>
-      <a href="#api_department_exports_deleteDepartment">deleteDepartment</a>
+      <a href="#api_department_exports_deleteDepartment">
+        deleteDepartment
+      </a>
     </li>
 
     <li>
-      <a href="#api_department_exports_getDepartments">getDepartments</a>
+      <a href="#api_department_exports_getDepartments">
+        getDepartments
+      </a>
     </li>
 
   </ul>
   <hr />
 
-  
+
   <h3 data-id="api_department_exports_createDepartment">
     createDepartment
   </h3>
-  
+
 
   <p>创建部门<br />详细请看：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=管理部门">http://qydev.weixin.qq.com/wiki/index.php?title=管理部门</a></p><p>Examples:</p><pre><code>api.createDepartment(name, opts, callback);
 </code></pre><p>Opts:</p><ul>
 <li><code>parentid</code>, 父部门id，根部门id为1</li>
 <li><code>order</code>，在父部门中的次序。从1开始，数字越大排序越靠后</li>
+<li><code>id</code>，部门ID。用指定部门ID新建部门，不指定此参数时，则自动生成</li>
 </ul>
 <p>Callback:</p><ul>
 <li><code>err</code>, 调用失败时得到的异常</li>
@@ -664,45 +1268,44 @@ API.mixin(require(&#39;./lib/api_media&#39;));
 }
 </code></pre>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>exports.createDepartment()</td> 
-      <td>exports</td>
-      <td>createDepartment</td>
+      <td colspan="3">exports.createDepartment()</td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>name(String)</td>
-      <td colspan="2">部门名字</td>
+      <td colspan="2"><p>部门名字</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>opts(Object)</td>
-      <td colspan="2">选项</td>
+      <td colspan="2"><p>选项</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>callback(Function)</td>
-      <td colspan="2">回调函数</td>
+      <td colspan="2"><p>回调函数</p></td>
     </tr>
   
 
   
   </table>
   
-  
+
   <h3 data-id="api_department_exports_updateDepartment">
     updateDepartment
   </h3>
-  
+
 
   <p>更新部门</p><p>Examples:</p><pre><code>var opts = {name: &#39;new name&#39;, parentid: 1, order: 5};
 api.updateDepartment(id, opts, callback);
@@ -721,45 +1324,44 @@ api.updateDepartment(id, opts, callback);
 }
 </code></pre>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>exports.updateDepartment()</td> 
-      <td>exports</td>
-      <td>updateDepartment</td>
+      <td colspan="3">exports.updateDepartment()</td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>id(Number)</td>
-      <td colspan="2">部门ID</td>
+      <td colspan="2"><p>部门ID</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>opts(Object)</td>
-      <td colspan="2">选项</td>
+      <td colspan="2"><p>选项</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>callback(Function)</td>
-      <td colspan="2">回调函数</td>
+      <td colspan="2"><p>回调函数</p></td>
     </tr>
   
 
   
   </table>
   
-  
+
   <h3 data-id="api_department_exports_deleteDepartment">
     deleteDepartment
   </h3>
-  
+
 
   <p>删除部门</p><p>Examples:</p><pre><code>api.deleteDepartment(id, callback);
 api.deleteDepartment([id1, id2], callback);
@@ -773,38 +1375,37 @@ api.deleteDepartment([id1, id2], callback);
 }
 </code></pre>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>exports.deleteDepartment()</td> 
-      <td>exports</td>
-      <td>deleteDepartment</td>
+      <td colspan="3">exports.deleteDepartment()</td>
     </tr>
   
 
     <tr>
       <td>参数</td>
-      <td>id(Number,Array)</td>
-      <td colspan="2">部门ID</td>
+      <td>id()</td>
+      <td colspan="2"><p>部门ID</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>callback(Function)</td>
-      <td colspan="2">回调函数</td>
+      <td colspan="2"><p>回调函数</p></td>
     </tr>
   
 
   
   </table>
   
-  
+
   <h3 data-id="api_department_exports_getDepartments">
     getDepartments
   </h3>
-  
+
 
   <p>查看所有部门</p><p>Examples:</p><pre><code>api.getDepartments(callback);
 </code></pre><p>Callback:</p><ul>
@@ -829,20 +1430,233 @@ api.deleteDepartment([id1, id2], callback);
 }
 </code></pre>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>exports.getDepartments()</td> 
-      <td>exports</td>
-      <td>getDepartments</td>
+      <td colspan="3">exports.getDepartments()</td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>callback(Function)</td>
-      <td colspan="2">回调函数</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
+        <section id="api_api_ip" class="api">
+  <h2>api_ip: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#api_ip__make">
+        make
+      </a>
+    </li>
+
+  </ul>
+  <hr />
+
+
+  <h3 data-id="api_ip__make">
+    make
+  </h3>
+
+
+  <p>创建标签</p><p>详细请看：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=%E5%9B%9E%E8%B0%83%E6%A8%A1%E5%BC%8F#.E8.8E.B7.E5.8F.96.E5.BE.AE.E4.BF.A1.E6.9C.8D.E5.8A.A1.E5.99.A8.E7.9A.84ip.E6.AE.B5">http://qydev.weixin.qq.com/wiki/index.php?title=%E5%9B%9E%E8%B0%83%E6%A8%A1%E5%BC%8F#.E8.8E.B7.E5.8F.96.E5.BE.AE.E4.BF.A1.E6.9C.8D.E5.8A.A1.E5.99.A8.E7.9A.84ip.E6.AE.B5</a><br />Examples:</p><pre><code>api.getCallbackIP(name, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+ &quot;ip_list&quot;: [&quot;101.226.103.*&quot;, &quot;101.226.62.*&quot;]
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">make()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
+        <section id="api_api_js" class="api">
+  <h2>api_js: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#api_js_exports_registerTicketHandle">
+        registerTicketHandle
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_js_exports_getTicket">
+        getTicket
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_js_exports_getJsConfig">
+        getJsConfig
+      </a>
+    </li>
+
+  </ul>
+  <hr />
+
+
+  <h3 data-id="api_js_exports_registerTicketHandle">
+    registerTicketHandle
+  </h3>
+
+
+  <p>多台服务器负载均衡时，ticketToken需要外部存储共享。<br />需要调用此registerTicketHandle来设置获取和保存的自定义方法。</p><p>Examples:</p><pre><code>api.registerTicketHandle(getTicketToken, saveTicketToken);
+// getTicketToken
+function getTicketToken(callback) {
+ settingModel.getItem({key: &#39;weixin_ticketToken&#39;}, function (err, setting) {
+   if (err) return callback(err);
+   callback(null, setting.value);
+ });
+}
+// saveTicketToken
+function saveTicketToken(_ticketToken, callback) {
+ settingModel.setItem({key:&#39;weixin_ticketToken&#39;, value: ticketToken}, function (err) {
+   if (err) return callback(err);
+   callback(null);
+ });
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.registerTicketHandle()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>getTicketToken(Function)</td>
+      <td colspan="2"><p>获取外部ticketToken的函数</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>saveTicketToken(Function)</td>
+      <td colspan="2"><p>存储外部ticketToken的函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="api_js_exports_getTicket">
+    getTicket
+  </h3>
+
+
+  <p>获取js sdk所需的有效js ticket</p><p>Callback:</p><ul>
+<li><code>err</code>, 异常对象</li>
+<li><code>result</code>, 正常获取时的数据</li>
+</ul>
+<p>Result:</p><ul>
+<li><code>errcode</code>, 0为成功</li>
+<li><code>errmsg</code>, 成功为&#39;ok&#39;，错误则为详细错误信息</li>
+<li><code>ticket</code>, js sdk有效票据，如：bxLdikRXVbTPdHSM05e5u5sUoXNKd8-41ZO3MhKoyN5OfkWITDGgnr2fwJ0m9E8NYzWKVZvdVtaUgWvsdshFKA</li>
+<li><code>expires_in</code>, 有效期7200秒，开发者必须在自己的服务全局缓存jsapi_ticket</li>
+</ul>
+
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getTicket()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="api_js_exports_getJsConfig">
+    getJsConfig
+  </h3>
+
+
+  <p>获取微信JS SDK Config的所需参数</p><p>注意事项</p><ol>
+<li>签名用的noncestr和timestamp必须与wx.config中的nonceStr和timestamp相同。</li>
+<li>签名用的url必须是调用JS接口页面的完整URL。</li>
+<li>出于安全考虑，开发者必须在服务器端实现签名的逻辑。<br />Examples:<pre><code>var param = {
+debug:false,
+jsApiList: [&#39;onMenuShareTimeline&#39;, &#39;onMenuShareAppMessage&#39;],
+url: &#39;http://www.xxx.com&#39; 
+};
+api.getJsConfig(param, callback);
+</code></pre></li>
+</ol>
+<p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的js sdk config所需参数</li>
+</ul>
+
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getJsConfig()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>param(Object)</td>
+      <td colspan="2"><p>参数</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
     </tr>
   
 
@@ -857,21 +1671,25 @@ api.deleteDepartment([id1, id2], callback);
   <ul class="indexs">
   
     <li>
-      <a href="#api_media_exports_uploadMedia">uploadMedia</a>
+      <a href="#api_media_exports_uploadMedia">
+        uploadMedia
+      </a>
     </li>
 
     <li>
-      <a href="#api_media_exports_getMedia">getMedia</a>
+      <a href="#api_media_exports_getMedia">
+        getMedia
+      </a>
     </li>
 
   </ul>
   <hr />
 
-  
+
   <h3 data-id="api_media_exports_uploadMedia">
     uploadMedia
   </h3>
-  
+
 
   <p>上传多媒体文件，分别有图片（image）、语音（voice）、视频（video）和普通文件（file）<br />详情请见：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=上传媒体文件">http://qydev.weixin.qq.com/wiki/index.php?title=上传媒体文件</a><br />Examples:</p><pre><code>api.uploadMedia(&#39;filepath&#39;, type, callback);
 </code></pre><p>Callback:</p><ul>
@@ -887,45 +1705,44 @@ api.deleteDepartment([id1, id2], callback);
 </ul>
 
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>exports.uploadMedia()</td> 
-      <td>exports</td>
-      <td>uploadMedia</td>
+      <td colspan="3">exports.uploadMedia()</td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>filepath(String)</td>
-      <td colspan="2">文件路径</td>
+      <td colspan="2"><p>文件路径</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>type(String)</td>
-      <td colspan="2">媒体类型，可用值有image、voice、video、file</td>
+      <td colspan="2"><p>媒体类型，可用值有image、voice、video、file</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>callback(Function)</td>
-      <td colspan="2">回调函数</td>
+      <td colspan="2"><p>回调函数</p></td>
     </tr>
   
 
   
   </table>
   
-  
+
   <h3 data-id="api_media_exports_getMedia">
     getMedia
   </h3>
-  
+
 
   <p>根据媒体ID获取媒体内容<br />详情请见：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=获取媒体文件">http://qydev.weixin.qq.com/wiki/index.php?title=获取媒体文件</a><br />Examples:</p><pre><code>api.getMedia(&#39;media_id&#39;, callback);
 </code></pre><p>Callback:</p><ul>
@@ -935,27 +1752,26 @@ api.deleteDepartment([id1, id2], callback);
 </ul>
 
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>exports.getMedia()</td> 
-      <td>exports</td>
-      <td>getMedia</td>
+      <td colspan="3">exports.getMedia()</td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>mediaId(String)</td>
-      <td colspan="2">媒体文件的ID</td>
+      <td colspan="2"><p>媒体文件的ID</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>callback(Function)</td>
-      <td colspan="2">回调函数</td>
+      <td colspan="2"><p>回调函数</p></td>
     </tr>
   
 
@@ -970,25 +1786,31 @@ api.deleteDepartment([id1, id2], callback);
   <ul class="indexs">
   
     <li>
-      <a href="#api_menu_exports_createMenu">createMenu</a>
+      <a href="#api_menu_exports_createMenu">
+        createMenu
+      </a>
     </li>
 
     <li>
-      <a href="#api_menu_exports_getMenu">getMenu</a>
+      <a href="#api_menu_exports_getMenu">
+        getMenu
+      </a>
     </li>
 
     <li>
-      <a href="#api_menu_exports_removeMenu">removeMenu</a>
+      <a href="#api_menu_exports_removeMenu">
+        removeMenu
+      </a>
     </li>
 
   </ul>
   <hr />
 
-  
+
   <h3 data-id="api_menu_exports_createMenu">
     createMenu
   </h3>
-  
+
 
   <p>创建自定义菜单<br />详细请看：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=创建应用菜单">http://qydev.weixin.qq.com/wiki/index.php?title=创建应用菜单</a></p><p>Menu:</p><pre><code>{
  &quot;button&quot;:[
@@ -1022,38 +1844,37 @@ api.deleteDepartment([id1, id2], callback);
 <p>Result:</p><pre><code>{&quot;errcode&quot;:0,&quot;errmsg&quot;:&quot;ok&quot;}
 </code></pre>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>exports.createMenu()</td> 
-      <td>exports</td>
-      <td>createMenu</td>
+      <td colspan="3">exports.createMenu()</td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>menu(Object)</td>
-      <td colspan="2">菜单对象</td>
+      <td colspan="2"><p>菜单对象</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>callback(Function)</td>
-      <td colspan="2">回调函数</td>
+      <td colspan="2"><p>回调函数</p></td>
     </tr>
   
 
   
   </table>
   
-  
+
   <h3 data-id="api_menu_exports_getMenu">
     getMenu
   </h3>
-  
+
 
   <p>获取菜单<br />详细请看：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=获取菜单列表">http://qydev.weixin.qq.com/wiki/index.php?title=获取菜单列表</a></p><p>Examples:</p><pre><code>api.getMenu(callback);
 </code></pre><p>Callback:</p><ul>
@@ -1076,31 +1897,30 @@ api.deleteDepartment([id1, id2], callback);
 }
 </code></pre>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>exports.getMenu()</td> 
-      <td>exports</td>
-      <td>getMenu</td>
+      <td colspan="3">exports.getMenu()</td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>callback(Function)</td>
-      <td colspan="2">回调函数</td>
+      <td colspan="2"><p>回调函数</p></td>
     </tr>
   
 
   
   </table>
   
-  
+
   <h3 data-id="api_menu_exports_removeMenu">
     removeMenu
   </h3>
-  
+
 
   <p>删除自定义菜单<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=自定义菜单删除接口">http://mp.weixin.qq.com/wiki/index.php?title=自定义菜单删除接口</a><br />Examples:</p><pre><code>api.removeMenu(callback);
 </code></pre><p>Callback:</p><ul>
@@ -1110,20 +1930,19 @@ api.deleteDepartment([id1, id2], callback);
 <p>Result:</p><pre><code>{&quot;errcode&quot;:0,&quot;errmsg&quot;:&quot;ok&quot;}
 </code></pre>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>exports.removeMenu()</td> 
-      <td>exports</td>
-      <td>removeMenu</td>
+      <td colspan="3">exports.removeMenu()</td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>callback(Function)</td>
-      <td colspan="2">回调函数</td>
+      <td colspan="2"><p>回调函数</p></td>
     </tr>
   
 
@@ -1138,17 +1957,19 @@ api.deleteDepartment([id1, id2], callback);
   <ul class="indexs">
   
     <li>
-      <a href="#api_message_exports_send">send</a>
+      <a href="#api_message_exports_send">
+        send
+      </a>
     </li>
 
   </ul>
   <hr />
 
-  
+
   <h3 data-id="api_message_exports_send">
     send
   </h3>
-  
+
 
   <p>发送消息分别有图片（image）、语音（voice）、视频（video）和缩略图（thumb）<br />详细请看：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=发送接口说明">http://qydev.weixin.qq.com/wiki/index.php?title=发送接口说明</a><br />Examples:</p><pre><code>api.send(to, message, callback);
 </code></pre><p>To:</p><pre><code>{
@@ -1258,34 +2079,33 @@ api.deleteDepartment([id1, id2], callback);
 }
 </code></pre>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>exports.send()</td> 
-      <td>exports</td>
-      <td>send</td>
+      <td colspan="3">exports.send()</td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>to(Object)</td>
-      <td colspan="2">接受消息的用户</td>
+      <td colspan="2"><p>接受消息的用户</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>message(Object)</td>
-      <td colspan="2">消息对象</td>
+      <td colspan="2"><p>消息对象</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>callback(Function)</td>
-      <td colspan="2">回调函数</td>
+      <td colspan="2"><p>回调函数</p></td>
     </tr>
   
 
@@ -1300,41 +2120,55 @@ api.deleteDepartment([id1, id2], callback);
   <ul class="indexs">
   
     <li>
-      <a href="#api_tag_exports_createTag">createTag</a>
+      <a href="#api_tag_exports_createTag">
+        createTag
+      </a>
     </li>
 
     <li>
-      <a href="#api_tag_exports_updateTagName">updateTagName</a>
+      <a href="#api_tag_exports_updateTagName">
+        updateTagName
+      </a>
     </li>
 
     <li>
-      <a href="#api_tag_exports_deleteTag">deleteTag</a>
+      <a href="#api_tag_exports_deleteTag">
+        deleteTag
+      </a>
     </li>
 
     <li>
-      <a href="#api_tag_exports_listTags">listTags</a>
+      <a href="#api_tag_exports_listTags">
+        listTags
+      </a>
     </li>
 
     <li>
-      <a href="#api_tag_exports_getTagUsers">getTagUsers</a>
+      <a href="#api_tag_exports_getTagUsers">
+        getTagUsers
+      </a>
     </li>
 
     <li>
-      <a href="#api_tag_exports_addTagUsers">addTagUsers</a>
+      <a href="#api_tag_exports_addTagUsers">
+        addTagUsers
+      </a>
     </li>
 
     <li>
-      <a href="#api_tag_exports_deleteTagUsers">deleteTagUsers</a>
+      <a href="#api_tag_exports_deleteTagUsers">
+        deleteTagUsers
+      </a>
     </li>
 
   </ul>
   <hr />
 
-  
+
   <h3 data-id="api_tag_exports_createTag">
     createTag
   </h3>
-  
+
 
   <p>创建标签</p><p>详细请看：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=管理标签">http://qydev.weixin.qq.com/wiki/index.php?title=管理标签</a><br />Examples:</p><pre><code>api.createTag(name, callback);
 </code></pre><p>Callback:</p><ul>
@@ -1348,38 +2182,37 @@ api.deleteDepartment([id1, id2], callback);
 }
 </code></pre>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>exports.createTag()</td> 
-      <td>exports</td>
-      <td>createTag</td>
+      <td colspan="3">exports.createTag()</td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>name(String)</td>
-      <td colspan="2">标签名字</td>
+      <td colspan="2"><p>标签名字</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>callback(Function)</td>
-      <td colspan="2">回调函数</td>
+      <td colspan="2"><p>回调函数</p></td>
     </tr>
   
 
   
   </table>
   
-  
+
   <h3 data-id="api_tag_exports_updateTagName">
     updateTagName
   </h3>
-  
+
 
   <p>更新标签名字</p><p>Examples:</p><pre><code>api.updateTagName(id, name, callback);
 </code></pre><p>Callback:</p><ul>
@@ -1392,45 +2225,44 @@ api.deleteDepartment([id1, id2], callback);
 }
 </code></pre>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>exports.updateTagName()</td> 
-      <td>exports</td>
-      <td>updateTagName</td>
+      <td colspan="3">exports.updateTagName()</td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>id(String)</td>
-      <td colspan="2">标签ID</td>
+      <td colspan="2"><p>标签ID</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>name(String)</td>
-      <td colspan="2">标签名称。最长64个字符</td>
+      <td colspan="2"><p>标签名称。最长64个字符</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>callback(Function)</td>
-      <td colspan="2">回调函数</td>
+      <td colspan="2"><p>回调函数</p></td>
     </tr>
   
 
   
   </table>
   
-  
+
   <h3 data-id="api_tag_exports_deleteTag">
     deleteTag
   </h3>
-  
+
 
   <p>删除标签</p><p>Examples:</p><pre><code>api.deleteTag(id, callback);
 </code></pre><p>Callback:</p><ul>
@@ -1443,38 +2275,37 @@ api.deleteDepartment([id1, id2], callback);
 }
 </code></pre>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>exports.deleteTag()</td> 
-      <td>exports</td>
-      <td>deleteTag</td>
+      <td colspan="3">exports.deleteTag()</td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>id(Number)</td>
-      <td colspan="2">标签ID</td>
+      <td colspan="2"><p>标签ID</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>callback(Function)</td>
-      <td colspan="2">回调函数</td>
+      <td colspan="2"><p>回调函数</p></td>
     </tr>
   
 
   
   </table>
   
-  
+
   <h3 data-id="api_tag_exports_listTags">
     listTags
   </h3>
-  
+
 
   <p>获取标签列表</p><p>Examples:</p><pre><code>api.listTags(callback);
 </code></pre><p>Callback:</p><ul>
@@ -1487,31 +2318,30 @@ api.deleteDepartment([id1, id2], callback);
 }
 </code></pre>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>exports.listTags()</td> 
-      <td>exports</td>
-      <td>listTags</td>
+      <td colspan="3">exports.listTags()</td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>callback(Function)</td>
-      <td colspan="2">回调函数</td>
+      <td colspan="2"><p>回调函数</p></td>
     </tr>
   
 
   
   </table>
   
-  
+
   <h3 data-id="api_tag_exports_getTagUsers">
     getTagUsers
   </h3>
-  
+
 
   <p>获取标签成员</p><p>Examples:</p><pre><code>api.getTagUsers(id, callback);
 </code></pre><p>Callback:</p><ul>
@@ -1530,38 +2360,37 @@ api.deleteDepartment([id1, id2], callback);
 }
 </code></pre>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>exports.getTagUsers()</td> 
-      <td>exports</td>
-      <td>getTagUsers</td>
+      <td colspan="3">exports.getTagUsers()</td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>id(Number)</td>
-      <td colspan="2">标签ID</td>
+      <td colspan="2"><p>标签ID</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>callback(Function)</td>
-      <td colspan="2">回调函数</td>
+      <td colspan="2"><p>回调函数</p></td>
     </tr>
   
 
   
   </table>
   
-  
+
   <h3 data-id="api_tag_exports_addTagUsers">
     addTagUsers
   </h3>
-  
+
 
   <p>增加标签成员</p><p>Examples:</p><pre><code>var userIdList = [&#39;id1&#39;, &#39;id2&#39;];
 api.addTagUsers(id, userIdList, callback);
@@ -1584,45 +2413,44 @@ api.addTagUsers(id, userIdList, callback);
 }
 </code></pre>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>exports.addTagUsers()</td> 
-      <td>exports</td>
-      <td>addTagUsers</td>
+      <td colspan="3">exports.addTagUsers()</td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>id(Number)</td>
-      <td colspan="2">标签ID</td>
+      <td colspan="2"><p>标签ID</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>userIdList(Array)</td>
-      <td colspan="2">用户ID列表</td>
+      <td colspan="2"><p>用户ID列表</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>callback(Function)</td>
-      <td colspan="2">回调函数</td>
+      <td colspan="2"><p>回调函数</p></td>
     </tr>
   
 
   
   </table>
   
-  
+
   <h3 data-id="api_tag_exports_deleteTagUsers">
     deleteTagUsers
   </h3>
-  
+
 
   <p>删除标签成员</p><p>Examples:</p><pre><code>var userIdList = [&#39;id1&#39;, &#39;id2&#39;];
 api.deleteTagUsers(id, userIdList, callback);
@@ -1645,34 +2473,33 @@ api.deleteTagUsers(id, userIdList, callback);
 }
 </code></pre>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>exports.deleteTagUsers()</td> 
-      <td>exports</td>
-      <td>deleteTagUsers</td>
+      <td colspan="3">exports.deleteTagUsers()</td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>id(Number)</td>
-      <td colspan="2">标签ID</td>
+      <td colspan="2"><p>标签ID</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>userIdList(Array)</td>
-      <td colspan="2">用户ID数组</td>
+      <td colspan="2"><p>用户ID数组</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>callback(Function)</td>
-      <td colspan="2">回调函数</td>
+      <td colspan="2"><p>回调函数</p></td>
     </tr>
   
 
@@ -1687,45 +2514,73 @@ api.deleteTagUsers(id, userIdList, callback);
   <ul class="indexs">
   
     <li>
-      <a href="#api_user_exports_createUser">createUser</a>
+      <a href="#api_user_exports_createUser">
+        createUser
+      </a>
     </li>
 
     <li>
-      <a href="#api_user_exports_updateUser">updateUser</a>
+      <a href="#api_user_exports_updateUser">
+        updateUser
+      </a>
     </li>
 
     <li>
-      <a href="#api_user_exports_deleteUser">deleteUser</a>
+      <a href="#api_user_exports_deleteUser">
+        deleteUser
+      </a>
     </li>
 
     <li>
-      <a href="#api_user_exports_getUser">getUser</a>
+      <a href="#api_user__make">
+        make
+      </a>
     </li>
 
     <li>
-      <a href="#api_user_exports_getDepartmentUsers">getDepartmentUsers</a>
+      <a href="#api_user_exports_getUser">
+        getUser
+      </a>
     </li>
 
     <li>
-      <a href="#api_user_exports_getDepartmentUsersDetail">getDepartmentUsersDetail</a>
+      <a href="#api_user_exports_getDepartmentUsers">
+        getDepartmentUsers
+      </a>
     </li>
 
     <li>
-      <a href="#api_user_exports_getUserIdByCode">getUserIdByCode</a>
+      <a href="#api_user_exports_getDepartmentUsersDetail">
+        getDepartmentUsersDetail
+      </a>
     </li>
 
     <li>
-      <a href="#api_user_exports_getAuthorizeURL">getAuthorizeURL</a>
+      <a href="#api_user_exports_inviteUser">
+        inviteUser
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_user_exports_getUserIdByCode">
+        getUserIdByCode
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_user_exports_getAuthorizeURL">
+        getAuthorizeURL
+      </a>
     </li>
 
   </ul>
   <hr />
 
-  
+
   <h3 data-id="api_user_exports_createUser">
     createUser
   </h3>
-  
+
 
   <p>创建成员<br />详细请看：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=管理成员">http://qydev.weixin.qq.com/wiki/index.php?title=管理成员</a></p><p>Examples:</p><pre><code>api.createUser(user, callback);
 </code></pre><p>User:</p><pre><code>{
@@ -1749,38 +2604,37 @@ api.deleteTagUsers(id, userIdList, callback);
 }
 </code></pre>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>exports.createUser()</td> 
-      <td>exports</td>
-      <td>createUser</td>
+      <td colspan="3">exports.createUser()</td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>user(Object)</td>
-      <td colspan="2">成员信息</td>
+      <td colspan="2"><p>成员信息</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>callback(Function)</td>
-      <td colspan="2">回调函数</td>
+      <td colspan="2"><p>回调函数</p></td>
     </tr>
   
 
   
   </table>
   
-  
+
   <h3 data-id="api_user_exports_updateUser">
     updateUser
   </h3>
-  
+
 
   <p>更新成员</p><p>Examples:</p><pre><code>api.updateUser(user, callback);
 </code></pre><p>User:</p><pre><code>{
@@ -1805,38 +2659,37 @@ api.deleteTagUsers(id, userIdList, callback);
 }
 </code></pre>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>exports.updateUser()</td> 
-      <td>exports</td>
-      <td>updateUser</td>
+      <td colspan="3">exports.updateUser()</td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>user(Object)</td>
-      <td colspan="2">成员信息</td>
+      <td colspan="2"><p>成员信息</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>callback(Function)</td>
-      <td colspan="2">回调函数</td>
+      <td colspan="2"><p>回调函数</p></td>
     </tr>
   
 
   
   </table>
   
-  
+
   <h3 data-id="api_user_exports_deleteUser">
     deleteUser
   </h3>
-  
+
 
   <p>删除成员</p><p>Examples:</p><pre><code>api.deleteUser(id, callback);
 </code></pre><p>Callback:</p><ul>
@@ -1849,38 +2702,80 @@ api.deleteTagUsers(id, userIdList, callback);
 }
 </code></pre>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>exports.deleteUser()</td> 
-      <td>exports</td>
-      <td>deleteUser</td>
+      <td colspan="3">exports.deleteUser()</td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>id(Number)</td>
-      <td colspan="2">成员ID</td>
+      <td colspan="2"><p>成员ID</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>callback(Function)</td>
-      <td colspan="2">回调函数</td>
+      <td colspan="2"><p>回调函数</p></td>
     </tr>
   
 
   
   </table>
   
+
+  <h3 data-id="api_user__make">
+    make
+  </h3>
+
+
+  <p>批量删除成员</p><p>Examples:</p><pre><code>api.deleteUsers([&quot;zhangsan&quot;, &quot;lisi&quot;], callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+ &quot;errcode&quot;: 0,
+ &quot;errmsg&quot;: &quot;deleted&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
   
+    <tr>
+      <td>方法</td>
+      <td colspan="3">make()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>users(Array)</td>
+      <td colspan="2"><p>待删除的用户</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+
   <h3 data-id="api_user_exports_getUser">
     getUser
   </h3>
-  
+
 
   <p>获取成员</p><p>Examples:</p><pre><code>api.getUser(id, callback);
 </code></pre><p>Callback:</p><ul>
@@ -1904,38 +2799,37 @@ api.deleteTagUsers(id, userIdList, callback);
 }
 </code></pre>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>exports.getUser()</td> 
-      <td>exports</td>
-      <td>getUser</td>
+      <td colspan="3">exports.getUser()</td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>id(Number)</td>
-      <td colspan="2">成员ID</td>
+      <td colspan="2"><p>成员ID</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>callback(Function)</td>
-      <td colspan="2">回调函数</td>
+      <td colspan="2"><p>回调函数</p></td>
     </tr>
   
 
   
   </table>
   
-  
+
   <h3 data-id="api_user_exports_getDepartmentUsers">
     getDepartmentUsers
   </h3>
-  
+
 
   <p>获取部门成员</p><p>Examples:</p><pre><code>api.getDepartmentUsers(departmentId, fetchChild, status, callback);
 </code></pre><p>Callback:</p><ul>
@@ -1954,52 +2848,51 @@ api.deleteTagUsers(id, userIdList, callback);
 }
 </code></pre>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>exports.getDepartmentUsers()</td> 
-      <td>exports</td>
-      <td>getDepartmentUsers</td>
+      <td colspan="3">exports.getDepartmentUsers()</td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>departmentId(Number)</td>
-      <td colspan="2">部门ID</td>
+      <td colspan="2"><p>部门ID</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>fetchChild(Number)</td>
-      <td colspan="2">值：1/0，是否递归获取子部门下面的成员</td>
+      <td colspan="2"><p>值：1/0，是否递归获取子部门下面的成员</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>status(Number)</td>
-      <td colspan="2">0获取全部员工，1获取已关注成员列表，2获取禁用成员列表，4获取未关注成员列表。status可叠加</td>
+      <td colspan="2"><p>0获取全部员工，1获取已关注成员列表，2获取禁用成员列表，4获取未关注成员列表。status可叠加</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>callback(Function)</td>
-      <td colspan="2">回调函数</td>
+      <td colspan="2"><p>回调函数</p></td>
     </tr>
   
 
   
   </table>
   
-  
+
   <h3 data-id="api_user_exports_getDepartmentUsersDetail">
     getDepartmentUsersDetail
   </h3>
-  
+
 
   <p>获取部门成员(详情)</p><p>Examples:</p><pre><code>api.getDepartmentUsersDetail(departmentId, fetchChild, status, callback);
 </code></pre><p>Callback:</p><ul>
@@ -2026,52 +2919,102 @@ api.deleteTagUsers(id, userIdList, callback);
 }
 </code></pre>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>exports.getDepartmentUsersDetail()</td> 
-      <td>exports</td>
-      <td>getDepartmentUsersDetail</td>
+      <td colspan="3">exports.getDepartmentUsersDetail()</td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>departmentId(Number)</td>
-      <td colspan="2">部门ID</td>
+      <td colspan="2"><p>部门ID</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>fetchChild(Number)</td>
-      <td colspan="2">值：1/0，是否递归获取子部门下面的成员</td>
+      <td colspan="2"><p>值：1/0，是否递归获取子部门下面的成员</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>status(Number)</td>
-      <td colspan="2">0获取全部员工，1获取已关注成员列表，2获取禁用成员列表，4获取未关注成员列表。status可叠加</td>
+      <td colspan="2"><p>0获取全部员工，1获取已关注成员列表，2获取禁用成员列表，4获取未关注成员列表。status可叠加</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>callback(Function)</td>
-      <td colspan="2">回调函数</td>
+      <td colspan="2"><p>回调函数</p></td>
     </tr>
   
 
   
   </table>
   
+
+  <h3 data-id="api_user_exports_inviteUser">
+    inviteUser
+  </h3>
+
+
+  <p>邀请成员关注</p><p>详情：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=%E7%AE%A1%E7%90%86%E6%88%90%E5%91%98#.E9.82.80.E8.AF.B7.E6.88.90.E5.91.98.E5.85.B3.E6.B3.A8">http://qydev.weixin.qq.com/wiki/index.php?title=%E7%AE%A1%E7%90%86%E6%88%90%E5%91%98#.E9.82.80.E8.AF.B7.E6.88.90.E5.91.98.E5.85.B3.E6.B3.A8</a><br />Examples:</p><pre><code>api.inviteUser(id, invite_tips, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+ &quot;errcode&quot;: 0,
+ &quot;errmsg&quot;: &quot;ok&quot;,
+ &quot;type&quot;:1
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
   
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.inviteUser()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>id(String)</td>
+      <td colspan="2"><p>userid</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>invite_tips(String)</td>
+      <td colspan="2"><p>邀请的一句话</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+
   <h3 data-id="api_user_exports_getUserIdByCode">
     getUserIdByCode
   </h3>
-  
+
 
   <p>根据Code获取用户ID</p><p>详情：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=根据code获取成员信息">http://qydev.weixin.qq.com/wiki/index.php?title=根据code获取成员信息</a><br />Examples:</p><pre><code>api.getUserIdByCode(code, callback);
 </code></pre><p>Callback:</p><ul>
@@ -2083,69 +3026,67 @@ api.deleteTagUsers(id, userIdList, callback);
 }
 </code></pre>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>exports.getUserIdByCode()</td> 
-      <td>exports</td>
-      <td>getUserIdByCode</td>
+      <td colspan="3">exports.getUserIdByCode()</td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>code(String)</td>
-      <td colspan="2">OAuth授权获取的code</td>
+      <td colspan="2"><p>OAuth授权获取的code</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>callback(Function)</td>
-      <td colspan="2">回调函数</td>
+      <td colspan="2"><p>回调函数</p></td>
     </tr>
   
 
   
   </table>
   
-  
+
   <h3 data-id="api_user_exports_getAuthorizeURL">
     getAuthorizeURL
   </h3>
-  
+
 
   <p>获取授权页面的URL地址</p>
 
+  <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
   
     <tr>
       <td>方法</td>
-      <td>exports.getAuthorizeURL()</td> 
-      <td>exports</td>
-      <td>getAuthorizeURL</td>
+      <td colspan="3">exports.getAuthorizeURL()</td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>redirect(String)</td>
-      <td colspan="2">授权后要跳转的地址</td>
+      <td colspan="2"><p>授权后要跳转的地址</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>state(String)</td>
-      <td colspan="2">开发者可提供的数据</td>
+      <td colspan="2"><p>开发者可提供的数据</p></td>
     </tr>
   
 
     <tr>
       <td>参数</td>
       <td>scope(String)</td>
-      <td colspan="2">作用范围，值为snsapi_userinfo和snsapi_base，前者用于弹出，后者用于跳转</td>
+      <td colspan="2"><p>作用范围，值为snsapi_userinfo和snsapi_base，前者用于弹出，后者用于跳转</p></td>
     </tr>
   
 
@@ -2188,19 +3129,28 @@ api.deleteTagUsers(id, userIdList, callback);
         $('td pre').removeClass('prettyprint');
         prettyPrint();
         var $window = $(window);
-        $('.bs-docs-sidenav').affix({
-          offset: {
-            top: function () {
-              return $window.width() <= 980 ? 290 : 210
-            },
-            bottom: 270
-          }
-        });
+        var sidenav = $('.bs-docs-sidenav');
+        if (sidenav.height() < window.innerHeight) {
+          sidenav.affix({
+            offset: {
+              top: function () {
+                return $window.width() <= 980 ? 290 : 210
+              },
+              bottom: 200
+            }
+          });
+        } else {
+          sidenav.removeClass('affix');
+        }
         $(".content").find('h1, h2, h3, h4, h5, h6').each(function () {
           var node = $(this);
           // 总是设置id
           node.attr("id", node.data('id') || "index_" + node.text());
-          node.css("paddingTop", 50);
+        });
+
+        $('.bs-docs-sidenav .accordion-marker').on('click', function(event) {
+          var current = $(event.currentTarget);
+          current.find('.glyphicon').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
         });
       });
     </script>
