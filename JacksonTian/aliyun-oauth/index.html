@@ -57,6 +57,12 @@
   </li>
 
   <li class="level_2">
+    <a href="#index_Documentation" title="Documentation">
+      <i class="icon-chevron-right"></i>Documentation
+    </a>
+  </li>
+
+  <li class="level_2">
     <a href="#index_Usage" title="Usage">
       <i class="icon-chevron-right"></i>Usage
     </a>
@@ -76,8 +82,9 @@
         <h1>aliyun-oauth</h1>
 <p>Aliyun OAuth for ES6</p><h2>Installation</h2>
 <pre><code>$ npm install aliyun-oauth --save
-</code></pre><h2>Usage</h2>
-<pre><code>var config = require(&#39;../config&#39;);
+</code></pre><h2>Documentation</h2>
+<p>文档地址： <a href="http://doxmate.cool/JacksonTian/aliyun-oauth/index.html">http://doxmate.cool/JacksonTian/aliyun-oauth/index.html</a></p><h2>Usage</h2>
+<pre><code class="lang-js">var config = require(&#39;../config&#39;);
 var OAuth = require(&#39;aliyun-oauth&#39;);
 var oauth = new OAuth(config.oauth.key, config.oauth.secret);
 
@@ -112,7 +119,8 @@ exports.callback = function * () {
   this.redirect(&#39;/&#39;);
 };
 // 退出时请清理session即可
-</code></pre><h2>License</h2>
+</code></pre>
+<h2>License</h2>
 <p>The MIT license</p>
       </section>
   
