@@ -5169,14 +5169,35 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   </h3>
 
 
-  <p>获取门店列表</p><pre><code>Examples:
-</code></pre><p>api.getPois(0, 20, callback);</p><pre><code>Callback:
-
-- `err`, 调用失败时得到的异常
-- `result`, 调用正常时得到的对象
-
-Result:
-</code></pre><p>{<br />  &quot;errcode&quot;: 0,<br />  &quot;errmsg&quot;: &quot;ok&quot;<br />  &quot;business_list&quot;: [{<br />    &quot;base_info&quot;: {<br />      &quot;sid&quot;: &quot;100&quot;,<br />      &quot;poi_id&quot;: &quot;5794560&quot;,<br />      &quot;business_name&quot;: &quot;肯打鸡&quot;,<br />      &quot;branch_name&quot;: &quot;东方路店&quot;,<br />      &quot;address&quot;: &quot;东方路88号&quot;,<br />      &quot;available_state&quot;: 3<br />    }<br />  }, {<br />    &quot;base_info&quot;: {<br />      &quot;sid&quot;: &quot;101&quot;,<br />      &quot;business_name&quot;: &quot;肯打鸡&quot;,<br />      &quot;branch_name&quot;: &quot;西方路店&quot;,<br />      &quot;address&quot;: &quot;西方路88号&quot;,<br />      &quot;available_state&quot;: 4<br />    }<br />  }],<br />  &quot;total_count&quot;: &quot;2&quot;,<br />}<br />```</p>
+  <p>获取门店列表<br />Examples:</p><pre><code>api.getPois(0, 20, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;ok&quot;
+  &quot;business_list&quot;: [{
+    &quot;base_info&quot;: {
+      &quot;sid&quot;: &quot;100&quot;,
+      &quot;poi_id&quot;: &quot;5794560&quot;,
+      &quot;business_name&quot;: &quot;肯打鸡&quot;,
+      &quot;branch_name&quot;: &quot;东方路店&quot;,
+      &quot;address&quot;: &quot;东方路88号&quot;,
+      &quot;available_state&quot;: 3
+    }
+  }, {
+    &quot;base_info&quot;: {
+      &quot;sid&quot;: &quot;101&quot;,
+      &quot;business_name&quot;: &quot;肯打鸡&quot;,
+      &quot;branch_name&quot;: &quot;西方路店&quot;,
+      &quot;address&quot;: &quot;西方路88号&quot;,
+      &quot;available_state&quot;: 4
+    }
+  }],
+  &quot;total_count&quot;: &quot;2&quot;,
+}
+</code></pre>
 
   <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
