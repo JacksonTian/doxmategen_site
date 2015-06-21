@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="assets/base.css" />
   </head>
   <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-inverse navbar-static-top top-navbar" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -38,7 +38,7 @@
     </nav>
     <header class="jumbotron subhead">
       <div class="container">
-        <h1>wechat-oauth <small>Version: 1.0.1 By @Jackson Tian</small></h1>
+        <h1>wechat-oauth <small>Version: 1.1.0 By @Jackson Tian</small></h1>
         <p class="lead">
           微信公共平台OAuth
         </p>
@@ -55,9 +55,9 @@
 			<div class="accordion-group">
 				<div class="accordion-heading">
 					<a href="#api_oauth" class="api_side_link">oauth</a>
-					<div class="accordion-marker" id="collapse_marker_oauth">
+					<div class="accordion-marker">
 						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#oauth" href="#collapse_oauth">
-							 <span id="toggle_oauth" class="glyphicon glyphicon-chevron-right"></span>
+							 <span class="glyphicon glyphicon-chevron-right"></span>
 						</a>
 					</div>
 				</div>
@@ -78,6 +78,14 @@
 						</li>
 					
 						<li>
+							<a href="#oauth__getAuthorizeURLForWebsite">getAuthorizeURLForWebsite</a>
+						</li>
+					
+						<li>
+							<a href="#oauth__getAccessToken">getAccessToken</a>
+						</li>
+					
+						<li>
 							<a href="#oauth__refreshAccessToken">refreshAccessToken</a>
 						</li>
 					
@@ -95,21 +103,15 @@
 			</div>
 		</div>
   </li>
-  
-  <script type="text/javascript">
-    $('#collapse_marker_oauth').on('click', function() {
-    	$('#toggle_oauth').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
-    });
-  </script>
 
   <li>
 		<div class="accordion" id="util">
 			<div class="accordion-group">
 				<div class="accordion-heading">
 					<a href="#api_util" class="api_side_link">util</a>
-					<div class="accordion-marker" id="collapse_marker_util">
+					<div class="accordion-marker">
 						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#util" href="#collapse_util">
-							 <span id="toggle_util" class="glyphicon glyphicon-chevron-right"></span>
+							 <span class="glyphicon glyphicon-chevron-right"></span>
 						</a>
 					</div>
 				</div>
@@ -127,12 +129,6 @@
 			</div>
 		</div>
   </li>
-  
-  <script type="text/javascript">
-    $('#collapse_marker_util').on('click', function() {
-    	$('#toggle_util').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
-    });
-  </script>
 
 </ul>
 
@@ -144,37 +140,61 @@
   <ul class="indexs">
   
     <li>
-      <a href="#oauth__OAuth">OAuth</a>
+      <a href="#oauth__OAuth">
+        OAuth
+      </a>
     </li>
 
     <li>
-      <a href="#oauth__setOpts">setOpts</a>
+      <a href="#oauth__setOpts">
+        setOpts
+      </a>
     </li>
 
     <li>
-      <a href="#oauth__getAuthorizeURL">getAuthorizeURL</a>
+      <a href="#oauth__getAuthorizeURL">
+        getAuthorizeURL
+      </a>
     </li>
 
     <li>
-      <a href="#oauth__refreshAccessToken">refreshAccessToken</a>
+      <a href="#oauth__getAuthorizeURLForWebsite">
+        getAuthorizeURLForWebsite
+      </a>
     </li>
 
     <li>
-      <a href="#oauth__getUser">getUser</a>
+      <a href="#oauth__getAccessToken">
+        getAccessToken
+      </a>
     </li>
 
     <li>
-      <a href="#oauth__getUserByCode">getUserByCode</a>
+      <a href="#oauth__refreshAccessToken">
+        refreshAccessToken
+      </a>
+    </li>
+
+    <li>
+      <a href="#oauth__getUser">
+        getUser
+      </a>
+    </li>
+
+    <li>
+      <a href="#oauth__getUserByCode">
+        getUserByCode
+      </a>
     </li>
 
   </ul>
   <hr />
 
-  
+
   <h3 data-id="oauth__OAuth">
     OAuth
   </h3>
-  
+
 
   <p>根据appid和appsecret创建OAuth接口的构造函数<br />如需跨进程跨机器进行操作，access token需要进行全局维护<br />使用使用token的优先级是：</p><ol>
 <li>使用当前缓存的token对象</li>
@@ -189,7 +209,7 @@ var api = new OAuth(&#39;appid&#39;, &#39;secret&#39;);
   
     <tr>
       <td>函数</td>
-      <td colspan="3">OAuth()</td> 
+      <td colspan="3">OAuth()</td>
     </tr>
   
 
@@ -224,11 +244,11 @@ var api = new OAuth(&#39;appid&#39;, &#39;secret&#39;);
   
   </table>
   
-  
+
   <h3 data-id="oauth__setOpts">
     setOpts
   </h3>
-  
+
 
   <p>用于设置urllib的默认options</p><p>Examples:</p><pre><code>oauth.setOpts({timeout: 15000});
 </code></pre>
@@ -238,7 +258,7 @@ var api = new OAuth(&#39;appid&#39;, &#39;secret&#39;);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">OAuth.prototype.setOpts()</td> 
+      <td colspan="3">OAuth.prototype.setOpts()</td>
     </tr>
   
 
@@ -252,11 +272,11 @@ var api = new OAuth(&#39;appid&#39;, &#39;secret&#39;);
   
   </table>
   
-  
+
   <h3 data-id="oauth__getAuthorizeURL">
     getAuthorizeURL
   </h3>
-  
+
 
   <p>获取授权页面的URL地址</p>
 
@@ -265,7 +285,7 @@ var api = new OAuth(&#39;appid&#39;, &#39;secret&#39;);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">OAuth.prototype.getAuthorizeURL()</td> 
+      <td colspan="3">OAuth.prototype.getAuthorizeURL()</td>
     </tr>
   
 
@@ -293,11 +313,100 @@ var api = new OAuth(&#39;appid&#39;, &#39;secret&#39;);
   
   </table>
   
+
+  <h3 data-id="oauth__getAuthorizeURLForWebsite">
+    getAuthorizeURLForWebsite
+  </h3>
+
+
+  <p>获取授权页面的URL地址</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
   
+    <tr>
+      <td>方法</td>
+      <td colspan="3">OAuth.prototype.getAuthorizeURLForWebsite()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>redirect(String)</td>
+      <td colspan="2"><p>授权后要跳转的地址</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>state(String)</td>
+      <td colspan="2"><p>开发者可提供的数据</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>scope(String)</td>
+      <td colspan="2"><p>作用范围，值为snsapi_login，前者用于弹出，后者用于跳转</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="oauth__getAccessToken">
+    getAccessToken
+  </h3>
+
+
+  <p>根据授权获取到的code，换取access token和openid<br />获取openid之后，可以调用<code>wechat.API</code>来获取更多信息<br />Examples:</p><pre><code>api.getAccessToken(code, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 获取access token出现异常时的异常对象</li>
+<li><code>result</code>, 成功时得到的响应结果</li>
+</ul>
+<p>Result:</p><pre><code>{
+ data: {
+   &quot;access_token&quot;: &quot;ACCESS_TOKEN&quot;,
+   &quot;expires_in&quot;: 7200,
+   &quot;refresh_token&quot;: &quot;REFRESH_TOKEN&quot;,
+   &quot;openid&quot;: &quot;OPENID&quot;,
+   &quot;scope&quot;: &quot;SCOPE&quot;
+ }
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">OAuth.prototype.getAccessToken()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>code(String)</td>
+      <td colspan="2"><p>授权获取到的code</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+
   <h3 data-id="oauth__refreshAccessToken">
     refreshAccessToken
   </h3>
-  
+
 
   <p>根据refresh token，刷新access token，调用getAccessToken后才有效<br />Examples:</p><pre><code>api.refreshAccessToken(refreshToken, callback);
 </code></pre><p>Callback:</p><ul>
@@ -320,7 +429,7 @@ var api = new OAuth(&#39;appid&#39;, &#39;secret&#39;);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">OAuth.prototype.refreshAccessToken()</td> 
+      <td colspan="3">OAuth.prototype.refreshAccessToken()</td>
     </tr>
   
 
@@ -341,11 +450,11 @@ var api = new OAuth(&#39;appid&#39;, &#39;secret&#39;);
   
   </table>
   
-  
+
   <h3 data-id="oauth__getUser">
     getUser
   </h3>
-  
+
 
   <p>根据openid，获取用户信息。<br />当access token无效时，自动通过refresh token获取新的access token。然后再获取用户信息<br />Examples:</p><pre><code>api.getUser(options, callback);
 </code></pre><p>Options:</p><pre><code>openId
@@ -378,7 +487,7 @@ var api = new OAuth(&#39;appid&#39;, &#39;secret&#39;);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">OAuth.prototype.getUser()</td> 
+      <td colspan="3">OAuth.prototype.getUser()</td>
     </tr>
   
 
@@ -399,11 +508,11 @@ var api = new OAuth(&#39;appid&#39;, &#39;secret&#39;);
   
   </table>
   
-  
+
   <h3 data-id="oauth__getUserByCode">
     getUserByCode
   </h3>
-  
+
 
   <p>根据code，获取用户信息。<br />Examples:</p><pre><code>api.getUserByCode(code, callback);
 </code></pre><p>Callback:</p><ul>
@@ -430,7 +539,7 @@ var api = new OAuth(&#39;appid&#39;, &#39;secret&#39;);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">OAuth.prototype.getUserByCode()</td> 
+      <td colspan="3">OAuth.prototype.getUserByCode()</td>
     </tr>
   
 
@@ -459,17 +568,19 @@ var api = new OAuth(&#39;appid&#39;, &#39;secret&#39;);
   <ul class="indexs">
   
     <li>
-      <a href="#util_exports_wrapper">wrapper</a>
+      <a href="#util_exports_wrapper">
+        wrapper
+      </a>
     </li>
 
   </ul>
   <hr />
 
-  
+
   <h3 data-id="util_exports_wrapper">
     wrapper
   </h3>
-  
+
 
   <p>对返回结果的一层封装，如果遇见微信返回的错误，将返回一个错误<br />参见：<a href="http://mp.weixin.qq.com/wiki/index.php?title=返回码说明">http://mp.weixin.qq.com/wiki/index.php?title=返回码说明</a></p>
 
@@ -478,7 +589,7 @@ var api = new OAuth(&#39;appid&#39;, &#39;secret&#39;);
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.wrapper()</td> 
+      <td colspan="3">exports.wrapper()</td>
     </tr>
   
 
@@ -511,19 +622,28 @@ var api = new OAuth(&#39;appid&#39;, &#39;secret&#39;);
         $('td pre').removeClass('prettyprint');
         prettyPrint();
         var $window = $(window);
-        $('.bs-docs-sidenav').affix({
-          offset: {
-            top: function () {
-              return $window.width() <= 980 ? 290 : 210
-            },
-            bottom: 270
-          }
-        });
+        var sidenav = $('.bs-docs-sidenav');
+        if (sidenav.height() < window.innerHeight) {
+          sidenav.affix({
+            offset: {
+              top: function () {
+                return $window.width() <= 980 ? 290 : 210
+              },
+              bottom: 200
+            }
+          });
+        } else {
+          sidenav.removeClass('affix');
+        }
         $(".content").find('h1, h2, h3, h4, h5, h6').each(function () {
           var node = $(this);
           // 总是设置id
           node.attr("id", node.data('id') || "index_" + node.text());
-          node.css("paddingTop", 50);
+        });
+
+        $('.bs-docs-sidenav .accordion-marker').on('click', function(event) {
+          var current = $(event.currentTarget);
+          current.find('.glyphicon').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
         });
       });
     </script>
