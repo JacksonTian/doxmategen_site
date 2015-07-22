@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>ots2 Documentation</title>
+    <meta name="keywords" content="OTS,OTS2,Aliyun" />
+    <meta name="description" content="OTS(2014-08-08) client for Node.js(ES6)" />
+    <script src="assets/prettify.js"></script>
+    <script src="assets/jquery-1.8.2.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/base.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-static-top top-navbar" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./index.html">ots2</a>
+        </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+          
+            <li>
+              <a href="./api.html">API Docs</a>
+            </li>
+          
+          
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <header class="jumbotron subhead">
+      <div class="container">
+        <h1>ots2 <small>Version: 1.0.0 By @Jackson Tian</small></h1>
+        <p class="lead">
+          OTS(2014-08-08) client for Node.js(ES6)
+        </p>
+      </div>
+    </header>
+
+<div class="container content">
+  <div class="row">
+  	<div class="col-md-3">
+      <ul class="nav nav-list bs-docs-sidenav affix">
+
+  <li class="level_2">
+    <a href="#index_OTS介绍" title="OTS介绍">
+      <i class="icon-chevron-right"></i>OTS介绍
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_安装" title="安装">
+      <i class="icon-chevron-right"></i>安装
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_使用" title="使用">
+      <i class="icon-chevron-right"></i>使用
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_License" title="License">
+      <i class="icon-chevron-right"></i>License
+    </a>
+  </li>
+
+</ul>
+
+    </div>
+    <div class="col-md-9">
+      <section>
+        <h1>Aliyun OTS client for Node.js(ES6)</h1>
+<p>Aliyun OTS数据库服务Node.js客户端。</p><h2>OTS介绍</h2>
+<p>OTS是构建在阿里云飞天分布式系统之上的NoSQL数据库服务，提供海量结构化数据的存储和实时访问。OTS以实例和表的形式组织数据，通过数据分片和负载均衡技术，达到规模的无缝扩展。OTS向应用程序屏蔽底层硬件平台的故障和错误，能自动从各类错误中快速恢复，提供非常高的服务可用性。OTS管理的数据全部存储在SSD中并具有多个备份，提供了快速的访问性能和极高的数据可靠性。用户在使用OTS服务时，只需要按照预留和使用的资源进行付费，无需关心数据库的软硬件升级维护、集群缩容扩容等复杂问题。</p><p>更多细节请参见：<a href="http://docs.aliyun.com/?#/pub/ots/Getting-Started/OTSIntroduction">http://docs.aliyun.com/?#/pub/ots/Getting-Started/OTSIntroduction</a></p><h2>安装</h2>
+<pre><code class="lang-sh">$ npm install ots2 --save
+</code></pre>
+<h2>使用</h2>
+<h3>创建客户端</h3>
+<pre><code class="lang-js">var ots = require(&#39;ots2&#39;);
+var client = ots.createClient({
+  accessKeyID: &#39;&lt;YOUR ACCESSKEYID&gt;&#39;,
+  accessKeySecret: &#39;&lt;YOUR ACCESSKEYSECRET&gt;&#39;,
+  instance: &#39;&lt;YOUR INSTANCE&gt;&#39;,
+  region: &#39;&lt;YOUR REGION&gt;&#39;
+});
+</code></pre>
+<h3>调用API</h3>
+<p>所有表的操作</p><pre><code class="lang-js">// 列出所有表名
+yield* client.listTable();
+// 创建表
+var keys = [{ &#39;name&#39;: &#39;uid&#39;, &#39;type&#39;: &#39;STRING&#39; }];
+var capacityUnit = {read: 1, write: 1};
+var response = yield* client.createTable(&#39;metrics&#39;, keys, capacityUnit);
+// 更新表
+var capacityUnit = {read: 2, write: 1};
+var response = yield* client.updateTable(&#39;metrics&#39;, capacityUnit);
+// 查看表信息
+var response = yield* client.describeTable(&#39;metrics&#39;);
+// 删除表
+var response = yield* client.deleteTable(&#39;metrics&#39;);
+</code></pre>
+<p>所有行的操作</p><pre><code class="lang-js">// 写入行
+var name = &#39;metrics&#39;;
+var condition = {
+  row_existence: ots.RowExistenceExpectation.IGNORE
+};
+var primaryKeys = [
+  {
+    name: &#39;uid&#39;,
+    value: ots.createString(&#39;test_uid&#39;)
+  }
+];
+var columns = [
+  {
+    name: &#39;test&#39;,
+    value: ots.createString(&#39;test_value&#39;)
+  }
+];
+var response = yield* client.putRow(name, condition, primaryKeys, columns);
+
+// 读取行
+var name = &#39;metrics&#39;;
+var primaryKeys = [
+  {
+    name: &#39;uid&#39;,
+    value: ots.createString(&#39;test_uid&#39;)
+  }
+];
+var columns = [&#39;test&#39;];
+var response = yield* client.getRow(name, primaryKeys, columns);
+
+// 更新行
+var name = &#39;metrics&#39;;
+var condition = {
+  row_existence: ots.RowExistenceExpectation.IGNORE
+};
+var primaryKeys = [
+  {
+    name: &#39;uid&#39;,
+    value: ots.createString(&#39;test_uid&#39;)
+  }
+];
+var columns = [
+  {
+    name: &#39;test&#39;,
+    type: ots.OperationType.PUT,
+    value: ots.createString(&#39;test_value_replaced&#39;)
+  }
+];
+var response = yield* client.updateRow(name, condition, primaryKeys, columns);
+
+// 删除行
+var name = &#39;metrics&#39;;
+var condition = {
+  row_existence: OTS.RowExistenceExpectation.IGNORE
+};
+var primaryKeys = [
+  {
+    name: &#39;uid&#39;,
+    value: OTS.createString(&#39;test_uid&#39;)
+  }
+];
+var response = yield* client.deleteRow(name, condition, primaryKeys);
+</code></pre>
+<p>批量操作</p><pre><code class="lang-js">// 批量写
+var tables = [
+  {
+    table_name: &#39;metrics&#39;,
+    put_rows: [
+      {
+        condition: {
+          row_existence: OTS.RowExistenceExpectation.IGNORE
+        },
+        primary_key: [
+          {
+            name: &#39;uid&#39;,
+            value: OTS.createString(&#39;test_uid&#39;)
+          }
+        ],
+        attribute_columns: [
+          {
+            name: &#39;test&#39;,
+            value: OTS.createString(&#39;test_value&#39;)
+          }
+        ]
+      }
+    ],
+    update_rows: [],
+    delete_rows: []
+  }
+];
+var response = yield* client.batchWriteRow(tables);
+
+// 批量读
+var tables = [
+  {
+    table_name: &#39;metrics&#39;,
+    rows: [
+      {
+        primary_key: [
+          {
+            name: &#39;uid&#39;,
+            value: OTS.createString(&#39;test_uid&#39;)
+          }
+        ]
+      }
+    ],
+    columns_to_get: [&#39;test&#39;]
+  }
+];
+var response = yield* client.batchGetRow(tables);
+
+// 范围读
+var start = [
+  {
+    name: &#39;uid&#39;,
+    value: OTS.createInfMin()
+  }
+];
+var end = [
+  {
+    name: &#39;uid&#39;,
+    value: OTS.createInfMax()
+  }
+];
+
+var request = {
+  table_name: &#39;metrics&#39;,
+  direction: OTS.Direction.FORWARD,
+  columns_to_get: [&#39;test&#39;],
+  limit: 4,
+  inclusive_start_primary_key: start,
+  exclusive_end_primary_key: end
+};
+var response = yield* client.getRange(request);
+</code></pre>
+<h2>License</h2>
+<p>OTS服务由阿里云提供。但本模块在MIT许可下自由使用。</p><p>(The MIT license)</p>
+      </section>
+  
+    </div>
+  </div>
+</div>
+      <footer class="footer">
+        <div class="container">
+          <p class="pull-right">
+            <a href="#">Back to top</a>
+          </p>
+          <p>此文档通过doxmate生成。主题借鉴Bootstrap API文档风格，注解基于<a href="https://github.com/visionmedia/dox">Dox</a>。欢迎关注doxmate作者<a href="http://weibo.com/shyvo" target="_blank">@朴灵</a></p>
+          <ul class="footer-links">
+            <li><a href="https://github.com/visionmedia/dox">Dox主页</a></li>
+            <li><a href="http://html5ify.com/doxmate">Doxmate主页</a></li>
+            <li><a href="https://github.com/JacksonTian/doxmate">Doxmate源码</a></li>
+            <li><a href="https://github.com/JacksonTian/doxmate/issues?state=open">提交bug</a></li>
+          </ul>
+      </div>
+    </footer>
+    <script>
+      $(function() {
+        $('pre').addClass('prettyprint');
+        $('td pre').removeClass('prettyprint');
+        prettyPrint();
+        var $window = $(window);
+        var sidenav = $('.bs-docs-sidenav');
+        if (sidenav.height() < window.innerHeight) {
+          sidenav.affix({
+            offset: {
+              top: function () {
+                return $window.width() <= 980 ? 290 : 210
+              },
+              bottom: 200
+            }
+          });
+        } else {
+          sidenav.removeClass('affix');
+        }
+        $(".content").find('h1, h2, h3, h4, h5, h6').each(function () {
+          var node = $(this);
+          // 总是设置id
+          node.attr("id", node.data('id') || "index_" + node.text());
+        });
+
+        $('.bs-docs-sidenav .accordion-marker').on('click', function(event) {
+          var current = $(event.currentTarget);
+          current.find('.glyphicon').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+        });
+      });
+    </script>
+  
+  </body>
+</html>
+

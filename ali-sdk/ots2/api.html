@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>ots2 Documentation</title>
+    <meta name="keywords" content="OTS,OTS2,Aliyun" />
+    <meta name="description" content="OTS(2014-08-08) client for Node.js(ES6)" />
+    <script src="assets/prettify.js"></script>
+    <script src="assets/jquery-1.8.2.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/base.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-static-top top-navbar" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./index.html">ots2</a>
+        </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+          
+            <li>
+              <a href="./api.html">API Docs</a>
+            </li>
+          
+          
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <header class="jumbotron subhead">
+      <div class="container">
+        <h1>ots2 <small>Version: 1.0.0 By @Jackson Tian</small></h1>
+        <p class="lead">
+          OTS(2014-08-08) client for Node.js(ES6)
+        </p>
+      </div>
+    </header>
+
+<div class="container content">
+  <div class="row">
+    <div class="col-md-3 bs-docs-sidebar">
+      <ul class="nav nav-list bs-docs-sidenav affix">
+
+  <li>
+		<div class="accordion" id="actions">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_actions" class="api_side_link">actions</a>
+					<div class="accordion-marker">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#actions" href="#collapse_actions">
+							 <span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_actions">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#actions_exports_createTable">createTable</a>
+						</li>
+					
+						<li>
+							<a href="#actions_exports_updateTable">updateTable</a>
+						</li>
+					
+						<li>
+							<a href="#actions_exports_listTable">listTable</a>
+						</li>
+					
+						<li>
+							<a href="#actions_exports_describeTable">describeTable</a>
+						</li>
+					
+						<li>
+							<a href="#actions_exports_deleteTable">deleteTable</a>
+						</li>
+					
+						<li>
+							<a href="#actions_exports_putRow">putRow</a>
+						</li>
+					
+						<li>
+							<a href="#actions_exports_getRow">getRow</a>
+						</li>
+					
+						<li>
+							<a href="#actions_exports_updateRow">updateRow</a>
+						</li>
+					
+						<li>
+							<a href="#actions_exports_deleteRow">deleteRow</a>
+						</li>
+					
+						<li>
+							<a href="#actions_exports_getRange">getRange</a>
+						</li>
+					
+						<li>
+							<a href="#actions_exports_batchGetRow">batchGetRow</a>
+						</li>
+					
+						<li>
+							<a href="#actions_exports_batchWriteRow">batchWriteRow</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+
+  <li>
+		<div class="accordion" id="client">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_client" class="api_side_link">client</a>
+					<div class="accordion-marker">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#client" href="#collapse_client">
+							 <span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_client">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+
+  <li>
+		<div class="accordion" id="ots2">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_ots2" class="api_side_link">ots2</a>
+					<div class="accordion-marker">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#ots2" href="#collapse_ots2">
+							 <span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_ots2">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+
+  <li>
+		<div class="accordion" id="util">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_util" class="api_side_link">util</a>
+					<div class="accordion-marker">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#util" href="#collapse_util">
+							 <span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_util">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#util_exports_sha1">sha1</a>
+						</li>
+					
+						<li>
+							<a href="#util_exports_md5">md5</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+
+</ul>
+
+    </div>
+    <div class="col-md-9">
+      
+        <section id="api_actions" class="api">
+  <h2>actions: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#actions_exports_createTable">
+        createTable
+      </a>
+    </li>
+
+    <li>
+      <a href="#actions_exports_updateTable">
+        updateTable
+      </a>
+    </li>
+
+    <li>
+      <a href="#actions_exports_listTable">
+        listTable
+      </a>
+    </li>
+
+    <li>
+      <a href="#actions_exports_describeTable">
+        describeTable
+      </a>
+    </li>
+
+    <li>
+      <a href="#actions_exports_deleteTable">
+        deleteTable
+      </a>
+    </li>
+
+    <li>
+      <a href="#actions_exports_putRow">
+        putRow
+      </a>
+    </li>
+
+    <li>
+      <a href="#actions_exports_getRow">
+        getRow
+      </a>
+    </li>
+
+    <li>
+      <a href="#actions_exports_updateRow">
+        updateRow
+      </a>
+    </li>
+
+    <li>
+      <a href="#actions_exports_deleteRow">
+        deleteRow
+      </a>
+    </li>
+
+    <li>
+      <a href="#actions_exports_getRange">
+        getRange
+      </a>
+    </li>
+
+    <li>
+      <a href="#actions_exports_batchGetRow">
+        batchGetRow
+      </a>
+    </li>
+
+    <li>
+      <a href="#actions_exports_batchWriteRow">
+        batchWriteRow
+      </a>
+    </li>
+
+  </ul>
+  <hr />
+
+
+  <h3 data-id="actions_exports_createTable">
+    createTable
+  </h3>
+
+
+  <p>根据给定的表结构信息创建相应的表。</p><p>Example:</p><pre><code>var keys = [{ &#39;name&#39;: &#39;uid&#39;, &#39;type&#39;: &#39;STRING&#39; }];
+var capacityUnit = {read: 1, write: 1};
+yield* client.createTable(&#39;metrics&#39;, keys, capacityUnit);
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.createTable()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>name(String)</td>
+      <td colspan="2"><p>表名</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>keys(Array)</td>
+      <td colspan="2"><p>主键列表</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>capacity(Object)</td>
+      <td colspan="2"><p>保留容量单元</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Object</td>
+      <td colspan="2"><p>返回值</p></td> </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="actions_exports_updateTable">
+    updateTable
+  </h3>
+
+
+  <p>更新指定表的预留读吞吐量或预留写吞吐量设置，新设定将于更新成功一分钟内生效。</p><p>Example:</p><pre><code>var capacityUnit = {read: 2, write: 1};
+yield* client.updateTable(&#39;metrics&#39;, capacityUnit);
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.updateTable()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>name(String)</td>
+      <td colspan="2"><p>表名</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>capacity(Object)</td>
+      <td colspan="2"><p>保留容量单元</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Object</td>
+      <td colspan="2"><p>返回值</p></td> </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="actions_exports_listTable">
+    listTable
+  </h3>
+
+
+  <p>获取当前实例下已创建的所有表的表名。</p><p>Example:</p><pre><code>yield* client.listTable();
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.listTable()</td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Object</td>
+      <td colspan="2"><p>返回值</p></td> </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="actions_exports_describeTable">
+    describeTable
+  </h3>
+
+
+  <p>查询指定表的结构信息和预留读写吞吐量设置信息。<br />Example:</p><pre><code>yield* client.describeTable(&#39;metrics&#39;);
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.describeTable()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>name(String)</td>
+      <td colspan="2"><p>表名</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Object</td>
+      <td colspan="2"><p>返回值</p></td> </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="actions_exports_deleteTable">
+    deleteTable
+  </h3>
+
+
+  <p>删除本实例下指定的表<br />Example:</p><pre><code>yield* client.deleteTable(&#39;metrics&#39;);
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.deleteTable()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>name(String)</td>
+      <td colspan="2"><p>表名</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Object</td>
+      <td colspan="2"><p>返回值</p></td> </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="actions_exports_putRow">
+    putRow
+  </h3>
+
+
+  <p>插入数据到指定的行，如果该行不存在，则新增一行；若该行存在，则覆盖原有行。</p><p>Example:</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.putRow()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>name(String)</td>
+      <td colspan="2"><p>表名</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Object</td>
+      <td colspan="2"><p>返回值</p></td> </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="actions_exports_getRow">
+    getRow
+  </h3>
+
+
+  <p>根据给定的主键读取单行数据。</p><p>Example:<br /><code>
+</code></p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getRow()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>name(String)</td>
+      <td colspan="2"><p>表名</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Object</td>
+      <td colspan="2"><p>返回值</p></td> </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="actions_exports_updateRow">
+    updateRow
+  </h3>
+
+
+  <p>更新指定行的数据，如果该行不存在，则新增一行；<br />若该行存在，则根据请求的内容在这一行中新增、修改或者删除指定列的值。</p><p>Example:<br /><code>
+</code></p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.updateRow()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>name(String)</td>
+      <td colspan="2"><p>表名</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Object</td>
+      <td colspan="2"><p>返回值</p></td> </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="actions_exports_deleteRow">
+    deleteRow
+  </h3>
+
+
+  <p>删除一行数据。</p><p>Example:<br /><code>
+</code></p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.deleteRow()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>name(String)</td>
+      <td colspan="2"><p>表名</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Object</td>
+      <td colspan="2"><p>返回值</p></td> </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="actions_exports_getRange">
+    getRange
+  </h3>
+
+
+  <p>读取指定主键范围内的数据。</p><p>Example:<br /><code>
+</code></p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getRange()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>name(String)</td>
+      <td colspan="2"><p>表名</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Object</td>
+      <td colspan="2"><p>返回值</p></td> </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="actions_exports_batchGetRow">
+    batchGetRow
+  </h3>
+
+
+  <p>批量读取一个或多个表中的若干行数据。<br />BatchGetRow操作可视为多个GetRow操作的集合，各个操作独立执行，独立返回结果，独立计算服务能力单元。<br />与执行大量的GetRow操作相比，使用BatchGetRow操作可以有效减少请求的响应时间，提高数据的读取速率。</p><p>Example:<br /><code>
+</code></p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.batchGetRow()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>name(String)</td>
+      <td colspan="2"><p>表名</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Object</td>
+      <td colspan="2"><p>返回值</p></td> </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="actions_exports_batchWriteRow">
+    batchWriteRow
+  </h3>
+
+
+  <p>批量插入，修改或删除一个或多个表中的若干行数据。<br />BatchWriteRow操作可视为多个PutRow、UpdateRow、DeleteRow操作的集合，各个操作独立执行，独立返回结果，独立计算服务能力单元。<br />与执行大量的单行写操作相比，使用BatchWriteRow操作可以有效减少请求的响应时间，提高数据的写入速率。</p><p>Example:<br /><code>
+</code></p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.batchWriteRow()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>tables(Array)</td>
+      <td colspan="2"><p>对应了每个table下各操作的响应信息，包括是否成功执行，错误码和消耗的服务能力单元。</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Object</td>
+      <td colspan="2"><p>返回值</p></td> </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
+        <section id="api_client" class="api">
+  <h2>client: API索引</h2>
+  <ul class="indexs">
+  
+  </ul>
+  <hr />
+
+
+
+  
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+
+  
+  </table>
+  
+</section>
+
+      
+        <section id="api_ots2" class="api">
+  <h2>ots2: API索引</h2>
+  <ul class="indexs">
+  
+  </ul>
+  <hr />
+
+
+
+  
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+
+  
+  </table>
+  
+</section>
+
+      
+        <section id="api_util" class="api">
+  <h2>util: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#util_exports_sha1">
+        sha1
+      </a>
+    </li>
+
+    <li>
+      <a href="#util_exports_md5">
+        md5
+      </a>
+    </li>
+
+  </ul>
+  <hr />
+
+
+  <h3 data-id="util_exports_sha1">
+    sha1
+  </h3>
+
+
+  <p>对字符串进行hmac sha1签名</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.sha1()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>input(String)</td>
+      <td colspan="2"><p>待签名的字符串内容</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>key(String)</td>
+      <td colspan="2"><p>签名所用key</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>String</td>
+      <td colspan="2"><p>按base64编码的签名</p></td> </tr>
+  
+
+  
+  </table>
+  
+
+  <h3 data-id="util_exports_md5">
+    md5
+  </h3>
+
+
+  <p>对字符串进行md5签名</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.md5()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>input(String)</td>
+      <td colspan="2"><p>待签名的字符串内容</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>String</td>
+      <td colspan="2"><p>按base64编码的签名</p></td> </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
+    </div>
+  </div>
+</div>
+      <footer class="footer">
+        <div class="container">
+          <p class="pull-right">
+            <a href="#">Back to top</a>
+          </p>
+          <p>此文档通过doxmate生成。主题借鉴Bootstrap API文档风格，注解基于<a href="https://github.com/visionmedia/dox">Dox</a>。欢迎关注doxmate作者<a href="http://weibo.com/shyvo" target="_blank">@朴灵</a></p>
+          <ul class="footer-links">
+            <li><a href="https://github.com/visionmedia/dox">Dox主页</a></li>
+            <li><a href="http://html5ify.com/doxmate">Doxmate主页</a></li>
+            <li><a href="https://github.com/JacksonTian/doxmate">Doxmate源码</a></li>
+            <li><a href="https://github.com/JacksonTian/doxmate/issues?state=open">提交bug</a></li>
+          </ul>
+      </div>
+    </footer>
+    <script>
+      $(function() {
+        $('pre').addClass('prettyprint');
+        $('td pre').removeClass('prettyprint');
+        prettyPrint();
+        var $window = $(window);
+        var sidenav = $('.bs-docs-sidenav');
+        if (sidenav.height() < window.innerHeight) {
+          sidenav.affix({
+            offset: {
+              top: function () {
+                return $window.width() <= 980 ? 290 : 210
+              },
+              bottom: 200
+            }
+          });
+        } else {
+          sidenav.removeClass('affix');
+        }
+        $(".content").find('h1, h2, h3, h4, h5, h6').each(function () {
+          var node = $(this);
+          // 总是设置id
+          node.attr("id", node.data('id') || "index_" + node.text());
+        });
+
+        $('.bs-docs-sidenav .accordion-marker').on('click', function(event) {
+          var current = $(event.currentTarget);
+          current.find('.glyphicon').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+        });
+      });
+    </script>
+  
+  </body>
+</html>
+
