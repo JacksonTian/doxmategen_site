@@ -135,6 +135,10 @@
 					<div class="accordion-inner">
 					<ul class="indexs">
 					
+						<li>
+							<a href="#client_exports_createClient">createClient</a>
+						</li>
+					
 					</ul>
 					</div>
 				</div>
@@ -156,6 +160,10 @@
 				<div class="accordion-body collapse" id="collapse_ots2">
 					<div class="accordion-inner">
 					<ul class="indexs">
+					
+						<li>
+							<a href="#ots2_module_exports">exports</a>
+						</li>
 					
 					</ul>
 					</div>
@@ -709,12 +717,107 @@ yield* client.updateTable(&#39;metrics&#39;, capacityUnit);
   <h2>client: API索引</h2>
   <ul class="indexs">
   
+    <li>
+      <a href="#client_exports_createClient">
+        createClient
+      </a>
+    </li>
+
   </ul>
   <hr />
 
 
+  <h3 data-id="client_exports_createClient">
+    createClient
+  </h3>
+
+
+  <p>根据选项创建实例的客户端</p><p>Example:</p><pre><code>var ots = require(&#39;ots2&#39;);
+var client = ots.createClient({
+ accessKeyID: &#39;&lt;YOUR ACCESSKEYID&gt;&#39;,
+ accessKeySecret: &#39;&lt;YOUR ACCESSKEYSECRET&gt;&#39;,
+ instance: &#39;&lt;YOUR INSTANCE&gt;&#39;,
+ region: &#39;&lt;YOUR REGION&gt;&#39;
+});
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.createClient()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>opts(Object)</td>
+      <td colspan="2"><p>选项</p></td>
+    </tr>
+  
 
   
+  </table>
+  
+
+
+  <p>生成不同类型的Column</p><p>Example:</p><pre><code>ots.createStringColumn(&#39;name&#39;, &#39;value&#39;);
+ots.createBinaryColumn(&#39;name&#39;, bin);
+ots.createBooleanColumn(&#39;name&#39;, true);
+ots.createDoubleColumn(&#39;name&#39;, 1.1);
+ots.createIntegerColumn(&#39;name&#39;, 10);
+ots.createInfMinColumn(&#39;name&#39;);
+ots.createInfMaxColumn(&#39;name&#39;);
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+
+    <tr>
+      <td>name</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>name(String)</td>
+      <td colspan="2"><p>column name</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>value(MIX)</td>
+      <td colspan="2"><p>column value</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+
+
+  <p>相关Enum类型</p><p>Example:</p><pre><code>ots.ColumnType = {
+   INF_MIN,
+   INF_MAX,
+   INTEGER,
+   STRING,
+   BOOLEAN,
+   DOUBLE,
+   BINARY
+}
+ots.RowExistenceExpectation = {
+   IGNORE,
+   EXPECT_EXIST,
+   EXPECT_NOT_EXIST }
+ots.OperationType: { PUT, DELETE }
+ots.Direction = { FORWARD, BACKWARD }
+</code></pre>
 
   <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
@@ -730,15 +833,38 @@ yield* client.updateTable(&#39;metrics&#39;, capacityUnit);
   <h2>ots2: API索引</h2>
   <ul class="indexs">
   
+    <li>
+      <a href="#ots2_module_ots2">
+        ots2
+      </a>
+    </li>
+
   </ul>
   <hr />
 
 
+  <h3 data-id="ots2_module_ots2">
+    ots2
+  </h3>
 
-  
+
+  <p>ProtoBuf定义</p>
 
   <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>属性</td>
+      <td colspan="3">module.exports</td>
+    </tr>
+  
+
+    <tr>
+      <td>name</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
   
 
   
