@@ -38,7 +38,7 @@
     </nav>
     <header class="jumbotron subhead">
       <div class="container">
-        <h1>wechat-enterprise-api <small>Version: 0.0.8 By @Jackson Tian</small></h1>
+        <h1>wechat-enterprise-api <small>Version: 0.1.3 By @Jackson Tian</small></h1>
         <p class="lead">
           微信公共平台企业号版本Node API库
         </p>
@@ -66,15 +66,15 @@
 					<ul class="indexs">
 					
 						<li>
-							<a href="#api_agent_exports_getAgent">getAgent</a>
+							<a href="#api_agent__make">make</a>
 						</li>
 					
 						<li>
-							<a href="#api_agent_exports_setAgent">setAgent</a>
+							<a href="#api_agent__make">make</a>
 						</li>
 					
 						<li>
-							<a href="#api_agent_exports_listAgent">listAgent</a>
+							<a href="#api_agent__make">make</a>
 						</li>
 					
 					</ul>
@@ -257,6 +257,56 @@
 					
 						<li>
 							<a href="#api_js_exports_getJsConfig">getJsConfig</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+
+  <li>
+		<div class="accordion" id="api_material">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_material" class="api_side_link">api_material</a>
+					<div class="accordion-marker">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_material" href="#collapse_api_material">
+							 <span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_material">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_material_exports_addMaterial">addMaterial</a>
+						</li>
+					
+						<li>
+							<a href="#api_material_exports_addMPNews">addMPNews</a>
+						</li>
+					
+						<li>
+							<a href="#api_material_exports_updateMPNews">updateMPNews</a>
+						</li>
+					
+						<li>
+							<a href="#api_material_exports_getMaterial">getMaterial</a>
+						</li>
+					
+						<li>
+							<a href="#api_material_exports_delMaterial">delMaterial</a>
+						</li>
+					
+						<li>
+							<a href="#api_material_exports_countMaterial">countMaterial</a>
+						</li>
+					
+						<li>
+							<a href="#api_material_exports_batchgetMaterial">batchgetMaterial</a>
 						</li>
 					
 					</ul>
@@ -500,33 +550,31 @@
   <ul class="indexs">
   
     <li>
-      <a href="#api_agent_exports_getAgent">
-        getAgent
+      <a href="#api_agent__make">
+        make
       </a>
     </li>
 
     <li>
-      <a href="#api_agent_exports_setAgent">
-        setAgent
+      <a href="#api_agent__make">
+        make
       </a>
     </li>
 
     <li>
-      <a href="#api_agent_exports_listAgent">
-        listAgent
+      <a href="#api_agent__make">
+        make
       </a>
     </li>
 
   </ul>
   <hr />
 
-
-  <h3 data-id="api_agent_exports_getAgent">
-    getAgent
+  <h3 data-id="api_agent__make">
+    make
   </h3>
 
-
-  <p>获取企业号应用</p><p>Examples:</p><pre><code>api.getAgent(agentid, callback);
+  <p>获取企业号应用<br />详细请看：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=获取企业号应用">http://qydev.weixin.qq.com/wiki/index.php?title=获取企业号应用</a></p><p>Examples:</p><pre><code>api.getAgent(agentid, callback);
 </code></pre><p>Callback:</p><ul>
 <li><code>err</code>, 调用失败时得到的异常</li>
 <li><code>result</code>, 调用正常时得到的对象</li>
@@ -573,7 +621,7 @@
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.getAgent()</td>
+      <td colspan="3">make()</td>
     </tr>
   
 
@@ -594,13 +642,11 @@
   
   </table>
   
-
-  <h3 data-id="api_agent_exports_setAgent">
-    setAgent
+  <h3 data-id="api_agent__make">
+    make
   </h3>
 
-
-  <p>设置企业号应用</p><p>Examples:</p><pre><code>api.setAgent(opts, callback);
+  <p>设置企业号应用<br />详细请看：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=设置企业号应用">http://qydev.weixin.qq.com/wiki/index.php?title=设置企业号应用</a></p><p>Examples:</p><pre><code>api.setAgent(opts, callback);
 </code></pre><p>Opts:</p><pre><code>{
   &quot;agentid&quot;: &quot;5&quot;,
   &quot;report_location_flag&quot;: &quot;0&quot;,
@@ -628,7 +674,7 @@ Result:
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.setAgent()</td>
+      <td colspan="3">make()</td>
     </tr>
   
 
@@ -649,13 +695,11 @@ Result:
   
   </table>
   
-
-  <h3 data-id="api_agent_exports_listAgent">
-    listAgent
+  <h3 data-id="api_agent__make">
+    make
   </h3>
 
-
-  <p>企业号应用列表</p><p>Examples:</p><pre><code>api.listAgent(callback);
+  <p>获取应用概况列表<br />详细请看：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=获取应用概况列表">http://qydev.weixin.qq.com/wiki/index.php?title=获取应用概况列表</a></p><p>Examples:</p><pre><code>api.listAgent(callback);
 </code></pre><p>Callback:</p><ul>
 <li><code>err</code>, 调用失败时得到的异常</li>
 <li><code>result</code>, 调用正常时得到的对象</li>
@@ -687,7 +731,7 @@ Result:
   
     <tr>
       <td>方法</td>
-      <td colspan="3">exports.listAgent()</td>
+      <td colspan="3">make()</td>
     </tr>
   
 
@@ -741,11 +785,9 @@ Result:
   </ul>
   <hr />
 
-
   <h3 data-id="api_batch_exports_batchInviteUser">
     batchInviteUser
   </h3>
-
 
   <p>批量邀请成员<br />详细请看：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E6%8E%A5%E5%8F%A3#.E9.82.80.E8.AF.B7.E6.88.90.E5.91.98.E5.85.B3.E6.B3.A8">http://qydev.weixin.qq.com/wiki/index.php?title=%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E6%8E%A5%E5%8F%A3#.E9.82.80.E8.AF.B7.E6.88.90.E5.91.98.E5.85.B3.E6.B3.A8</a></p><p>Examples:</p><pre><code>api.batchInviteUser(to, taskCb, callback);
 </code></pre><p>To:</p><pre><code>{
@@ -797,11 +839,9 @@ Result:
   
   </table>
   
-
   <h3 data-id="api_batch_exports_batchSyncUser">
     batchSyncUser
   </h3>
-
 
   <p>批量更新成员<br />详细请看：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E6%8E%A5%E5%8F%A3#.E9.82.80.E8.AF.B7.E6.88.90.E5.91.98.E5.85.B3.E6.B3.A8">http://qydev.weixin.qq.com/wiki/index.php?title=%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E6%8E%A5%E5%8F%A3#.E9.82.80.E8.AF.B7.E6.88.90.E5.91.98.E5.85.B3.E6.B3.A8</a></p><p>Examples:</p><pre><code>api.batchSyncUser(mediaId, taskCb, callback);
 </code></pre><pre><code>TaskCb:
@@ -847,11 +887,9 @@ Result:
   
   </table>
   
-
   <h3 data-id="api_batch_exports_batchReplaceUser">
     batchReplaceUser
   </h3>
-
 
   <p>全量覆盖成员<br />详细请看：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E6%8E%A5%E5%8F%A3#.E9.82.80.E8.AF.B7.E6.88.90.E5.91.98.E5.85.B3.E6.B3.A8">http://qydev.weixin.qq.com/wiki/index.php?title=%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E6%8E%A5%E5%8F%A3#.E9.82.80.E8.AF.B7.E6.88.90.E5.91.98.E5.85.B3.E6.B3.A8</a></p><p>Examples:</p><pre><code>api.batchReplaceUser(mediaId, taskCb, callback);
 </code></pre><pre><code>TaskCb:
@@ -897,11 +935,9 @@ Result:
   
   </table>
   
-
   <h3 data-id="api_batch_exports_batchReplaceParty">
     batchReplaceParty
   </h3>
-
 
   <p>全量覆盖部门<br />详细请看：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E6%8E%A5%E5%8F%A3#.E9.82.80.E8.AF.B7.E6.88.90.E5.91.98.E5.85.B3.E6.B3.A8">http://qydev.weixin.qq.com/wiki/index.php?title=%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E6%8E%A5%E5%8F%A3#.E9.82.80.E8.AF.B7.E6.88.90.E5.91.98.E5.85.B3.E6.B3.A8</a></p><p>Examples:</p><pre><code>api.batchReplaceParty(mediaId, taskCb, callback);
 </code></pre><pre><code>TaskCb:
@@ -947,11 +983,9 @@ Result:
   
   </table>
   
-
   <h3 data-id="api_batch_exports_batchGetResult">
     batchGetResult
   </h3>
-
 
   <p>获取批量任务的结果<br />详细请看：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E6%8E%A5%E5%8F%A3#.E9.82.80.E8.AF.B7.E6.88.90.E5.91.98.E5.85.B3.E6.B3.A8">http://qydev.weixin.qq.com/wiki/index.php?title=%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E6%8E%A5%E5%8F%A3#.E9.82.80.E8.AF.B7.E6.88.90.E5.91.98.E5.85.B3.E6.B3.A8</a></p><p>Examples:</p><pre><code>api.batchGetResult(jobid, callback);
 </code></pre><p>Callback:</p><ul>
@@ -1026,11 +1060,9 @@ Result:
   </ul>
   <hr />
 
-
   <h3 data-id="api_common__API">
     API
   </h3>
-
 
   <p>根据appid和appsecret创建API的构造函数。</p><p>如需跨进程跨机器进行操作Wechat API（依赖access token），access token需要进行全局维护<br />使用策略如下：</p><ol>
 <li>调用用户传入的获取token的异步方法，获得token之后使用</li>
@@ -1098,11 +1130,9 @@ var api = new API(&#39;appid&#39;, &#39;secret&#39;, &#39;agentid&#39;);
   
   </table>
   
-
   <h3 data-id="api_common__setOpts">
     setOpts
   </h3>
-
 
   <p>用于设置urllib的默认options</p><p>Examples:</p><pre><code>api.setOpts({timeout: 15000});
 </code></pre>
@@ -1126,11 +1156,9 @@ var api = new API(&#39;appid&#39;, &#39;secret&#39;, &#39;agentid&#39;);
   
   </table>
   
-
   <h3 data-id="api_common__request">
     request
   </h3>
-
 
   <p>设置urllib的options</p>
 
@@ -1146,11 +1174,9 @@ var api = new API(&#39;appid&#39;, &#39;secret&#39;, &#39;agentid&#39;);
   
   </table>
   
-
   <h3 data-id="api_common__getLatestToken">
     getLatestToken
   </h3>
-
 
   <p>获取最新的token。</p><ul>
 <li>如果还没有请求过token，则发起获取Token请求。</li>
@@ -1182,11 +1208,9 @@ var api = new API(&#39;appid&#39;, &#39;secret&#39;, &#39;agentid&#39;);
   
   </table>
   
-
   <h3 data-id="api_common_API_mixin">
     mixin
   </h3>
-
 
   <p>用于支持对象合并。将对象合并到API.prototype上，使得能够支持扩展<br />Examples:</p><pre><code>// 媒体管理（上传、下载）
 API.mixin(require(&#39;./lib/api_media&#39;));
@@ -1245,11 +1269,9 @@ API.mixin(require(&#39;./lib/api_media&#39;));
   </ul>
   <hr />
 
-
   <h3 data-id="api_department_exports_createDepartment">
     createDepartment
   </h3>
-
 
   <p>创建部门<br />详细请看：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=管理部门">http://qydev.weixin.qq.com/wiki/index.php?title=管理部门</a></p><p>Examples:</p><pre><code>api.createDepartment(name, opts, callback);
 </code></pre><p>Opts:</p><ul>
@@ -1301,11 +1323,9 @@ API.mixin(require(&#39;./lib/api_media&#39;));
   
   </table>
   
-
   <h3 data-id="api_department_exports_updateDepartment">
     updateDepartment
   </h3>
-
 
   <p>更新部门</p><p>Examples:</p><pre><code>var opts = {name: &#39;new name&#39;, parentid: 1, order: 5};
 api.updateDepartment(id, opts, callback);
@@ -1357,11 +1377,9 @@ api.updateDepartment(id, opts, callback);
   
   </table>
   
-
   <h3 data-id="api_department_exports_deleteDepartment">
     deleteDepartment
   </h3>
-
 
   <p>删除部门</p><p>Examples:</p><pre><code>api.deleteDepartment(id, callback);
 api.deleteDepartment([id1, id2], callback);
@@ -1386,7 +1404,7 @@ api.deleteDepartment([id1, id2], callback);
 
     <tr>
       <td>参数</td>
-      <td>id()</td>
+      <td>id(Number,Array)</td>
       <td colspan="2"><p>部门ID</p></td>
     </tr>
   
@@ -1401,11 +1419,9 @@ api.deleteDepartment([id1, id2], callback);
   
   </table>
   
-
   <h3 data-id="api_department_exports_getDepartments">
     getDepartments
   </h3>
-
 
   <p>查看所有部门</p><p>Examples:</p><pre><code>api.getDepartments(callback);
 </code></pre><p>Callback:</p><ul>
@@ -1465,11 +1481,9 @@ api.deleteDepartment([id1, id2], callback);
   </ul>
   <hr />
 
-
   <h3 data-id="api_ip__make">
     make
   </h3>
-
 
   <p>创建标签</p><p>详细请看：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=%E5%9B%9E%E8%B0%83%E6%A8%A1%E5%BC%8F#.E8.8E.B7.E5.8F.96.E5.BE.AE.E4.BF.A1.E6.9C.8D.E5.8A.A1.E5.99.A8.E7.9A.84ip.E6.AE.B5">http://qydev.weixin.qq.com/wiki/index.php?title=%E5%9B%9E%E8%B0%83%E6%A8%A1%E5%BC%8F#.E8.8E.B7.E5.8F.96.E5.BE.AE.E4.BF.A1.E6.9C.8D.E5.8A.A1.E5.99.A8.E7.9A.84ip.E6.AE.B5</a><br />Examples:</p><pre><code>api.getCallbackIP(name, callback);
 </code></pre><p>Callback:</p><ul>
@@ -1528,11 +1542,9 @@ api.deleteDepartment([id1, id2], callback);
   </ul>
   <hr />
 
-
   <h3 data-id="api_js_exports_registerTicketHandle">
     registerTicketHandle
   </h3>
-
 
   <p>多台服务器负载均衡时，ticketToken需要外部存储共享。<br />需要调用此registerTicketHandle来设置获取和保存的自定义方法。</p><p>Examples:</p><pre><code>api.registerTicketHandle(getTicketToken, saveTicketToken);
 // getTicketToken
@@ -1577,11 +1589,9 @@ function saveTicketToken(_ticketToken, callback) {
   
   </table>
   
-
   <h3 data-id="api_js_exports_getTicket">
     getTicket
   </h3>
-
 
   <p>获取js sdk所需的有效js ticket</p><p>Callback:</p><ul>
 <li><code>err</code>, 异常对象</li>
@@ -1614,11 +1624,9 @@ function saveTicketToken(_ticketToken, callback) {
   
   </table>
   
-
   <h3 data-id="api_js_exports_getJsConfig">
     getJsConfig
   </h3>
-
 
   <p>获取微信JS SDK Config的所需参数</p><p>注意事项</p><ol>
 <li>签名用的noncestr和timestamp必须与wx.config中的nonceStr和timestamp相同。</li>
@@ -1666,6 +1674,410 @@ api.getJsConfig(param, callback);
 </section>
 
       
+        <section id="api_api_material" class="api">
+  <h2>api_material: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#api_material_exports_addMaterial">
+        addMaterial
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_material_exports_addMPNews">
+        addMPNews
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_material_exports_updateMPNews">
+        updateMPNews
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_material_exports_getMaterial">
+        getMaterial
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_material_exports_delMaterial">
+        delMaterial
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_material_exports_countMaterial">
+        countMaterial
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_material_exports_batchgetMaterial">
+        batchgetMaterial
+      </a>
+    </li>
+
+  </ul>
+  <hr />
+
+  <h3 data-id="api_material_exports_addMaterial">
+    addMaterial
+  </h3>
+
+  <p>上传永久素材，分别有图片（image）、语音（voice）、视频（video）和普通文件（file）<br />详情请见：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=%E4%B8%8A%E4%BC%A0%E6%B0%B8%E4%B9%85%E7%B4%A0%E6%9D%90">http://qydev.weixin.qq.com/wiki/index.php?title=%E4%B8%8A%E4%BC%A0%E6%B0%B8%E4%B9%85%E7%B4%A0%E6%9D%90</a><br />Examples:</p><pre><code>api.addMaterial(agentid, &#39;filepath&#39;, type, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{&quot;errcode&quot;:0,&quot;errmsg&quot;:&quot;ok&quot;,&quot;media_id&quot;: &quot;2-G6nrLmr5EFSDC3MMfasdfb_-zK1dDdzmd0p7&quot;}
+</code></pre><p>Shortcut:</p><ul>
+<li><code>exports.addImage(agentid, filepath, callback);</code></li>
+<li><code>exports.addVoice(agentid, filepath, callback);</code></li>
+<li><code>exports.addVideo(agentid, filepath, callback);</code></li>
+<li><code>exports.addFile(agentid, filepath, callback);</code></li>
+</ul>
+
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.addMaterial()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>agentid(String)</td>
+      <td colspan="2"><p>应用的id</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>filepath(String)</td>
+      <td colspan="2"><p>文件路径</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>type(String)</td>
+      <td colspan="2"><p>媒体类型，可用值有image、voice、video、file</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_material_exports_addMPNews">
+    addMPNews
+  </h3>
+
+  <p>上传永久图文素材<br />详情请见：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=%E4%B8%8A%E4%BC%A0%E6%B0%B8%E4%B9%85%E7%B4%A0%E6%9D%90">http://qydev.weixin.qq.com/wiki/index.php?title=%E4%B8%8A%E4%BC%A0%E6%B0%B8%E4%B9%85%E7%B4%A0%E6%9D%90</a><br />Examples:</p><pre><code>api.addMPNews(agentid, mpnews, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{&quot;errcode&quot;: &quot;0&quot;,&quot;errmsg&quot;: &quot;ok&quot;,&quot;media_id&quot;: &quot;2-G6nrLmr5EC3MMfasdfb_-zK1dDdzmd0p7&quot;}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.addMPNews()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>agentid(String)</td>
+      <td colspan="2"><p>应用的id</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>mpnews(String)</td>
+      <td colspan="2"><p>图文消息的结构</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_material_exports_updateMPNews">
+    updateMPNews
+  </h3>
+
+  <p>更新永久图文素材<br />详情请见：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=%E4%BF%AE%E6%94%B9%E6%B0%B8%E4%B9%85%E5%9B%BE%E6%96%87%E7%B4%A0%E6%9D%90">http://qydev.weixin.qq.com/wiki/index.php?title=%E4%BF%AE%E6%94%B9%E6%B0%B8%E4%B9%85%E5%9B%BE%E6%96%87%E7%B4%A0%E6%9D%90</a><br />Examples:</p><pre><code>api.updateMPNews(agentid, media_id, mpnews, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{&quot;errcode&quot;: &quot;0&quot;,&quot;errmsg&quot;: &quot;ok&quot;}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.updateMPNews()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>agentid(String)</td>
+      <td colspan="2"><p>应用的id</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>media_id(String)</td>
+      <td colspan="2"><p>素材id</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>mpnews(String)</td>
+      <td colspan="2"><p>图文消息的结构</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_material_exports_getMaterial">
+    getMaterial
+  </h3>
+
+  <p>获取永久素材<br />详情请见：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=%E8%8E%B7%E5%8F%96%E6%B0%B8%E4%B9%85%E7%B4%A0%E6%9D%90">http://qydev.weixin.qq.com/wiki/index.php?title=%E8%8E%B7%E5%8F%96%E6%B0%B8%E4%B9%85%E7%B4%A0%E6%9D%90</a><br />Examples:</p><pre><code>api.getMaterial(agentid, &#39;media_id&#39;, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的文件Buffer对象</li>
+<li><code>res</code>, HTTP响应对象</li>
+</ul>
+
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getMaterial()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>agentid(String)</td>
+      <td colspan="2"><p>应用的id</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>mediaId(String)</td>
+      <td colspan="2"><p>媒体文件的ID</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_material_exports_delMaterial">
+    delMaterial
+  </h3>
+
+  <p>删除永久素材<br />详情请见：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=%E5%88%A0%E9%99%A4%E6%B0%B8%E4%B9%85%E7%B4%A0%E6%9D%90">http://qydev.weixin.qq.com/wiki/index.php?title=%E5%88%A0%E9%99%A4%E6%B0%B8%E4%B9%85%E7%B4%A0%E6%9D%90</a><br />Examples:</p><pre><code>api.delMaterial(agentid, &#39;media_id&#39;, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的文件Buffer对象</li>
+<li><code>res</code>, HTTP响应对象</li>
+</ul>
+<p>Result:</p><pre><code>{&quot;errcode&quot;: &quot;0&quot;,&quot;errmsg&quot;: &quot;deleted&quot;}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.delMaterial()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>agentid(String)</td>
+      <td colspan="2"><p>应用的id</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>mediaId(String)</td>
+      <td colspan="2"><p>媒体文件的ID</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_material_exports_countMaterial">
+    countMaterial
+  </h3>
+
+  <p>获取素材总数<br />详情请见：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=%E8%8E%B7%E5%8F%96%E7%B4%A0%E6%9D%90%E6%80%BB%E6%95%B0">http://qydev.weixin.qq.com/wiki/index.php?title=%E8%8E%B7%E5%8F%96%E7%B4%A0%E6%9D%90%E6%80%BB%E6%95%B0</a><br />Examples:</p><pre><code>api.countMaterial(agentid, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的文件Buffer对象</li>
+<li><code>res</code>, HTTP响应对象</li>
+</ul>
+<p>Result:</p><pre><code>{&quot;errcode&quot;: &quot;0&quot;,&quot;errmsg&quot;: &quot;ok&quot;, &quot;total_count&quot;: 37,&quot;image_count&quot;: 12, &quot;voice_count&quot;: 10, &quot;video_count&quot;: 3,  &quot;file_count&quot;: 3, &quot;mpnews_count&quot;: 6}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.countMaterial()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>agentid(String)</td>
+      <td colspan="2"><p>应用的id</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>mediaId(String)</td>
+      <td colspan="2"><p>媒体文件的ID</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_material_exports_batchgetMaterial">
+    batchgetMaterial
+  </h3>
+
+  <p>获取素材列表<br />详情请见：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=%E8%8E%B7%E5%8F%96%E7%B4%A0%E6%9D%90%E5%88%97%E8%A1%A8">http://qydev.weixin.qq.com/wiki/index.php?title=%E8%8E%B7%E5%8F%96%E7%B4%A0%E6%9D%90%E5%88%97%E8%A1%A8</a><br />type 可为图片（image）、语音（voice）、视频（video）、普通文件（file）、图文消息（mpnews）<br />Examples:</p><pre><code>api.batchgetMaterial(agentid, type, offset, count, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的文件Buffer对象</li>
+<li><code>res</code>, HTTP响应对象</li>
+</ul>
+<p>Result:</p><pre><code>{&quot;errcode&quot;: &quot;0&quot;,&quot;errmsg&quot;: &quot;ok&quot;, &quot;total_count&quot;: 37,&quot;image_count&quot;: 12, &quot;voice_count&quot;: 10, &quot;video_count&quot;: 3,  &quot;file_count&quot;: 3, &quot;mpnews_count&quot;: 6}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.batchgetMaterial()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>agentid(String)</td>
+      <td colspan="2"><p>应用的id</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>type(String)</td>
+      <td colspan="2"><p>媒体类型 可以为图文(mpnews)、图片（image）、音频（voice）、视频（video）、文件（file）</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>offset(String)</td>
+      <td colspan="2"><p>从该类型素材的该偏移位置开始返回，0表示从第一个素材返回</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>count(String)</td>
+      <td colspan="2"><p>返回素材的数量，取值在1到50之间</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
         <section id="api_api_media" class="api">
   <h2>api_media: API索引</h2>
   <ul class="indexs">
@@ -1685,11 +2097,9 @@ api.getJsConfig(param, callback);
   </ul>
   <hr />
 
-
   <h3 data-id="api_media_exports_uploadMedia">
     uploadMedia
   </h3>
-
 
   <p>上传多媒体文件，分别有图片（image）、语音（voice）、视频（video）和普通文件（file）<br />详情请见：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=上传媒体文件">http://qydev.weixin.qq.com/wiki/index.php?title=上传媒体文件</a><br />Examples:</p><pre><code>api.uploadMedia(&#39;filepath&#39;, type, callback);
 </code></pre><p>Callback:</p><ul>
@@ -1738,11 +2148,9 @@ api.getJsConfig(param, callback);
   
   </table>
   
-
   <h3 data-id="api_media_exports_getMedia">
     getMedia
   </h3>
-
 
   <p>根据媒体ID获取媒体内容<br />详情请见：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=获取媒体文件">http://qydev.weixin.qq.com/wiki/index.php?title=获取媒体文件</a><br />Examples:</p><pre><code>api.getMedia(&#39;media_id&#39;, callback);
 </code></pre><p>Callback:</p><ul>
@@ -1806,11 +2214,9 @@ api.getJsConfig(param, callback);
   </ul>
   <hr />
 
-
   <h3 data-id="api_menu_exports_createMenu">
     createMenu
   </h3>
-
 
   <p>创建自定义菜单<br />详细请看：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=创建应用菜单">http://qydev.weixin.qq.com/wiki/index.php?title=创建应用菜单</a></p><p>Menu:</p><pre><code>{
  &quot;button&quot;:[
@@ -1870,11 +2276,9 @@ api.getJsConfig(param, callback);
   
   </table>
   
-
   <h3 data-id="api_menu_exports_getMenu">
     getMenu
   </h3>
-
 
   <p>获取菜单<br />详细请看：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=获取菜单列表">http://qydev.weixin.qq.com/wiki/index.php?title=获取菜单列表</a></p><p>Examples:</p><pre><code>api.getMenu(callback);
 </code></pre><p>Callback:</p><ul>
@@ -1916,11 +2320,9 @@ api.getJsConfig(param, callback);
   
   </table>
   
-
   <h3 data-id="api_menu_exports_removeMenu">
     removeMenu
   </h3>
-
 
   <p>删除自定义菜单<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=自定义菜单删除接口">http://mp.weixin.qq.com/wiki/index.php?title=自定义菜单删除接口</a><br />Examples:</p><pre><code>api.removeMenu(callback);
 </code></pre><p>Callback:</p><ul>
@@ -1965,11 +2367,9 @@ api.getJsConfig(param, callback);
   </ul>
   <hr />
 
-
   <h3 data-id="api_message_exports_send">
     send
   </h3>
-
 
   <p>发送消息分别有图片（image）、语音（voice）、视频（video）和缩略图（thumb）<br />详细请看：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=发送接口说明">http://qydev.weixin.qq.com/wiki/index.php?title=发送接口说明</a><br />Examples:</p><pre><code>api.send(to, message, callback);
 </code></pre><p>To:</p><pre><code>{
@@ -2164,11 +2564,9 @@ api.getJsConfig(param, callback);
   </ul>
   <hr />
 
-
   <h3 data-id="api_tag_exports_createTag">
     createTag
   </h3>
-
 
   <p>创建标签</p><p>详细请看：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=管理标签">http://qydev.weixin.qq.com/wiki/index.php?title=管理标签</a><br />Examples:</p><pre><code>api.createTag(name, callback);
 </code></pre><p>Callback:</p><ul>
@@ -2208,11 +2606,9 @@ api.getJsConfig(param, callback);
   
   </table>
   
-
   <h3 data-id="api_tag_exports_updateTagName">
     updateTagName
   </h3>
-
 
   <p>更新标签名字</p><p>Examples:</p><pre><code>api.updateTagName(id, name, callback);
 </code></pre><p>Callback:</p><ul>
@@ -2258,11 +2654,9 @@ api.getJsConfig(param, callback);
   
   </table>
   
-
   <h3 data-id="api_tag_exports_deleteTag">
     deleteTag
   </h3>
-
 
   <p>删除标签</p><p>Examples:</p><pre><code>api.deleteTag(id, callback);
 </code></pre><p>Callback:</p><ul>
@@ -2301,11 +2695,9 @@ api.getJsConfig(param, callback);
   
   </table>
   
-
   <h3 data-id="api_tag_exports_listTags">
     listTags
   </h3>
-
 
   <p>获取标签列表</p><p>Examples:</p><pre><code>api.listTags(callback);
 </code></pre><p>Callback:</p><ul>
@@ -2337,11 +2729,9 @@ api.getJsConfig(param, callback);
   
   </table>
   
-
   <h3 data-id="api_tag_exports_getTagUsers">
     getTagUsers
   </h3>
-
 
   <p>获取标签成员</p><p>Examples:</p><pre><code>api.getTagUsers(id, callback);
 </code></pre><p>Callback:</p><ul>
@@ -2386,11 +2776,9 @@ api.getJsConfig(param, callback);
   
   </table>
   
-
   <h3 data-id="api_tag_exports_addTagUsers">
     addTagUsers
   </h3>
-
 
   <p>增加标签成员</p><p>Examples:</p><pre><code>var userIdList = [&#39;id1&#39;, &#39;id2&#39;];
 api.addTagUsers(id, userIdList, callback);
@@ -2446,11 +2834,9 @@ api.addTagUsers(id, userIdList, callback);
   
   </table>
   
-
   <h3 data-id="api_tag_exports_deleteTagUsers">
     deleteTagUsers
   </h3>
-
 
   <p>删除标签成员</p><p>Examples:</p><pre><code>var userIdList = [&#39;id1&#39;, &#39;id2&#39;];
 api.deleteTagUsers(id, userIdList, callback);
@@ -2576,11 +2962,9 @@ api.deleteTagUsers(id, userIdList, callback);
   </ul>
   <hr />
 
-
   <h3 data-id="api_user_exports_createUser">
     createUser
   </h3>
-
 
   <p>创建成员<br />详细请看：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=管理成员">http://qydev.weixin.qq.com/wiki/index.php?title=管理成员</a></p><p>Examples:</p><pre><code>api.createUser(user, callback);
 </code></pre><p>User:</p><pre><code>{
@@ -2630,11 +3014,9 @@ api.deleteTagUsers(id, userIdList, callback);
   
   </table>
   
-
   <h3 data-id="api_user_exports_updateUser">
     updateUser
   </h3>
-
 
   <p>更新成员</p><p>Examples:</p><pre><code>api.updateUser(user, callback);
 </code></pre><p>User:</p><pre><code>{
@@ -2685,11 +3067,9 @@ api.deleteTagUsers(id, userIdList, callback);
   
   </table>
   
-
   <h3 data-id="api_user_exports_deleteUser">
     deleteUser
   </h3>
-
 
   <p>删除成员</p><p>Examples:</p><pre><code>api.deleteUser(id, callback);
 </code></pre><p>Callback:</p><ul>
@@ -2728,11 +3108,9 @@ api.deleteTagUsers(id, userIdList, callback);
   
   </table>
   
-
   <h3 data-id="api_user__make">
     make
   </h3>
-
 
   <p>批量删除成员</p><p>Examples:</p><pre><code>api.deleteUsers([&quot;zhangsan&quot;, &quot;lisi&quot;], callback);
 </code></pre><p>Callback:</p><ul>
@@ -2771,11 +3149,9 @@ api.deleteTagUsers(id, userIdList, callback);
   
   </table>
   
-
   <h3 data-id="api_user_exports_getUser">
     getUser
   </h3>
-
 
   <p>获取成员</p><p>Examples:</p><pre><code>api.getUser(id, callback);
 </code></pre><p>Callback:</p><ul>
@@ -2825,11 +3201,9 @@ api.deleteTagUsers(id, userIdList, callback);
   
   </table>
   
-
   <h3 data-id="api_user_exports_getDepartmentUsers">
     getDepartmentUsers
   </h3>
-
 
   <p>获取部门成员</p><p>Examples:</p><pre><code>api.getDepartmentUsers(departmentId, fetchChild, status, callback);
 </code></pre><p>Callback:</p><ul>
@@ -2888,11 +3262,9 @@ api.deleteTagUsers(id, userIdList, callback);
   
   </table>
   
-
   <h3 data-id="api_user_exports_getDepartmentUsersDetail">
     getDepartmentUsersDetail
   </h3>
-
 
   <p>获取部门成员(详情)</p><p>Examples:</p><pre><code>api.getDepartmentUsersDetail(departmentId, fetchChild, status, callback);
 </code></pre><p>Callback:</p><ul>
@@ -2959,11 +3331,9 @@ api.deleteTagUsers(id, userIdList, callback);
   
   </table>
   
-
   <h3 data-id="api_user_exports_inviteUser">
     inviteUser
   </h3>
-
 
   <p>邀请成员关注</p><p>详情：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=%E7%AE%A1%E7%90%86%E6%88%90%E5%91%98#.E9.82.80.E8.AF.B7.E6.88.90.E5.91.98.E5.85.B3.E6.B3.A8">http://qydev.weixin.qq.com/wiki/index.php?title=%E7%AE%A1%E7%90%86%E6%88%90%E5%91%98#.E9.82.80.E8.AF.B7.E6.88.90.E5.91.98.E5.85.B3.E6.B3.A8</a><br />Examples:</p><pre><code>api.inviteUser(id, invite_tips, callback);
 </code></pre><p>Callback:</p><ul>
@@ -3010,11 +3380,9 @@ api.deleteTagUsers(id, userIdList, callback);
   
   </table>
   
-
   <h3 data-id="api_user_exports_getUserIdByCode">
     getUserIdByCode
   </h3>
-
 
   <p>根据Code获取用户ID</p><p>详情：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=根据code获取成员信息">http://qydev.weixin.qq.com/wiki/index.php?title=根据code获取成员信息</a><br />Examples:</p><pre><code>api.getUserIdByCode(code, callback);
 </code></pre><p>Callback:</p><ul>
@@ -3052,11 +3420,9 @@ api.deleteTagUsers(id, userIdList, callback);
   
   </table>
   
-
   <h3 data-id="api_user_exports_getAuthorizeURL">
     getAuthorizeURL
   </h3>
-
 
   <p>获取授权页面的URL地址</p>
 
