@@ -38,7 +38,7 @@
     </nav>
     <header class="jumbotron subhead">
       <div class="container">
-        <h1>wechat-api <small>Version: 1.15.0 By @Jackson Tian</small></h1>
+        <h1>wechat-api <small>Version: 1.16.0 By @Jackson Tian</small></h1>
         <p class="lead">
           微信公共平台Node库 API
         </p>
@@ -64,6 +64,18 @@
 				<div class="accordion-body collapse" id="collapse_api_card">
 					<div class="accordion-inner">
 					<ul class="indexs">
+					
+						<li>
+							<a href="#api_card__make">make</a>
+						</li>
+					
+						<li>
+							<a href="#api_card__make">make</a>
+						</li>
+					
+						<li>
+							<a href="#api_card__make">make</a>
+						</li>
 					
 						<li>
 							<a href="#api_card__make">make</a>
@@ -837,6 +849,30 @@
 							<a href="#api_shakearound__make">make</a>
 						</li>
 					
+						<li>
+							<a href="#api_shakearound__make">make</a>
+						</li>
+					
+						<li>
+							<a href="#api_shakearound__make">make</a>
+						</li>
+					
+						<li>
+							<a href="#api_shakearound__make">make</a>
+						</li>
+					
+						<li>
+							<a href="#api_shakearound__make">make</a>
+						</li>
+					
+						<li>
+							<a href="#api_shakearound__make">make</a>
+						</li>
+					
+						<li>
+							<a href="#api_shakearound_exports_getShakehbConfig">getShakehbConfig</a>
+						</li>
+					
 					</ul>
 					</div>
 				</div>
@@ -1269,6 +1305,24 @@
       </a>
     </li>
 
+    <li>
+      <a href="#api_card__importCustomizedCodes">
+        importCustomizedCodes
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_card__checkCustomizedCodes">
+        checkCustomizedCodes
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_card__getDepositCodesCount">
+        getDepositCodesCount
+      </a>
+    </li>
+
   </ul>
   <hr />
 
@@ -1409,6 +1463,174 @@
       <td>参数</td>
       <td>expire_seconds(number)</td>
       <td colspan="2"><p>二维码的有效时间，范围是60 ~ 1800秒。不填默认为永久有效。</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_card__importCustomizedCodes">
+    importCustomizedCodes
+  </h3>
+
+  <p>导入code接口<br />接口说明<br />开发者可调用该接口将自定义code导入微信卡券后台，由微信侧代理存储并下发code，本接口仅用于支持自定义code的卡券参与互通。<br />code:</p><pre><code>[
+  &quot;11111&quot;,
+  &quot;22222&quot;,
+  &quot;33333&quot;
+]
+</code></pre><p>Examples:</p><pre><code>api.importCustomizedCodes(&#39;cardId&#39;, code, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+ &quot;errcode&quot;:0,
+ &quot;errmsg&quot;:&quot;ok&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">make()</td>
+    </tr>
+  
+
+    <tr>
+      <td>名字</td>
+      <td colspan="3">importCustomizedCodes</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>cardId(String)</td>
+      <td colspan="2"><p>卡券ID</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>code(Array)</td>
+      <td colspan="2"><p>待导入自定义code</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_card__checkCustomizedCodes">
+    checkCustomizedCodes
+  </h3>
+
+  <p>核查code接口<br />接口说明<br />支持开发者调用该接口查询code导入微信后台的情况。<br />code:</p><pre><code>[
+  &quot;11111&quot;,
+  &quot;22222&quot;,
+  &quot;33333&quot;
+]
+</code></pre><p>Examples:</p><pre><code>api.checkCustomizedCodes(&#39;cardId&#39;, code, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+ &quot;errcode&quot;:0,
+ &quot;errmsg&quot;:&quot;ok&quot;,
+ &quot;exist_code&quot;:[&quot;11111&quot;,&quot;22222&quot;],
+ &quot;not_exist_code&quot;:[&quot;33333&quot;]
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">make()</td>
+    </tr>
+  
+
+    <tr>
+      <td>名字</td>
+      <td colspan="3">checkCustomizedCodes</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>cardId(String)</td>
+      <td colspan="2"><p>卡券ID</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>code(Array)</td>
+      <td colspan="2"><p>待核查自定义code</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_card__getDepositCodesCount">
+    getDepositCodesCount
+  </h3>
+
+  <p>查询导入code数目接口<br />接口说明<br />支持开发者调用该接口查询code导入微信后台成功的数目。<br />Examples:</p><pre><code>api.getDepositCodesCount(&#39;cardId&#39;, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+ &quot;errcode&quot;:0,
+ &quot;errmsg&quot;:&quot;ok&quot;,
+ &quot;count&quot;:123
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">make()</td>
+    </tr>
+  
+
+    <tr>
+      <td>名字</td>
+      <td colspan="3">getDepositCodesCount</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>cardId(String)</td>
+      <td colspan="2"><p>卡券ID</p></td>
     </tr>
   
 
@@ -5673,6 +5895,42 @@ api.sendNews(&#39;openid&#39;, articles, callback);
       </a>
     </li>
 
+    <li>
+      <a href="#api_shakearound__addBeaconGroup">
+        addBeaconGroup
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_shakearound__addGroupBeacons">
+        addGroupBeacons
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_shakearound__addLotteryInfo">
+        addLotteryInfo
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_shakearound__setPrizeBucket">
+        setPrizeBucket
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_shakearound__setLotterySwitch">
+        setLotterySwitch
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_shakearound_exports_getShakehbConfig">
+        getShakehbConfig
+      </a>
+    </li>
+
   </ul>
   <hr />
 
@@ -6659,6 +6917,354 @@ api.sendNews(&#39;openid&#39;, articles, callback);
       <td>参数</td>
       <td>callback(Function)</td>
       <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_shakearound__addBeaconGroup">
+    addBeaconGroup
+  </h3>
+
+  <p>新增分组<br />接口说明：<br />新建设备分组，每个帐号下最多只有100个分组。<br />group:<br />{<br />  group_name: &#39;test&#39;<br />}<br />Examples:</p><pre><code>api.addBeaconGroup(group, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+  &quot;data&quot; : {
+    &quot;group_id&quot;: 123,
+    &quot;group_name&quot;: &#39;test&#39;
+  },
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;success.&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">make()</td>
+    </tr>
+  
+
+    <tr>
+      <td>名字</td>
+      <td colspan="3">addBeaconGroup</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>group(Object)</td>
+      <td colspan="2"><p>分组信息</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_shakearound__addGroupBeacons">
+    addGroupBeacons
+  </h3>
+
+  <p>添加设备到分组<br />接口说明：<br />添加设备到分组，每个分组能够持有的设备上限为10000，并且每次添加操作的添加上限为1000。只有在摇周边申请的设备才能添加到分组。<br />Options:</p><pre><code>{
+ &quot;group_id&quot;: 123,
+ &quot;device_identifier&quot;: [
+   {
+     // 设备编号，若填了UUID、major、minor，则可不填设备编号，若二者都填，则以设备编号为优先
+     &quot;device_id&quot;: 10011,
+     &quot;uuid&quot;: &quot;FDA50693-A4E2-4FB1-AFCF-C6EB07647825&quot;,
+     &quot;major&quot;: 1002,
+     &quot;minor&quot;: 1223
+   }
+ ]
+}
+</code></pre><p>Examples:</p><pre><code>api.addGroupBeacons(options, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+  &quot;data&quot; : {
+  },
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;success.&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">make()</td>
+    </tr>
+  
+
+    <tr>
+      <td>名字</td>
+      <td colspan="3">addGroupBeacons</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>options(Object)</td>
+      <td colspan="2"><p>请求参数</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_shakearound__addLotteryInfo">
+    addLotteryInfo
+  </h3>
+
+  <p>创建红包活动<br />接口说明:<br />创建红包活动，设置红包活动有效期，红包活动开关等基本信息，返回活动id。<br />详情请参见：<a href="http://mp.weixin.qq.com/wiki/12/9738788d171724b080b52f6e41490cb4.html">http://mp.weixin.qq.com/wiki/12/9738788d171724b080b52f6e41490cb4.html</a><br />Options:</p><pre><code>{
+  &quot;use_template&quot;: 1,
+  &quot;logo_url&quot;: &quot;https://lodejs.org/images/qr.jpg&quot;
+}
+</code></pre><p>Body:</p><pre><code>{
+  &quot;title&quot;: &quot;抽奖活动名称&quot;,
+  &quot;desc&quot;: &quot;抽奖活动描述&quot;,
+  &quot;onoff&quot;: 1,
+  &quot;begin_time&quot;: 1428854400,
+  &quot;expire_time&quot;: 1428940800,
+  &quot;sponsor_appid&quot;: &quot;wx476f028272e53c62&quot;,
+  &quot;total&quot;: 10,
+  &quot;jump_url&quot;: &quot;https://lodejs.org&quot;,
+  &quot;key&quot;: &quot;u5pPq38tQP97yGn8iZxbBsfWvbn37poP&quot;
+}
+</code></pre><p>Examples:</p><pre><code>api.addLotteryInfo(options, body, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;&quot;,
+  &quot;lottery_id&quot;: &quot;5794560&quot;,
+  &quot;page_id&quot;: 1,
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">make()</td>
+    </tr>
+  
+
+    <tr>
+      <td>名字</td>
+      <td colspan="3">addLotteryInfo</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>options(Object)</td>
+      <td colspan="2"><p>请求参数</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>body(Object)</td>
+      <td colspan="2"><p>JSON格式的结构体</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_shakearound__setPrizeBucket">
+    setPrizeBucket
+  </h3>
+
+  <p>录入红包信息<br />接口说明:<br />在调用&quot;创建红包活动&quot;接口之后，调用此接口录入红包信息。<br />详情请参见：<a href="http://mp.weixin.qq.com/wiki/12/9738788d171724b080b52f6e41490cb4.html">http://mp.weixin.qq.com/wiki/12/9738788d171724b080b52f6e41490cb4.html</a><br />Options:</p><pre><code>{
+  &quot;lottery_id&quot;: &quot;5794560&quot;,
+  &quot;mchid&quot;: &quot;1234567890&quot;,
+  &quot;sponsor_appid&quot;: &quot;wx476f028272e53c62&quot;
+  &quot;prize_info_list&quot;: [{
+    &quot;ticket&quot;: &quot;v1|ZiPs2l0hpMBp3uwGI1rwp45vOdz/V/zQ/00jP9MeWT+e47/q1FJjwCIP34frSjzOxAEzJ7k2CtAg1pmcShvkChBWqbThxPm6MBuzceoHtj79iHuHaEn0WAO+j4sXnXnbGswFOlDYWg1ngvrRYnCY3g==&quot;,
+  }]
+}
+</code></pre><p>Examples:</p><pre><code>api.setPrizeBucket(options, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;&quot;,
+  &quot;success_num&quot;: 1,
+  &quot;repeat_ticket_list&quot;: [{
+    &quot;ticket&quot;: &quot;v1|ZiPs2l0hpMBp3uwGI1rwp45vOdz/V/zQ/00jP9MeWT+e47/q1FJjwCIP34frSjzOxAEzJ7k2CtAg1pmcShvkChBWqbThxPm6MBuzceoHtj79iHuHaEn0WAO+j4sXnXnbGswFOlDYWg1ngvrRYnCY3g==&quot;,
+  }]
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">make()</td>
+    </tr>
+  
+
+    <tr>
+      <td>名字</td>
+      <td colspan="3">setPrizeBucket</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>options(Object)</td>
+      <td colspan="2"><p>请求参数</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_shakearound__setLotterySwitch">
+    setLotterySwitch
+  </h3>
+
+  <p>设置红包活动抽奖开关<br />接口说明:<br />开发者实时控制红包活动抽奖的开启和关闭。<br />详情请参见：<a href="http://mp.weixin.qq.com/wiki/12/9738788d171724b080b52f6e41490cb4.html">http://mp.weixin.qq.com/wiki/12/9738788d171724b080b52f6e41490cb4.html</a><br />Examples:</p><pre><code>api.setLotterySwitch(lotteryId, onoff, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">make()</td>
+    </tr>
+  
+
+    <tr>
+      <td>名字</td>
+      <td colspan="3">setLotterySwitch</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>lotteryId(String)</td>
+      <td colspan="2"><p>红包抽奖id</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>onoff(Number)</td>
+      <td colspan="2"><p>活动抽奖开关，0：关闭，1：开启</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_shakearound_exports_getShakehbConfig">
+    getShakehbConfig
+  </h3>
+
+  <p>获取红包JSAPI参数<br />接口说明:<br />用于在第三方页面中，通过调用JSAPI来触发用户抽红包的操作。<br />详情请参见：<a href="http://mp.weixin.qq.com/wiki/12/9738788d171724b080b52f6e41490cb4.html">http://mp.weixin.qq.com/wiki/12/9738788d171724b080b52f6e41490cb4.html</a><br />Examples:</p><pre><code>api.getShakehbConfig(openid, lotteryId, key);
+</code></pre><p>Return:</p><pre><code>{
+  &quot;openid&quot;: &quot;o-hVKuNknQQBZFDlbE8eibQzIX3o&quot;,
+  &quot;lottery_id&quot;: &quot;5794560&quot;
+  &quot;noncestr&quot;: &quot;5K8264ILTKCH16CQ2502SI8ZNMTM67VS&quot;
+  &quot;sign&quot;: &quot;D6F2078841D003C09BF5263EDA3CD5F9&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getShakehbConfig()</td>
+    </tr>
+  
+
+    <tr>
+      <td>名字</td>
+      <td colspan="3">getShakehbConfig</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>openid(String)</td>
+      <td colspan="2"><p>用户openid</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>lotteryId(String)</td>
+      <td colspan="2"><p>红包抽奖id</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>key(String)</td>
+      <td colspan="2"><p>“创建红包活动”接口设置的key</p></td>
     </tr>
   
 
