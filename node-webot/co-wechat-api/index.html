@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>co-wechat-api Documentation</title>
     <meta name="keywords" content="weixin,wechat" />
-    <meta name="description" content="微信公共平台Node库 API" />
+    <meta name="description" content="微信公共平台Node库API，ES6版本" />
     <script src="assets/prettify.js"></script>
     <script src="assets/jquery-1.8.2.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.js"></script>
@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="assets/base.css" />
   </head>
   <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-inverse navbar-static-top top-navbar" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -27,6 +27,10 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
           
+            <li>
+              <a href="./api.html">API Docs</a>
+            </li>
+          
           
           </ul>
         </div><!-- /.navbar-collapse -->
@@ -34,9 +38,9 @@
     </nav>
     <header class="jumbotron subhead">
       <div class="container">
-        <h1>co-wechat-api <small>Version: 1.0.0 By @Jackson Tian</small></h1>
+        <h1>co-wechat-api <small>Version: 2.0.1 By @Jackson Tian</small></h1>
         <p class="lead">
-          微信公共平台Node库 API
+          微信公共平台Node库API，ES6版本
         </p>
       </div>
     </header>
@@ -47,8 +51,62 @@
       <ul class="nav nav-list bs-docs-sidenav affix">
 
   <li class="level_2">
+    <a href="#index_模块状态" title="模块状态">
+      <i class="icon-chevron-right"></i>模块状态
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_功能列表" title="功能列表">
+      <i class="icon-chevron-right"></i>功能列表
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_Installation" title="Installation">
+      <i class="icon-chevron-right"></i>Installation
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_Usage" title="Usage">
+      <i class="icon-chevron-right"></i>Usage
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_Show cases" title="Show cases">
+      <i class="icon-chevron-right"></i>Show cases
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_详细API" title="详细API">
+      <i class="icon-chevron-right"></i>详细API
+    </a>
+  </li>
+
+  <li class="level_2">
     <a href="#index_License" title="License">
       <i class="icon-chevron-right"></i>License
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_交流群" title="交流群">
+      <i class="icon-chevron-right"></i>交流群
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_感谢" title="感谢">
+      <i class="icon-chevron-right"></i>感谢
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_捐赠" title="捐赠">
+      <i class="icon-chevron-right"></i>捐赠
     </a>
   </li>
 
@@ -57,9 +115,71 @@
     </div>
     <div class="col-md-9">
       <section>
-        <h1>co-wechat-api</h1>
-<h2>License</h2>
-<p>The MIT license</p>
+        <h1>Wechat API(ES6版)</h1>
+<p>微信公共平台API。</p><h2>模块状态</h2>
+<ul>
+<li><a href="http://badge.fury.io/js/co-wechat"><img src="https://badge.fury.io/js/co-wechat-api.png" alt="NPM version"></a></li>
+<li><a href="https://travis-ci.org/node-webot/co-wechat-api"><img src="https://travis-ci.org/node-webot/co-wechat-api.png?branch=master" alt="Build Status"></a></li>
+<li><a href="https://david-dm.org/node-webot/co-wechat-api"><img src="https://david-dm.org/node-webot/co-wechat-api.png" alt="Dependencies Status"></a></li>
+<li><a href="https://coveralls.io/r/node-webot/co-wechat-api"><img src="https://coveralls.io/repos/node-webot/co-wechat-api/badge.png" alt="Coverage Status"></a></li>
+</ul>
+<h2>功能列表</h2>
+<ul>
+<li>发送客服消息（文本、图片、语音、视频、音乐、图文）</li>
+<li>菜单操作（查询、创建、删除）</li>
+<li>二维码（创建临时、永久二维码，查看二维码URL）</li>
+<li>分组操作（查询、创建、修改、移动用户到分组）</li>
+<li>用户信息（查询用户基本信息、获取关注者列表）</li>
+<li>媒体文件（上传、获取）</li>
+<li>群发消息（文本、图片、语音、视频、图文）</li>
+<li>客服记录（查询客服记录，查看客服、查看在线客服）</li>
+<li>群发消息</li>
+<li>公众号支付（发货通知、订单查询）</li>
+<li>微信小店（商品管理、库存管理、邮费模板管理、分组管理、货架管理、订单管理、功能接口）</li>
+<li>模版消息</li>
+<li>网址缩短</li>
+<li>语义查询</li>
+<li>数据分析</li>
+<li>JSSDK服务端支持</li>
+<li>素材管理</li>
+<li>摇一摇周边</li>
+</ul>
+<p>详细参见<a href="http://doxmate.cool/node-webot/co-wechat-api/api.html">API文档</a></p><p>企业版本请前往：<a href="https://github.com/node-webot/wechat-enterprise">https://github.com/node-webot/wechat-enterprise</a></p><h2>Installation</h2>
+<pre><code class="lang-sh">$ npm install co-wechat-api
+</code></pre>
+<h2>Usage</h2>
+<pre><code class="lang-js">var WechatAPI = require(&#39;co-wechat-api&#39;);
+
+var api = new WechatAPI(appid, appsecret);
+var result = yield* api.updateRemark(&#39;open_id&#39;, &#39;remarked&#39;);
+</code></pre>
+<h3>多进程</h3>
+<p>当多进程时，token需要全局维护，以下为保存token的接口。</p><pre><code>var api = new API(&#39;appid&#39;, &#39;secret&#39;, function* () {
+  // 传入一个获取全局token的方法
+  var txt = yield fs.readFile(&#39;access_token.txt&#39;, &#39;utf8&#39;);
+  return JSON.parse(txt);
+}, function* (token) {
+  // 请将token存储到全局，跨进程、跨机器级别的全局，比如写到数据库、redis等
+  // 这样才能在cluster模式及多机情况下使用，以下为写入到文件的示例
+  yield fs.writeFile(&#39;access_token.txt&#39;, JSON.stringify(token));
+});
+</code></pre><h2>Show cases</h2>
+<h3>Node.js API自动回复</h3>
+<p><img src="http://nodeapi.diveintonode.org/assets/qrcode.jpg" alt="Node.js API自动回复机器人"></p><p>欢迎关注。</p><p>代码：<a href="https://github.com/JacksonTian/api-doc-service">https://github.com/JacksonTian/api-doc-service</a></p><p>你可以在<a href="http://www.cloudfoundry.com/">CloudFoundry</a>、<a href="https://www.appfog.com/">appfog</a>、<a href="http://developer.baidu.com/wiki/index.php?title=docs/cplat/rt/node.js">BAE</a>等搭建自己的机器人。</p><h2>详细API</h2>
+<p>原始API文档请参见：<a href="http://mp.weixin.qq.com/wiki/index.php?title=消息接口指南">消息接口指南</a>。</p><h2>License</h2>
+<p>The MIT license.</p><h2>交流群</h2>
+<p>QQ群：157964097，使用疑问，开发，贡献代码请加群。</p><h2>感谢</h2>
+<p>感谢以下贡献者：</p><pre><code>
+ project  : co-wechat-api
+ repo age : 10 months
+ active   : 5 days
+ commits  : 11
+ files    : 68
+ authors  :
+     9  Jackson Tian  81.8%
+     2  ken           18.2%
+</code></pre><h2>捐赠</h2>
+<p>如果您觉得Wechat对您有帮助，欢迎请作者一杯咖啡</p><p><img src="https://cloud.githubusercontent.com/assets/327019/2941591/2b9e5e58-d9a7-11e3-9e80-c25aba0a48a1.png" alt="捐赠wechat"></p><p>或者<a href="https://www.gittip.com/JacksonTian/"><img src="http://img.shields.io/gratipay/JacksonTian.svg" alt=""></a></p>
       </section>
   
     </div>
@@ -85,19 +205,28 @@
         $('td pre').removeClass('prettyprint');
         prettyPrint();
         var $window = $(window);
-        $('.bs-docs-sidenav').affix({
-          offset: {
-            top: function () {
-              return $window.width() <= 980 ? 290 : 210
-            },
-            bottom: 270
-          }
-        });
+        var sidenav = $('.bs-docs-sidenav');
+        if (sidenav.height() < window.innerHeight) {
+          sidenav.affix({
+            offset: {
+              top: function () {
+                return $window.width() <= 980 ? 290 : 210
+              },
+              bottom: 200
+            }
+          });
+        } else {
+          sidenav.removeClass('affix');
+        }
         $(".content").find('h1, h2, h3, h4, h5, h6').each(function () {
           var node = $(this);
           // 总是设置id
           node.attr("id", node.data('id') || "index_" + node.text());
-          node.css("paddingTop", 50);
+        });
+
+        $('.bs-docs-sidenav .accordion-marker').on('click', function(event) {
+          var current = $(event.currentTarget);
+          current.find('.glyphicon').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
         });
       });
     </script>
