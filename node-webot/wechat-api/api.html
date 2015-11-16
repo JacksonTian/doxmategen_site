@@ -38,7 +38,7 @@
     </nav>
     <header class="jumbotron subhead">
       <div class="container">
-        <h1>wechat-api <small>Version: 1.18.0 By @Jackson Tian</small></h1>
+        <h1>wechat-api <small>Version: 1.20.0 By @Jackson Tian</small></h1>
         <p class="lead">
           微信公共平台Node库 API
         </p>
@@ -64,6 +64,14 @@
 				<div class="accordion-body collapse" id="collapse_api_card">
 					<div class="accordion-inner">
 					<ul class="indexs">
+					
+						<li>
+							<a href="#api_card__make">make</a>
+						</li>
+					
+						<li>
+							<a href="#api_card__make">make</a>
+						</li>
 					
 						<li>
 							<a href="#api_card__make">make</a>
@@ -878,6 +886,30 @@
 						</li>
 					
 						<li>
+							<a href="#api_shakearound__make">make</a>
+						</li>
+					
+						<li>
+							<a href="#api_shakearound__make">make</a>
+						</li>
+					
+						<li>
+							<a href="#api_shakearound__make">make</a>
+						</li>
+					
+						<li>
+							<a href="#api_shakearound__make">make</a>
+						</li>
+					
+						<li>
+							<a href="#api_shakearound__make">make</a>
+						</li>
+					
+						<li>
+							<a href="#api_shakearound__make">make</a>
+						</li>
+					
+						<li>
 							<a href="#api_shakearound_exports_getShakehbConfig">getShakehbConfig</a>
 						</li>
 					
@@ -1331,6 +1363,18 @@
       </a>
     </li>
 
+    <li>
+      <a href="#api_card__make">
+        make
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_card__make">
+        make
+      </a>
+    </li>
+
   </ul>
   <hr />
 
@@ -1646,6 +1690,91 @@
       <td>参数</td>
       <td>callback(Function)</td>
       <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_card__make">
+    make
+  </h3>
+
+  <p>拉取卡券概况数据</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">make()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>beginDate(String)</td>
+      <td colspan="2"><p>开始时间</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>endDate(String)</td>
+      <td colspan="2"><p>结束时间（结束时间不能为当天，不然会报错，可设为昨天）</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>source(int)</td>
+      <td colspan="2"><p>卡券来源，0为公众平台创建的卡券数据、1是API创建的卡券数据</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_card__make">
+    make
+  </h3>
+
+  <p>获取免费券数据</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">make()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>cardId(String)</td>
+      <td colspan="2"><p>cardId 卡券ID</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>beginDate(String)</td>
+      <td colspan="2"><p>开始时间</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>endDate(String)</td>
+      <td colspan="2"><p>结束时间（结束时间不能为当天，不然会报错，可设为昨天）</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>source(int)</td>
+      <td colspan="2"><p>卡券来源，0为公众平台创建的卡券数据、1是API创建的卡券数据</p></td>
     </tr>
   
 
@@ -5823,6 +5952,12 @@ api.sendNews(&#39;openid&#39;, articles, callback);
     </li>
 
     <li>
+      <a href="#api_shakearound__applyBeaconsStatus">
+        applyBeaconsStatus
+      </a>
+    </li>
+
+    <li>
       <a href="#api_shakearound__updateBeacon">
         updateBeacon
       </a>
@@ -5895,8 +6030,20 @@ api.sendNews(&#39;openid&#39;, articles, callback);
     </li>
 
     <li>
+      <a href="#api_shakearound__getDeviceStatisticsList">
+        getDeviceStatisticsList
+      </a>
+    </li>
+
+    <li>
       <a href="#api_shakearound__getPageStatistics">
         getPageStatistics
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_shakearound__getPageStatisticsList">
+        getPageStatisticsList
       </a>
     </li>
 
@@ -5919,8 +6066,26 @@ api.sendNews(&#39;openid&#39;, articles, callback);
     </li>
 
     <li>
+      <a href="#api_shakearound__updateBeaconGroup">
+        updateBeaconGroup
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_shakearound__deleteBeaconGroup">
+        deleteBeaconGroup
+      </a>
+    </li>
+
+    <li>
       <a href="#api_shakearound__addGroupBeacons">
         addGroupBeacons
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_shakearound__deleteGroupBeacons">
+        deleteGroupBeacons
       </a>
     </li>
 
@@ -6090,6 +6255,57 @@ api.sendNews(&#39;openid&#39;, articles, callback);
     <tr>
       <td>名字</td>
       <td colspan="3">applyBeacons</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>options(Object)</td>
+      <td colspan="2"><p>请求参数</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_shakearound__applyBeaconsStatus">
+    applyBeaconsStatus
+  </h3>
+
+  <p>设备管理: 查询设备ID申请审核状态。<br />接口说明:<br />查询设备ID申请的审核状态。若单次申请的设备ID数量小于等于500个，系统会进行快速审核；<br />若单次申请的设备ID数量大于500个，则在三个工作日内完成审核。<br />详情请参见：<a href="http://mp.weixin.qq.com/wiki/10/9926857d34ef8cea6bcd6cffb6cea80a.html">http://mp.weixin.qq.com/wiki/10/9926857d34ef8cea6bcd6cffb6cea80a.html</a></p><p>Options:</p><pre><code>{
+  &quot;apply_id&quot;: 12345
+}
+</code></pre><p>Examples:</p><pre><code>api.applyBeaconsStatus(apply_id, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+  &quot;data&quot; : { ... },
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;success.&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">make()</td>
+    </tr>
+  
+
+    <tr>
+      <td>名字</td>
+      <td colspan="3">applyBeaconsStatus</td>
     </tr>
   
 
@@ -6872,6 +7088,84 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
   </table>
   
+  <h3 data-id="api_shakearound__getDeviceStatisticsList">
+    getDeviceStatisticsList
+  </h3>
+
+  <p>数据统计: 批量查询设备统计数据接口<br />接口说明:<br />查询指定时间商家帐号下的每个设备进行摇周边操作的人数、次数，点击摇周边消息的人数、次数。<br />只能查询最近90天内的数据，且一次只能查询一天。<br />此接口无法获取当天的数据，最早只能获取前一天的数据。由于系统在凌晨处理前一天的数据，<br />太早调用此接口可能获取不到数据，建议在早上8：00之后调用此接口。<br />注意：对于摇周边人数、摇周边次数、点击摇周边消息的人数、点击摇周边消息的次数都为0的设备，不在结果列表中返回。<br />详情请参见：<a href="http://mp.weixin.qq.com/wiki/1/e0b035c89b0a9c95a8210204087fec69.html">http://mp.weixin.qq.com/wiki/1/e0b035c89b0a9c95a8210204087fec69.html</a><br />Options:</p><pre><code>{
+  date: 1438704000,
+  page_index: 1
+}
+</code></pre><p>Examples:</p><pre><code>api.getDeviceStatisticsList(options, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+&quot;data&quot;: {
+  &quot;devices&quot;: [
+    {
+      &quot;device_id&quot;: 10097,
+      &quot;major&quot;: 10001,
+      &quot;minor&quot;: 12102,
+      &quot;uuid&quot;: &quot;FDA50693-A4E2-4FB1-AFCF-C6EB07647825&quot;
+      &quot;shake_pv&quot;: 1
+      &quot;shake_uv&quot;: 2
+      &quot;click_pv&quot;: 3
+      &quot;click_uv&quot;:4
+    },
+    {
+      &quot;device_id&quot;: 10097,
+      &quot;major&quot;: 10001,
+      &quot;minor&quot;: 12102,
+      &quot;uuid&quot;: &quot;FDA50693-A4E2-4FB1-AFCF-C6EB07647825&quot;
+      &quot;shake_pv&quot;:1
+      &quot;shake_uv&quot;:2
+      &quot;click_pv&quot;:3
+      &quot;click_uv&quot;:4
+    }
+   ],
+  },
+  &quot;date&quot;:1435075200
+  &quot;total_count&quot;: 151
+  &quot;page_index&quot;:1
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;success.&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">make()</td>
+    </tr>
+  
+
+    <tr>
+      <td>名字</td>
+      <td colspan="3">getDeviceStatisticsList</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>options(Object)</td>
+      <td colspan="2"><p>请求参数</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
   <h3 data-id="api_shakearound__getPageStatistics">
     getPageStatistics
   </h3>
@@ -6920,6 +7214,78 @@ api.sendNews(&#39;openid&#39;, articles, callback);
     <tr>
       <td>名字</td>
       <td colspan="3">getPageStatistics</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>options(Object)</td>
+      <td colspan="2"><p>请求参数</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_shakearound__getPageStatisticsList">
+    getPageStatisticsList
+  </h3>
+
+  <p>数据统计: 批量查询页面统计数据接口<br />接口说明:<br />查询指定时间商家帐号下的每个页面进行摇周边操作的人数、次数，点击摇周边消息的人数、次数。<br />只能查询最近90天内的数据，且一次只能查询一天。<br />此接口无法获取当天的数据，最早只能获取前一天的数据。由于系统在凌晨处理前一天的数据，<br />太早调用此接口可能获取不到数据，建议在早上8：00之后调用此接口。<br />注意：对于摇周边人数、摇周边次数、点击摇周边消息的人数、点击摇周边消息的次数都为0的设备，不在结果列表中返回。<br />详情请参见：<a href="http://mp.weixin.qq.com/wiki/1/e0b035c89b0a9c95a8210204087fec69.html">http://mp.weixin.qq.com/wiki/1/e0b035c89b0a9c95a8210204087fec69.html</a><br />Options:</p><pre><code>{
+  date: 1425139200,
+  page_index: 1
+}
+</code></pre><p>Examples:</p><pre><code>api.getPageStatisticsList(options, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+&quot;data&quot;: {
+  &quot;pages&quot;: [
+    {
+      &quot;page_id&quot;: 1,
+      &quot;shake_pv&quot;: 1,
+      &quot;shake_uv&quot;: 2,
+      &quot;click_pv&quot;: 3,
+      &quot;click_uv&quot;:4
+    },
+    {
+      &quot;page_id&quot;: 2,
+      &quot;shake_pv&quot;:1,
+      &quot;shake_uv&quot;:2,
+      &quot;click_pv&quot;:3,
+      &quot;click_uv&quot;:4
+    }
+   ],
+  },
+  &quot;date&quot;:1435075200
+  &quot;total_count&quot;: 151
+  &quot;page_index&quot;:1
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;success.&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">make()</td>
+    </tr>
+  
+
+    <tr>
+      <td>名字</td>
+      <td colspan="3">getPageStatisticsList</td>
     </tr>
   
 
@@ -7121,6 +7487,106 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   
   </table>
   
+  <h3 data-id="api_shakearound__updateBeaconGroup">
+    updateBeaconGroup
+  </h3>
+
+  <p>编辑分组信息<br />接口说明：<br />编辑设备分组信息，目前只能修改分组名。<br />group:<br />{<br />  group_id: 123,<br />  group_name: &#39;test update&#39;<br />}<br />Examples:</p><pre><code>api.updateBeaconGroup(group, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+  &quot;data&quot; : {
+    &quot;group_id&quot;: 123,
+    &quot;group_name&quot;: &#39;test update&#39;
+  },
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;success.&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">make()</td>
+    </tr>
+  
+
+    <tr>
+      <td>名字</td>
+      <td colspan="3">updateBeaconGroup</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>group(Object)</td>
+      <td colspan="2"><p>分组信息</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_shakearound__deleteBeaconGroup">
+    deleteBeaconGroup
+  </h3>
+
+  <p>删除分组信息<br />接口说明：<br />删除设备分组，若分组中还存在设备，则不能删除成功。需把设备移除以后，才能删除。<br />group:<br />{<br />  group_id: 123<br />}<br />Examples:</p><pre><code>api.deleteBeaconGroup(group_id, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+  &quot;data&quot; : {
+  },
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;success.&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">make()</td>
+    </tr>
+  
+
+    <tr>
+      <td>名字</td>
+      <td colspan="3">deleteBeaconGroup</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>group(Object)</td>
+      <td colspan="2"><p>分组信息</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
   <h3 data-id="api_shakearound__addGroupBeacons">
     addGroupBeacons
   </h3>
@@ -7162,6 +7628,67 @@ api.sendNews(&#39;openid&#39;, articles, callback);
     <tr>
       <td>名字</td>
       <td colspan="3">addGroupBeacons</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>options(Object)</td>
+      <td colspan="2"><p>请求参数</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_shakearound__deleteGroupBeacons">
+    deleteGroupBeacons
+  </h3>
+
+  <p>从分组中移除设备<br />接口说明：<br />从分组中移除设备，每次删除操作的上限为1000。<br />Options:</p><pre><code>{
+ &quot;group_id&quot;: 123,
+ &quot;device_identifier&quot;: [
+   {
+     // 设备编号，若填了UUID、major、minor，则可不填设备编号，若二者都填，则以设备编号为优先
+     &quot;device_id&quot;: 10011,
+     &quot;uuid&quot;: &quot;FDA50693-A4E2-4FB1-AFCF-C6EB07647825&quot;,
+     &quot;major&quot;: 1002,
+     &quot;minor&quot;: 1223
+   }
+ ]
+}
+</code></pre><p>Examples:</p><pre><code>api.deleteGroupBeacons(options, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+  &quot;data&quot; : {
+  },
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;success.&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">make()</td>
+    </tr>
+  
+
+    <tr>
+      <td>名字</td>
+      <td colspan="3">deleteGroupBeacons</td>
     </tr>
   
 
