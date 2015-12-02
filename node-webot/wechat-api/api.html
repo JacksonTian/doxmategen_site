@@ -38,7 +38,7 @@
     </nav>
     <header class="jumbotron subhead">
       <div class="container">
-        <h1>wechat-api <small>Version: 1.20.0 By @Jackson Tian</small></h1>
+        <h1>wechat-api <small>Version: 1.21.0 By @Jackson Tian</small></h1>
         <p class="lead">
           微信公共平台Node库 API
         </p>
@@ -64,6 +64,10 @@
 				<div class="accordion-body collapse" id="collapse_api_card">
 					<div class="accordion-inner">
 					<ul class="indexs">
+					
+						<li>
+							<a href="#api_card__make">make</a>
+						</li>
 					
 						<li>
 							<a href="#api_card__make">make</a>
@@ -633,6 +637,10 @@
 					
 						<li>
 							<a href="#api_message_exports_sendNews">sendNews</a>
+						</li>
+					
+						<li>
+							<a href="#api_message_exports_sendMpNews">sendMpNews</a>
 						</li>
 					
 						<li>
@@ -1346,6 +1354,12 @@
     </li>
 
     <li>
+      <a href="#api_card__activateMembercardUserForm">
+        activateMembercardUserForm
+      </a>
+    </li>
+
+    <li>
       <a href="#api_card__importCustomizedCodes">
         importCustomizedCodes
       </a>
@@ -1515,6 +1529,51 @@
       <td>参数</td>
       <td>expire_seconds(number)</td>
       <td colspan="2"><p>二维码的有效时间，范围是60 ~ 1800秒。不填默认为永久有效。</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_card__activateMembercardUserForm">
+    activateMembercardUserForm
+  </h3>
+
+  <p>设置开卡字段接口</p><pre><code>Examples:
+</code></pre><p>api.activateMembercardUserForm(info, callback);</p><pre><code>Callback:
+
+- `err`, 调用失败时得到的异常
+- `result`, 调用正常时得到的对象
+
+Result:
+</code></pre><p>{<br /> &quot;errcode&quot;:0,<br /> &quot;errmsg&quot;:&quot;ok&quot;<br />}<br />```</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">make()</td>
+    </tr>
+  
+
+    <tr>
+      <td>名字</td>
+      <td colspan="3">activateMembercardUserForm</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>info(Object)</td>
+      <td colspan="2"><p>参数</p></td>
     </tr>
   
 
@@ -4838,6 +4897,12 @@ api.uploadVideoMaterial(&#39;filepath&#39;, description, callback);
     </li>
 
     <li>
+      <a href="#api_message_exports_sendMpNews">
+        sendMpNews
+      </a>
+    </li>
+
+    <li>
       <a href="#api_message_exports_sendCard">
         sendCard
       </a>
@@ -5084,7 +5149,7 @@ api.sendMusic(&#39;openid&#39;, music, callback);
     sendNews
   </h3>
 
-  <p>客服消息，发送图文消息<br />详细细节 <a href="http://mp.weixin.qq.com/wiki/1/70a29afed17f56d537c833f89be979c9.html#.E5.AE.A2.E6.9C.8D.E6.8E.A5.E5.8F.A3-.E5.8F.91.E6.B6.88.E6.81.AF">http://mp.weixin.qq.com/wiki/1/70a29afed17f56d537c833f89be979c9.html#.E5.AE.A2.E6.9C.8D.E6.8E.A5.E5.8F.A3-.E5.8F.91.E6.B6.88.E6.81.AF</a><br />Examples:</p><pre><code>var articles = [
+  <p>客服消息，发送图文消息（点击跳转到外链）<br />详细细节 <a href="http://mp.weixin.qq.com/wiki/1/70a29afed17f56d537c833f89be979c9.html#.E5.AE.A2.E6.9C.8D.E6.8E.A5.E5.8F.A3-.E5.8F.91.E6.B6.88.E6.81.AF">http://mp.weixin.qq.com/wiki/1/70a29afed17f56d537c833f89be979c9.html#.E5.AE.A2.E6.9C.8D.E6.8E.A5.E5.8F.A3-.E5.8F.91.E6.B6.88.E6.81.AF</a><br />Examples:</p><pre><code>var articles = [
  {
    &quot;title&quot;:&quot;Happy Day&quot;,
    &quot;description&quot;:&quot;Is Really A Happy Day&quot;,
@@ -5124,6 +5189,50 @@ api.sendNews(&#39;openid&#39;, articles, callback);
       <td>参数</td>
       <td>articles(Array)</td>
       <td colspan="2"><p>图文列表</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_message_exports_sendMpNews">
+    sendMpNews
+  </h3>
+
+  <p>客服消息，发送图文消息（点击跳转到图文消息页面）<br />详细细节 <a href="http://mp.weixin.qq.com/wiki/14/d9be34fe03412c92517da10a5980e7ee.html#.E5.AE.A2.E6.9C.8D.E6.8E.A5.E5.8F.A3-.E5.8F.91.E6.B6.88.E6.81.AF">http://mp.weixin.qq.com/wiki/14/d9be34fe03412c92517da10a5980e7ee.html#.E5.AE.A2.E6.9C.8D.E6.8E.A5.E5.8F.A3-.E5.8F.91.E6.B6.88.E6.81.AF</a><br />Examples:</p><pre><code>api.sendMpNews(&#39;openid&#39;, &#39;mediaId&#39; , callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.sendMpNews()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>openid(String)</td>
+      <td colspan="2"><p>用户的openid</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>mediaId(String)</td>
+      <td colspan="2"><p>图文消息的id</p></td>
     </tr>
   
 
@@ -10228,17 +10337,32 @@ api.addTemplate(templateIdShort, callback);
     sendTemplate
   </h3>
 
-  <p>发送模板消息<br />Examples:</p><pre><code>var templateId: &#39;模板id&#39;;
+  <p>发送模板消息<br />详细细节: <a href="http://mp.weixin.qq.com/wiki/17/304c1885ea66dbedf7dc170d84999a9d.html">http://mp.weixin.qq.com/wiki/17/304c1885ea66dbedf7dc170d84999a9d.html</a><br />Examples:</p><pre><code>var templateId: &#39;模板id&#39;;
 // URL置空，则在发送后,点击模板消息会进入一个空白页面（ios）, 或无法点击（android）
 var url: &#39;http://weixin.qq.com/download&#39;;
-var topcolor = &#39;#FF0000&#39;; // 顶部颜色
 var data = {
- user:{
-   &quot;value&quot;:&#39;黄先生&#39;,
-   &quot;color&quot;:&quot;#173177&quot;
- }
+   &quot;first&quot;: {
+     &quot;value&quot;:&quot;恭喜你购买成功！&quot;,
+     &quot;color&quot;:&quot;#173177&quot;
+   },
+   &quot;keyword1&quot;:{
+     &quot;value&quot;:&quot;巧克力&quot;,
+     &quot;color&quot;:&quot;#173177&quot;
+   },
+   &quot;keyword2&quot;: {
+     &quot;value&quot;:&quot;39.8元&quot;,
+     &quot;color&quot;:&quot;#173177&quot;
+   },
+   &quot;keyword3&quot;: {
+     &quot;value&quot;:&quot;2014年9月22日&quot;,
+     &quot;color&quot;:&quot;#173177&quot;
+   },
+   &quot;remark&quot;:{
+     &quot;value&quot;:&quot;欢迎再次购买！&quot;,
+     &quot;color&quot;:&quot;#173177&quot;
+   }
 };
-api.sendTemplate(&#39;openid&#39;, templateId, url, topColor, data, callback);
+api.sendTemplate(&#39;openid&#39;, templateId, url, data, callback);
 </code></pre><p>Callback:</p><ul>
 <li><code>err</code>, 调用失败时得到的异常</li>
 <li><code>result</code>, 调用正常时得到的对象</li>
@@ -10272,13 +10396,6 @@ api.sendTemplate(&#39;openid&#39;, templateId, url, topColor, data, callback);
       <td>参数</td>
       <td>url(String)</td>
       <td colspan="2"><p>URL置空，则在发送后，点击模板消息会进入一个空白页面（ios），或无法点击（android）</p></td>
-    </tr>
-  
-
-    <tr>
-      <td>参数</td>
-      <td>topColor(String)</td>
-      <td colspan="2"><p>顶部颜色</p></td>
     </tr>
   
 
