@@ -38,7 +38,7 @@
     </nav>
     <header class="jumbotron subhead">
       <div class="container">
-        <h1>co-wechat-api <small>Version: 2.0.1 By @Jackson Tian</small></h1>
+        <h1>co-wechat-api <small>Version: 2.3.0 By @Jackson Tian</small></h1>
         <p class="lead">
           微信公共平台Node库API，ES6版本
         </p>
@@ -561,6 +561,18 @@
 							<a href="#api_menu_exports_getMenuConfig">getMenuConfig</a>
 						</li>
 					
+						<li>
+							<a href="#api_menu_exports_addConditionalMenu">addConditionalMenu</a>
+						</li>
+					
+						<li>
+							<a href="#api_menu_exports_delConditionalMenu">delConditionalMenu</a>
+						</li>
+					
+						<li>
+							<a href="#api_menu_exports_tryConditionalMenu">tryConditionalMenu</a>
+						</li>
+					
 					</ul>
 					</div>
 				</div>
@@ -605,6 +617,10 @@
 					
 						<li>
 							<a href="#api_message_exports_sendNews">sendNews</a>
+						</li>
+					
+						<li>
+							<a href="#api_message_exports_getAutoreply">getAutoreply</a>
 						</li>
 					
 					</ul>
@@ -1029,6 +1045,10 @@
 					
 						<li>
 							<a href="#api_shop_order_exports_setExpressForOrder">setExpressForOrder</a>
+						</li>
+					
+						<li>
+							<a href="#api_shop_order_exports_setNoDeliveryForOrder">setNoDeliveryForOrder</a>
 						</li>
 					
 						<li>
@@ -3464,6 +3484,24 @@ api.uploadVideoMaterial(&#39;filepath&#39;, description);
       </a>
     </li>
 
+    <li>
+      <a href="#api_menu_exports_addConditionalMenu">
+        addConditionalMenu
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_menu_exports_delConditionalMenu">
+        delConditionalMenu
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_menu_exports_tryConditionalMenu">
+        tryConditionalMenu
+      </a>
+    </li>
+
   </ul>
   <hr />
 
@@ -3591,6 +3629,149 @@ api.uploadVideoMaterial(&#39;filepath&#39;, description);
   
   </table>
   
+  <h3 data-id="api_menu_exports_addConditionalMenu">
+    addConditionalMenu
+  </h3>
+
+  <p>创建个性化自定义菜单<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/0/c48ccd12b69ae023159b4bfaa7c39c20.html">http://mp.weixin.qq.com/wiki/0/c48ccd12b69ae023159b4bfaa7c39c20.html</a> * Menu:</p><pre><code>{
+ &quot;button&quot;:[
+ { 
+     &quot;type&quot;:&quot;click&quot;,
+     &quot;name&quot;:&quot;今日歌曲&quot;,
+     &quot;key&quot;:&quot;V1001_TODAY_MUSIC&quot; 
+ },
+ { 
+   &quot;name&quot;:&quot;菜单&quot;,
+   &quot;sub_button&quot;:[
+   { 
+     &quot;type&quot;:&quot;view&quot;,
+     &quot;name&quot;:&quot;搜索&quot;,
+     &quot;url&quot;:&quot;http://www.soso.com/&quot;
+   },
+   {
+     &quot;type&quot;:&quot;view&quot;,
+     &quot;name&quot;:&quot;视频&quot;,
+     &quot;url&quot;:&quot;http://v.qq.com/&quot;
+   },
+   {
+     &quot;type&quot;:&quot;click&quot;,
+     &quot;name&quot;:&quot;赞一下我们&quot;,
+     &quot;key&quot;:&quot;V1001_GOOD&quot;
+   }]
+}],
+&quot;matchrule&quot;:{
+ &quot;group_id&quot;:&quot;2&quot;,
+ &quot;sex&quot;:&quot;1&quot;,
+ &quot;country&quot;:&quot;中国&quot;,
+ &quot;province&quot;:&quot;广东&quot;,
+ &quot;city&quot;:&quot;广州&quot;,
+ &quot;client_platform_type&quot;:&quot;2&quot;
+ }
+}
+</code></pre><p>Examples:</p><pre><code>var result = yield* api.addConditionalMenu(menu);
+</code></pre><p>Result:</p><pre><code>{&quot;errcode&quot;:0,&quot;errmsg&quot;:&quot;ok&quot;}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.addConditionalMenu()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>menu(Object)</td>
+      <td colspan="2"><p>菜单对象</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_menu_exports_delConditionalMenu">
+    delConditionalMenu
+  </h3>
+
+  <p>删除个性化自定义菜单<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/0/c48ccd12b69ae023159b4bfaa7c39c20.html">http://mp.weixin.qq.com/wiki/0/c48ccd12b69ae023159b4bfaa7c39c20.html</a> * Menu:</p><pre><code>{
+ &quot;menuid&quot;:&quot;208379533&quot;
+}
+</code></pre><p>Examples:</p><pre><code>var result = yield* api.delConditionalMenu(menuid);
+</code></pre><p>Result:</p><pre><code>{&quot;errcode&quot;:0,&quot;errmsg&quot;:&quot;ok&quot;}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.delConditionalMenu()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>menuid(String)</td>
+      <td colspan="2"><p>菜单id</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_menu_exports_tryConditionalMenu">
+    tryConditionalMenu
+  </h3>
+
+  <p>测试个性化自定义菜单<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/0/c48ccd12b69ae023159b4bfaa7c39c20.html">http://mp.weixin.qq.com/wiki/0/c48ccd12b69ae023159b4bfaa7c39c20.html</a> * Menu:</p><pre><code>{
+ &quot;user_id&quot;:&quot;nickma&quot;
+}
+</code></pre><p>Examples:</p><pre><code>var result = yield* api.tryConditionalMenu(user_id);
+</code></pre><p>Result:</p><pre><code>{
+   &quot;button&quot;: [
+       {
+           &quot;type&quot;: &quot;view&quot;, 
+           &quot;name&quot;: &quot;tx&quot;, 
+           &quot;url&quot;: &quot;http://www.qq.com/&quot;, 
+           &quot;sub_button&quot;: [ ]
+       }, 
+       {
+           &quot;type&quot;: &quot;view&quot;, 
+           &quot;name&quot;: &quot;tx&quot;, 
+           &quot;url&quot;: &quot;http://www.qq.com/&quot;, 
+           &quot;sub_button&quot;: [ ]
+       }, 
+       {
+           &quot;type&quot;: &quot;view&quot;, 
+           &quot;name&quot;: &quot;tx&quot;, 
+           &quot;url&quot;: &quot;http://www.qq.com/&quot;, 
+           &quot;sub_button&quot;: [ ]
+       }
+   ]
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.tryConditionalMenu()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>user_id(String)</td>
+      <td colspan="2"><p>user_id可以是粉丝的OpenID，也可以是粉丝的微信号。</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
 </section>
 
       
@@ -3631,6 +3812,12 @@ api.uploadVideoMaterial(&#39;filepath&#39;, description);
     <li>
       <a href="#api_message_exports_sendNews">
         sendNews
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_message_exports_getAutoreply">
+        getAutoreply
       </a>
     </li>
 
@@ -3856,6 +4043,93 @@ api.sendNews(&#39;openid&#39;, articles);
       <td>参数</td>
       <td>articles(Array)</td>
       <td colspan="2"><p>图文列表</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_message_exports_getAutoreply">
+    getAutoreply
+  </h3>
+
+  <p>获取自动回复规则<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/19/ce8afc8ae7470a0d7205322f46a02647.html">http://mp.weixin.qq.com/wiki/19/ce8afc8ae7470a0d7205322f46a02647.html</a><br />Examples:</p><pre><code>var result = yield* api.getAutoreply();
+</code></pre><p>Result:</p><pre><code>{
+&quot;is_add_friend_reply_open&quot;: 1,
+&quot;is_autoreply_open&quot;: 1,
+&quot;add_friend_autoreply_info&quot;: {
+    &quot;type&quot;: &quot;text&quot;,
+    &quot;content&quot;: &quot;Thanks for your attention!&quot;
+},
+&quot;message_default_autoreply_info&quot;: {
+    &quot;type&quot;: &quot;text&quot;,
+    &quot;content&quot;: &quot;Hello, this is autoreply!&quot;
+},
+&quot;keyword_autoreply_info&quot;: {
+    &quot;list&quot;: [
+        {
+            &quot;rule_name&quot;: &quot;autoreply-news&quot;,
+            &quot;create_time&quot;: 1423028166,
+            &quot;reply_mode&quot;: &quot;reply_all&quot;,
+            &quot;keyword_list_info&quot;: [
+                {
+                    &quot;type&quot;: &quot;text&quot;,
+                    &quot;match_mode&quot;: &quot;contain&quot;,
+                    &quot;content&quot;: &quot;news测试&quot;//此处content即为关键词内容
+                }
+            ],
+            &quot;reply_list_info&quot;: [
+                {
+                    &quot;type&quot;: &quot;news&quot;,
+                    &quot;news_info&quot;: {
+                        &quot;list&quot;: [
+                            {
+                                &quot;title&quot;: &quot;it&#39;s news&quot;,
+                                &quot;author&quot;: &quot;jim&quot;,
+                                &quot;digest&quot;: &quot;it&#39;s digest&quot;,
+                                &quot;show_cover&quot;: 1,
+                                &quot;cover_url&quot;: &quot;http://mmbiz.qpic.cn/mmbiz/GE7et87vE9vicuCibqXsX9GPPLuEtBfXfKbE8sWdt2DDcL0dMfQWJWTVn1N8DxI0gcRmrtqBOuwQHeuPKmFLK0ZQ/0&quot;,
+                                &quot;content_url&quot;: &quot;http://mp.weixin.qq.com/s?__biz=MjM5ODUwNTM3Ng==&amp;mid=203929886&amp;idx=1&amp;sn=628f964cf0c6d84c026881b6959aea8b#rd&quot;,
+                                &quot;source_url&quot;: &quot;http://www.url.com&quot;
+                            }
+                        ]
+                    }
+                },
+                {
+                    ....
+                }
+            ]
+        },
+        {
+            &quot;rule_name&quot;: &quot;autoreply-voice&quot;,
+            &quot;create_time&quot;: 1423027971,
+            &quot;reply_mode&quot;: &quot;random_one&quot;,
+            &quot;keyword_list_info&quot;: [
+                {
+                    &quot;type&quot;: &quot;text&quot;,
+                    &quot;match_mode&quot;: &quot;contain&quot;,
+                    &quot;content&quot;: &quot;voice测试&quot;
+                }
+            ],
+            &quot;reply_list_info&quot;: [
+                {
+                    &quot;type&quot;: &quot;voice&quot;,
+                    &quot;content&quot;: &quot;NESsxgHEvAcg3egJTtYj4uG1PTL6iPhratdWKDLAXYErhN6oEEfMdVyblWtBY5vp&quot;
+                }
+            ]
+        },
+        ...
+    ]
+}
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getAutoreply()</td>
     </tr>
   
 
@@ -6515,6 +6789,12 @@ Result:
     </li>
 
     <li>
+      <a href="#api_shop_order_exports_setNoDeliveryForOrder">
+        setNoDeliveryForOrder
+      </a>
+    </li>
+
+    <li>
       <a href="#api_shop_order_exports_closeOrder">
         closeOrder
       </a>
@@ -6675,7 +6955,7 @@ Result:
     setExpressForOrder
   </h3>
 
-  <p>设置订单发货信息<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.setExpressForOrder(orderId, deliveryCompany, deliveryTrackNo);
+  <p>设置订单发货信息<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.setExpressForOrder(orderId, deliveryCompany, deliveryTrackNo, isOthers);
 </code></pre><p>Result:</p><pre><code>{
  &quot;errcode&quot;: 0,
  &quot;errmsg&quot;: &quot;success&quot;
@@ -6709,6 +6989,43 @@ Result:
       <td>参数</td>
       <td>deliveryTrackNo(String)</td>
       <td colspan="2"><p>运单Id</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>isOthers(Number)</td>
+      <td colspan="2"><p>是否为6.4.5表之外的其它物流公司(0-否，1-是，无该字段默认为不是其它物流公司)</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_shop_order_exports_setNoDeliveryForOrder">
+    setNoDeliveryForOrder
+  </h3>
+
+  <p>设置订单发货信息－不需要物流配送<br />适用于不需要实体物流配送的虚拟商品，完成本操作后订单即完成。<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.setNoDeliveryForOrder(orderId);
+</code></pre><p>Result:</p><pre><code>{
+ &quot;errcode&quot;: 0,
+ &quot;errmsg&quot;: &quot;success&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.setNoDeliveryForOrder()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>orderId(String)</td>
+      <td colspan="2"><p>订单Id</p></td>
     </tr>
   
 
