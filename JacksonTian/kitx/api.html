@@ -47,46 +47,136 @@
 
 <div class="container content">
   <div class="row">
-  	<div class="col-md-3">
+    <div class="col-md-3 bs-docs-sidebar">
       <ul class="nav nav-list bs-docs-sidenav affix">
 
-  <li class="level_2">
-    <a href="#index_Installation" title="Installation">
-      <i class="icon-chevron-right"></i>Installation
-    </a>
-  </li>
-
-  <li class="level_2">
-    <a href="#index_Usage" title="Usage">
-      <i class="icon-chevron-right"></i>Usage
-    </a>
-  </li>
-
-  <li class="level_2">
-    <a href="#index_API" title="API">
-      <i class="icon-chevron-right"></i>API
-    </a>
+  <li>
+		<div class="accordion" id="index">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_index" class="api_side_link">index</a>
+					<div class="accordion-marker">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#index" href="#collapse_index">
+							 <span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_index">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#index_exports_loadJSONSync">loadJSONSync</a>
+						</li>
+					
+						<li>
+							<a href="#index_exports_encode">encode</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
   </li>
 
 </ul>
 
     </div>
     <div class="col-md-9">
-      <section>
-        <h1>kitx</h1>
-<p>A Node.js toolkit.</p><h2>Installation</h2>
-<pre><code class="lang-sh">$ npm install kitx --save
-</code></pre>
-<h2>Usage</h2>
-<p>Require it:</p><pre><code class="lang-js">var kit = require(&#39;kitx&#39;);
-</code></pre>
-<h2>API</h2>
-<p>See</p><ul>
-<li>loadJSONSync(filepath)</li>
-</ul>
-
-      </section>
+      
+        <section id="api_index" class="api">
+  <h2>index: API索引</h2>
+  <ul class="indexs">
   
+    <li>
+      <a href="#index_exports_loadJSONSync">
+        loadJSONSync
+      </a>
+    </li>
+
+    <li>
+      <a href="#index_exports_encode">
+        encode
+      </a>
+    </li>
+
+  </ul>
+  <hr />
+
+  <h3 data-id="index_exports_loadJSONSync">
+    loadJSONSync
+  </h3>
+
+  <p>Load .json file synchronous.</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.loadJSONSync()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>filename(String)</td>
+      <td colspan="2"><p>absolute file path</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Object</td>
+      <td colspan="2"><p>a parsed object</p></td> </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="index_exports_encode">
+    encode
+  </h3>
+
+  <p>Encoding a string to Buffer safely</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.encode()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>str(String)</td>
+      <td colspan="2"><p>string.</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>encoding.(String)</td>
+      <td colspan="2"><p>optional.</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>encoded(Buffer)</td>
+      <td colspan="2"><p>buffer</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
     </div>
   </div>
 </div>
