@@ -38,7 +38,7 @@
     </nav>
     <header class="jumbotron subhead">
       <div class="container">
-        <h1>ots2 <small>Version: 1.0.0 By @Jackson Tian</small></h1>
+        <h1>ots2 <small>Version: 1.2.2 By @Jackson Tian</small></h1>
         <p class="lead">
           OTS(2014-08-08) client for Node.js(ES6)
         </p>
@@ -136,6 +136,10 @@
 					<ul class="indexs">
 					
 						<li>
+							<a href="#client__Client">Client</a>
+						</li>
+					
+						<li>
 							<a href="#client_exports_createClient">createClient</a>
 						</li>
 					
@@ -163,36 +167,6 @@
 					
 						<li>
 							<a href="#ots2_module_exports">exports</a>
-						</li>
-					
-					</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-  </li>
-
-  <li>
-		<div class="accordion" id="util">
-			<div class="accordion-group">
-				<div class="accordion-heading">
-					<a href="#api_util" class="api_side_link">util</a>
-					<div class="accordion-marker">
-						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#util" href="#collapse_util">
-							 <span class="glyphicon glyphicon-chevron-right"></span>
-						</a>
-					</div>
-				</div>
-				<div class="accordion-body collapse" id="collapse_util">
-					<div class="accordion-inner">
-					<ul class="indexs">
-					
-						<li>
-							<a href="#util_exports_sha1">sha1</a>
-						</li>
-					
-						<li>
-							<a href="#util_exports_md5">md5</a>
 						</li>
 					
 					</ul>
@@ -286,15 +260,13 @@
   </ul>
   <hr />
 
-
   <h3 data-id="actions_exports_createTable">
     createTable
   </h3>
 
-
   <p>根据给定的表结构信息创建相应的表。</p><p>Example:</p><pre><code>var keys = [{ &#39;name&#39;: &#39;uid&#39;, &#39;type&#39;: &#39;STRING&#39; }];
 var capacityUnit = {read: 1, write: 1};
-yield* client.createTable(&#39;metrics&#39;, keys, capacityUnit);
+yield client.createTable(&#39;metrics&#39;, keys, capacityUnit);
 </code></pre>
 
   <p>方法签名</p>
@@ -336,14 +308,12 @@ yield* client.createTable(&#39;metrics&#39;, keys, capacityUnit);
   
   </table>
   
-
   <h3 data-id="actions_exports_updateTable">
     updateTable
   </h3>
 
-
   <p>更新指定表的预留读吞吐量或预留写吞吐量设置，新设定将于更新成功一分钟内生效。</p><p>Example:</p><pre><code>var capacityUnit = {read: 2, write: 1};
-yield* client.updateTable(&#39;metrics&#39;, capacityUnit);
+yield client.updateTable(&#39;metrics&#39;, capacityUnit);
 </code></pre>
 
   <p>方法签名</p>
@@ -378,13 +348,11 @@ yield* client.updateTable(&#39;metrics&#39;, capacityUnit);
   
   </table>
   
-
   <h3 data-id="actions_exports_listTable">
     listTable
   </h3>
 
-
-  <p>获取当前实例下已创建的所有表的表名。</p><p>Example:</p><pre><code>yield* client.listTable();
+  <p>获取当前实例下已创建的所有表的表名。</p><p>Example:</p><pre><code>yield client.listTable();
 </code></pre>
 
   <p>方法签名</p>
@@ -405,13 +373,11 @@ yield* client.updateTable(&#39;metrics&#39;, capacityUnit);
   
   </table>
   
-
   <h3 data-id="actions_exports_describeTable">
     describeTable
   </h3>
 
-
-  <p>查询指定表的结构信息和预留读写吞吐量设置信息。<br />Example:</p><pre><code>yield* client.describeTable(&#39;metrics&#39;);
+  <p>查询指定表的结构信息和预留读写吞吐量设置信息。<br />Example:</p><pre><code>yield client.describeTable(&#39;metrics&#39;);
 </code></pre>
 
   <p>方法签名</p>
@@ -439,13 +405,11 @@ yield* client.updateTable(&#39;metrics&#39;, capacityUnit);
   
   </table>
   
-
   <h3 data-id="actions_exports_deleteTable">
     deleteTable
   </h3>
 
-
-  <p>删除本实例下指定的表<br />Example:</p><pre><code>yield* client.deleteTable(&#39;metrics&#39;);
+  <p>删除本实例下指定的表<br />Example:</p><pre><code>yield client.deleteTable(&#39;metrics&#39;);
 </code></pre>
 
   <p>方法签名</p>
@@ -473,11 +437,9 @@ yield* client.updateTable(&#39;metrics&#39;, capacityUnit);
   
   </table>
   
-
   <h3 data-id="actions_exports_putRow">
     putRow
   </h3>
-
 
   <p>插入数据到指定的行，如果该行不存在，则新增一行；若该行存在，则覆盖原有行。</p><p>Example:</p>
 
@@ -506,11 +468,9 @@ yield* client.updateTable(&#39;metrics&#39;, capacityUnit);
   
   </table>
   
-
   <h3 data-id="actions_exports_getRow">
     getRow
   </h3>
-
 
   <p>根据给定的主键读取单行数据。</p><p>Example:<br /><code>
 </code></p>
@@ -540,11 +500,9 @@ yield* client.updateTable(&#39;metrics&#39;, capacityUnit);
   
   </table>
   
-
   <h3 data-id="actions_exports_updateRow">
     updateRow
   </h3>
-
 
   <p>更新指定行的数据，如果该行不存在，则新增一行；<br />若该行存在，则根据请求的内容在这一行中新增、修改或者删除指定列的值。</p><p>Example:<br /><code>
 </code></p>
@@ -574,11 +532,9 @@ yield* client.updateTable(&#39;metrics&#39;, capacityUnit);
   
   </table>
   
-
   <h3 data-id="actions_exports_deleteRow">
     deleteRow
   </h3>
-
 
   <p>删除一行数据。</p><p>Example:<br /><code>
 </code></p>
@@ -608,14 +564,26 @@ yield* client.updateTable(&#39;metrics&#39;, capacityUnit);
   
   </table>
   
-
   <h3 data-id="actions_exports_getRange">
     getRange
   </h3>
 
-
-  <p>读取指定主键范围内的数据。</p><p>Example:<br /><code>
-</code></p>
+  <p>读取指定主键范围内的数据。</p><p>Example:</p><pre><code>var start = {
+  uid: OTS.InfMin
+};
+var end = {
+  uid: OTS.InfMax
+};
+var request = {
+  table_name: &#39;metrics&#39;,
+  direction: OTS.Direction.FORWARD,
+  columns_to_get: [&#39;test&#39;],
+  limit: 4,
+  inclusive_start_primary_key: start,
+  exclusive_end_primary_key: end
+};
+var response = yield client.getRange(request);
+</code></pre>
 
   <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
@@ -642,14 +610,32 @@ yield* client.updateTable(&#39;metrics&#39;, capacityUnit);
   
   </table>
   
-
   <h3 data-id="actions_exports_batchGetRow">
     batchGetRow
   </h3>
 
-
-  <p>批量读取一个或多个表中的若干行数据。<br />BatchGetRow操作可视为多个GetRow操作的集合，各个操作独立执行，独立返回结果，独立计算服务能力单元。<br />与执行大量的GetRow操作相比，使用BatchGetRow操作可以有效减少请求的响应时间，提高数据的读取速率。</p><p>Example:<br /><code>
-</code></p>
+  <p>批量读取一个或多个表中的若干行数据。<br />BatchGetRow操作可视为多个GetRow操作的集合，各个操作独立执行，独立返回结果，<br />独立计算服务能力单元。与执行大量的GetRow操作相比，使用BatchGetRow操作可以有效减少<br />请求的响应时间，提高数据的读取速率。</p><p>Example:</p><pre><code>var tables = [
+  {
+    table_name: &#39;metrics&#39;,
+    put_rows: [
+      {
+        condition: {
+          row_existence: OTS.RowExistenceExpectation.IGNORE
+        },
+        primary_key: {
+          uid: &#39;test_uid&#39;
+        },
+        attribute_columns: {
+          test: &#39;test_value&#39;
+        }
+      }
+    ],
+    update_rows: [],
+    delete_rows: []
+  }
+];
+var response = yield client.batchWriteRow(tables);
+</code></pre>
 
   <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
@@ -676,14 +662,13 @@ yield* client.updateTable(&#39;metrics&#39;, capacityUnit);
   
   </table>
   
-
   <h3 data-id="actions_exports_batchWriteRow">
     batchWriteRow
   </h3>
 
+  <p>批量插入，修改或删除一个或多个表中的若干行数据。<br />BatchWriteRow操作可视为多个PutRow、UpdateRow、DeleteRow操作的集合，各个操作独立执行，独立返回结果，独立计算服务能力单元。<br />与执行大量的单行写操作相比，使用BatchWriteRow操作可以有效减少请求的响应时间，提高数据的写入速率。</p><p>Example:</p><pre><code>
 
-  <p>批量插入，修改或删除一个或多个表中的若干行数据。<br />BatchWriteRow操作可视为多个PutRow、UpdateRow、DeleteRow操作的集合，各个操作独立执行，独立返回结果，独立计算服务能力单元。<br />与执行大量的单行写操作相比，使用BatchWriteRow操作可以有效减少请求的响应时间，提高数据的写入速率。</p><p>Example:<br /><code>
-</code></p>
+</code></pre>
 
   <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
@@ -718,6 +703,12 @@ yield* client.updateTable(&#39;metrics&#39;, capacityUnit);
   <ul class="indexs">
   
     <li>
+      <a href="#client__Client">
+        Client
+      </a>
+    </li>
+
+    <li>
       <a href="#client_exports_createClient">
         createClient
       </a>
@@ -726,11 +717,41 @@ yield* client.updateTable(&#39;metrics&#39;, capacityUnit);
   </ul>
   <hr />
 
+  <h3 data-id="client__Client">
+    Client
+  </h3>
 
+  <p>OTS Client</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>函数</td>
+      <td colspan="3">Client()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>opts(Object)</td>
+      <td colspan="2"><ul>
+<li>instance</li>
+<li>region</li>
+<li>accessKeyID</li>
+<li>accessKeySecret</li>
+<li>keepAliveMsecs {Number} http(s) agent keep socket conn time, unit ms</li>
+</ul>
+</td>
+    </tr>
+  
+
+  
+  </table>
+  
   <h3 data-id="client_exports_createClient">
     createClient
   </h3>
-
 
   <p>根据选项创建实例的客户端</p><p>Example:</p><pre><code>var ots = require(&#39;ots2&#39;);
 var client = ots.createClient({
@@ -760,72 +781,6 @@ var client = ots.createClient({
   
   </table>
   
-
-
-  <p>生成不同类型的Column</p><p>Example:</p><pre><code>ots.createStringColumn(&#39;name&#39;, &#39;value&#39;);
-ots.createBinaryColumn(&#39;name&#39;, bin);
-ots.createBooleanColumn(&#39;name&#39;, true);
-ots.createDoubleColumn(&#39;name&#39;, 1.1);
-ots.createIntegerColumn(&#39;name&#39;, 10);
-ots.createInfMinColumn(&#39;name&#39;);
-ots.createInfMaxColumn(&#39;name&#39;);
-</code></pre>
-
-  <p>方法签名</p>
-  <table class="table table-striped table-bordered table-hover table-condensed">
-  
-
-    <tr>
-      <td>name</td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  
-
-    <tr>
-      <td>参数</td>
-      <td>name(String)</td>
-      <td colspan="2"><p>column name</p></td>
-    </tr>
-  
-
-    <tr>
-      <td>参数</td>
-      <td>value(MIX)</td>
-      <td colspan="2"><p>column value</p></td>
-    </tr>
-  
-
-  
-  </table>
-  
-
-
-  <p>相关Enum类型</p><p>Example:</p><pre><code>ots.ColumnType = {
-   INF_MIN,
-   INF_MAX,
-   INTEGER,
-   STRING,
-   BOOLEAN,
-   DOUBLE,
-   BINARY
-}
-ots.RowExistenceExpectation = {
-   IGNORE,
-   EXPECT_EXIST,
-   EXPECT_NOT_EXIST }
-ots.OperationType: { PUT, DELETE }
-ots.Direction = { FORWARD, BACKWARD }
-</code></pre>
-
-  <p>方法签名</p>
-  <table class="table table-striped table-bordered table-hover table-condensed">
-  
-
-  
-  </table>
-  
 </section>
 
       
@@ -842,11 +797,9 @@ ots.Direction = { FORWARD, BACKWARD }
   </ul>
   <hr />
 
-
   <h3 data-id="ots2_module_ots2">
     ots2
   </h3>
-
 
   <p>ProtoBuf定义</p>
 
@@ -860,106 +813,9 @@ ots.Direction = { FORWARD, BACKWARD }
   
 
     <tr>
-      <td>name</td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>名字</td>
+      <td colspan="3">ots2</td>
     </tr>
-  
-
-  
-  </table>
-  
-</section>
-
-      
-        <section id="api_util" class="api">
-  <h2>util: API索引</h2>
-  <ul class="indexs">
-  
-    <li>
-      <a href="#util_exports_sha1">
-        sha1
-      </a>
-    </li>
-
-    <li>
-      <a href="#util_exports_md5">
-        md5
-      </a>
-    </li>
-
-  </ul>
-  <hr />
-
-
-  <h3 data-id="util_exports_sha1">
-    sha1
-  </h3>
-
-
-  <p>对字符串进行hmac sha1签名</p>
-
-  <p>方法签名</p>
-  <table class="table table-striped table-bordered table-hover table-condensed">
-  
-    <tr>
-      <td>方法</td>
-      <td colspan="3">exports.sha1()</td>
-    </tr>
-  
-
-    <tr>
-      <td>参数</td>
-      <td>input(String)</td>
-      <td colspan="2"><p>待签名的字符串内容</p></td>
-    </tr>
-  
-
-    <tr>
-      <td>参数</td>
-      <td>key(String)</td>
-      <td colspan="2"><p>签名所用key</p></td>
-    </tr>
-  
-
-    <tr>
-      <td>返回</td>
-      <td>String</td>
-      <td colspan="2"><p>按base64编码的签名</p></td> </tr>
-  
-
-  
-  </table>
-  
-
-  <h3 data-id="util_exports_md5">
-    md5
-  </h3>
-
-
-  <p>对字符串进行md5签名</p>
-
-  <p>方法签名</p>
-  <table class="table table-striped table-bordered table-hover table-condensed">
-  
-    <tr>
-      <td>方法</td>
-      <td colspan="3">exports.md5()</td>
-    </tr>
-  
-
-    <tr>
-      <td>参数</td>
-      <td>input(String)</td>
-      <td colspan="2"><p>待签名的字符串内容</p></td>
-    </tr>
-  
-
-    <tr>
-      <td>返回</td>
-      <td>String</td>
-      <td colspan="2"><p>按base64编码的签名</p></td> </tr>
   
 
   

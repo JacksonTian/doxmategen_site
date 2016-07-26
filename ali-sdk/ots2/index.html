@@ -38,7 +38,7 @@
     </nav>
     <header class="jumbotron subhead">
       <div class="container">
-        <h1>ots2 <small>Version: 1.0.0 By @Jackson Tian</small></h1>
+        <h1>ots2 <small>Version: 1.2.2 By @Jackson Tian</small></h1>
         <p class="lead">
           OTS(2014-08-08) client for Node.js(ES6)
         </p>
@@ -81,7 +81,7 @@
       <section>
         <h1>Aliyun OTS client for Node.js(ES6)</h1>
 <p>Aliyun OTS数据库服务Node.js客户端。</p><h2>OTS介绍</h2>
-<p>OTS是构建在阿里云飞天分布式系统之上的NoSQL数据库服务，提供海量结构化数据的存储和实时访问。OTS以实例和表的形式组织数据，通过数据分片和负载均衡技术，达到规模的无缝扩展。OTS向应用程序屏蔽底层硬件平台的故障和错误，能自动从各类错误中快速恢复，提供非常高的服务可用性。OTS管理的数据全部存储在SSD中并具有多个备份，提供了快速的访问性能和极高的数据可靠性。用户在使用OTS服务时，只需要按照预留和使用的资源进行付费，无需关心数据库的软硬件升级维护、集群缩容扩容等复杂问题。</p><p>更多细节请参见：<a href="http://docs.aliyun.com/?#/pub/ots/Getting-Started/OTSIntroduction">http://docs.aliyun.com/?#/pub/ots/Getting-Started/OTSIntroduction</a></p><h2>安装</h2>
+<p>OTS是构建在阿里云飞天分布式系统之上的NoSQL数据库服务，提供海量结构化数据的存储和实时访问。OTS以实例和表的形式组织数据，通过数据分片和负载均衡技术，达到规模的无缝扩展。OTS向应用程序屏蔽底层硬件平台的故障和错误，能自动从各类错误中快速恢复，提供非常高的服务可用性。OTS管理的数据全部存储在SSD中并具有多个备份，提供了快速的访问性能和极高的数据可靠性。用户在使用OTS服务时，只需要按照预留和使用的资源进行付费，无需关心数据库的软硬件升级维护、集群缩容扩容等复杂问题。</p><p>更多细节请参见：<a href="https://help.aliyun.com/product/27278.html">https://help.aliyun.com/product/27278.html</a></p><h2>安装</h2>
 <pre><code class="lang-sh">$ npm install ots2 --save
 </code></pre>
 <h2>使用</h2>
@@ -91,71 +91,66 @@ var client = ots.createClient({
   accessKeyID: &#39;&lt;YOUR ACCESSKEYID&gt;&#39;,
   accessKeySecret: &#39;&lt;YOUR ACCESSKEYSECRET&gt;&#39;,
   instance: &#39;&lt;YOUR INSTANCE&gt;&#39;,
-  region: &#39;&lt;YOUR REGION&gt;&#39;
+  region: &#39;&lt;YOUR REGION&gt;&#39;,
+  keepAliveMsecs: 1000, // default 1000
 });
 </code></pre>
 <h3>调用API</h3>
 <p>详细API文档请参见：<a href="http://doxmate.cool/ali-sdk/ots2/index.html">http://doxmate.cool/ali-sdk/ots2/index.html</a></p><p>所有表的操作</p><pre><code class="lang-js">// 列出所有表名
-yield* client.listTable();
+yield client.listTable();
 // 创建表
 var keys = [{ &#39;name&#39;: &#39;uid&#39;, &#39;type&#39;: &#39;STRING&#39; }];
 var capacityUnit = {read: 1, write: 1};
-var response = yield* client.createTable(&#39;metrics&#39;, keys, capacityUnit);
+var response = yield client.createTable(&#39;metrics&#39;, keys, capacityUnit);
 // 更新表
 var capacityUnit = {read: 2, write: 1};
-var response = yield* client.updateTable(&#39;metrics&#39;, capacityUnit);
+var response = yield client.updateTable(&#39;metrics&#39;, capacityUnit);
 // 查看表信息
-var response = yield* client.describeTable(&#39;metrics&#39;);
+var response = yield client.describeTable(&#39;metrics&#39;);
 // 删除表
-var response = yield* client.deleteTable(&#39;metrics&#39;);
+var response = yield client.deleteTable(&#39;metrics&#39;);
 </code></pre>
 <p>所有行的操作</p><pre><code class="lang-js">// 写入行
 var name = &#39;metrics&#39;;
 var condition = {
   row_existence: ots.RowExistenceExpectation.IGNORE
 };
-var primaryKeys = [
-  ots.createStringColumn(&#39;uid&#39;, &#39;test_uid&#39;)
-];
-var columns = [
-  ots.createStringColumn(&#39;test&#39;, &#39;test_value&#39;)
-];
-var response = yield* client.putRow(name, condition, primaryKeys, columns);
+var primaryKeys = {uid: &#39;test_uid&#39;};
+
+var columns = {test: &#39;test_value&#39;};
+
+var response = yield client.putRow(name, condition, primaryKeys, columns);
 
 // 读取行
 var name = &#39;metrics&#39;;
-var primaryKeys = [
-  ots.createStringColumn(&#39;uid&#39;, &#39;test_uid&#39;)
-];
+var primaryKeys = {uid: &#39;test_uid&#39;};
+
 var columns = [&#39;test&#39;];
-var response = yield* client.getRow(name, primaryKeys, columns);
+var response = yield client.getRow(name, primaryKeys, columns);
 
 // 更新行
 var name = &#39;metrics&#39;;
 var condition = {
   row_existence: ots.RowExistenceExpectation.IGNORE
 };
-var primaryKeys = [
-  ots.createStringColumn(&#39;uid&#39;, &#39;test_uid&#39;)
-];
-var columns = [
-  {
-    name: &#39;test&#39;,
-    type: ots.OperationType.PUT,
-    value: ots.createString(&#39;test_value_replaced&#39;)
-  }
-];
-var response = yield* client.updateRow(name, condition, primaryKeys, columns);
+var primaryKeys = {uid: &#39;test_uid&#39;};
+
+var columns = {
+  test: ots.$put(&#39;test_value_replaced&#39;)
+};
+
+var response = yield client.updateRow(name, condition, primaryKeys, columns);
 
 // 删除行
 var name = &#39;metrics&#39;;
 var condition = {
   row_existence: ots.RowExistenceExpectation.IGNORE
 };
-var primaryKeys = [
-  ots.createStringColumn(&#39;uid&#39;, &#39;test_uid&#39;)
-];
-var response = yield* client.deleteRow(name, condition, primaryKeys);
+var primaryKeys = {
+  uid: &#39;test_uid&#39;
+};
+
+var response = yield client.deleteRow(name, condition, primaryKeys);
 </code></pre>
 <p>批量操作</p><pre><code class="lang-js">// 批量写
 var tables = [
@@ -166,19 +161,19 @@ var tables = [
         condition: {
           row_existence: ots.RowExistenceExpectation.IGNORE
         },
-        primary_key: [
-          ots.createStringColumn(&#39;uid&#39;, &#39;test_uid&#39;)
-        ],
-        attribute_columns: [
-          ots.createStringColumn(&#39;test&#39;, &#39;test_value&#39;)
-        ]
+        primary_key: {
+          uid: &#39;test_uid&#39;
+        },
+        attribute_columns: {
+          test: &#39;test_value&#39;
+        }
       }
     ],
-    update_rows: [],
-    delete_rows: []
+    update_rows: {},
+    delete_rows: {}
   }
 ];
-var response = yield* client.batchWriteRow(tables);
+var response = yield client.batchWriteRow(tables);
 
 // 批量读
 var tables = [
@@ -186,23 +181,24 @@ var tables = [
     table_name: &#39;metrics&#39;,
     rows: [
       {
-        primary_key: [
-          ots.createStringColumn(&#39;uid&#39;, &#39;test_uid&#39;)
-        ]
+        primary_key: {
+          uid: &#39;test_uid&#39;
+        }
       }
     ],
     columns_to_get: [&#39;test&#39;]
   }
 ];
-var response = yield* client.batchGetRow(tables);
+var response = yield client.batchGetRow(tables);
 
 // 范围读
-var start = [
-  ots.createInfMinColumn(&#39;uid&#39;)
-];
-var end = [
-  ots.createInfMaxColumn(&#39;uid&#39;)
-];
+var start = {
+  uid: ots.InfMin
+};
+
+var end = {
+  uid: ots.InfMax
+};
 
 var request = {
   table_name: &#39;metrics&#39;,
@@ -212,7 +208,7 @@ var request = {
   inclusive_start_primary_key: start,
   exclusive_end_primary_key: end
 };
-var response = yield* client.getRange(request);
+var response = yield client.getRange(request);
 </code></pre>
 <h2>License</h2>
 <p>OTS服务由阿里云提供。但本模块在MIT许可下自由使用。</p><p>(The MIT license)</p>
