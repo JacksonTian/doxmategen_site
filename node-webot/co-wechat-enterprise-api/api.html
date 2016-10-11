@@ -1,0 +1,2764 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>co-wechat-enterprise-api Documentation</title>
+    <meta name="keywords" content="weixin,wechat" />
+    <meta name="description" content="微信企业号Node库API，ES6版本" />
+    <script src="assets/prettify.js"></script>
+    <script src="assets/jquery-1.8.2.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/base.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-static-top top-navbar" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./index.html">co-wechat-enterprise-api</a>
+        </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+          
+            <li>
+              <a href="./api.html">API Docs</a>
+            </li>
+          
+          
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <header class="jumbotron subhead">
+      <div class="container">
+        <h1>co-wechat-enterprise-api <small>Version: 1.0.0 By @Nick Ma</small></h1>
+        <p class="lead">
+          微信企业号Node库API，ES6版本
+        </p>
+      </div>
+    </header>
+
+<div class="container content">
+  <div class="row">
+    <div class="col-md-3 bs-docs-sidebar">
+      <ul class="nav nav-list bs-docs-sidenav affix">
+
+  <li>
+		<div class="accordion" id="api_agent">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_agent" class="api_side_link">api_agent</a>
+					<div class="accordion-marker">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_agent" href="#collapse_api_agent">
+							 <span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_agent">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_agent_exports_getAgent">getAgent</a>
+						</li>
+					
+						<li>
+							<a href="#api_agent_exports_setAgent">setAgent</a>
+						</li>
+					
+						<li>
+							<a href="#api_agent_exports_listAgent">listAgent</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+
+  <li>
+		<div class="accordion" id="api_batch">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_batch" class="api_side_link">api_batch</a>
+					<div class="accordion-marker">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_batch" href="#collapse_api_batch">
+							 <span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_batch">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_batch_exports_batchInviteUser">batchInviteUser</a>
+						</li>
+					
+						<li>
+							<a href="#api_batch_exports_batchSyncUser">batchSyncUser</a>
+						</li>
+					
+						<li>
+							<a href="#api_batch_exports_batchReplaceUser">batchReplaceUser</a>
+						</li>
+					
+						<li>
+							<a href="#api_batch_exports_batchReplaceParty">batchReplaceParty</a>
+						</li>
+					
+						<li>
+							<a href="#api_batch_exports_batchGetResult">batchGetResult</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+
+  <li>
+		<div class="accordion" id="api_common">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_common" class="api_side_link">api_common</a>
+					<div class="accordion-marker">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_common" href="#collapse_api_common">
+							 <span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_common">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_common__API">API</a>
+						</li>
+					
+						<li>
+							<a href="#api_common__setOpts">setOpts</a>
+						</li>
+					
+						<li>
+							<a href="#api_common__request">request</a>
+						</li>
+					
+						<li>
+							<a href="#api_common_API_mixin">mixin</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+
+  <li>
+		<div class="accordion" id="api_department">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_department" class="api_side_link">api_department</a>
+					<div class="accordion-marker">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_department" href="#collapse_api_department">
+							 <span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_department">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_department_exports_createDepartment">createDepartment</a>
+						</li>
+					
+						<li>
+							<a href="#api_department_exports_updateDepartment">updateDepartment</a>
+						</li>
+					
+						<li>
+							<a href="#api_department_exports_deleteDepartment">deleteDepartment</a>
+						</li>
+					
+						<li>
+							<a href="#api_department_exports_getDepartments">getDepartments</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+
+  <li>
+		<div class="accordion" id="api_ip">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_ip" class="api_side_link">api_ip</a>
+					<div class="accordion-marker">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_ip" href="#collapse_api_ip">
+							 <span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_ip">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_ip_exports_getCallbackIP">getCallbackIP</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+
+  <li>
+		<div class="accordion" id="api_js">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_js" class="api_side_link">api_js</a>
+					<div class="accordion-marker">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_js" href="#collapse_api_js">
+							 <span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_js">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_js_exports_registerTicketHandle">registerTicketHandle</a>
+						</li>
+					
+						<li>
+							<a href="#api_js_exports_getTicket">getTicket</a>
+						</li>
+					
+						<li>
+							<a href="#api_js_exports_getJsConfig">getJsConfig</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+
+  <li>
+		<div class="accordion" id="api_menu">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_menu" class="api_side_link">api_menu</a>
+					<div class="accordion-marker">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_menu" href="#collapse_api_menu">
+							 <span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_menu">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_menu_exports_createMenu">createMenu</a>
+						</li>
+					
+						<li>
+							<a href="#api_menu_exports_getMenu">getMenu</a>
+						</li>
+					
+						<li>
+							<a href="#api_menu_exports_removeMenu">removeMenu</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+
+  <li>
+		<div class="accordion" id="api_message">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_message" class="api_side_link">api_message</a>
+					<div class="accordion-marker">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_message" href="#collapse_api_message">
+							 <span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_message">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_message_exports_send">send</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+
+  <li>
+		<div class="accordion" id="api_tag">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_tag" class="api_side_link">api_tag</a>
+					<div class="accordion-marker">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_tag" href="#collapse_api_tag">
+							 <span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_tag">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_tag_exports_createTag">createTag</a>
+						</li>
+					
+						<li>
+							<a href="#api_tag_exports_updateTagName">updateTagName</a>
+						</li>
+					
+						<li>
+							<a href="#api_tag_exports_deleteTag">deleteTag</a>
+						</li>
+					
+						<li>
+							<a href="#api_tag_exports_listTags">listTags</a>
+						</li>
+					
+						<li>
+							<a href="#api_tag_exports_getTagUsers">getTagUsers</a>
+						</li>
+					
+						<li>
+							<a href="#api_tag_exports_addTagUsers">addTagUsers</a>
+						</li>
+					
+						<li>
+							<a href="#api_tag_exports_deleteTagUsers">deleteTagUsers</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+
+  <li>
+		<div class="accordion" id="api_user">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_user" class="api_side_link">api_user</a>
+					<div class="accordion-marker">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_user" href="#collapse_api_user">
+							 <span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_user">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_user_exports_createUser">createUser</a>
+						</li>
+					
+						<li>
+							<a href="#api_user_exports_updateUser">updateUser</a>
+						</li>
+					
+						<li>
+							<a href="#api_user_exports_deleteUser">deleteUser</a>
+						</li>
+					
+						<li>
+							<a href="#api_user_exports_getUser">getUser</a>
+						</li>
+					
+						<li>
+							<a href="#api_user_exports_getDepartmentUsers">getDepartmentUsers</a>
+						</li>
+					
+						<li>
+							<a href="#api_user_exports_getDepartmentUsersDetail">getDepartmentUsersDetail</a>
+						</li>
+					
+						<li>
+							<a href="#api_user_exports_inviteUser">inviteUser</a>
+						</li>
+					
+						<li>
+							<a href="#api_user_exports_getUserIdByCode">getUserIdByCode</a>
+						</li>
+					
+						<li>
+							<a href="#api_user_exports_getAuthorizeURL">getAuthorizeURL</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+
+  <li>
+		<div class="accordion" id="util">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_util" class="api_side_link">util</a>
+					<div class="accordion-marker">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#util" href="#collapse_util">
+							 <span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_util">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+
+</ul>
+
+    </div>
+    <div class="col-md-9">
+      
+        <section id="api_api_agent" class="api">
+  <h2>api_agent: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#api_agent_exports_getAgent">
+        getAgent
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_agent_exports_setAgent">
+        setAgent
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_agent_exports_listAgent">
+        listAgent
+      </a>
+    </li>
+
+  </ul>
+  <hr />
+
+  <h3 data-id="api_agent_exports_getAgent">
+    getAgent
+  </h3>
+
+  <p>获取企业号应用<br />
+详细请看：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=%E8%8E%B7%E5%8F%96%E4%BC%81%E4%B8%9A%E5%8F%B7%E5%BA%94%E7%94%A8">http://qydev.weixin.qq.com/wiki/index.php?title=获取企业号应用</a></p>
+<p>Examples:</p>
+<pre><code>var result = yield api.getAgent(agentid);
+</code></pre>
+<p>Result:</p>
+<pre><code>{
+&quot;errcode&quot;:&quot;0&quot;,
+&quot;errmsg&quot;:&quot;ok&quot; ,
+&quot;agentid&quot;:&quot;1&quot; ,
+&quot;name&quot;:&quot;NAME&quot; ,
+&quot;square_logo_url&quot;:&quot;xxxxxxxx&quot; ,
+&quot;round_logo_url&quot;:&quot;yyyyyyyy&quot; ,
+&quot;description&quot;:&quot;desc&quot; ,
+&quot;allow_userinfos&quot;:{
+    &quot;user&quot;:[
+          {
+              &quot;userid&quot;:&quot;id1&quot;,
+              &quot;status&quot;:&quot;1&quot;
+          },
+          {
+              &quot;userid&quot;:&quot;id2&quot;,
+              &quot;status&quot;:&quot;1&quot;
+          },
+          {
+              &quot;userid&quot;:&quot;id3&quot;,
+              &quot;status&quot;:&quot;1&quot;
+          }
+           ]
+ },
+&quot;allow_partys&quot;:{
+    &quot;partyid&quot;: [1]
+ },
+&quot;allow_tags&quot;:{
+    &quot;tagid&quot;: [1,2,3]
+ }
+&quot;close&quot;:0 ,
+&quot;redirect_domain&quot;:&quot;www.qq.com&quot;,
+&quot;report_location_flag&quot;:0,
+&quot;isreportuser&quot;:0,
+&quot;isreportenter&quot;:0
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getAgent()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>agentid(String)</td>
+      <td colspan="2"><p>企业号应用的id</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_agent_exports_setAgent">
+    setAgent
+  </h3>
+
+  <p>设置企业号应用<br />
+详细请看：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=%E8%AE%BE%E7%BD%AE%E4%BC%81%E4%B8%9A%E5%8F%B7%E5%BA%94%E7%94%A8">http://qydev.weixin.qq.com/wiki/index.php?title=设置企业号应用</a></p>
+<p>Examples:</p>
+<pre><code>var result = yield api.setAgent(opts);
+</code></pre>
+<p>Opts:</p>
+<pre><code>{
+  &quot;agentid&quot;: &quot;5&quot;,
+  &quot;report_location_flag&quot;: &quot;0&quot;,
+  &quot;logo_mediaid&quot;: &quot;xxxxx&quot;,
+  &quot;name&quot;: &quot;NAME&quot;,
+  &quot;description&quot;: &quot;DESC&quot;,
+  &quot;redirect_domain&quot;: &quot;xxxxxx&quot;,
+  &quot;isreportuser&quot;:0,
+  &quot;isreportenter&quot;:0
+}
+</code></pre>
+<p>Callback:</p>
+<ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<pre><code>
+Result:
+{
+  &quot;errcode&quot;:&quot;0&quot;,
+  &quot;errmsg&quot;:&quot;ok&quot; ,
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.setAgent()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>opts(Object)</td>
+      <td colspan="2"><p>更新的数据</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_agent_exports_listAgent">
+    listAgent
+  </h3>
+
+  <p>获取应用概况列表<br />
+详细请看：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=%E8%8E%B7%E5%8F%96%E5%BA%94%E7%94%A8%E6%A6%82%E5%86%B5%E5%88%97%E8%A1%A8">http://qydev.weixin.qq.com/wiki/index.php?title=获取应用概况列表</a></p>
+<p>Examples:</p>
+<pre><code>var result = yield api.listAgent();
+</code></pre>
+<pre><code>
+Result:
+{
+ &quot;errcode&quot;: 0,
+ &quot;errmsg&quot;: &quot;ok&quot;,
+ &quot;agentlist&quot;: [
+   {
+      &quot;agentid&quot;: &quot;5&quot;,
+      &quot;name&quot;: &quot;企业小助手&quot;,
+      &quot;square_logo_url&quot;: &quot;url&quot;,
+      &quot;round_logo_url&quot;: &quot;url&quot;
+   },
+   {
+      &quot;agentid&quot;: &quot;8&quot;,
+      &quot;name&quot;: &quot;HR小助手&quot;,
+      &quot;square_logo_url&quot;: &quot;url&quot;,
+      &quot;round_logo_url&quot;: &quot;url&quot;
+   }
+ ]  
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.listAgent()</td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
+        <section id="api_api_batch" class="api">
+  <h2>api_batch: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#api_batch_exports_batchInviteUser">
+        batchInviteUser
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_batch_exports_batchSyncUser">
+        batchSyncUser
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_batch_exports_batchReplaceUser">
+        batchReplaceUser
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_batch_exports_batchReplaceParty">
+        batchReplaceParty
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_batch_exports_batchGetResult">
+        batchGetResult
+      </a>
+    </li>
+
+  </ul>
+  <hr />
+
+  <h3 data-id="api_batch_exports_batchInviteUser">
+    batchInviteUser
+  </h3>
+
+  <p>批量邀请成员<br />
+详细请看：http://qydev.weixin.qq.com/wiki/index.php?title=%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E6%8E%A5%E5%8F%A3#.E9.82.80.E8.AF.B7.E6.88.90.E5.91.98.E5.85.B3.E6.B3.A8</p>
+<p>Examples:</p>
+<pre><code>var result = yield api.batchInviteUser(to, callback);
+</code></pre>
+<p>To:</p>
+<pre><code>{
+  &quot;touser&quot;:&quot;xxx|xxx&quot;,
+  &quot;toparty&quot;:&quot;xxx|xxx&quot;,
+  &quot;totag&quot;:&quot;xxx|xxx&quot;,
+  &quot;invite_tips&quot;:&quot;xxx&quot;,
+}
+</code></pre>
+<pre><code>TaskCb:
+</code></pre>
+<p>{<br />
+&quot;url&quot;: &quot;xxx&quot;,<br />
+&quot;token&quot;: &quot;xxx&quot;,<br />
+&quot;encodingaeskey&quot;: &quot;xxx&quot;<br />
+}</p>
+<pre><code>
+Result:
+</code></pre>
+<p>{<br />
+&quot;errcode&quot;: 0,<br />
+&quot;errmsg&quot;: &quot;ok&quot;,<br />
+&quot;jobid&quot;: &quot;IoZW03y44Zcwuz-2K6T6rHTcf1uwyVbcYu2aRALKw-U&quot;<br />
+}</p>
+<pre><code></code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.batchInviteUser()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>to(Object)</td>
+      <td colspan="2"><p>批量邀请的数据结构</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Object)</td>
+      <td colspan="2"><p>任务执行完毕后的回调结构</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_batch_exports_batchSyncUser">
+    batchSyncUser
+  </h3>
+
+  <p>批量更新成员<br />
+详细请看：http://qydev.weixin.qq.com/wiki/index.php?title=%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E6%8E%A5%E5%8F%A3#.E9.82.80.E8.AF.B7.E6.88.90.E5.91.98.E5.85.B3.E6.B3.A8</p>
+<p>Examples:</p>
+<pre><code>var result = yield api.batchSyncUser(mediaId, callback);
+</code></pre>
+<pre><code>TaskCb:
+</code></pre>
+<p>{<br />
+&quot;url&quot;: &quot;xxx&quot;,<br />
+&quot;token&quot;: &quot;xxx&quot;,<br />
+&quot;encodingaeskey&quot;: &quot;xxx&quot;<br />
+}</p>
+<pre><code>
+Result:
+</code></pre>
+<p>{<br />
+&quot;errcode&quot;: 0,<br />
+&quot;errmsg&quot;: &quot;ok&quot;,<br />
+&quot;jobid&quot;: &quot;IoZW03y44Zcwuz-2K6T6rHTcf1uwyVbcYu2aRALKw-U&quot;<br />
+}</p>
+<pre><code></code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.batchSyncUser()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>mediaId(String)</td>
+      <td colspan="2"><p>数据文件的mediaId</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Object)</td>
+      <td colspan="2"><p>任务执行完毕后的回调结构</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_batch_exports_batchReplaceUser">
+    batchReplaceUser
+  </h3>
+
+  <p>全量覆盖成员<br />
+详细请看：http://qydev.weixin.qq.com/wiki/index.php?title=%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E6%8E%A5%E5%8F%A3#.E9.82.80.E8.AF.B7.E6.88.90.E5.91.98.E5.85.B3.E6.B3.A8</p>
+<p>Examples:</p>
+<pre><code>var result = yield api.batchReplaceUser(mediaId, callback);
+</code></pre>
+<pre><code>TaskCb:
+</code></pre>
+<p>{<br />
+&quot;url&quot;: &quot;xxx&quot;,<br />
+&quot;token&quot;: &quot;xxx&quot;,<br />
+&quot;encodingaeskey&quot;: &quot;xxx&quot;<br />
+}</p>
+<pre><code>
+Result:
+</code></pre>
+<p>{<br />
+&quot;errcode&quot;: 0,<br />
+&quot;errmsg&quot;: &quot;ok&quot;,<br />
+&quot;jobid&quot;: &quot;IoZW03y44Zcwuz-2K6T6rHTcf1uwyVbcYu2aRALKw-U&quot;<br />
+}</p>
+<pre><code></code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.batchReplaceUser()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>mediaId(String)</td>
+      <td colspan="2"><p>数据文件的mediaId</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Object)</td>
+      <td colspan="2"><p>任务执行完毕后的回调结构</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_batch_exports_batchReplaceParty">
+    batchReplaceParty
+  </h3>
+
+  <p>全量覆盖部门<br />
+详细请看：http://qydev.weixin.qq.com/wiki/index.php?title=%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E6%8E%A5%E5%8F%A3#.E9.82.80.E8.AF.B7.E6.88.90.E5.91.98.E5.85.B3.E6.B3.A8</p>
+<p>Examples:</p>
+<pre><code>var result = yield api.batchReplaceParty(mediaId, callback);
+</code></pre>
+<pre><code>TaskCb:
+</code></pre>
+<p>{<br />
+&quot;url&quot;: &quot;xxx&quot;,<br />
+&quot;token&quot;: &quot;xxx&quot;,<br />
+&quot;encodingaeskey&quot;: &quot;xxx&quot;<br />
+}</p>
+<pre><code>
+Result:
+</code></pre>
+<p>{<br />
+&quot;errcode&quot;: 0,<br />
+&quot;errmsg&quot;: &quot;ok&quot;,<br />
+&quot;jobid&quot;: &quot;IoZW03y44Zcwuz-2K6T6rHTcf1uwyVbcYu2aRALKw-U&quot;<br />
+}</p>
+<pre><code></code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.batchReplaceParty()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>mediaId(Object)</td>
+      <td colspan="2"><p>数据文件的mediaId</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Object)</td>
+      <td colspan="2"><p>任务执行完毕后的回调结构</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_batch_exports_batchGetResult">
+    batchGetResult
+  </h3>
+
+  <p>获取批量任务的结果<br />
+详细请看：http://qydev.weixin.qq.com/wiki/index.php?title=%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E6%8E%A5%E5%8F%A3#.E9.82.80.E8.AF.B7.E6.88.90.E5.91.98.E5.85.B3.E6.B3.A8</p>
+<p>Examples:</p>
+<pre><code>var result = yield api.batchGetResult(jobid);
+</code></pre>
+<p>返回结果参考微信的官方文档</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.batchGetResult()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>jobid(String)</td>
+      <td colspan="2"><p>启动批量任务时返回的任务id</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
+        <section id="api_api_common" class="api">
+  <h2>api_common: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#api_common__API">
+        API
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_common__setOpts">
+        setOpts
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_common__request">
+        request
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_common_API_mixin">
+        mixin
+      </a>
+    </li>
+
+  </ul>
+  <hr />
+
+  <h3 data-id="api_common__API">
+    API
+  </h3>
+
+  <p>根据appid和appsecret创建API的构造函数<br />
+CorpID是企业号的标识，每个企业号拥有一个唯一的CorpID；Secret是管理组凭证密钥。<br />
+系统管理员可通过管理端的权限管理功能创建管理组，分配管理组对应用、通讯录的访问权限。<br />
+完成后，管理组即可获得唯一的secret。<br />
+系统管理员可通过权限管理查看所有管理组的secret，其他管理员可通过设置中的开发者凭据查看。<br />
+当企业应用调用企业号接口时，企业号后台为根据此次访问的AccessToken,校验访问的合法性以及所对应的管理组的管理权限以返回相应的结果。<br />
+注：你应该审慎配置管理组的权限，够用即好，权限过大会增加误操作可能性及信息安全隐患。<br />
+如需跨进程跨机器进行操作Wechat API（依赖access token），access token需要进行全局维护<br />
+使用策略如下：</p>
+<ol>
+<li>调用用户传入的获取token的异步方法，获得token之后使用</li>
+<li>使用corpid/corpsecret获取token。并调用用户传入的保存token方法保存 * Tips: * - 如果跨机器运行wechat模块，需要注意同步机器之间的系统时间。 * Examples:</li>
+</ol>
+<pre><code>var API = require('co-wechat-enterprise-api');
+var api = new API('corpid', 'corpsecret');
+</code></pre>
+<p>以上即可满足单进程使用。<br />
+当多进程时，token需要全局维护，以下为保存token的接口。<br />
+以下的例子使用了文本文件，实际使用中建议放到数据库中。<br />
+saveToken 方法接受的参数数据结构： { accessToken: 'aJvlZe6Q_vpYfdTFXWCSbJ7mVuMSXKvVGJU7BNy1wWBVE_41yOTM-ZE-axbsjNxWIWraYoOyJbcqIeyVpBHWtg' }<br />
+getToken 方法要保证返回的数据结构同上。</p>
+<pre><code>var api = new API('corpid', 'corpsecret', function* () {
+  // 传入一个获取全局token的方法
+  var txt = yield fs.readFile('access_token.txt', 'utf8');
+  return JSON.parse(txt);
+}, function* (token) {
+  // 请将token存储到全局，跨进程、跨机器级别的全局，比如写到数据库、redis等
+  // 这样才能在cluster模式及多机情况下使用，以下为写入到文件的示例
+  yield fs.writeFile('access_token.txt', JSON.stringify(token));
+});
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>函数</td>
+      <td colspan="3">API()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>corpid(String)</td>
+      <td colspan="2"><p>企业号的 corpid</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>corpsecret(String)</td>
+      <td colspan="2"><p>在公众平台上申请得到的corpsecret</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>getToken(Generator)</td>
+      <td colspan="2"><p>可选的。获取全局token对象的方法，多进程模式部署时需在意</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>saveToken(Generator)</td>
+      <td colspan="2"><p>可选的。保存全局token对象的方法，多进程模式部署时需在意</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_common__setOpts">
+    setOpts
+  </h3>
+
+  <p>用于设置urllib的默认options * Examples:</p>
+<pre><code>api.setOpts({timeout: 15000});
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">API.prototype.setOpts()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>opts(Object)</td>
+      <td colspan="2"><p>默认选项</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_common__request">
+    request
+  </h3>
+
+  <p>设置urllib的hook</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">API.prototype.request()</td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_common_API_mixin">
+    mixin
+  </h3>
+
+  <p>用于支持对象合并。将对象合并到API.prototype上，使得能够支持扩展<br />
+Examples:</p>
+<pre><code>// 媒体管理（上传、下载）
+API.mixin(require('./lib/api_media'));
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">API.mixin()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>obj(Object)</td>
+      <td colspan="2"><p>要合并的对象</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
+        <section id="api_api_department" class="api">
+  <h2>api_department: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#api_department_exports_createDepartment">
+        createDepartment
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_department_exports_updateDepartment">
+        updateDepartment
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_department_exports_deleteDepartment">
+        deleteDepartment
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_department_exports_getDepartments">
+        getDepartments
+      </a>
+    </li>
+
+  </ul>
+  <hr />
+
+  <h3 data-id="api_department_exports_createDepartment">
+    createDepartment
+  </h3>
+
+  <p>创建部门<br />
+详细请看：http://qydev.weixin.qq.com/wiki/index.php?title=管理部门</p>
+<p>Examples:</p>
+<pre><code>var result = yield api.createDepartment(name, opts);
+</code></pre>
+<p>Opts:</p>
+<ul>
+<li><code>parentid</code>, 父部门id，根部门id为1</li>
+<li><code>order</code>，在父部门中的次序。从1开始，数字越大排序越靠后</li>
+<li><code>id</code>，部门ID。用指定部门ID新建部门，不指定此参数时，则自动生成</li>
+</ul>
+<p>Result:</p>
+<pre><code>{
+ &quot;errcode&quot;: 0,
+ &quot;errmsg&quot;: &quot;created&quot;,
+ &quot;id&quot;: 2
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.createDepartment()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>name(String)</td>
+      <td colspan="2"><p>部门名字</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>opts(Object)</td>
+      <td colspan="2"><p>选项</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_department_exports_updateDepartment">
+    updateDepartment
+  </h3>
+
+  <p>更新部门</p>
+<p>Examples:</p>
+<pre><code>var opts = {name: 'new name', parentid: 1, order: 5};
+var result = yield api.updateDepartment(id, opts);
+</code></pre>
+<p>Opts:</p>
+<ul>
+<li><code>name</code>, 新的部门名字。可选</li>
+<li><code>parentid</code>, 父部门id，根部门id为1。可选</li>
+<li><code>order</code>，在父部门中的次序。从1开始，数字越大排序越靠后。可选，默认为1</li>
+</ul>
+<p>Result:</p>
+<pre><code>{
+ &quot;errcode&quot;: 0,
+ &quot;errmsg&quot;: &quot;updated&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.updateDepartment()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>id(Number)</td>
+      <td colspan="2"><p>部门ID</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>opts(Object)</td>
+      <td colspan="2"><p>选项</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_department_exports_deleteDepartment">
+    deleteDepartment
+  </h3>
+
+  <p>删除部门</p>
+<p>Examples:</p>
+<pre><code>var result = yield api.deleteDepartment(id);
+var result = yield api.deleteDepartment([id1, id2]);
+</code></pre>
+<p>Result:</p>
+<pre><code>{
+ &quot;errcode&quot;: 0,
+ &quot;errmsg&quot;: &quot;deleted&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.deleteDepartment()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>id(Number,Array)</td>
+      <td colspan="2"><p>部门ID</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_department_exports_getDepartments">
+    getDepartments
+  </h3>
+
+  <p>查看所有部门</p>
+<p>Examples:</p>
+<pre><code>var result = yield api.getDepartments();
+</code></pre>
+<p>Result:</p>
+<pre><code>{
+ &quot;errcode&quot;: 0,
+ &quot;errmsg&quot;: &quot;ok&quot;,
+ &quot;department&quot;: [
+   {
+     &quot;id&quot;: 1,
+     &quot;name&quot;: &quot;广州研发中心&quot;,
+     &quot;parentid&quot;: 0
+   },
+   {
+     &quot;id&quot;: 2
+     &quot;name&quot;: &quot;邮箱产品部&quot;,
+     &quot;parentid&quot;: 1
+   }
+ ]
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getDepartments()</td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
+        <section id="api_api_ip" class="api">
+  <h2>api_ip: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#api_ip_exports_getCallbackIP">
+        getCallbackIP
+      </a>
+    </li>
+
+  </ul>
+  <hr />
+
+  <h3 data-id="api_ip_exports_getCallbackIP">
+    getCallbackIP
+  </h3>
+
+  <p>获取微信服务器IP地址<br />
+详情请见：<a href="http://mp.weixin.qq.com/wiki/index.php?title=%E8%8E%B7%E5%8F%96%E5%BE%AE%E4%BF%A1%E6%9C%8D%E5%8A%A1%E5%99%A8IP%E5%9C%B0%E5%9D%80">http://mp.weixin.qq.com/wiki/index.php?title=获取微信服务器IP地址</a><br />
+Examples:</p>
+<pre><code>var result = yield api.getCallbackIP();
+</code></pre>
+<p>Result:</p>
+<pre><code>{
+  &quot;ip_list&quot;:[&quot;127.0.0.1&quot;,&quot;127.0.0.1&quot;]
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getCallbackIP()</td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
+        <section id="api_api_js" class="api">
+  <h2>api_js: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#api_js_exports_registerTicketHandle">
+        registerTicketHandle
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_js_exports_getTicket">
+        getTicket
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_js_exports_getJsConfig">
+        getJsConfig
+      </a>
+    </li>
+
+  </ul>
+  <hr />
+
+  <h3 data-id="api_js_exports_registerTicketHandle">
+    registerTicketHandle
+  </h3>
+
+  <p>多台服务器负载均衡时，ticketToken需要外部存储共享。<br />
+需要调用此registerTicketHandle来设置获取和保存的自定义方法。</p>
+<p>Examples:</p>
+<pre><code>api.registerTicketHandle(getTicketToken, saveTicketToken);
+// getTicketToken
+function getTicketToken* () {
+ settingModel.getItem({key: 'weixin_ticketToken'}, function (err, setting) {
+   if (err) return callback(err);
+   callback(null, setting.value);
+ });
+}
+// saveTicketToken
+function saveTicketToken* (_ticketToken) {
+ settingModel.setItem({key:'weixin_ticketToken', value: ticketToken}, function (err) {
+   if (err) return callback(err);
+   callback(null);
+ });
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.registerTicketHandle()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>getTicketToken(Function)</td>
+      <td colspan="2"><p>获取外部ticketToken的函数</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>saveTicketToken(Function)</td>
+      <td colspan="2"><p>存储外部ticketToken的函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_js_exports_getTicket">
+    getTicket
+  </h3>
+
+  <p>获取js sdk所需的有效js ticket</p>
+<p>Result:</p>
+<ul>
+<li><code>errcode</code>, 0为成功</li>
+<li><code>errmsg</code>, 成功为'ok'，错误则为详细错误信息</li>
+<li><code>ticket</code>, js sdk有效票据，如：bxLdikRXVbTPdHSM05e5u5sUoXNKd8-41ZO3MhKoyN5OfkWITDGgnr2fwJ0m9E8NYzWKVZvdVtaUgWvsdshFKA</li>
+<li><code>expires_in</code>, 有效期7200秒，开发者必须在自己的服务全局缓存jsapi_ticket</li>
+</ul>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getTicket()</td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_js_exports_getJsConfig">
+    getJsConfig
+  </h3>
+
+  <p>获取微信JS SDK Config的所需参数</p>
+<p>注意事项</p>
+<ol>
+<li>签名用的noncestr和timestamp必须与wx.config中的nonceStr和timestamp相同。</li>
+<li>签名用的url必须是调用JS接口页面的完整URL。</li>
+<li>出于安全考虑，开发者必须在服务器端实现签名的逻辑。<br />
+Examples:</li>
+</ol>
+<pre><code>var param = {
+ debug:false,
+ jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage'],
+ url: 'http://www.xxx.com' 
+};
+var result = yield api.getJsConfig(param);
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getJsConfig()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>param(Object)</td>
+      <td colspan="2"><p>参数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
+        <section id="api_api_menu" class="api">
+  <h2>api_menu: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#api_menu_exports_createMenu">
+        createMenu
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_menu_exports_getMenu">
+        getMenu
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_menu_exports_removeMenu">
+        removeMenu
+      </a>
+    </li>
+
+  </ul>
+  <hr />
+
+  <h3 data-id="api_menu_exports_createMenu">
+    createMenu
+  </h3>
+
+  <p>创建自定义菜单<br />
+详细请看：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8%E8%8F%9C%E5%8D%95">http://qydev.weixin.qq.com/wiki/index.php?title=创建应用菜单</a></p>
+<p>Menu:</p>
+<pre><code>{
+ &quot;button&quot;:[
+   {
+     &quot;type&quot;:&quot;click&quot;,
+     &quot;name&quot;:&quot;今日歌曲&quot;,
+     &quot;key&quot;:&quot;V1001_TODAY_MUSIC&quot;
+   },
+   {
+     &quot;name&quot;:&quot;菜单&quot;,
+     &quot;sub_button&quot;:[
+       {
+         &quot;type&quot;:&quot;view&quot;,
+         &quot;name&quot;:&quot;搜索&quot;,
+         &quot;url&quot;:&quot;http://www.soso.com/&quot;
+       },
+       {
+         &quot;type&quot;:&quot;click&quot;,
+         &quot;name&quot;:&quot;赞一下我们&quot;,
+         &quot;key&quot;:&quot;V1001_GOOD&quot;
+       }]
+     }]
+   }
+ ]
+}
+</code></pre>
+<p>Examples:</p>
+<pre><code>var result = yield api.createMenu(agentid, menu);
+</code></pre>
+<p>Result:</p>
+<pre><code>{&quot;errcode&quot;:0,&quot;errmsg&quot;:&quot;ok&quot;}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.createMenu()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>agentid(String)</td>
+      <td colspan="2"><p>APP</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>menu(Object)</td>
+      <td colspan="2"><p>菜单对象</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_menu_exports_getMenu">
+    getMenu
+  </h3>
+
+  <p>获取菜单<br />
+详细请看：<a href="http://qydev.weixin.qq.com/wiki/index.php?title=%E8%8E%B7%E5%8F%96%E8%8F%9C%E5%8D%95%E5%88%97%E8%A1%A8">http://qydev.weixin.qq.com/wiki/index.php?title=获取菜单列表</a></p>
+<p>Examples:</p>
+<pre><code>var result = yield api.getMenu(agentid);
+</code></pre>
+<p>Result:</p>
+<pre><code>// 结果示例
+{
+ &quot;menu&quot;: {
+   &quot;button&quot;:[
+     {&quot;type&quot;:&quot;click&quot;,&quot;name&quot;:&quot;今日歌曲&quot;,&quot;key&quot;:&quot;V1001_TODAY_MUSIC&quot;,&quot;sub_button&quot;:[]},
+     {&quot;type&quot;:&quot;click&quot;,&quot;name&quot;:&quot;歌手简介&quot;,&quot;key&quot;:&quot;V1001_TODAY_SINGER&quot;,&quot;sub_button&quot;:[]},
+     {&quot;name&quot;:&quot;菜单&quot;,&quot;sub_button&quot;:[
+       {&quot;type&quot;:&quot;view&quot;,&quot;name&quot;:&quot;搜索&quot;,&quot;url&quot;:&quot;http://www.soso.com/&quot;,&quot;sub_button&quot;:[]},
+       {&quot;type&quot;:&quot;view&quot;,&quot;name&quot;:&quot;视频&quot;,&quot;url&quot;:&quot;http://v.qq.com/&quot;,&quot;sub_button&quot;:[]},
+       {&quot;type&quot;:&quot;click&quot;,&quot;name&quot;:&quot;赞一下我们&quot;,&quot;key&quot;:&quot;V1001_GOOD&quot;,&quot;sub_button&quot;:[]}]
+     }
+   ]
+ }
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getMenu()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>agentid(String)</td>
+      <td colspan="2"><p>APP</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_menu_exports_removeMenu">
+    removeMenu
+  </h3>
+
+  <p>删除自定义菜单<br />
+详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=%E8%87%AA%E5%AE%9A%E4%B9%89%E8%8F%9C%E5%8D%95%E5%88%A0%E9%99%A4%E6%8E%A5%E5%8F%A3">http://mp.weixin.qq.com/wiki/index.php?title=自定义菜单删除接口</a><br />
+Examples:</p>
+<pre><code>var result = yield api.removeMenu(agentid);
+</code></pre>
+<p>Result:</p>
+<pre><code>{&quot;errcode&quot;:0,&quot;errmsg&quot;:&quot;ok&quot;}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.removeMenu()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>agentid(String)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
+        <section id="api_api_message" class="api">
+  <h2>api_message: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#api_message_exports_send">
+        send
+      </a>
+    </li>
+
+  </ul>
+  <hr />
+
+  <h3 data-id="api_message_exports_send">
+    send
+  </h3>
+
+  <p>发送消息分别有图片（image）、语音（voice）、视频（video）和缩略图（thumb）<br />
+详细请看：http://qydev.weixin.qq.com/wiki/index.php?title=发送接口说明<br />
+Examples:</p>
+<pre><code>var result = yield api.send(agentid, to, message);
+</code></pre>
+<p>To:</p>
+<pre><code>{
+ &quot;touser&quot;: &quot;UserID1|UserID2|UserID3&quot;,
+ &quot;toparty&quot;: &quot; PartyID1 | PartyID2 &quot;,
+ &quot;totag&quot;: &quot; TagID1 | TagID2 &quot;
+}
+</code></pre>
+<p>Message:<br />
+文本消息：</p>
+<pre><code>{
+ &quot;msgtype&quot;: &quot;text&quot;,
+ &quot;text&quot;: {
+   &quot;content&quot;: &quot;Holiday Request For Pony(http://xxxxx)&quot;
+ },
+ &quot;safe&quot;:&quot;0&quot;
+}
+</code></pre>
+<p>图片消息：</p>
+<pre><code>{
+ &quot;msgtype&quot;: &quot;image&quot;,
+ &quot;image&quot;: {
+   &quot;media_id&quot;: &quot;MEDIA_ID&quot;
+ },
+ &quot;safe&quot;:&quot;0&quot;
+}
+</code></pre>
+<p>图片消息：</p>
+<pre><code>{
+ &quot;msgtype&quot;: &quot;image&quot;,
+ &quot;image&quot;: {
+   &quot;media_id&quot;: &quot;MEDIA_ID&quot;
+ },
+ &quot;safe&quot;:&quot;0&quot;
+}
+</code></pre>
+<p>语音消息：</p>
+<pre><code>{
+ &quot;msgtype&quot;: &quot;voice&quot;,
+ &quot;voice&quot;: {
+   &quot;media_id&quot;: &quot;MEDIA_ID&quot;
+ },
+ &quot;safe&quot;:&quot;0&quot;
+}
+</code></pre>
+<p>视频消息：</p>
+<pre><code>{
+ &quot;msgtype&quot;: &quot;video&quot;,
+ &quot;video&quot;: {
+   &quot;media_id&quot;: &quot;MEDIA_ID&quot;
+   &quot;title&quot;: &quot;Title&quot;,
+   &quot;description&quot;: &quot;Description&quot;
+ },
+ &quot;safe&quot;:&quot;0&quot;
+}
+</code></pre>
+<p>文件消息：</p>
+<pre><code>{
+ &quot;msgtype&quot;: &quot;file&quot;,
+ &quot;file&quot;: {
+   &quot;media_id&quot;: &quot;MEDIA_ID&quot;
+ },
+ &quot;safe&quot;:&quot;0&quot;
+}
+</code></pre>
+<p>图文消息：</p>
+<pre><code>{
+ &quot;msgtype&quot;: &quot;news&quot;,
+ &quot;news&quot;: {
+   &quot;articles&quot;:[
+     {
+       &quot;title&quot;: &quot;Title&quot;,
+       &quot;description&quot;: &quot;Description&quot;,
+       &quot;url&quot;: &quot;URL&quot;,
+       &quot;picurl&quot;: &quot;PIC_URL&quot;,
+     },
+     {
+       &quot;title&quot;: &quot;Title&quot;,
+       &quot;description&quot;: &quot;Description&quot;,
+       &quot;url&quot;: &quot;URL&quot;,
+       &quot;picurl&quot;: &quot;PIC_URL&quot;,
+     }
+   ]
+ },
+ &quot;safe&quot;:&quot;0&quot;
+}
+</code></pre>
+<p>MP消息：</p>
+<pre><code>{
+ &quot;msgtype&quot;: &quot;mpnews&quot;,
+ &quot;mpnews&quot;: {
+   &quot;articles&quot;:[
+     {
+       &quot;thumb_media_id&quot;: &quot;id&quot;,
+       &quot;author&quot;: &quot;Author&quot;,
+       &quot;content_source_url&quot;: &quot;URL&quot;,
+       &quot;content&quot;: &quot;Content&quot;
+       &quot;digest&quot;: &quot;Digest description&quot;,
+       &quot;show_cover_pic&quot;: &quot;0&quot;
+     },
+     {
+       &quot;thumb_media_id&quot;: &quot;id&quot;,
+       &quot;author&quot;: &quot;Author&quot;,
+       &quot;content_source_url&quot;: &quot;URL&quot;,
+       &quot;content&quot;: &quot;Content&quot;
+       &quot;digest&quot;: &quot;Digest description&quot;,
+       &quot;show_cover_pic&quot;: &quot;0&quot;
+     }
+   ],
+   &quot;media_id&quot;: &quot;id&quot;
+ },
+ &quot;safe&quot;:&quot;0&quot;
+}
+</code></pre>
+<p>Result:</p>
+<pre><code>{
+ &quot;errcode&quot;: 0,
+ &quot;errmsg&quot;: &quot;ok&quot;,
+ &quot;invaliduser&quot;: &quot;UserID1&quot;,
+ &quot;invalidparty&quot;:&quot;PartyID1&quot;,
+ &quot;invalidtag&quot;:&quot;TagID1&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.send()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>agentid(String)</td>
+      <td colspan="2"><p>APP</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>to(Object)</td>
+      <td colspan="2"><p>接受消息的用户</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>message(Object)</td>
+      <td colspan="2"><p>消息对象</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
+        <section id="api_api_tag" class="api">
+  <h2>api_tag: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#api_tag_exports_createTag">
+        createTag
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_tag_exports_updateTagName">
+        updateTagName
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_tag_exports_deleteTag">
+        deleteTag
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_tag_exports_listTags">
+        listTags
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_tag_exports_getTagUsers">
+        getTagUsers
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_tag_exports_addTagUsers">
+        addTagUsers
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_tag_exports_deleteTagUsers">
+        deleteTagUsers
+      </a>
+    </li>
+
+  </ul>
+  <hr />
+
+  <h3 data-id="api_tag_exports_createTag">
+    createTag
+  </h3>
+
+  <p>创建标签</p>
+<p>详细请看：http://qydev.weixin.qq.com/wiki/index.php?title=管理标签<br />
+Examples:</p>
+<pre><code>var result = yield api.createTag(name);
+</code></pre>
+<p>Result:</p>
+<pre><code>{
+ &quot;errcode&quot;: 0,
+ &quot;errmsg&quot;: &quot;created&quot;,
+ &quot;tagid&quot;: &quot;1&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.createTag()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>name(String)</td>
+      <td colspan="2"><p>标签名字</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_tag_exports_updateTagName">
+    updateTagName
+  </h3>
+
+  <p>更新标签名字</p>
+<p>Examples:</p>
+<pre><code>var result = yield api.updateTagName(id, name);
+</code></pre>
+<p>Result:</p>
+<pre><code>{
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;updated&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.updateTagName()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>id(String)</td>
+      <td colspan="2"><p>标签ID</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>name(String)</td>
+      <td colspan="2"><p>标签名称。最长64个字符</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_tag_exports_deleteTag">
+    deleteTag
+  </h3>
+
+  <p>删除标签</p>
+<p>Examples:</p>
+<pre><code>var result = yield api.deleteTag(id);
+</code></pre>
+<p>Result:</p>
+<pre><code>{
+ &quot;errcode&quot;: 0,
+ &quot;errmsg&quot;: &quot;deleted&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.deleteTag()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>id(Number)</td>
+      <td colspan="2"><p>标签ID</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_tag_exports_listTags">
+    listTags
+  </h3>
+
+  <p>获取标签列表</p>
+<p>Examples:</p>
+<pre><code>var result = yield api.listTags();
+</code></pre>
+<p>Result:</p>
+<pre><code>{
+ &quot;errcode&quot;: 0,
+ &quot;errmsg&quot;: &quot;deleted&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.listTags()</td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_tag_exports_getTagUsers">
+    getTagUsers
+  </h3>
+
+  <p>获取标签成员</p>
+<p>Examples:</p>
+<pre><code>var result = yield api.getTagUsers(id);
+</code></pre>
+<p>Result:</p>
+<pre><code>{
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;ok&quot;,
+  &quot;userlist&quot;: [
+    {
+        &quot;userid&quot;: &quot;zhangsan&quot;,
+        &quot;name&quot;: &quot;李四&quot;
+    }
+  ]
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getTagUsers()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>id(Number)</td>
+      <td colspan="2"><p>标签ID</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_tag_exports_addTagUsers">
+    addTagUsers
+  </h3>
+
+  <p>增加标签成员</p>
+<p>Examples:</p>
+<pre><code>var userIdList = ['id1', 'id2'];
+api.addTagUsers(id, userIdList, callback);
+</code></pre>
+<p>Callback:</p>
+<ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:<br />
+a)正确时返回</p>
+<pre><code>{
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;deleted&quot;
+}
+</code></pre>
+<p>b)若部分userid非法，则返回</p>
+<pre><code>{
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;invalid userlist failed&quot;
+  &quot;invalidlist&quot;：&quot;usr1|usr2|usr&quot;
+}
+</code></pre>
+<p>c)当包含的userid全部非法时返回</p>
+<pre><code>{
+  &quot;errcode&quot;: 40031,
+  &quot;errmsg&quot;: &quot;all list invalid&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.addTagUsers()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>id(Number)</td>
+      <td colspan="2"><p>标签ID</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>userIdList(Array)</td>
+      <td colspan="2"><p>用户ID列表</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_tag_exports_deleteTagUsers">
+    deleteTagUsers
+  </h3>
+
+  <p>删除标签成员</p>
+<p>Examples:</p>
+<pre><code>var userIdList = ['id1', 'id2'];
+api.deleteTagUsers(id, userIdList, callback);
+</code></pre>
+<p>Callback:</p>
+<ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:<br />
+a)正确时返回</p>
+<pre><code>{
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;deleted&quot;
+}
+</code></pre>
+<p>b)若部分userid非法，则返回</p>
+<pre><code>{
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;invalid userlist failed&quot;
+  &quot;invalidlist&quot;：&quot;usr1|usr2|usr&quot;
+}
+</code></pre>
+<p>c)当包含的userid全部非法时返回</p>
+<pre><code>{
+  &quot;errcode&quot;: 40031,
+  &quot;errmsg&quot;: &quot;all list invalid&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.deleteTagUsers()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>id(Number)</td>
+      <td colspan="2"><p>标签ID</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>userIdList(Array)</td>
+      <td colspan="2"><p>用户ID数组</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2"><p>回调函数</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
+        <section id="api_api_user" class="api">
+  <h2>api_user: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#api_user_exports_createUser">
+        createUser
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_user_exports_updateUser">
+        updateUser
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_user_exports_deleteUser">
+        deleteUser
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_user_exports_getUser">
+        getUser
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_user_exports_getDepartmentUsers">
+        getDepartmentUsers
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_user_exports_getDepartmentUsersDetail">
+        getDepartmentUsersDetail
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_user_exports_inviteUser">
+        inviteUser
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_user_exports_getUserIdByCode">
+        getUserIdByCode
+      </a>
+    </li>
+
+    <li>
+      <a href="#api_user_exports_getAuthorizeURL">
+        getAuthorizeURL
+      </a>
+    </li>
+
+  </ul>
+  <hr />
+
+  <h3 data-id="api_user_exports_createUser">
+    createUser
+  </h3>
+
+  <p>创建成员<br />
+详细请看：http://qydev.weixin.qq.com/wiki/index.php?title=管理成员</p>
+<p>Examples:</p>
+<pre><code>var result = yield api.createUser(user);
+</code></pre>
+<p>User:</p>
+<pre><code>{
+  &quot;userid&quot;: &quot;zhangsan&quot;,
+  &quot;name&quot;: &quot;张三&quot;,
+  &quot;department&quot;: [1, 2],
+  &quot;position&quot;: &quot;产品经理&quot;,
+  &quot;mobile&quot;: &quot;15913215421&quot;,
+  &quot;gender&quot;: 1,
+  &quot;tel&quot;: &quot;62394&quot;,
+  &quot;email&quot;: &quot;zhangsan@gzdev.com&quot;,
+  &quot;weixinid&quot;: &quot;zhangsan4dev&quot;
+}
+</code></pre>
+<p>Result:</p>
+<pre><code>{
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;created&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.createUser()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>user(Object)</td>
+      <td colspan="2"><p>成员信息</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_user_exports_updateUser">
+    updateUser
+  </h3>
+
+  <p>更新成员</p>
+<p>Examples:</p>
+<pre><code>var result = yield api.updateUser(user);
+</code></pre>
+<p>User:</p>
+<pre><code>{
+  &quot;userid&quot;: &quot;zhangsan&quot;,
+  &quot;name&quot;: &quot;李四&quot;,
+  &quot;department&quot;: [1],
+  &quot;position&quot;: &quot;后台工程师&quot;,
+  &quot;mobile&quot;: &quot;15913215421&quot;,
+  &quot;gender&quot;: 1,
+  &quot;tel&quot;: &quot;62394&quot;,
+  &quot;email&quot;: &quot;zhangsan@gzdev.com&quot;,
+  &quot;weixinid&quot;: &quot;lisifordev&quot;,
+  &quot;enable&quot;: 1
+}
+</code></pre>
+<p>Result:</p>
+<pre><code>{
+ &quot;errcode&quot;: 0,
+ &quot;errmsg&quot;: &quot;updated&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.updateUser()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>user(Object)</td>
+      <td colspan="2"><p>成员信息</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_user_exports_deleteUser">
+    deleteUser
+  </h3>
+
+  <p>删除成员</p>
+<p>Examples:</p>
+<pre><code>var result = yield api.deleteUser(userid);
+</code></pre>
+<p>Result:</p>
+<pre><code>{
+ &quot;errcode&quot;: 0,
+ &quot;errmsg&quot;: &quot;deleted&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.deleteUser()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>id(Number)</td>
+      <td colspan="2"><p>成员ID</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_user_exports_getUser">
+    getUser
+  </h3>
+
+  <p>获取成员</p>
+<p>Examples:</p>
+<pre><code>var result = yield api.getUser(userid);
+</code></pre>
+<p>Result:</p>
+<pre><code>{
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;ok&quot;,
+  &quot;userid&quot;: &quot;zhangsan&quot;,
+  &quot;name&quot;: &quot;李四&quot;,
+  &quot;department&quot;: [1, 2],
+  &quot;position&quot;: &quot;后台工程师&quot;,
+  &quot;mobile&quot;: &quot;15913215421&quot;,
+  &quot;gender&quot;: 1,
+  &quot;tel&quot;: &quot;62394&quot;,
+  &quot;email&quot;: &quot;zhangsan@gzdev.com&quot;,
+  &quot;weixinid&quot;: &quot;lisifordev&quot;,
+  &quot;avatar&quot;: &quot;http://wx.qlogo.cn/mmopen/ajNVdqHZLLA3WJ6DSZUfiakYe37PKnQhBIeOQBO4czqrnZDS79FH5Wm5m4X69TBicnHFlhiafvDwklOpZeXYQQ2icg/0&quot;,
+  &quot;status&quot;: 1
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getUser()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>userid(Number)</td>
+      <td colspan="2"><p>成员ID</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_user_exports_getDepartmentUsers">
+    getDepartmentUsers
+  </h3>
+
+  <p>获取部门成员</p>
+<p>Examples:</p>
+<pre><code>var result = yield api.getDepartmentUsers(departmentId, fetchChild, status);
+</code></pre>
+<p>Result:</p>
+<pre><code>{
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;ok&quot;,
+  &quot;userlist&quot;: [
+    {
+      &quot;userid&quot;: &quot;zhangsan&quot;,
+      &quot;name&quot;: &quot;李四&quot;
+    }
+  ]
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getDepartmentUsers()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>departmentId(Number)</td>
+      <td colspan="2"><p>部门ID</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>fetchChild(Number)</td>
+      <td colspan="2"><p>值：1/0，是否递归获取子部门下面的成员</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>status(Number)</td>
+      <td colspan="2"><p>0获取全部员工，1获取已关注成员列表，2获取禁用成员列表，4获取未关注成员列表。status可叠加</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_user_exports_getDepartmentUsersDetail">
+    getDepartmentUsersDetail
+  </h3>
+
+  <p>获取部门成员(详情)</p>
+<p>Examples:</p>
+<pre><code>var result = yield api.getDepartmentUsersDetail(departmentId, fetchChild, status);
+</code></pre>
+<p>Result:</p>
+<pre><code>{
+ &quot;errcode&quot;: 0,
+ &quot;errmsg&quot;: &quot;ok&quot;,
+ &quot;userlist&quot;: [
+   {
+     &quot;userid&quot;: &quot;zhangsan&quot;,
+     &quot;name&quot;: &quot;李四&quot;,
+     &quot;department&quot;: [1, 2],
+     &quot;position&quot;: &quot;后台工程师&quot;,
+     &quot;mobile&quot;: &quot;15913215421&quot;,
+     &quot;email&quot;: &quot;zhangsan@gzdev.com&quot;,
+     &quot;weixinid&quot;: &quot;lisifordev&quot;,
+     &quot;avatar&quot;: &quot;http://wx.qlogo.cn/mmopen/ajNVdqHZLLA3WJ6DSZUfiakYe37PKnQhBIeOQBO4czqrnZDS79FH5Wm5m4X69TBicnHFlhiafvDwklOpZeXYQQ2icg/0&quot;,
+     &quot;status&quot;: 1,
+     &quot;extattr&quot;: {&quot;attrs&quot;:[{&quot;name&quot;:&quot;爱好&quot;,&quot;value&quot;:&quot;旅游&quot;},{&quot;name&quot;:&quot;卡号&quot;,&quot;value&quot;:&quot;1234567234&quot;}]}
+   }
+ ]
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getDepartmentUsersDetail()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>departmentId(Number)</td>
+      <td colspan="2"><p>部门ID</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>fetchChild(Number)</td>
+      <td colspan="2"><p>值：1/0，是否递归获取子部门下面的成员</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>status(Number)</td>
+      <td colspan="2"><p>0获取全部员工，1获取已关注成员列表，2获取禁用成员列表，4获取未关注成员列表。status可叠加</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_user_exports_inviteUser">
+    inviteUser
+  </h3>
+
+  <p>邀请成员关注</p>
+<p>详情：http://qydev.weixin.qq.com/wiki/index.php?title=%E7%AE%A1%E7%90%86%E6%88%90%E5%91%98#.E9.82.80.E8.AF.B7.E6.88.90.E5.91.98.E5.85.B3.E6.B3.A8<br />
+Examples:</p>
+<pre><code>var result = yield api.inviteUser(userid, invite_tips);
+</code></pre>
+<p>Callback:</p>
+<ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p>
+<pre><code>{
+ &quot;errcode&quot;: 0,
+ &quot;errmsg&quot;: &quot;ok&quot;,
+ &quot;type&quot;:1
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.inviteUser()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>userid(String)</td>
+      <td colspan="2"><p>userid</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>invite_tips(String)</td>
+      <td colspan="2"><p>邀请的一句话</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_user_exports_getUserIdByCode">
+    getUserIdByCode
+  </h3>
+
+  <p>根据Code获取用户ID</p>
+<p>详情：http://qydev.weixin.qq.com/wiki/index.php?title=根据code获取成员信息<br />
+Examples:</p>
+<pre><code>var result = yield api.getUserIdByCode(code, agentid);
+</code></pre>
+<p>Result:</p>
+<pre><code>{
+  &quot;UserId&quot;: &quot;USERID&quot;
+}
+</code></pre>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getUserIdByCode()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>code(String)</td>
+      <td colspan="2"><p>OAuth授权获取的code</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>agentid(String)</td>
+      <td colspan="2"><p>APP</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="api_user_exports_getAuthorizeURL">
+    getAuthorizeURL
+  </h3>
+
+  <p>获取授权页面的URL地址</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getAuthorizeURL()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>redirect(String)</td>
+      <td colspan="2"><p>授权后要跳转的地址</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>state(String)</td>
+      <td colspan="2"><p>开发者可提供的数据</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>scope(String)</td>
+      <td colspan="2"><p>作用范围，值为snsapi_userinfo和snsapi_base，前者用于弹出，后者用于跳转</p></td>
+    </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
+        <section id="api_util" class="api">
+  <h2>util: API索引</h2>
+  <ul class="indexs">
+  
+  </ul>
+  <hr />
+
+</section>
+
+      
+    </div>
+  </div>
+</div>
+      <footer class="footer">
+        <div class="container">
+          <p class="pull-right">
+            <a href="#">Back to top</a>
+          </p>
+          <p>此文档通过doxmate生成。主题借鉴Bootstrap API文档风格，注解基于<a href="https://github.com/visionmedia/dox">Dox</a>。欢迎关注doxmate作者<a href="http://weibo.com/shyvo" target="_blank">@朴灵</a></p>
+          <ul class="footer-links">
+            <li><a href="https://github.com/visionmedia/dox">Dox主页</a></li>
+            <li><a href="http://html5ify.com/doxmate">Doxmate主页</a></li>
+            <li><a href="https://github.com/JacksonTian/doxmate">Doxmate源码</a></li>
+            <li><a href="https://github.com/JacksonTian/doxmate/issues?state=open">提交bug</a></li>
+          </ul>
+      </div>
+    </footer>
+    <script>
+      $(function() {
+        $('pre').addClass('prettyprint');
+        $('td pre').removeClass('prettyprint');
+        prettyPrint();
+        var $window = $(window);
+        var sidenav = $('.bs-docs-sidenav');
+        if (sidenav.height() < window.innerHeight) {
+          sidenav.affix({
+            offset: {
+              top: function () {
+                return $window.width() <= 980 ? 290 : 210
+              },
+              bottom: 200
+            }
+          });
+        } else {
+          sidenav.removeClass('affix');
+        }
+        $(".content").find('h1, h2, h3, h4, h5, h6').each(function () {
+          var node = $(this);
+          // 总是设置id
+          node.attr("id", node.data('id') || "index_" + node.text());
+        });
+
+        $('.bs-docs-sidenav .accordion-marker').on('click', function(event) {
+          var current = $(event.currentTarget);
+          current.find('.glyphicon').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+        });
+      });
+    </script>
+  
+  </body>
+</html>
+

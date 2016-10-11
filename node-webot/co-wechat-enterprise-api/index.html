@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>co-wechat-enterprise-api Documentation</title>
+    <meta name="keywords" content="weixin,wechat" />
+    <meta name="description" content="微信企业号Node库API，ES6版本" />
+    <script src="assets/prettify.js"></script>
+    <script src="assets/jquery-1.8.2.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/base.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-static-top top-navbar" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./index.html">co-wechat-enterprise-api</a>
+        </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+          
+            <li>
+              <a href="./api.html">API Docs</a>
+            </li>
+          
+          
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <header class="jumbotron subhead">
+      <div class="container">
+        <h1>co-wechat-enterprise-api <small>Version: 1.0.0 By @Nick Ma</small></h1>
+        <p class="lead">
+          微信企业号Node库API，ES6版本
+        </p>
+      </div>
+    </header>
+
+<div class="container content">
+  <div class="row">
+  	<div class="col-md-3">
+      <ul class="nav nav-list bs-docs-sidenav affix">
+
+  <li class="level_2">
+    <a href="#index_模块状态" title="模块状态">
+      <i class="icon-chevron-right"></i>模块状态
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_功能列表" title="功能列表">
+      <i class="icon-chevron-right"></i>功能列表
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_Installation" title="Installation">
+      <i class="icon-chevron-right"></i>Installation
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_Usage" title="Usage">
+      <i class="icon-chevron-right"></i>Usage
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_内网节点如何通过代理访问" title="内网节点如何通过代理访问">
+      <i class="icon-chevron-right"></i>内网节点如何通过代理访问
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_License" title="License">
+      <i class="icon-chevron-right"></i>License
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_交流群" title="交流群">
+      <i class="icon-chevron-right"></i>交流群
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_感谢" title="感谢">
+      <i class="icon-chevron-right"></i>感谢
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_捐赠" title="捐赠">
+      <i class="icon-chevron-right"></i>捐赠
+    </a>
+  </li>
+
+</ul>
+
+    </div>
+    <div class="col-md-9">
+      <section>
+        <h1 id="wechat-enterprise-api-es6-">Wechat Enterprise API(ES6版)</h1>
+<p>微信企业号API。</p>
+<h2 id="-">模块状态</h2>
+<ul>
+<li><a href="http://badge.fury.io/js/co-wechat-enterprise-api"><img src="https://badge.fury.io/js/co-wechat-enterprise-api.png" alt="NPM version"></a></li>
+<li><a href="https://travis-ci.org/node-webot/co-wechat-enterprise-api"><img src="https://travis-ci.org/node-webot/co-wechat-enterprise-api.png?branch=master" alt="Build Status"></a></li>
+<li><a href="https://david-dm.org/node-webot/co-wechat-enterprise-api"><img src="https://david-dm.org/node-webot/co-wechat-enterprise-api.png" alt="Dependencies Status"></a></li>
+<li><a href="https://coveralls.io/r/node-webot/co-wechat-enterprise-api"><img src="https://coveralls.io/repos/node-webot/co-wechat-enterprise-api/badge.png" alt="Coverage Status"></a></li>
+</ul>
+<h2 id="-">功能列表</h2>
+<ul>
+<li>主动消息</li>
+<li>菜单操作</li>
+<li>部门管理</li>
+<li>用户管理</li>
+<li>标签管理</li>
+<li>媒体文件</li>
+<li>OAuth API（授权、获取基本信息）</li>
+<li>JS SDK 授权</li>
+<li>管理企业号应用</li>
+<li>通讯录批量操作接口</li>
+<li>永久素材管理接口</li>
+<li>企业号摇一摇周边接口</li>
+</ul>
+<p>详细参见<a href="http://doxmate.cool/node-webot/co-wechat-enterprise-api/api.html">API文档</a></p>
+<p>微信企业号官方文档(<a href="http://qydev.weixin.qq.com/wiki/index.php">http://qydev.weixin.qq.com/wiki/index.php</a>)</p>
+<p>订阅号和服务号版本请前往：<a href="https://github.com/node-webot/co-wechat-api">https://github.com/node-webot/co-wechat-api</a></p>
+<h2 id="installation">Installation</h2>
+<pre><code class="lang-sh">$ npm install co-wechat-enterprise-api
+</code></pre>
+<h2 id="usage">Usage</h2>
+<pre><code class="lang-js">var API = require(&#39;co-wechat-enterprise-api&#39;);
+
+var api = new API(corpid, corpsecret);
+var result = yield* api.updateRemark(&#39;open_id&#39;, &#39;remarked&#39;);
+</code></pre>
+<h3 id="-">多进程</h3>
+<p>当多进程时，token需要全局维护，以下为保存token的接口。</p>
+<pre><code>var api = new API(&#39;corpid&#39;, &#39;corpsecret&#39;, function* () {
+  // 传入一个获取全局token的方法
+  var txt = yield fs.readFile(&#39;access_token.txt&#39;, &#39;utf8&#39;);
+  return JSON.parse(txt);
+}, function* (token) {
+  // 请将token存储到全局，跨进程、跨机器级别的全局，比如写到数据库、redis等
+  // 这样才能在cluster模式及多机情况下使用，以下为写入到文件的示例
+  yield fs.writeFile(&#39;access_token.txt&#39;, JSON.stringify(token));
+});
+</code></pre><h2 id="-">内网节点如何通过代理访问</h2>
+<h3 id="-">通过代理服务器访问</h3>
+<h4 id="-">场景</h4>
+<p>对于大规模的集群部署模式，为了安全和速度，会有一些负载均衡的节点放在内网的服务器上（即负载均衡的节点与主结点通过内网连接，并且内网服务器上没有外网的IP）。这时，就需要配置代理服务器来使内网的机器可以有限度的访问外网的资源。例如：微信套件中的各种主动调用接口。</p>
+<p>如何架设代理服务器在这里不做赘述，一般推荐使用squid 3，免费、快速、配置简单。</p>
+<h4 id="-">技术原理</h4>
+<p>由于需要访问的微信API服务器是https协议，所以普通的http代理模式不能使用。
+而一般都是http协议的代理服务器。
+我们要实现的就是通过http代理通道来走https的请求。</p>
+<p>基本的步骤是2步：</p>
+<ul>
+<li>连接到代理服务器，发送CONNECT命令，打开一个TCP连接。</li>
+<li>使用上一步打开的TCP连接，发送https的请求。</li>
+</ul>
+<h4 id="-">实现步骤</h4>
+<p>一、下载<a href="https://github.com/koichik/node-tunnel">node-tunnel</a> 注意：npm上的版本较老，不支持node v0.10以上的版本。</p>
+<p>二、使用 httpsOverHttp 这个agent。</p>
+<p>三、将agent配置给httpx。</p>
+<pre><code class="lang-js">var tunnel = require(&#39;tunnel&#39;);
+
+var agent = tunnel.httpsOverHttp({
+  proxy: {
+    host: &#39;proxy_host_ip&#39;, // 代理服务器的IP
+    port: 3128 // 代理服务器的端口
+  }
+});
+
+api.setOpts({
+   agent: agent
+});
+</code></pre>
+<h2 id="license">License</h2>
+<p>The MIT license.</p>
+<h2 id="-">交流群</h2>
+<p>QQ群：157964097，使用疑问，开发，贡献代码请加群。</p>
+<h2 id="-">感谢</h2>
+<p>感谢以下贡献者：</p>
+<pre><code>
+ project  : co-wechat-api
+ repo age : 1 year, 1 month
+ active   : 14 days
+ commits  : 44
+ files    : 70
+ authors  :
+    32  Jackson Tian  72.7%
+     6  magicxie      13.6%
+     2  TimZhang      4.5%
+     2  ken           4.5%
+     2  马剑          4.5%
+</code></pre><h2 id="-">捐赠</h2>
+<p>如果您觉得Wechat对您有帮助，欢迎请作者一杯咖啡</p>
+<p><img src="https://cloud.githubusercontent.com/assets/327019/2941591/2b9e5e58-d9a7-11e3-9e80-c25aba0a48a1.png" alt="捐赠wechat"></p>
+<p>或者<a href="https://www.gittip.com/JacksonTian/"><img src="http://img.shields.io/gratipay/JacksonTian.svg" alt=""></a></p>
+
+      </section>
+  
+    </div>
+  </div>
+</div>
+      <footer class="footer">
+        <div class="container">
+          <p class="pull-right">
+            <a href="#">Back to top</a>
+          </p>
+          <p>此文档通过doxmate生成。主题借鉴Bootstrap API文档风格，注解基于<a href="https://github.com/visionmedia/dox">Dox</a>。欢迎关注doxmate作者<a href="http://weibo.com/shyvo" target="_blank">@朴灵</a></p>
+          <ul class="footer-links">
+            <li><a href="https://github.com/visionmedia/dox">Dox主页</a></li>
+            <li><a href="http://html5ify.com/doxmate">Doxmate主页</a></li>
+            <li><a href="https://github.com/JacksonTian/doxmate">Doxmate源码</a></li>
+            <li><a href="https://github.com/JacksonTian/doxmate/issues?state=open">提交bug</a></li>
+          </ul>
+      </div>
+    </footer>
+    <script>
+      $(function() {
+        $('pre').addClass('prettyprint');
+        $('td pre').removeClass('prettyprint');
+        prettyPrint();
+        var $window = $(window);
+        var sidenav = $('.bs-docs-sidenav');
+        if (sidenav.height() < window.innerHeight) {
+          sidenav.affix({
+            offset: {
+              top: function () {
+                return $window.width() <= 980 ? 290 : 210
+              },
+              bottom: 200
+            }
+          });
+        } else {
+          sidenav.removeClass('affix');
+        }
+        $(".content").find('h1, h2, h3, h4, h5, h6').each(function () {
+          var node = $(this);
+          // 总是设置id
+          node.attr("id", node.data('id') || "index_" + node.text());
+        });
+
+        $('.bs-docs-sidenav .accordion-marker').on('click', function(event) {
+          var current = $(event.currentTarget);
+          current.find('.glyphicon').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+        });
+      });
+    </script>
+  
+  </body>
+</html>
+
