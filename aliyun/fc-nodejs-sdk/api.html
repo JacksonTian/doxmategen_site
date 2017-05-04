@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>@alicloud/fc Documentation</title>
+    <meta name="keywords" content="@alicloud/fc" />
+    <meta name="description" content="Aliyun Function Compute API SDK" />
+    <script src="assets/prettify.js"></script>
+    <script src="assets/jquery-1.8.2.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/base.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-static-top top-navbar" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./index.html">@alicloud/fc</a>
+        </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+          
+            <li>
+              <a href="./api.html">API Docs</a>
+            </li>
+          
+          
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <header class="jumbotron subhead">
+      <div class="container">
+        <h1>@alicloud/fc <small>Version: 1.0.0 By @Jackson Tian</small></h1>
+        <p class="lead">
+          Aliyun Function Compute API SDK
+        </p>
+      </div>
+    </header>
+
+<div class="container content">
+  <div class="row">
+    <div class="col-md-3 bs-docs-sidebar">
+      <ul class="nav nav-list bs-docs-sidenav affix">
+
+  <li>
+		<div class="accordion" id="client">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_client" class="api_side_link">client</a>
+					<div class="accordion-marker">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#client" href="#collapse_client">
+							 <span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_client">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#client__createService">createService</a>
+						</li>
+					
+						<li>
+							<a href="#client__listServices">listServices</a>
+						</li>
+					
+						<li>
+							<a href="#client__getService">getService</a>
+						</li>
+					
+						<li>
+							<a href="#client__updateService">updateService</a>
+						</li>
+					
+						<li>
+							<a href="#client__deleteService">deleteService</a>
+						</li>
+					
+						<li>
+							<a href="#client__createFunction">createFunction</a>
+						</li>
+					
+						<li>
+							<a href="#client__listFunctions">listFunctions</a>
+						</li>
+					
+						<li>
+							<a href="#client__getFunction">getFunction</a>
+						</li>
+					
+						<li>
+							<a href="#client__updateFunction">updateFunction</a>
+						</li>
+					
+						<li>
+							<a href="#client__deleteFunction">deleteFunction</a>
+						</li>
+					
+						<li>
+							<a href="#client__invokeFunction">invokeFunction</a>
+						</li>
+					
+						<li>
+							<a href="#client__createTrigger">createTrigger</a>
+						</li>
+					
+						<li>
+							<a href="#client__listTriggers">listTriggers</a>
+						</li>
+					
+						<li>
+							<a href="#client__getTrigger">getTrigger</a>
+						</li>
+					
+						<li>
+							<a href="#client__updateTrigger">updateTrigger</a>
+						</li>
+					
+						<li>
+							<a href="#client__deleteTrigger">deleteTrigger</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+  </li>
+
+</ul>
+
+    </div>
+    <div class="col-md-9">
+      
+        <section id="api_client" class="api">
+  <h2>client: API索引</h2>
+  <ul class="indexs">
+  
+    <li>
+      <a href="#client__createService">
+        createService
+      </a>
+    </li>
+
+    <li>
+      <a href="#client__listServices">
+        listServices
+      </a>
+    </li>
+
+    <li>
+      <a href="#client__getService">
+        getService
+      </a>
+    </li>
+
+    <li>
+      <a href="#client__updateService">
+        updateService
+      </a>
+    </li>
+
+    <li>
+      <a href="#client__deleteService">
+        deleteService
+      </a>
+    </li>
+
+    <li>
+      <a href="#client__createFunction">
+        createFunction
+      </a>
+    </li>
+
+    <li>
+      <a href="#client__listFunctions">
+        listFunctions
+      </a>
+    </li>
+
+    <li>
+      <a href="#client__getFunction">
+        getFunction
+      </a>
+    </li>
+
+    <li>
+      <a href="#client__updateFunction">
+        updateFunction
+      </a>
+    </li>
+
+    <li>
+      <a href="#client__deleteFunction">
+        deleteFunction
+      </a>
+    </li>
+
+    <li>
+      <a href="#client__invokeFunction">
+        invokeFunction
+      </a>
+    </li>
+
+    <li>
+      <a href="#client__createTrigger">
+        createTrigger
+      </a>
+    </li>
+
+    <li>
+      <a href="#client__listTriggers">
+        listTriggers
+      </a>
+    </li>
+
+    <li>
+      <a href="#client__getTrigger">
+        getTrigger
+      </a>
+    </li>
+
+    <li>
+      <a href="#client__updateTrigger">
+        updateTrigger
+      </a>
+    </li>
+
+    <li>
+      <a href="#client__deleteTrigger">
+        deleteTrigger
+      </a>
+    </li>
+
+  </ul>
+  <hr />
+
+  <h3 data-id="client__createService">
+    createService
+  </h3>
+
+  <p>创建Service</p>
+<p>Options:</p>
+<ul>
+<li>description Service的简短描述</li>
+<li>logConfig log config</li>
+<li>role Service role</li>
+</ul>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">createService()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>serviceName(String)</td>
+      <td colspan="2"><p>服务名</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>options(Object)</td>
+      <td colspan="2"><p>选项，optional</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Promise</td>
+      <td colspan="2"><p>返回 ServiceResponse</p></td> </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="client__listServices">
+    listServices
+  </h3>
+
+  <p>获取Service列表</p>
+<p>Options:</p>
+<ul>
+<li>limit</li>
+<li>prefix</li>
+<li>startKey</li>
+<li>nextToken</li>
+</ul>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">listServices()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>options(Object)</td>
+      <td colspan="2"><p>选项，optional</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Promise</td>
+      <td colspan="2"><p>返回 Service 列表</p></td> </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="client__getService">
+    getService
+  </h3>
+
+  <p>获取service信息</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">getService()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>serviceName(String)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Promise</td>
+      <td colspan="2"><p>返回 Service 信息</p></td> </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="client__updateService">
+    updateService
+  </h3>
+
+  <p>更新Service信息</p>
+<p>Options:</p>
+<ul>
+<li>description Service的简短描述</li>
+<li>logConfig log config</li>
+<li>role service role</li>
+</ul>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">updateService()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>serviceName(String)</td>
+      <td colspan="2"><p>服务名</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>options(Object)</td>
+      <td colspan="2"><p>选项，optional</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Promise</td>
+      <td colspan="2"><p>返回 Service 信息</p></td> </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="client__deleteService">
+    deleteService
+  </h3>
+
+  <p>删除Service</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">deleteService()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>serviceName(String)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Promise</td>
+      <td colspan="2"></td> </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="client__createFunction">
+    createFunction
+  </h3>
+
+  <p>创建Function</p>
+<p>Options:</p>
+<ul>
+<li>description function的简短描述</li>
+<li>code function代码</li>
+<li>functionName</li>
+<li>handler</li>
+<li>memorySize</li>
+<li>runtime</li>
+<li>timeout</li>
+</ul>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">createFunction()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>serviceName(String)</td>
+      <td colspan="2"><p>服务名</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>options(Object)</td>
+      <td colspan="2"><p>Function配置</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Promise</td>
+      <td colspan="2"><p>返回 Function 信息</p></td> </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="client__listFunctions">
+    listFunctions
+  </h3>
+
+  <p>获取Function列表</p>
+<p>Options:</p>
+<ul>
+<li>limit</li>
+<li>prefix</li>
+<li>startKey</li>
+<li>nextToken</li>
+</ul>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">listFunctions()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>serviceName(String)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>options(Object)</td>
+      <td colspan="2"><p>选项，optional</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Promise</td>
+      <td colspan="2"><p>返回Function列表</p></td> </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="client__getFunction">
+    getFunction
+  </h3>
+
+  <p>获取Function信息</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">getFunction()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>serviceName(String)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>functionName(String)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Promise</td>
+      <td colspan="2"><p>返回 Function 信息</p></td> </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="client__updateFunction">
+    updateFunction
+  </h3>
+
+  <p>更新Function信息</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">updateFunction()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>serviceName(String)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>functionName(String)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>options(Object)</td>
+      <td colspan="2"><p>Function配置，见createFunction</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Promise</td>
+      <td colspan="2"><p>返回 Function 信息</p></td> </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="client__deleteFunction">
+    deleteFunction
+  </h3>
+
+  <p>删除Function</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">deleteFunction()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>serviceName(String)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>functionName(String)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Promise</td>
+      <td colspan="2"></td> </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="client__invokeFunction">
+    invokeFunction
+  </h3>
+
+  <p>调用Function</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">invokeFunction()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>serviceName(String)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>functionName(String)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>options(Object)</td>
+      <td colspan="2"><p>event信息</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Promise</td>
+      <td colspan="2"><p>返回Function的执行结果</p></td> </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="client__createTrigger">
+    createTrigger
+  </h3>
+
+  <p>创建Trigger</p>
+<p>Options:</p>
+<ul>
+<li>invocationRole</li>
+<li>sourceArn</li>
+<li>triggerType</li>
+<li>triggerName</li>
+<li>triggerConfig</li>
+</ul>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">createTrigger()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>serviceName(String)</td>
+      <td colspan="2"><p>服务名</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>functionName(String)</td>
+      <td colspan="2"><p>服务名</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>options(Object)</td>
+      <td colspan="2"><p>Trigger配置</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Promise</td>
+      <td colspan="2"><p>返回 Trigger 信息</p></td> </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="client__listTriggers">
+    listTriggers
+  </h3>
+
+  <p>获取Trigger列表</p>
+<p>Options:</p>
+<ul>
+<li>limit</li>
+<li>prefix</li>
+<li>startKey</li>
+<li>nextToken</li>
+</ul>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">listTriggers()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>serviceName(String)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>functionName(String)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>options(Object)</td>
+      <td colspan="2"><p>选项，optional</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Promise</td>
+      <td colspan="2"><p>返回Trigger列表</p></td> </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="client__getTrigger">
+    getTrigger
+  </h3>
+
+  <p>获取Trigger信息</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">getTrigger()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>serviceName(String)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>functionName(String)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>triggerName(String)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Promise</td>
+      <td colspan="2"><p>返回 Trigger 信息</p></td> </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="client__updateTrigger">
+    updateTrigger
+  </h3>
+
+  <p>更新Trigger信息</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">updateTrigger()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>serviceName(String)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>functionName(String)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>triggerName(String)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>options(Object)</td>
+      <td colspan="2"><p>Trigger配置，见createTrigger</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Promise</td>
+      <td colspan="2"><p>返回 Trigger 信息</p></td> </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="client__deleteTrigger">
+    deleteTrigger
+  </h3>
+
+  <p>删除Trigger</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">deleteTrigger()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>serviceName(String)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>functionName(String)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>triggerName(String)</td>
+      <td colspan="2"></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>Promise</td>
+      <td colspan="2"></td> </tr>
+  
+
+  
+  </table>
+  
+</section>
+
+      
+    </div>
+  </div>
+</div>
+      <footer class="footer">
+        <div class="container">
+          <p class="pull-right">
+            <a href="#">Back to top</a>
+          </p>
+          <p>此文档通过doxmate生成。主题借鉴Bootstrap API文档风格，注解基于<a href="https://github.com/visionmedia/dox">Dox</a>。欢迎关注doxmate作者<a href="http://weibo.com/shyvo" target="_blank">@朴灵</a></p>
+          <ul class="footer-links">
+            <li><a href="https://github.com/visionmedia/dox">Dox主页</a></li>
+            <li><a href="http://html5ify.com/doxmate">Doxmate主页</a></li>
+            <li><a href="https://github.com/JacksonTian/doxmate">Doxmate源码</a></li>
+            <li><a href="https://github.com/JacksonTian/doxmate/issues?state=open">提交bug</a></li>
+          </ul>
+      </div>
+    </footer>
+    <script>
+      $(function() {
+        $('pre').addClass('prettyprint');
+        $('td pre').removeClass('prettyprint');
+        prettyPrint();
+        var $window = $(window);
+        var sidenav = $('.bs-docs-sidenav');
+        if (sidenav.height() < window.innerHeight) {
+          sidenav.affix({
+            offset: {
+              top: function () {
+                return $window.width() <= 980 ? 290 : 210
+              },
+              bottom: 200
+            }
+          });
+        } else {
+          sidenav.removeClass('affix');
+        }
+        $(".content").find('h1, h2, h3, h4, h5, h6').each(function () {
+          var node = $(this);
+          // 总是设置id
+          node.attr("id", node.data('id') || "index_" + node.text());
+        });
+
+        $('.bs-docs-sidenav .accordion-marker').on('click', function(event) {
+          var current = $(event.currentTarget);
+          current.find('.glyphicon').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+        });
+      });
+    </script>
+  
+  </body>
+</html>
+

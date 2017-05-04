@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>@alicloud/fc Documentation</title>
+    <meta name="keywords" content="@alicloud/fc" />
+    <meta name="description" content="Aliyun Function Compute API SDK" />
+    <script src="assets/prettify.js"></script>
+    <script src="assets/jquery-1.8.2.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/base.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-static-top top-navbar" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./index.html">@alicloud/fc</a>
+        </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+          
+            <li>
+              <a href="./api.html">API Docs</a>
+            </li>
+          
+          
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <header class="jumbotron subhead">
+      <div class="container">
+        <h1>@alicloud/fc <small>Version: 1.0.0 By @Jackson Tian</small></h1>
+        <p class="lead">
+          Aliyun Function Compute API SDK
+        </p>
+      </div>
+    </header>
+
+<div class="container content">
+  <div class="row">
+  	<div class="col-md-3">
+      <ul class="nav nav-list bs-docs-sidenav affix">
+
+  <li class="level_2">
+    <a href="#index_Install" title="Install">
+      <i class="icon-chevron-right"></i>Install
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_License" title="License">
+      <i class="icon-chevron-right"></i>License
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_Examples" title="Examples">
+      <i class="icon-chevron-right"></i>Examples
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_API Spec" title="API Spec">
+      <i class="icon-chevron-right"></i>API Spec
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_Test" title="Test">
+      <i class="icon-chevron-right"></i>Test
+    </a>
+  </li>
+
+</ul>
+
+    </div>
+    <div class="col-md-9">
+      <section>
+        <h1 id="fc-nodejs-sdk">fc-nodejs-sdk</h1>
+<p><a href="https://npmjs.org/package/@alicloud/fc"><img src="https://img.shields.io/npm/v/@alicloud/fc.svg?style=flat-square" alt="NPM version"></a>
+<a href="https://travis-ci.org/aliyun/fc-nodejs-sdk.svg?branch=master"><img src="https://img.shields.io/travis/aliyun/fc-nodejs-sdk/master.svg?style=flat-square" alt="build status"></a>
+<a href="https://coveralls.io/github/aliyun/fc-nodejs-sdk?branch=master"><img src="https://coveralls.io/repos/aliyun/fc-nodejs-sdk/badge.svg?branch=master&amp;service=github" alt="coverage"></a></p>
+<h2 id="install">Install</h2>
+<pre><code class="lang-bash">npm install @alicloud/fc --save
+</code></pre>
+<h2 id="license">License</h2>
+<p><a href="LICENSE">MIT</a></p>
+<h2 id="examples">Examples</h2>
+<h3 id="promise">Promise</h3>
+<pre><code class="lang-js">&#39;use strict&#39;;
+
+var FCClient = require(&#39;@alicloud/fc&#39;);
+
+var client = new FCClient(&#39;&lt;account id&gt;&#39;, {
+  accessKeyID: &#39;&lt;access key id&gt;&#39;,
+  accessKeySecret: &#39;&lt;access key secret&gt;&#39;,
+  region: &#39;cn-shanghai&#39;,
+});
+
+var serviceName = &#39;&lt;service name&gt;&#39;;
+var funcName = &#39;&lt;function name&gt;&#39;;
+
+client.createService(serviceName).then(function(resp) {
+  console.log(&#39;create service: %j&#39;, resp);
+  return client.createFunction(serviceName, {
+    functionName: funcName,
+    handler: &#39;index.handler&#39;,
+    memorySize: 128,
+    runtime: &#39;nodejs4.4&#39;,
+    code: {
+      zipFile: fs.readFileSync(&#39;/tmp/index.zip&#39;, &#39;base64&#39;),
+    },
+  });
+}).then(function(resp) {
+  console.log(&#39;create function: %j&#39;, resp);
+  return client.invokeFunction(serviceName, funcName, &#39;event&#39;);
+}).then(function(resp) {
+  console.log(&#39;invoke function: %j&#39;, resp);
+}).catch(function(err) {
+  console.error(err);
+});
+</code></pre>
+<h3 id="async-await-node-7-6-">async/await (node &gt;= 7.6)</h3>
+<pre><code class="lang-js">&#39;use strict&#39;;
+
+const FCClient = require(&#39;@alicloud/fc&#39;);
+
+var client = new FCClient(&#39;&lt;account id&gt;&#39;, {
+  accessKeyID: &#39;&lt;access key id&gt;&#39;,
+  accessKeySecret: &#39;&lt;access key secret&gt;&#39;,
+  region: &#39;cn-shanghai&#39;,
+});
+
+var serviceName = &#39;&lt;service name&gt;&#39;;
+var funcName = &#39;&lt;function name&gt;&#39;;
+
+async function test () {
+  try {
+    var resp = await client.createService(serviceName);
+    console.log(&#39;create service: %j&#39;, resp);
+
+    resp = await client.createFunction(serviceName, {
+      functionName: funcName,
+      handler: &#39;index.handler&#39;,
+      memorySize: 128,
+      runtime: &#39;nodejs4.4&#39;,
+      code: {
+        zipFile: fs.readFileSync(&#39;/tmp/index.zip&#39;, &#39;base64&#39;),
+      },
+    });
+    console.log(&#39;create function: %j&#39;, resp);
+
+    resp = await client.invokeFunction(serviceName, funcName, &#39;event&#39;);
+    console.log(&#39;invoke function: %j&#39;, resp);
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+test().then();
+</code></pre>
+<h2 id="api-spec">API Spec</h2>
+<p>See: <a href="https://help.aliyun.com/document_detail/52877.html">https://help.aliyun.com/document_detail/52877.html</a></p>
+<h2 id="test">Test</h2>
+<pre><code class="lang-sh">ACCOUNT_ID=&lt;ACCOUNT_ID&gt; ACCESS_KEY_ID=&lt;ACCESS_KEY_ID&gt; ACCESS_KEY_SECRET=&lt;ACCESS_KEY_SECRET&gt; make test
+</code></pre>
+
+      </section>
+  
+    </div>
+  </div>
+</div>
+      <footer class="footer">
+        <div class="container">
+          <p class="pull-right">
+            <a href="#">Back to top</a>
+          </p>
+          <p>此文档通过doxmate生成。主题借鉴Bootstrap API文档风格，注解基于<a href="https://github.com/visionmedia/dox">Dox</a>。欢迎关注doxmate作者<a href="http://weibo.com/shyvo" target="_blank">@朴灵</a></p>
+          <ul class="footer-links">
+            <li><a href="https://github.com/visionmedia/dox">Dox主页</a></li>
+            <li><a href="http://html5ify.com/doxmate">Doxmate主页</a></li>
+            <li><a href="https://github.com/JacksonTian/doxmate">Doxmate源码</a></li>
+            <li><a href="https://github.com/JacksonTian/doxmate/issues?state=open">提交bug</a></li>
+          </ul>
+      </div>
+    </footer>
+    <script>
+      $(function() {
+        $('pre').addClass('prettyprint');
+        $('td pre').removeClass('prettyprint');
+        prettyPrint();
+        var $window = $(window);
+        var sidenav = $('.bs-docs-sidenav');
+        if (sidenav.height() < window.innerHeight) {
+          sidenav.affix({
+            offset: {
+              top: function () {
+                return $window.width() <= 980 ? 290 : 210
+              },
+              bottom: 200
+            }
+          });
+        } else {
+          sidenav.removeClass('affix');
+        }
+        $(".content").find('h1, h2, h3, h4, h5, h6').each(function () {
+          var node = $(this);
+          // 总是设置id
+          node.attr("id", node.data('id') || "index_" + node.text());
+        });
+
+        $('.bs-docs-sidenav .accordion-marker').on('click', function(event) {
+          var current = $(event.currentTarget);
+          current.find('.glyphicon').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+        });
+      });
+    </script>
+  
+  </body>
+</html>
+
