@@ -38,7 +38,7 @@
     </nav>
     <header class="jumbotron subhead">
       <div class="container">
-        <h1>kitx <small>Version: 1.0.0 By @Jackson Tian</small></h1>
+        <h1>kitx <small>Version: 1.2.1 By @Jackson Tian</small></h1>
         <p class="lead">
           toolkit
         </p>
@@ -90,7 +90,31 @@
 						</li>
 					
 						<li>
+							<a href="#index_exports_makeNonce">makeNonce</a>
+						</li>
+					
+						<li>
+							<a href="#index_exports_pad2">pad2</a>
+						</li>
+					
+						<li>
+							<a href="#index_exports_pad3">pad3</a>
+						</li>
+					
+						<li>
+							<a href="#index_exports_getYYYYMMDD">getYYYYMMDD</a>
+						</li>
+					
+						<li>
 							<a href="#index_exports_sleep">sleep</a>
+						</li>
+					
+						<li>
+							<a href="#index_exports_getIPv4">getIPv4</a>
+						</li>
+					
+						<li>
+							<a href="#index_exports_getMac">getMac</a>
 						</li>
 					
 					</ul>
@@ -146,8 +170,44 @@
     </li>
 
     <li>
+      <a href="#index_exports_makeNonce">
+        makeNonce
+      </a>
+    </li>
+
+    <li>
+      <a href="#index_exports_pad2">
+        pad2
+      </a>
+    </li>
+
+    <li>
+      <a href="#index_exports_pad3">
+        pad3
+      </a>
+    </li>
+
+    <li>
+      <a href="#index_exports_getYYYYMMDD">
+        getYYYYMMDD
+      </a>
+    </li>
+
+    <li>
       <a href="#index_exports_sleep">
         sleep
+      </a>
+    </li>
+
+    <li>
+      <a href="#index_exports_getIPv4">
+        getIPv4
+      </a>
+    </li>
+
+    <li>
+      <a href="#index_exports_getMac">
+        getMac
       </a>
     </li>
 
@@ -158,7 +218,8 @@
     loadJSONSync
   </h3>
 
-  <p>Load .json file synchronous.</p>
+  <p>Load <em>.json file synchronous. Don't use require('</em>.json')<br />
+to load *.json files, it will cached in process.</p>
 
   <p>方法签名</p>
   <table class="table table-striped table-bordered table-hover table-condensed">
@@ -279,7 +340,7 @@
     <tr>
       <td>参数</td>
       <td>encoding(String)</td>
-      <td colspan="2"><p>optionnal. can be &#39;hex&#39;, &#39;binary&#39;, &#39;base64&#39;.</p></td>
+      <td colspan="2"><p>optionnal. can be 'hex', 'binary', 'base64'.</p></td>
     </tr>
   
 
@@ -324,7 +385,7 @@
     <tr>
       <td>参数</td>
       <td>encoding(String)</td>
-      <td colspan="2"><p>optionnal. can be &#39;hex&#39;, &#39;binary&#39;, &#39;base64&#39;.</p></td>
+      <td colspan="2"><p>optionnal. can be 'hex', 'binary', 'base64'.</p></td>
     </tr>
   
 
@@ -369,6 +430,123 @@
   
   </table>
   
+  <h3 data-id="index_exports_makeNonce">
+    makeNonce
+  </h3>
+
+  <p>Generate a nonce string</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>属性</td>
+      <td colspan="3">exports.makeNonce</td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>String</td>
+      <td colspan="2"><p>a nonce string.</p></td> </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="index_exports_pad2">
+    pad2
+  </h3>
+
+  <p>Pad a number as \d\d format</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.pad2()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>num(Number)</td>
+      <td colspan="2"><p>a number that less than 100.</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>String</td>
+      <td colspan="2"><p>if number less than 10, pad with 0,  otherwise, returns string of number.</p></td> </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="index_exports_pad3">
+    pad3
+  </h3>
+
+  <p>Pad a number as \d\d\d format</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.pad3()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>num(Number)</td>
+      <td colspan="2"><p>a number that less than 1000.</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>String</td>
+      <td colspan="2"><p>if number less than 100, pad with 0,  otherwise, returns string of number.</p></td> </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="index_exports_getYYYYMMDD">
+    getYYYYMMDD
+  </h3>
+
+  <p>Return the YYYYMMDD format of a date.</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getYYYYMMDD()</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>date(Date)</td>
+      <td colspan="2"><p>a Date object.</p></td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>String</td>
+      <td colspan="2"><p>the YYYYMMDD format.</p></td> </tr>
+  
+
+  
+  </table>
+  
   <h3 data-id="index_exports_sleep">
     sleep
   </h3>
@@ -395,6 +573,54 @@
       <td>返回</td>
       <td>Promise</td>
       <td colspan="2"><p>a Promise</p></td> </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="index_exports_getIPv4">
+    getIPv4
+  </h3>
+
+  <p>Get the IPv4 address</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getIPv4()</td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>String</td>
+      <td colspan="2"><p>the IPv4 address, or empty string</p></td> </tr>
+  
+
+  
+  </table>
+  
+  <h3 data-id="index_exports_getMac">
+    getMac
+  </h3>
+
+  <p>Get the Mac address</p>
+
+  <p>方法签名</p>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td colspan="3">exports.getMac()</td>
+    </tr>
+  
+
+    <tr>
+      <td>返回</td>
+      <td>String</td>
+      <td colspan="2"><p>the Mac address</p></td> </tr>
   
 
   
