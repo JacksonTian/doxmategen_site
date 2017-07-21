@@ -38,7 +38,7 @@
     </nav>
     <header class="jumbotron subhead">
       <div class="container">
-        <h1>co-wechat-api <small>Version: 2.3.0 By @Jackson Tian</small></h1>
+        <h1>co-wechat-api <small>Version: 3.1.0 By @Jackson Tian</small></h1>
         <p class="lead">
           微信公共平台Node库API，ES6版本
         </p>
@@ -115,15 +115,16 @@
     </div>
     <div class="col-md-9">
       <section>
-        <h1>Wechat API(ES6版)</h1>
-<p>微信公共平台API。</p><h2>模块状态</h2>
+        <h1 id="wechat-api-es6-">Wechat API(ES6版)</h1>
+<p>微信公共平台API。</p>
+<h2 id="-">模块状态</h2>
 <ul>
 <li><a href="http://badge.fury.io/js/co-wechat-api"><img src="https://badge.fury.io/js/co-wechat-api.png" alt="NPM version"></a></li>
 <li><a href="https://travis-ci.org/node-webot/co-wechat-api"><img src="https://travis-ci.org/node-webot/co-wechat-api.png?branch=master" alt="Build Status"></a></li>
 <li><a href="https://david-dm.org/node-webot/co-wechat-api"><img src="https://david-dm.org/node-webot/co-wechat-api.png" alt="Dependencies Status"></a></li>
 <li><a href="https://coveralls.io/r/node-webot/co-wechat-api"><img src="https://coveralls.io/repos/node-webot/co-wechat-api/badge.png" alt="Coverage Status"></a></li>
 </ul>
-<h2>功能列表</h2>
+<h2 id="-">功能列表</h2>
 <ul>
 <li>发送客服消息（文本、图片、语音、视频、音乐、图文）</li>
 <li>菜单操作（查询、创建、删除、个性化菜单）</li>
@@ -144,45 +145,73 @@
 <li>素材管理</li>
 <li>摇一摇周边</li>
 </ul>
-<p>详细参见<a href="http://doxmate.cool/node-webot/co-wechat-api/api.html">API文档</a></p><p>企业版本请前往：<a href="https://github.com/node-webot/wechat-enterprise">https://github.com/node-webot/wechat-enterprise</a></p><h2>Installation</h2>
+<p>详细参见<a href="http://doxmate.cool/node-webot/co-wechat-api/api.html">API文档</a></p>
+<p>企业版本请前往：<a href="https://github.com/node-webot/wechat-enterprise">https://github.com/node-webot/wechat-enterprise</a></p>
+<h2 id="installation">Installation</h2>
 <pre><code class="lang-sh">$ npm install co-wechat-api
 </code></pre>
-<h2>Usage</h2>
+<h2 id="usage">Usage</h2>
 <pre><code class="lang-js">var WechatAPI = require(&#39;co-wechat-api&#39;);
 
-var api = new WechatAPI(appid, appsecret);
-var result = yield* api.updateRemark(&#39;open_id&#39;, &#39;remarked&#39;);
+async function() {
+  var api = new WechatAPI(appid, appsecret);
+  var result = await api.updateRemark(&#39;open_id&#39;, &#39;remarked&#39;);
+}
 </code></pre>
-<h3>多进程</h3>
-<p>当多进程时，token需要全局维护，以下为保存token的接口。</p><pre><code>var api = new API(&#39;appid&#39;, &#39;secret&#39;, function* () {
+<h3 id="-">多进程</h3>
+<p>当多进程时，token需要全局维护，以下为保存token的接口：</p>
+<pre><code class="lang-js">var api = new API(&#39;appid&#39;, &#39;secret&#39;, async function () {
   // 传入一个获取全局token的方法
-  var txt = yield fs.readFile(&#39;access_token.txt&#39;, &#39;utf8&#39;);
+  var txt = await fs.readFile(&#39;access_token.txt&#39;, &#39;utf8&#39;);
   return JSON.parse(txt);
-}, function* (token) {
+}, async function (token) {
   // 请将token存储到全局，跨进程、跨机器级别的全局，比如写到数据库、redis等
   // 这样才能在cluster模式及多机情况下使用，以下为写入到文件的示例
-  yield fs.writeFile(&#39;access_token.txt&#39;, JSON.stringify(token));
+  await fs.writeFile(&#39;access_token.txt&#39;, JSON.stringify(token));
 });
-</code></pre><h2>Show cases</h2>
-<h3>Node.js API自动回复</h3>
-<p><img src="http://nodeapi.diveintonode.org/assets/qrcode.jpg" alt="Node.js API自动回复机器人"></p><p>欢迎关注。</p><p>代码：<a href="https://github.com/JacksonTian/api-doc-service">https://github.com/JacksonTian/api-doc-service</a></p><p>你可以在<a href="http://www.cloudfoundry.com/">CloudFoundry</a>、<a href="https://www.appfog.com/">appfog</a>、<a href="http://developer.baidu.com/wiki/index.php?title=docs/cplat/rt/node.js">BAE</a>等搭建自己的机器人。</p><h2>详细API</h2>
-<p>原始API文档请参见：<a href="http://mp.weixin.qq.com/wiki/index.php?title=消息接口指南">消息接口指南</a>。</p><h2>License</h2>
-<p>The MIT license.</p><h2>交流群</h2>
-<p>QQ群：157964097，使用疑问，开发，贡献代码请加群。</p><h2>感谢</h2>
-<p>感谢以下贡献者：</p><pre><code>
+</code></pre>
+<h2 id="show-cases">Show cases</h2>
+<h3 id="node-js-api-">Node.js API自动回复</h3>
+<p><img src="http://nodeapi.diveintonode.org/assets/qrcode.jpg" alt="Node.js API自动回复机器人"></p>
+<p>欢迎关注。</p>
+<p>代码：<a href="https://github.com/JacksonTian/api-doc-service">https://github.com/JacksonTian/api-doc-service</a></p>
+<p>你可以在<a href="http://www.cloudfoundry.com/">CloudFoundry</a>、<a href="https://www.appfog.com/">appfog</a>、<a href="http://developer.baidu.com/wiki/index.php?title=docs/cplat/rt/node.js">BAE</a>等搭建自己的机器人。</p>
+<h2 id="-api">详细API</h2>
+<p>原始API文档请参见：<a href="http://mp.weixin.qq.com/wiki/index.php?title=消息接口指南">消息接口指南</a>。</p>
+<h2 id="license">License</h2>
+<p>The MIT license.</p>
+<h2 id="-">交流群</h2>
+<p>QQ群：157964097，使用疑问，开发，贡献代码请加群。</p>
+<h2 id="-">感谢</h2>
+<p>感谢以下贡献者：</p>
+<pre><code>
  project  : co-wechat-api
- repo age : 1 year, 1 month
- active   : 14 days
- commits  : 44
- files    : 70
+ repo age : 2 years, 6 months
+ active   : 37 days
+ commits  : 109
+ files    : 50
  authors  :
-    32  Jackson Tian  72.7%
-     6  magicxie      13.6%
-     2  TimZhang      4.5%
-     2  ken           4.5%
-     2  马剑          4.5%
-</code></pre><h2>捐赠</h2>
-<p>如果您觉得Wechat对您有帮助，欢迎请作者一杯咖啡</p><p><img src="https://cloud.githubusercontent.com/assets/327019/2941591/2b9e5e58-d9a7-11e3-9e80-c25aba0a48a1.png" alt="捐赠wechat"></p><p>或者<a href="https://www.gittip.com/JacksonTian/"><img src="http://img.shields.io/gratipay/JacksonTian.svg" alt=""></a></p>
+    75  Jackson Tian  68.8%
+     7  肥鼠          6.4%
+     6  magicxie      5.5%
+     3  马剑          2.8%
+     2  TimZhang      1.8%
+     2  Ziyi Yan      1.8%
+     2  ken           1.8%
+     2  Lei           1.8%
+     2  pillarhou     1.8%
+     2  sunwf         1.8%
+     1  Jichao Wu     0.9%
+     1  HelloYou      0.9%
+     1  swfbarhr      0.9%
+     1  ladjzero      0.9%
+     1  三点          0.9%
+     1  mukaiu        0.9%
+</code></pre><h2 id="-">捐赠</h2>
+<p>如果您觉得Wechat对您有帮助，欢迎请作者一杯咖啡</p>
+<p><img src="https://cloud.githubusercontent.com/assets/327019/2941591/2b9e5e58-d9a7-11e3-9e80-c25aba0a48a1.png" alt="捐赠wechat"></p>
+<p>或者<a href="https://www.gittip.com/JacksonTian/"><img src="http://img.shields.io/gratipay/JacksonTian.svg" alt=""></a></p>
+
       </section>
   
     </div>
