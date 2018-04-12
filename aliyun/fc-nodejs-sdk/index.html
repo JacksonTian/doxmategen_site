@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>@alicloud/fc Documentation</title>
-    <meta name="keywords" content="@alicloud/fc" />
-    <meta name="description" content="Aliyun Function Compute API SDK" />
+    <title>@alicloud/fc2 Documentation</title>
+    <meta name="keywords" content="@alicloud/fc2" />
+    <meta name="description" content="Aliyun Function Compute API SDK2" />
     <script src="assets/prettify.js"></script>
     <script src="assets/jquery-1.8.2.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.js"></script>
@@ -21,7 +21,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="./index.html">@alicloud/fc</a>
+          <a class="navbar-brand" href="./index.html">@alicloud/fc2</a>
         </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -38,9 +38,9 @@
     </nav>
     <header class="jumbotron subhead">
       <div class="container">
-        <h1>@alicloud/fc <small>Version: 1.0.0 By @Jackson Tian</small></h1>
+        <h1>@alicloud/fc2 <small>Version: 2.0.1 By @Jackson Tian</small></h1>
         <p class="lead">
-          Aliyun Function Compute API SDK
+          Aliyun Function Compute API SDK2
         </p>
       </div>
     </header>
@@ -51,8 +51,8 @@
       <ul class="nav nav-list bs-docs-sidenav affix">
 
   <li class="level_2">
-    <a href="#index_Install" title="Install">
-      <i class="icon-chevron-right"></i>Install
+    <a href="#index_Install oldVersion" title="Install oldVersion">
+      <i class="icon-chevron-right"></i>Install oldVersion
     </a>
   </li>
 
@@ -86,10 +86,24 @@
     <div class="col-md-9">
       <section>
         <h1 id="fc-nodejs-sdk">fc-nodejs-sdk</h1>
-<p><a href="https://npmjs.org/package/@alicloud/fc"><img src="https://img.shields.io/npm/v/@alicloud/fc.svg?style=flat-square" alt="NPM version"></a>
+<p><a href="https://npmjs.org/package/@alicloud/fc2"><img src="https://img.shields.io/npm/v/@alicloud/fc2.svg?style=flat-square" alt="NPM version"></a>
 <a href="https://travis-ci.org/aliyun/fc-nodejs-sdk.svg?branch=master"><img src="https://img.shields.io/travis/aliyun/fc-nodejs-sdk/master.svg?style=flat-square" alt="build status"></a>
 <a href="https://coveralls.io/github/aliyun/fc-nodejs-sdk?branch=master"><img src="https://coveralls.io/repos/aliyun/fc-nodejs-sdk/badge.svg?branch=master&amp;service=github" alt="coverage"></a></p>
-<h2 id="install">Install</h2>
+<p>Documents: <a href="http://doxmate.cool/aliyun/fc-nodejs-sdk/api.html">http://doxmate.cool/aliyun/fc-nodejs-sdk/api.html</a></p>
+<h2 id="notice">Notice</h2>
+<p>We suggest using fc2，The main difference between fc and fc2 is:</p>
+<p>The response returned by the user is the following dict, for invoke function, data is bytes, for other apis, data is dict.</p>
+<pre><code class="lang-js">{
+     &#39;headers&#39;: headers,
+     &#39;data&#39;: data,
+}
+
+</code></pre>
+<p>Install the official fc2 release version:</p>
+<pre><code class="lang-bash">npm install @alicloud/fc2 --save
+</code></pre>
+<h2 id="install-oldversion">Install oldVersion</h2>
+<p>fc version is in 1.x branch， you can install fc use &#39;npm&#39; like this</p>
 <pre><code class="lang-bash">npm install @alicloud/fc --save
 </code></pre>
 <h2 id="license">License</h2>
@@ -98,12 +112,13 @@
 <h3 id="promise">Promise</h3>
 <pre><code class="lang-js">&#39;use strict&#39;;
 
-var FCClient = require(&#39;@alicloud/fc&#39;);
+var FCClient = require(&#39;@alicloud/fc2&#39;);
 
 var client = new FCClient(&#39;&lt;account id&gt;&#39;, {
   accessKeyID: &#39;&lt;access key id&gt;&#39;,
   accessKeySecret: &#39;&lt;access key secret&gt;&#39;,
   region: &#39;cn-shanghai&#39;,
+  timeout: 10000 // Request timeout in milliseconds, default is 10s
 });
 
 var serviceName = &#39;&lt;service name&gt;&#39;;
@@ -132,7 +147,7 @@ client.createService(serviceName).then(function(resp) {
 <h3 id="async-await-node-7-6-">async/await (node &gt;= 7.6)</h3>
 <pre><code class="lang-js">&#39;use strict&#39;;
 
-const FCClient = require(&#39;@alicloud/fc&#39;);
+const FCClient = require(&#39;@alicloud/fc2&#39;);
 
 var client = new FCClient(&#39;&lt;account id&gt;&#39;, {
   accessKeyID: &#39;&lt;access key id&gt;&#39;,
@@ -167,6 +182,11 @@ async function test () {
 }
 
 test().then();
+</code></pre>
+<h3 id="custom-headers">Custom headers</h3>
+<pre><code class="lang-js">await client.invokeFunction(serviceName, funcName, &#39;event&#39;, {
+  &#39;x-fc-invocation-type&#39;: &#39;Async&#39;
+});
 </code></pre>
 <h2 id="api-spec">API Spec</h2>
 <p>See: <a href="https://help.aliyun.com/document_detail/52877.html">https://help.aliyun.com/document_detail/52877.html</a></p>
