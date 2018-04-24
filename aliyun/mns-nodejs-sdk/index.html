@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>@alicloud/mns Documentation</title>
+    <meta name="keywords" content="MNS,Message,Service,Aliyun,Alicloud" />
+    <meta name="description" content="&gt; 该 SDK 并未完全实现所有文档所提及的功能，如果您想使用的功能并未实现，请提[issue](https://github.com/aliyun/aliyun-mns-nodejs-sdk/issues/new)以增加优先级。" />
+    <script src="assets/prettify.js"></script>
+    <script src="assets/jquery-1.8.2.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/base.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-static-top top-navbar" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./index.html">@alicloud/mns</a>
+        </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+          
+            <li>
+              <a href="./api.html">API Docs</a>
+            </li>
+          
+          
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <header class="jumbotron subhead">
+      <div class="container">
+        <h1>@alicloud/mns <small>Version: 1.0.0-beta8 By @Jackson Tian</small></h1>
+        <p class="lead">
+          &gt; 该 SDK 并未完全实现所有文档所提及的功能，如果您想使用的功能并未实现，请提[issue](https://github.com/aliyun/aliyun-mns-nodejs-sdk/issues/new)以增加优先级。
+        </p>
+      </div>
+    </header>
+
+<div class="container content">
+  <div class="row">
+  	<div class="col-md-3">
+      <ul class="nav nav-list bs-docs-sidenav affix">
+
+  <li class="level_2">
+    <a href="#index_Installation" title="Installation">
+      <i class="icon-chevron-right"></i>Installation
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_API Spec" title="API Spec">
+      <i class="icon-chevron-right"></i>API Spec
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_Test" title="Test">
+      <i class="icon-chevron-right"></i>Test
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_Installation" title="Installation">
+      <i class="icon-chevron-right"></i>Installation
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_Usage" title="Usage">
+      <i class="icon-chevron-right"></i>Usage
+    </a>
+  </li>
+
+  <li class="level_2">
+    <a href="#index_License" title="License">
+      <i class="icon-chevron-right"></i>License
+    </a>
+  </li>
+
+</ul>
+
+    </div>
+    <div class="col-md-9">
+      <section>
+        <h1 id="mns-nodejs-sdk">mns-nodejs-sdk</h1>
+<p><a href="https://npmjs.org/package/@alicloud/mns"><img src="https://img.shields.io/npm/v/@alicloud/mns.svg?style=flat-square" alt="NPM version"></a>
+<a href="https://travis-ci.org/aliyun/mns-nodejs-sdk.svg?branch=master"><img src="https://img.shields.io/travis/aliyun/mns-nodejs-sdk/master.svg?style=flat-square" alt="build status"></a>
+<a href="https://coveralls.io/github/aliyun/mns-nodejs-sdk?branch=master"><img src="https://coveralls.io/repos/aliyun/mns-nodejs-sdk/badge.svg?branch=master&amp;service=github" alt="coverage"></a></p>
+<p>Documents: <a href="http://doxmate.cool/aliyun/mns-nodejs-sdk/api.html">http://doxmate.cool/aliyun/mns-nodejs-sdk/api.html</a></p>
+<blockquote>
+<p>该 SDK 并未完全实现所有文档所提及的功能，如果您想使用的功能并未实现，请提<a href="https://github.com/aliyun/mns-nodejs-sdk/issues/new">issue</a>以增加优先级。</p>
+</blockquote>
+<h2 id="installation">Installation</h2>
+<pre><code class="lang-bash">npm install @alicloud/mns --save
+</code></pre>
+<h2 id="api-spec">API Spec</h2>
+<p>See: <a href="https://help.aliyun.com/document_detail/27475.html">https://help.aliyun.com/document_detail/27475.html</a></p>
+<h2 id="test">Test</h2>
+<pre><code class="lang-sh">ACCOUNT_ID=&lt;ACCOUNT_ID&gt; ACCESS_KEY_ID=&lt;ACCESS_KEY_ID&gt; ACCESS_KEY_SECRET=&lt;ACCESS_KEY_SECRET&gt; make test
+</code></pre>
+<h2 id="installation">Installation</h2>
+<p>You can install it via npm/cnpm/yarn.</p>
+<pre><code class="lang-sh">$ npm install @alicloud/mns --save
+</code></pre>
+<h2 id="usage">Usage</h2>
+<pre><code class="lang-js">const MNSClient = require(&#39;@alicloud/mns&#39;);
+
+const accountid = &#39;&lt;account id&gt;&#39;;
+var client = new MNSClient(accountid, {
+  region: &#39;&lt;region&gt;&#39;,
+  accessKeyId: &#39;&lt;access key id&gt;&#39;,
+  accessKeySecret: &#39;&lt;access key secret&gt;&#39;,
+  // optional &amp; default
+  secure: false, // use https or http
+  internal: false, // use internal endpoint
+  vpc: false // use vpc endpoint
+});
+
+(async function () {
+  let res;
+  // create queue
+  res = await client.createQueue(&#39;test-queue2&#39;);
+  console.log(res);
+  // list queue
+  res = await client.listQueue();
+  console.log(JSON.stringify(res, null, 2));
+  // create topic
+  res = await client.createTopic(&#39;test-topic&#39;);
+  console.log(res);
+  // get topic attributes
+  res = await client.getTopicAttributes(&#39;test-topic&#39;);
+  console.log(res);
+  // publish message
+  res = await client.publishMessage(&#39;&lt;topic name&gt;&#39;, {
+    MessageBody: &#39;content&#39;,
+    MessageAttributes: {
+      DirectSMS: JSON.stringify({
+        FreeSignName: &#39;&#39;,
+        TemplateCode: &#39;&lt;template code&gt;&#39;,
+        Type: &#39;&lt;type&gt;&#39;,
+        Receiver: &#39;&lt;phone number&gt;&#39;,
+        SmsParams: JSON.stringify({
+          code: &#39;&lt;code&gt;&#39;,
+          product: &#39;&lt;product&gt;&#39;
+        })
+      })
+    }
+  });
+  console.log(res);
+})().then((data) =&gt; {
+  console.log(data);
+}, (err) =&gt; {
+  console.log(err.stack);
+});
+</code></pre>
+<h2 id="license">License</h2>
+<p>The <a href="LICENSE">MIT</a> License</p>
+
+      </section>
+  
+    </div>
+  </div>
+</div>
+      <footer class="footer">
+        <div class="container">
+          <p class="pull-right">
+            <a href="#">Back to top</a>
+          </p>
+          <p>此文档通过doxmate生成。主题借鉴Bootstrap API文档风格，注解基于<a href="https://github.com/visionmedia/dox">Dox</a>。欢迎关注doxmate作者<a href="http://weibo.com/shyvo" target="_blank">@朴灵</a></p>
+          <ul class="footer-links">
+            <li><a href="https://github.com/visionmedia/dox">Dox主页</a></li>
+            <li><a href="http://html5ify.com/doxmate">Doxmate主页</a></li>
+            <li><a href="https://github.com/JacksonTian/doxmate">Doxmate源码</a></li>
+            <li><a href="https://github.com/JacksonTian/doxmate/issues?state=open">提交bug</a></li>
+          </ul>
+      </div>
+    </footer>
+    <script>
+      $(function() {
+        $('pre').addClass('prettyprint');
+        $('td pre').removeClass('prettyprint');
+        prettyPrint();
+        var $window = $(window);
+        var sidenav = $('.bs-docs-sidenav');
+        if (sidenav.height() < window.innerHeight) {
+          sidenav.affix({
+            offset: {
+              top: function () {
+                return $window.width() <= 980 ? 290 : 210
+              },
+              bottom: 200
+            }
+          });
+        } else {
+          sidenav.removeClass('affix');
+        }
+        $(".content").find('h1, h2, h3, h4, h5, h6').each(function () {
+          var node = $(this);
+          // 总是设置id
+          node.attr("id", node.data('id') || "index_" + node.text());
+        });
+
+        $('.bs-docs-sidenav .accordion-marker').on('click', function(event) {
+          var current = $(event.currentTarget);
+          current.find('.glyphicon').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+        });
+      });
+    </script>
+  
+  </body>
+</html>
+
